@@ -14,13 +14,12 @@ export default defineConfig({
     screenshot: { mode: 'on', fullPage: true },
     viewport: { width: 1920, height: 1080 },
     video: 'retain-on-failure',
-    headless: true,
+    headless: 'new',
     launchOptions: {
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
-        '--headless=new',
         '--disable-gpu',
         '--window-size=1920,1080',
         '--hide-scrollbars',
