@@ -1,0 +1,1183 @@
+2025-01-23 05:07:24,582 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:08:25,130 - ERROR - Test execution failed: Message: session not created: cannot connect to chrome at 127.0.0.1:35499
+from chrome not reachable
+Stacktrace:
+#0 0x55a52dc11dca <unknown>
+#1 0x55a52d70824d <unknown>
+#2 0x55a52d6f417f <unknown>
+#3 0x55a52d74552c <unknown>
+#4 0x55a52d73b1ea <unknown>
+#5 0x55a52d788ca6 <unknown>
+#6 0x55a52d7882f6 <unknown>
+#7 0x55a52d77c833 <unknown>
+#8 0x55a52d7495a0 <unknown>
+#9 0x55a52d74aece <unknown>
+#10 0x55a52dbdbbdb <unknown>
+#11 0x55a52dbdfb67 <unknown>
+#12 0x55a52dbc73bc <unknown>
+#13 0x55a52dbe0727 <unknown>
+#14 0x55a52dbab74f <unknown>
+#15 0x55a52dc00938 <unknown>
+#16 0x55a52dc00b00 <unknown>
+#17 0x55a52dc10c46 <unknown>
+#18 0x7f105fa97ac3 <unknown>
+
+2025-01-23 05:09:52,903 - INFO - ====== WebDriver manager ======
+2025-01-23 05:09:52,969 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:09:52,997 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:09:53,026 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:09:53,105 - ERROR - Browser initialization attempt 1 failed: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55f54ed2ddca <unknown>
+#1 0x55f54e8243f0 <unknown>
+#2 0x55f54e85b47a <unknown>
+#3 0x55f54e8579b6 <unknown>
+#4 0x55f54e8a4ca6 <unknown>
+#5 0x55f54e8a42f6 <unknown>
+#6 0x55f54e898833 <unknown>
+#7 0x55f54e8655a0 <unknown>
+#8 0x55f54e866ece <unknown>
+#9 0x55f54ecf7bdb <unknown>
+#10 0x55f54ecfbb67 <unknown>
+#11 0x55f54ece33bc <unknown>
+#12 0x55f54ecfc727 <unknown>
+#13 0x55f54ecc774f <unknown>
+#14 0x55f54ed1c938 <unknown>
+#15 0x55f54ed1cb00 <unknown>
+#16 0x55f54ed2cc46 <unknown>
+#17 0x7f8c1c883ac3 <unknown>
+
+2025-01-23 05:09:53,105 - ERROR - Test execution failed: cannot access local variable 'driver' where it is not associated with a value
+2025-01-23 05:12:35,923 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 05:12:35,923 - INFO - Using user data directory: /tmp/chrome_test_k5o1l90j
+2025-01-23 05:12:35,923 - INFO - User data directory contents: []
+2025-01-23 05:12:39,951 - INFO - Installing ChromeDriver...
+2025-01-23 05:12:39,951 - INFO - ====== WebDriver manager ======
+2025-01-23 05:12:40,020 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:12:40,091 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:12:40,116 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:12:40,116 - INFO - Creating Chrome instance...
+2025-01-23 05:12:40,250 - ERROR - Browser initialization attempt 1 failed: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x563a74963dca <unknown>
+#1 0x563a7445a3f0 <unknown>
+#2 0x563a7449147a <unknown>
+#3 0x563a7448d9b6 <unknown>
+#4 0x563a744daca6 <unknown>
+#5 0x563a744da2f6 <unknown>
+#6 0x563a744ce833 <unknown>
+#7 0x563a7449b5a0 <unknown>
+#8 0x563a7449cece <unknown>
+#9 0x563a7492dbdb <unknown>
+#10 0x563a74931b67 <unknown>
+#11 0x563a749193bc <unknown>
+#12 0x563a74932727 <unknown>
+#13 0x563a748fd74f <unknown>
+#14 0x563a74952938 <unknown>
+#15 0x563a74952b00 <unknown>
+#16 0x563a74962c46 <unknown>
+#17 0x7fc1dfaddac3 <unknown>
+
+2025-01-23 05:12:42,272 - INFO - Waiting 3 seconds before next attempt...
+2025-01-23 05:12:45,273 - INFO - 
+Attempt 2 to initialize Chrome
+2025-01-23 05:12:45,273 - INFO - Using user data directory: /tmp/chrome_test_k5o1l90j
+2025-01-23 05:12:49,300 - INFO - Installing ChromeDriver...
+2025-01-23 05:12:49,300 - INFO - ====== WebDriver manager ======
+2025-01-23 05:12:49,368 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:12:49,393 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:12:49,415 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:12:49,416 - INFO - Creating Chrome instance...
+2025-01-23 05:12:49,493 - ERROR - Browser initialization attempt 2 failed: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55be1c327dca <unknown>
+#1 0x55be1be1e3f0 <unknown>
+#2 0x55be1be5547a <unknown>
+#3 0x55be1be519b6 <unknown>
+#4 0x55be1be9eca6 <unknown>
+#5 0x55be1be9e2f6 <unknown>
+#6 0x55be1be92833 <unknown>
+#7 0x55be1be5f5a0 <unknown>
+#8 0x55be1be60ece <unknown>
+#9 0x55be1c2f1bdb <unknown>
+#10 0x55be1c2f5b67 <unknown>
+#11 0x55be1c2dd3bc <unknown>
+#12 0x55be1c2f6727 <unknown>
+#13 0x55be1c2c174f <unknown>
+#14 0x55be1c316938 <unknown>
+#15 0x55be1c316b00 <unknown>
+#16 0x55be1c326c46 <unknown>
+#17 0x7f815614dac3 <unknown>
+
+2025-01-23 05:12:51,514 - INFO - Waiting 6 seconds before next attempt...
+2025-01-23 05:12:57,515 - INFO - 
+Attempt 3 to initialize Chrome
+2025-01-23 05:12:57,515 - INFO - Using user data directory: /tmp/chrome_test_k5o1l90j
+2025-01-23 05:13:01,544 - INFO - Installing ChromeDriver...
+2025-01-23 05:13:01,544 - INFO - ====== WebDriver manager ======
+2025-01-23 05:13:01,614 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:13:01,663 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:13:01,727 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:13:01,728 - INFO - Creating Chrome instance...
+2025-01-23 05:13:01,859 - ERROR - Browser initialization attempt 3 failed: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55f646c5adca <unknown>
+#1 0x55f6467513f0 <unknown>
+#2 0x55f64678847a <unknown>
+#3 0x55f6467849b6 <unknown>
+#4 0x55f6467d1ca6 <unknown>
+#5 0x55f6467d12f6 <unknown>
+#6 0x55f6467c5833 <unknown>
+#7 0x55f6467925a0 <unknown>
+#8 0x55f646793ece <unknown>
+#9 0x55f646c24bdb <unknown>
+#10 0x55f646c28b67 <unknown>
+#11 0x55f646c103bc <unknown>
+#12 0x55f646c29727 <unknown>
+#13 0x55f646bf474f <unknown>
+#14 0x55f646c49938 <unknown>
+#15 0x55f646c49b00 <unknown>
+#16 0x55f646c59c46 <unknown>
+#17 0x7f14b47b0ac3 <unknown>
+
+2025-01-23 05:13:03,880 - ERROR - All Chrome initialization attempts failed
+2025-01-23 05:13:03,880 - ERROR - Test execution failed: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55f646c5adca <unknown>
+#1 0x55f6467513f0 <unknown>
+#2 0x55f64678847a <unknown>
+#3 0x55f6467849b6 <unknown>
+#4 0x55f6467d1ca6 <unknown>
+#5 0x55f6467d12f6 <unknown>
+#6 0x55f6467c5833 <unknown>
+#7 0x55f6467925a0 <unknown>
+#8 0x55f646793ece <unknown>
+#9 0x55f646c24bdb <unknown>
+#10 0x55f646c28b67 <unknown>
+#11 0x55f646c103bc <unknown>
+#12 0x55f646c29727 <unknown>
+#13 0x55f646bf474f <unknown>
+#14 0x55f646c49938 <unknown>
+#15 0x55f646c49b00 <unknown>
+#16 0x55f646c59c46 <unknown>
+#17 0x7f14b47b0ac3 <unknown>
+
+2025-01-23 05:23:08,739 - INFO - Created initial user data directory: /tmp/chrome_test_1737609788_0b6cbdb2
+2025-01-23 05:23:08,740 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 05:23:08,740 - INFO - Using new user data directory: /tmp/chrome_test_1737609788_75d8cceb
+2025-01-23 05:23:08,740 - INFO - Removed existing user data directory
+2025-01-23 05:23:08,740 - INFO - Created fresh user data directory
+2025-01-23 05:23:13,768 - INFO - No Chrome processes found
+2025-01-23 05:23:13,775 - INFO - Installing ChromeDriver...
+2025-01-23 05:23:13,775 - INFO - ====== WebDriver manager ======
+2025-01-23 05:23:13,841 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:23:13,874 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:23:13,899 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:23:13,900 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 05:23:14,156 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:23:14,210 - ERROR - Browser initialization attempt 1 failed: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: excludeSwitches
+Stacktrace:
+#0 0x563141ef9dca <unknown>
+#1 0x5631419f03f0 <unknown>
+#2 0x563141a1aebc <unknown>
+#3 0x563141a1c4e5 <unknown>
+#4 0x563141a177ae <unknown>
+#5 0x563141a6efd4 <unknown>
+#6 0x563141a6e831 <unknown>
+#7 0x563141a70406 <unknown>
+#8 0x563141a702f6 <unknown>
+#9 0x563141a64833 <unknown>
+#10 0x563141a315a0 <unknown>
+#11 0x563141a32ece <unknown>
+#12 0x563141ec3bdb <unknown>
+#13 0x563141ec7b67 <unknown>
+#14 0x563141eaf3bc <unknown>
+#15 0x563141ec8727 <unknown>
+#16 0x563141e9374f <unknown>
+#17 0x563141ee8938 <unknown>
+#18 0x563141ee8b00 <unknown>
+#19 0x563141ef8c46 <unknown>
+#20 0x7f2c6d471ac3 <unknown>
+
+2025-01-23 05:23:16,230 - INFO - Waiting 3 seconds before next attempt...
+2025-01-23 05:23:19,230 - INFO - 
+Attempt 2 to initialize Chrome
+2025-01-23 05:23:19,231 - INFO - Using new user data directory: /tmp/chrome_test_1737609799_a997f012
+2025-01-23 05:23:19,231 - INFO - Removed existing user data directory
+2025-01-23 05:23:19,232 - INFO - Created fresh user data directory
+2025-01-23 05:23:24,261 - INFO - No Chrome processes found
+2025-01-23 05:23:24,269 - INFO - Installing ChromeDriver...
+2025-01-23 05:23:24,269 - INFO - ====== WebDriver manager ======
+2025-01-23 05:23:24,336 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:23:24,359 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:23:24,406 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:23:24,406 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 05:23:24,708 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:23:24,738 - ERROR - Browser initialization attempt 2 failed: you cannot reuse the ChromeOptions object
+2025-01-23 05:23:26,758 - INFO - Waiting 6 seconds before next attempt...
+2025-01-23 05:23:32,759 - INFO - 
+Attempt 3 to initialize Chrome
+2025-01-23 05:23:32,759 - INFO - Using new user data directory: /tmp/chrome_test_1737609812_8838bf6b
+2025-01-23 05:23:32,759 - INFO - Removed existing user data directory
+2025-01-23 05:23:32,760 - INFO - Created fresh user data directory
+2025-01-23 05:23:37,787 - INFO - No Chrome processes found
+2025-01-23 05:23:37,793 - INFO - Installing ChromeDriver...
+2025-01-23 05:23:37,793 - INFO - ====== WebDriver manager ======
+2025-01-23 05:23:37,858 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:23:37,884 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:23:37,911 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:23:37,911 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 05:23:38,147 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:23:38,178 - ERROR - Browser initialization attempt 3 failed: you cannot reuse the ChromeOptions object
+2025-01-23 05:23:40,198 - ERROR - All Chrome initialization attempts failed
+2025-01-23 05:23:40,199 - ERROR - Test execution failed: you cannot reuse the ChromeOptions object
+2025-01-23 05:39:10,513 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 05:39:10,513 - INFO - Using new user data directory: /tmp/chrome_test_1737610750_9232c964
+2025-01-23 05:39:10,513 - INFO - Removed existing user data directory
+2025-01-23 05:39:10,513 - INFO - Created fresh user data directory
+2025-01-23 05:39:15,540 - INFO - No Chrome processes found
+2025-01-23 05:39:15,541 - INFO - Installing ChromeDriver...
+2025-01-23 05:39:15,541 - INFO - ====== WebDriver manager ======
+2025-01-23 05:39:15,607 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:39:15,635 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:39:15,660 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:39:15,660 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 05:39:15,905 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:40:15,960 - ERROR - Browser initialization attempt 1 failed: Message: session not created: cannot connect to chrome at 127.0.0.1:42151
+from chrome not reachable
+Stacktrace:
+#0 0x55b88e071dca <unknown>
+#1 0x55b88db6824d <unknown>
+#2 0x55b88db5417f <unknown>
+#3 0x55b88dba552c <unknown>
+#4 0x55b88db9b1ea <unknown>
+#5 0x55b88dbe8ca6 <unknown>
+#6 0x55b88dbe82f6 <unknown>
+#7 0x55b88dbdc833 <unknown>
+#8 0x55b88dba95a0 <unknown>
+#9 0x55b88dbaaece <unknown>
+#10 0x55b88e03bbdb <unknown>
+#11 0x55b88e03fb67 <unknown>
+#12 0x55b88e0273bc <unknown>
+#13 0x55b88e040727 <unknown>
+#14 0x55b88e00b74f <unknown>
+#15 0x55b88e060938 <unknown>
+#16 0x55b88e060b00 <unknown>
+#17 0x55b88e070c46 <unknown>
+#18 0x7fc807f28ac3 <unknown>
+
+2025-01-23 05:40:17,983 - INFO - Waiting 3 seconds before next attempt...
+2025-01-23 05:40:20,983 - INFO - 
+Attempt 2 to initialize Chrome
+2025-01-23 05:40:20,984 - INFO - Using new user data directory: /tmp/chrome_test_1737610820_b24fa99c
+2025-01-23 05:40:20,984 - INFO - Removed existing user data directory
+2025-01-23 05:40:20,984 - INFO - Created fresh user data directory
+2025-01-23 05:40:26,013 - INFO - No Chrome processes found
+2025-01-23 05:40:26,014 - INFO - Installing ChromeDriver...
+2025-01-23 05:40:26,014 - INFO - ====== WebDriver manager ======
+2025-01-23 05:40:26,082 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:40:26,104 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:40:26,125 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:40:26,125 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 05:40:26,368 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:43:22,168 - INFO - Started virtual display
+2025-01-23 05:43:24,188 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 05:43:24,189 - INFO - Using new user data directory: /tmp/chrome_test_1737611004_6eed469e
+2025-01-23 05:43:24,189 - INFO - Removed existing user data directory
+2025-01-23 05:43:24,189 - INFO - Created fresh user data directory
+2025-01-23 05:43:29,217 - INFO - No Chrome processes found
+2025-01-23 05:43:29,217 - INFO - Installing ChromeDriver...
+2025-01-23 05:43:29,218 - INFO - ====== WebDriver manager ======
+2025-01-23 05:43:29,284 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:43:29,314 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:43:29,339 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:43:29,339 - INFO - Using debug port: 9222
+2025-01-23 05:43:29,339 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 05:43:29,590 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:43:34,902 - INFO - Configuring timeouts...
+2025-01-23 05:43:34,905 - INFO - Testing browser initialization...
+2025-01-23 05:43:36,944 - INFO - Verifying browser responsiveness...
+2025-01-23 05:43:36,952 - INFO - Browser title: 
+2025-01-23 05:43:36,952 - INFO - Testing JavaScript execution...
+2025-01-23 05:43:36,957 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 05:43:36,957 - INFO - Chrome initialization successful!
+2025-01-23 05:43:36,957 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 05:43:36,958 - INFO - Testing edge_detection - Attempt 1/5
+2025-01-23 05:43:53,469 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 05:43:55,009 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 05:43:55,215 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737611035.png
+2025-01-23 05:43:55,248 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737611035.png
+2025-01-23 05:43:55,250 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737611035.png
+2025-01-23 05:43:55,251 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737611035.png
+2025-01-23 05:43:55,251 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 05:43:55,252 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 05:43:55,252 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 05:43:55,254 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737611035.png
+2025-01-23 05:43:55,254 - INFO - Calculated movement distance: 45.37px
+2025-01-23 05:44:44,181 - WARNING - Could not verify CAPTCHA success
+2025-01-23 05:44:44,181 - WARNING - edge_detection failed on attempt 1
+2025-01-23 05:44:48,538 - INFO - Testing edge_detection - Attempt 2/5
+2025-01-23 05:45:02,131 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 05:45:03,666 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 05:45:03,855 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737611103.png
+2025-01-23 05:45:03,881 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737611103.png
+2025-01-23 05:45:03,883 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737611103.png
+2025-01-23 05:45:03,885 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737611103.png
+2025-01-23 05:45:03,885 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 05:45:03,885 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 05:45:03,885 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 05:45:03,887 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737611103.png
+2025-01-23 05:45:03,887 - INFO - Calculated movement distance: 53.37px
+2025-01-23 05:48:04,504 - INFO - Started virtual display
+2025-01-23 05:48:06,537 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 05:48:06,537 - INFO - Using new user data directory: /tmp/chrome_test_1737611286_a9635176
+2025-01-23 05:48:06,537 - INFO - Removed existing user data directory
+2025-01-23 05:48:06,538 - INFO - Created fresh user data directory
+2025-01-23 05:48:11,566 - INFO - No Chrome processes found
+2025-01-23 05:48:11,566 - INFO - Installing ChromeDriver...
+2025-01-23 05:48:11,566 - INFO - ====== WebDriver manager ======
+2025-01-23 05:48:11,635 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:48:11,659 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:48:11,685 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:48:11,685 - INFO - Using debug port: 9222
+2025-01-23 05:48:11,686 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 05:48:11,959 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:48:17,275 - INFO - Configuring timeouts...
+2025-01-23 05:48:17,278 - INFO - Testing browser initialization...
+2025-01-23 05:48:19,314 - INFO - Verifying browser responsiveness...
+2025-01-23 05:48:19,323 - INFO - Browser title: 
+2025-01-23 05:48:19,323 - INFO - Testing JavaScript execution...
+2025-01-23 05:48:19,328 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 05:48:19,328 - INFO - Chrome initialization successful!
+2025-01-23 05:48:19,329 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 05:48:19,329 - INFO - Testing edge_detection - Attempt 1/5
+2025-01-23 05:48:19,329 - INFO - Waiting 5.2 seconds before next attempt...
+2025-01-23 05:48:39,709 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 05:48:41,249 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 05:48:41,457 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737611321.png
+2025-01-23 05:48:41,489 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737611321.png
+2025-01-23 05:48:41,490 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737611321.png
+2025-01-23 05:48:41,492 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737611321.png
+2025-01-23 05:48:41,492 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 05:48:41,492 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 05:48:41,492 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 05:48:41,494 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737611321.png
+2025-01-23 05:48:41,494 - INFO - Calculated movement distance: 45.93px
+2025-01-23 05:50:52,987 - INFO - Started virtual display
+2025-01-23 05:50:55,026 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 05:50:55,026 - INFO - Using new user data directory: /tmp/chrome_test_1737611455_f55adc90
+2025-01-23 05:50:55,026 - INFO - Removed existing user data directory
+2025-01-23 05:50:55,026 - INFO - Created fresh user data directory
+2025-01-23 05:51:00,055 - INFO - No Chrome processes found
+2025-01-23 05:51:00,055 - INFO - Installing ChromeDriver...
+2025-01-23 05:51:00,056 - INFO - ====== WebDriver manager ======
+2025-01-23 05:51:00,124 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:51:00,150 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:51:00,173 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:51:00,173 - INFO - Using debug port: 9222
+2025-01-23 05:51:00,174 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 05:51:00,434 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:51:05,766 - INFO - Configuring timeouts...
+2025-01-23 05:51:05,769 - INFO - Testing browser initialization...
+2025-01-23 05:51:07,814 - INFO - Verifying browser responsiveness...
+2025-01-23 05:51:07,822 - INFO - Browser title: 
+2025-01-23 05:51:07,822 - INFO - Testing JavaScript execution...
+2025-01-23 05:51:07,827 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 05:51:07,827 - INFO - Chrome initialization successful!
+2025-01-23 05:51:07,828 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 05:51:07,828 - INFO - Testing edge_detection - Attempt 1/5
+2025-01-23 05:51:07,828 - INFO - Waiting 8.4 seconds before next attempt...
+2025-01-23 05:51:33,606 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 05:51:35,143 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 05:51:35,342 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737611495.png
+2025-01-23 05:51:35,373 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737611495.png
+2025-01-23 05:51:35,375 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737611495.png
+2025-01-23 05:51:35,377 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737611495.png
+2025-01-23 05:51:35,377 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 05:51:35,377 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 05:51:35,377 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 05:51:35,379 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737611495.png
+2025-01-23 05:51:35,379 - INFO - Calculated movement distance: 46.07px
+2025-01-23 05:51:45,657 - INFO - Starting verification process...
+2025-01-23 05:53:45,436 - INFO - Started virtual display
+2025-01-23 05:53:47,467 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 05:53:47,468 - INFO - Using new user data directory: /tmp/chrome_test_1737611627_88cb063e
+2025-01-23 05:53:47,468 - INFO - Removed existing user data directory
+2025-01-23 05:53:47,468 - INFO - Created fresh user data directory
+2025-01-23 05:53:52,497 - INFO - No Chrome processes found
+2025-01-23 05:53:52,497 - INFO - Installing ChromeDriver...
+2025-01-23 05:53:52,497 - INFO - ====== WebDriver manager ======
+2025-01-23 05:53:52,565 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:53:52,593 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 05:53:52,617 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 05:53:52,618 - INFO - Using debug port: 9222
+2025-01-23 05:53:52,618 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 05:53:52,858 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 05:53:58,182 - INFO - Configuring timeouts...
+2025-01-23 05:53:58,185 - INFO - Testing browser initialization...
+2025-01-23 05:54:00,224 - INFO - Verifying browser responsiveness...
+2025-01-23 05:54:00,232 - INFO - Browser title: 
+2025-01-23 05:54:00,232 - INFO - Testing JavaScript execution...
+2025-01-23 05:54:00,237 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 05:54:00,238 - INFO - Chrome initialization successful!
+2025-01-23 05:54:00,238 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 05:54:00,238 - INFO - Testing edge_detection - Attempt 1/5
+2025-01-23 05:54:00,238 - INFO - Waiting 11.1 seconds before next attempt...
+2025-01-23 05:54:27,139 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 05:54:28,674 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 05:54:28,943 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737611668.png
+2025-01-23 05:54:28,975 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737611668.png
+2025-01-23 05:54:28,977 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737611668.png
+2025-01-23 05:54:28,978 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737611668.png
+2025-01-23 05:54:28,978 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 05:54:28,978 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 05:54:28,978 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 05:54:28,980 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737611668.png
+2025-01-23 05:54:28,980 - INFO - Calculated movement distance: 49.46px
+2025-01-23 05:54:37,445 - INFO - Starting verification process with 5s timeout...
+2025-01-23 06:00:53,668 - INFO - Started virtual display
+2025-01-23 06:00:55,703 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 06:00:55,703 - INFO - Using new user data directory: /tmp/chrome_test_1737612055_18638f9e
+2025-01-23 06:00:55,704 - INFO - Removed existing user data directory
+2025-01-23 06:00:55,704 - INFO - Created fresh user data directory
+2025-01-23 06:01:00,732 - INFO - No Chrome processes found
+2025-01-23 06:01:00,732 - INFO - Installing ChromeDriver...
+2025-01-23 06:01:00,732 - INFO - ====== WebDriver manager ======
+2025-01-23 06:01:00,800 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:01:00,836 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:01:00,860 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 06:01:00,861 - INFO - Using debug port: 9222
+2025-01-23 06:01:00,861 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 06:01:01,114 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 06:01:06,438 - INFO - Configuring timeouts...
+2025-01-23 06:01:06,441 - INFO - Testing browser initialization...
+2025-01-23 06:01:08,483 - INFO - Verifying browser responsiveness...
+2025-01-23 06:01:08,491 - INFO - Browser title: 
+2025-01-23 06:01:08,491 - INFO - Testing JavaScript execution...
+2025-01-23 06:01:08,497 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 06:01:08,497 - INFO - Chrome initialization successful!
+2025-01-23 06:01:08,497 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 06:01:08,497 - INFO - Testing edge_detection - Attempt 1/5
+2025-01-23 06:01:08,497 - INFO - Waiting 8.2 seconds before next attempt...
+2025-01-23 06:01:34,342 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 06:01:35,880 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 06:01:36,075 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737612096.png
+2025-01-23 06:01:36,107 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737612096.png
+2025-01-23 06:01:36,109 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737612096.png
+2025-01-23 06:01:36,111 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737612096.png
+2025-01-23 06:01:36,111 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 06:01:36,111 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 06:01:36,111 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 06:01:36,113 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737612096.png
+2025-01-23 06:01:36,113 - INFO - Calculated movement distance: 45.74px
+2025-01-23 06:01:44,691 - INFO - Starting verification process with 5s timeout...
+2025-01-23 06:04:51,540 - INFO - Started virtual display
+2025-01-23 06:04:53,580 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 06:04:53,580 - INFO - Using new user data directory: /tmp/chrome_test_1737612293_31164dbd
+2025-01-23 06:04:53,581 - INFO - Removed existing user data directory
+2025-01-23 06:04:53,581 - INFO - Created fresh user data directory
+2025-01-23 06:04:58,610 - INFO - No Chrome processes found
+2025-01-23 06:04:58,610 - INFO - Installing ChromeDriver...
+2025-01-23 06:04:58,610 - INFO - ====== WebDriver manager ======
+2025-01-23 06:04:58,680 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:04:58,708 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:04:58,735 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 06:04:58,735 - INFO - Using debug port: 9222
+2025-01-23 06:04:58,735 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 06:04:58,987 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 06:05:04,303 - INFO - Configuring timeouts...
+2025-01-23 06:05:04,306 - INFO - Testing browser initialization...
+2025-01-23 06:05:06,342 - INFO - Verifying browser responsiveness...
+2025-01-23 06:05:06,350 - INFO - Browser title: 
+2025-01-23 06:05:06,350 - INFO - Testing JavaScript execution...
+2025-01-23 06:05:06,355 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 06:05:06,355 - INFO - Chrome initialization successful!
+2025-01-23 06:05:06,355 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 06:05:06,356 - INFO - Testing edge_detection - Attempt 1/10
+2025-01-23 06:05:06,356 - INFO - Waiting 10.0 seconds before next attempt...
+2025-01-23 06:05:34,025 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 06:05:35,563 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 06:05:35,732 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737612335.png
+2025-01-23 06:05:35,762 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737612335.png
+2025-01-23 06:05:35,764 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737612335.png
+2025-01-23 06:05:35,766 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737612335.png
+2025-01-23 06:05:35,766 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 06:05:35,766 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 06:05:35,766 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 06:05:35,767 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737612335.png
+2025-01-23 06:05:35,768 - INFO - Calculated movement distance: 50.23px
+2025-01-23 06:05:46,150 - INFO - Starting verification process with 5s timeout...
+2025-01-23 06:07:46,612 - WARNING - Timeout during verification iteration
+2025-01-23 06:07:46,612 - WARNING - edge_detection failed on attempt 1
+2025-01-23 06:07:51,158 - INFO - Testing edge_detection - Attempt 2/10
+2025-01-23 06:07:51,158 - INFO - Waiting 8.1 seconds before next attempt...
+2025-01-23 06:08:10,311 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 06:08:11,850 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 06:08:12,049 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737612492.png
+2025-01-23 06:08:12,074 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737612492.png
+2025-01-23 06:08:12,076 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737612492.png
+2025-01-23 06:08:12,078 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737612492.png
+2025-01-23 06:08:12,078 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 06:08:12,078 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 06:08:12,078 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 06:08:12,080 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737612492.png
+2025-01-23 06:08:12,080 - INFO - Calculated movement distance: 51.07px
+2025-01-23 06:09:41,808 - INFO - Started virtual display
+2025-01-23 06:09:43,846 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 06:09:43,846 - INFO - Using new user data directory: /tmp/chrome_test_1737612583_ccd23b6e
+2025-01-23 06:09:43,846 - INFO - Removed existing user data directory
+2025-01-23 06:09:43,846 - INFO - Created fresh user data directory
+2025-01-23 06:09:48,875 - INFO - No Chrome processes found
+2025-01-23 06:09:48,875 - INFO - Installing ChromeDriver...
+2025-01-23 06:09:48,875 - INFO - ====== WebDriver manager ======
+2025-01-23 06:09:48,940 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:09:48,973 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:09:48,997 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 06:09:48,998 - INFO - Using debug port: 9222
+2025-01-23 06:09:48,998 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 06:09:49,257 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 06:09:54,568 - INFO - Configuring timeouts...
+2025-01-23 06:09:54,571 - INFO - Testing browser initialization...
+2025-01-23 06:09:56,611 - INFO - Verifying browser responsiveness...
+2025-01-23 06:09:56,619 - INFO - Browser title: 
+2025-01-23 06:09:56,619 - INFO - Testing JavaScript execution...
+2025-01-23 06:09:56,624 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 06:09:56,625 - INFO - Chrome initialization successful!
+2025-01-23 06:09:56,625 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 06:09:56,625 - INFO - Testing edge_detection - Attempt 1/10
+2025-01-23 06:09:56,625 - INFO - Waiting 10.6 seconds before next attempt...
+2025-01-23 06:10:23,772 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 06:10:25,310 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 06:10:25,503 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737612625.png
+2025-01-23 06:10:25,534 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737612625.png
+2025-01-23 06:10:25,536 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737612625.png
+2025-01-23 06:10:25,537 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737612625.png
+2025-01-23 06:10:25,538 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 06:10:25,538 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 06:10:25,538 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 06:10:25,540 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737612625.png
+2025-01-23 06:10:25,540 - INFO - Calculated movement distance: 50.31px
+2025-01-23 06:10:35,292 - INFO - Starting verification process with strict timeout and signal handler...
+2025-01-23 06:10:41,292 - WARNING - Parent timeout triggered - forcing verification exit
+2025-01-23 06:15:03,396 - INFO - Started virtual display
+2025-01-23 06:15:05,428 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 06:15:05,428 - INFO - Using new user data directory: /tmp/chrome_test_1737612905_218c9f07
+2025-01-23 06:15:05,428 - INFO - Removed existing user data directory
+2025-01-23 06:15:05,428 - INFO - Created fresh user data directory
+2025-01-23 06:15:10,458 - INFO - No Chrome processes found
+2025-01-23 06:15:10,458 - INFO - Installing ChromeDriver...
+2025-01-23 06:15:10,458 - INFO - ====== WebDriver manager ======
+2025-01-23 06:15:10,530 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:15:10,559 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:15:10,583 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 06:15:10,584 - INFO - Using debug port: 9222
+2025-01-23 06:15:10,584 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 06:15:10,929 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 06:15:16,255 - INFO - Configuring timeouts...
+2025-01-23 06:15:16,258 - INFO - Testing browser initialization...
+2025-01-23 06:15:18,295 - INFO - Verifying browser responsiveness...
+2025-01-23 06:15:18,303 - INFO - Browser title: 
+2025-01-23 06:15:18,304 - INFO - Testing JavaScript execution...
+2025-01-23 06:15:18,309 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 06:15:18,309 - INFO - Chrome initialization successful!
+2025-01-23 06:15:18,310 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 06:15:18,310 - INFO - Testing edge_detection - Attempt 1/10
+2025-01-23 06:15:18,310 - INFO - Waiting 10.6 seconds before next attempt...
+2025-01-23 06:15:44,596 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 06:15:46,134 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 06:15:46,342 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737612946.png
+2025-01-23 06:15:46,373 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737612946.png
+2025-01-23 06:15:46,375 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737612946.png
+2025-01-23 06:15:46,376 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737612946.png
+2025-01-23 06:15:46,377 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 06:15:46,377 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 06:15:46,377 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 06:15:46,379 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737612946.png
+2025-01-23 06:15:46,379 - INFO - Calculated movement distance: 47.00px
+2025-01-23 06:15:56,696 - INFO - Starting verification process with strict timeout and signal handler...
+2025-01-23 06:16:02,696 - WARNING - Parent timeout triggered - forcing verification exit
+2025-01-23 06:19:36,592 - INFO - Started virtual display
+2025-01-23 06:19:38,631 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 06:19:38,631 - INFO - Using new user data directory: /tmp/chrome_test_1737613178_9b4b5703
+2025-01-23 06:19:38,631 - INFO - Removed existing user data directory
+2025-01-23 06:19:38,631 - INFO - Created fresh user data directory
+2025-01-23 06:19:43,660 - INFO - No Chrome processes found
+2025-01-23 06:19:43,661 - INFO - Installing ChromeDriver...
+2025-01-23 06:19:43,661 - INFO - ====== WebDriver manager ======
+2025-01-23 06:19:43,728 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:19:43,764 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:19:43,787 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 06:19:43,788 - INFO - Using debug port: 9222
+2025-01-23 06:19:43,788 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 06:19:44,023 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 06:19:49,342 - INFO - Configuring timeouts...
+2025-01-23 06:19:49,345 - INFO - Testing browser initialization...
+2025-01-23 06:19:51,383 - INFO - Verifying browser responsiveness...
+2025-01-23 06:19:51,390 - INFO - Browser title: 
+2025-01-23 06:19:51,390 - INFO - Testing JavaScript execution...
+2025-01-23 06:19:51,395 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 06:19:51,395 - INFO - Chrome initialization successful!
+2025-01-23 06:19:51,395 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 06:19:51,395 - INFO - Testing edge_detection - Attempt 1/10
+2025-01-23 06:19:51,395 - INFO - Waiting 9.3 seconds before next attempt...
+2025-01-23 06:20:19,058 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 06:20:20,599 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 06:20:20,769 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737613220.png
+2025-01-23 06:20:20,800 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737613220.png
+2025-01-23 06:20:20,801 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737613220.png
+2025-01-23 06:20:20,802 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737613220.png
+2025-01-23 06:20:20,803 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 06:20:20,803 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 06:20:20,803 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 06:20:20,804 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737613220.png
+2025-01-23 06:20:20,804 - INFO - Calculated movement distance: 52.98px
+2025-01-23 06:20:29,897 - INFO - Starting verification process with strict timeout and signal handler...
+2025-01-23 06:20:35,890 - WARNING - Parent timeout triggered - forcing verification exit
+2025-01-23 06:20:35,913 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a65d60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,914 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66090>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,915 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66270>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,916 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a666f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,917 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a668d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,917 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66ab0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,918 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66f30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,919 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67110>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,920 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a672f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,921 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a665a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,921 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66b70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,922 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66c00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,924 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a65d00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,925 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66480>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,925 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a662d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,926 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67470>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,927 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67650>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,928 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67830>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,929 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67cb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,930 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67e90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,930 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a46f30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,931 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67560>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element/f.3463B687E8A24F211BC41539A1172081.d.107F13DE7862523D9818BDF392D7E38B.e.26/enabled
+2025-01-23 06:20:35,932 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a679e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element/f.3463B687E8A24F211BC41539A1172081.d.107F13DE7862523D9818BDF392D7E38B.e.26/enabled
+2025-01-23 06:20:35,932 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67860>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element/f.3463B687E8A24F211BC41539A1172081.d.107F13DE7862523D9818BDF392D7E38B.e.26/enabled
+2025-01-23 06:20:35,934 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a65f40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,934 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a663f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,935 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a65fd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,936 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a666f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,937 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a669f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,937 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66c00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,938 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67290>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,939 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9c0b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,940 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9c290>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,941 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66c60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,941 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a669f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,942 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66150>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/element
+2025-01-23 06:20:35,943 - WARNING - Timeout during verification iteration
+2025-01-23 06:20:35,943 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a663c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:20:35,944 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a660c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:20:35,945 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66840>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:20:35,945 - WARNING - edge_detection failed on attempt 1
+2025-01-23 06:20:35,946 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67860>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:20:35,946 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a678f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:20:35,947 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f81983bb830>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:20:35,948 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a471d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:20:35,948 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9c4a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:20:35,949 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9c680>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:20:35,950 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9c860>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:20:35,950 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a471d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:20:50,951 - INFO - Testing edge_detection - Attempt 2/10
+2025-01-23 06:20:50,951 - INFO - Waiting 10.1 seconds before next attempt...
+2025-01-23 06:21:01,740 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67770>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/actions
+2025-01-23 06:21:01,741 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67620>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/actions
+2025-01-23 06:21:01,742 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66480>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/actions
+2025-01-23 06:21:01,743 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a65c40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url
+2025-01-23 06:21:01,743 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66300>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url
+2025-01-23 06:21:01,744 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a658b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url
+2025-01-23 06:21:01,745 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a668d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:21:01,745 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66630>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:01,746 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a669c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:01,746 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66990>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:01,747 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a65e80>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:21:01,748 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9cb00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:01,748 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9cce0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:01,749 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67530>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:01,750 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66870>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:21:16,750 - INFO - Testing edge_detection - Attempt 3/10
+2025-01-23 06:21:16,750 - INFO - Waiting 9.1 seconds before next attempt...
+2025-01-23 06:21:27,189 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a667b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/actions
+2025-01-23 06:21:27,190 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a679b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/actions
+2025-01-23 06:21:27,191 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67200>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/actions
+2025-01-23 06:21:27,192 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a657c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url
+2025-01-23 06:21:27,192 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67920>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url
+2025-01-23 06:21:27,193 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66780>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url
+2025-01-23 06:21:27,193 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a678c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:21:27,194 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67950>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:27,195 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8198bae900>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:27,195 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9c410>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:27,196 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9cf20>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:21:27,197 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9d160>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:27,197 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9d340>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:27,198 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8198bae960>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:27,199 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f81983dd610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:21:42,199 - INFO - Testing edge_detection - Attempt 4/10
+2025-01-23 06:21:42,199 - INFO - Waiting 9.6 seconds before next attempt...
+2025-01-23 06:21:52,528 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a661b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/actions
+2025-01-23 06:21:52,528 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66330>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/actions
+2025-01-23 06:21:52,529 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a674a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/actions
+2025-01-23 06:21:52,530 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66270>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url
+2025-01-23 06:21:52,531 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66ba0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url
+2025-01-23 06:21:52,531 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a668d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url
+2025-01-23 06:21:52,532 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a67830>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:21:52,532 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66c30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:52,533 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66a20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:52,534 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9cf20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:52,534 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9ca70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:21:52,535 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a9d5e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:52,536 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a669f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:52,536 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a668a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync
+2025-01-23 06:21:52,537 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=35841): Max retries exceeded with url: /session/58f5af9d58aa4e8de2c22fcdfe8221f9/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8194a66420>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:26:03,851 - INFO - Started virtual display
+2025-01-23 06:26:05,883 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 06:26:05,884 - INFO - Using new user data directory: /tmp/chrome_test_1737613565_6e124690
+2025-01-23 06:26:05,884 - INFO - Removed existing user data directory
+2025-01-23 06:26:05,884 - INFO - Created fresh user data directory
+2025-01-23 06:26:10,912 - INFO - No Chrome processes found
+2025-01-23 06:26:10,912 - INFO - Installing ChromeDriver...
+2025-01-23 06:26:10,913 - INFO - ====== WebDriver manager ======
+2025-01-23 06:26:10,982 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:26:11,008 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:26:11,031 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 06:26:11,032 - INFO - Using debug port: 9222
+2025-01-23 06:26:11,032 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 06:26:11,274 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 06:26:16,601 - INFO - Configuring timeouts...
+2025-01-23 06:26:16,603 - INFO - Testing browser initialization...
+2025-01-23 06:26:18,641 - INFO - Verifying browser responsiveness...
+2025-01-23 06:26:18,648 - INFO - Browser title: 
+2025-01-23 06:26:18,648 - INFO - Testing JavaScript execution...
+2025-01-23 06:26:18,654 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 06:26:18,654 - INFO - Chrome initialization successful!
+2025-01-23 06:26:18,654 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 06:26:20,682 - INFO - Waiting 16.0 seconds before starting edge_detection...
+2025-01-23 06:26:36,689 - INFO - Testing edge_detection - Attempt 1/10
+2025-01-23 06:26:36,689 - INFO - Waiting 11.6 seconds before next attempt...
+2025-01-23 06:27:03,864 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 06:27:05,402 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 06:27:05,595 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737613625.png
+2025-01-23 06:27:05,626 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737613625.png
+2025-01-23 06:27:05,627 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737613625.png
+2025-01-23 06:27:05,629 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737613625.png
+2025-01-23 06:27:05,629 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 06:27:05,629 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 06:27:05,629 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 06:27:05,631 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737613625.png
+2025-01-23 06:27:05,632 - INFO - Calculated movement distance: 46.01px
+2025-01-23 06:27:14,126 - INFO - Starting verification process with strict timeout and signal handler...
+2025-01-23 06:27:20,118 - WARNING - Parent timeout triggered - forcing verification exit
+2025-01-23 06:27:20,139 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3845c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,140 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3848c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,140 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384aa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,142 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384f20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,142 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385100>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,143 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3852e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,144 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385760>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,145 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385940>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,145 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385b20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,146 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3843e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,147 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3852b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,148 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385310>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,149 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384860>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,149 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384d10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,150 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384a40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,151 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385ca0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,152 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385e80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,152 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386060>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,153 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3864e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,154 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3866c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,154 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec359b80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,156 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385c70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element/f.5AFAD4BF0C5AEB270E672E3BAB15701E.d.671D01DF3BD44E35DADB745CDDF76E7A.e.35/enabled
+2025-01-23 06:27:20,156 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386150>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element/f.5AFAD4BF0C5AEB270E672E3BAB15701E.d.671D01DF3BD44E35DADB745CDDF76E7A.e.35/enabled
+2025-01-23 06:27:20,157 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3861b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element/f.5AFAD4BF0C5AEB270E672E3BAB15701E.d.671D01DF3BD44E35DADB745CDDF76E7A.e.35/enabled
+2025-01-23 06:27:20,158 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385c40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,159 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384c80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,159 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384830>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,160 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384560>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,161 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385220>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,161 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385130>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,162 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385a60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,163 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3868a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,163 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386a80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,164 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3856d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,165 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385040>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,165 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3851c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/element
+2025-01-23 06:27:20,166 - WARNING - Timeout during verification iteration
+2025-01-23 06:27:20,166 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384f20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:20,167 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384ec0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:20,168 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384bc0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:20,168 - WARNING - edge_detection failed on attempt 1
+2025-01-23 06:27:20,169 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384530>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:20,169 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386090>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:20,170 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3861b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:20,170 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385f70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:27:20,171 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386c60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:20,171 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386e40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:20,172 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387020>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:20,172 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3599a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:27:35,173 - INFO - Testing edge_detection - Attempt 2/10
+2025-01-23 06:27:35,173 - INFO - Waiting 11.1 seconds before next attempt...
+2025-01-23 06:27:47,024 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386bd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:27:47,025 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386210>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:27:47,025 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385f40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:27:47,027 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385d00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:27:47,027 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385be0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:27:47,028 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384830>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:27:47,028 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384920>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:27:47,029 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385640>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:47,029 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385130>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:47,030 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3851c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:47,030 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385d30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:27:47,031 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386ae0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:47,031 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3872c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:47,032 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec359b20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:27:47,032 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14f3489550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:28:02,033 - INFO - Testing edge_detection - Attempt 3/10
+2025-01-23 06:28:02,033 - INFO - Waiting 8.9 seconds before next attempt...
+2025-01-23 06:28:11,747 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3852e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:28:11,747 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3843e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:28:11,748 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385220>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:28:11,749 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384a40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:28:11,749 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3848f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:28:11,750 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384d10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:28:11,750 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384fb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:28:11,751 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3860f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:11,751 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385f40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:11,752 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384950>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:11,752 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386f30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:28:11,753 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387560>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:11,754 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14efe88e30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:11,754 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14f3489820>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:11,755 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f150cb50da0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:28:26,755 - INFO - Testing edge_detection - Attempt 4/10
+2025-01-23 06:28:26,755 - INFO - Waiting 10.4 seconds before next attempt...
+2025-01-23 06:28:38,535 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386180>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:28:38,536 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec385b50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:28:38,536 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386150>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:28:38,537 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3846e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:28:38,538 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384aa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:28:38,538 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384bf0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:28:38,539 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:28:38,539 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384f20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:38,540 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3853d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:38,540 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3852e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:38,541 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3872c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:28:38,542 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14f3489550>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:38,542 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14efe8bc20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:38,543 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384140>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:28:38,543 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384bc0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:28:53,543 - INFO - Testing edge_detection - Attempt 5/10
+2025-01-23 06:28:53,544 - INFO - Waiting 11.3 seconds before next attempt...
+2025-01-23 06:29:05,951 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3840e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:29:05,952 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec384b60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:29:05,952 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387410>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/actions
+2025-01-23 06:29:05,953 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386000>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:29:05,954 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387140>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:29:05,954 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec3860c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/url
+2025-01-23 06:29:05,955 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387860>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:29:05,955 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387aa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:29:05,956 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387c80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:29:05,957 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387e60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:29:05,957 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14efe8bc50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:29:05,958 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14f34892b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:29:05,959 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387a10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:29:05,959 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec386990>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09db1445a23fd47c39cfd847cd920331/execute/sync
+2025-01-23 06:29:05,960 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=49077): Max retries exceeded with url: /session/09db1445a23fd47c39cfd847cd920331/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f14ec387800>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:32:15,476 - INFO - Started virtual display
+2025-01-23 06:32:17,521 - INFO - Chrome cleanup completed successfully
+2025-01-23 06:32:17,522 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 06:32:17,522 - INFO - Using new user data directory: /tmp/chrome_test_1737613937_8db5a804
+2025-01-23 06:32:17,522 - INFO - Removed existing user data directory
+2025-01-23 06:32:17,522 - INFO - Created fresh user data directory
+2025-01-23 06:32:19,548 - INFO - Chrome cleanup completed successfully
+2025-01-23 06:32:22,557 - INFO - No Chrome processes found
+2025-01-23 06:32:22,557 - INFO - Installing ChromeDriver...
+2025-01-23 06:32:22,558 - INFO - ====== WebDriver manager ======
+2025-01-23 06:32:22,629 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:32:22,653 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:32:22,676 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 06:32:22,676 - INFO - Using debug port: 9222
+2025-01-23 06:32:22,676 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 06:32:22,909 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 06:32:28,230 - INFO - Configuring timeouts...
+2025-01-23 06:32:28,233 - INFO - Testing browser initialization...
+2025-01-23 06:32:30,274 - INFO - Verifying browser responsiveness...
+2025-01-23 06:32:30,282 - INFO - Browser title: 
+2025-01-23 06:32:30,282 - INFO - Testing JavaScript execution...
+2025-01-23 06:32:30,287 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 06:32:30,287 - INFO - Chrome initialization successful!
+2025-01-23 06:32:30,288 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 06:32:32,315 - INFO - Waiting 19.6 seconds before starting edge_detection...
+2025-01-23 06:32:51,918 - INFO - Testing edge_detection - Attempt 1/10
+2025-01-23 06:32:51,919 - INFO - Waiting 10.7 seconds before next attempt...
+2025-01-23 06:33:18,413 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 06:33:19,951 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 06:33:20,110 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737614000.png
+2025-01-23 06:33:20,141 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737614000.png
+2025-01-23 06:33:20,142 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737614000.png
+2025-01-23 06:33:20,143 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737614000.png
+2025-01-23 06:33:20,144 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 06:33:20,144 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 06:33:20,144 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 06:33:20,145 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737614000.png
+2025-01-23 06:33:20,145 - INFO - Calculated movement distance: 53.94px
+2025-01-23 06:33:30,282 - INFO - Starting verification process with strict timeout and signal handler...
+2025-01-23 06:33:36,274 - WARNING - Parent timeout triggered - forcing verification exit
+2025-01-23 06:33:36,296 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074f7d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,297 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074f8c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,298 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074faa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,299 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fef0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,300 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780110>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,300 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407802f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,302 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780770>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,302 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780950>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,303 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f43b37cb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,305 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074f680>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,305 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fc80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,306 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074f9e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,307 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407806e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,308 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780500>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,309 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780350>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,310 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780cb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,310 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780e90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,311 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781070>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,312 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407814f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,312 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407816d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,313 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074f080>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,314 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074f5f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element/f.CB67710031ECE0A7CD4532C8C161DE9A.d.27367CD86A90D92B628B579168C5AFA2.e.27/enabled
+2025-01-23 06:33:36,315 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fa10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element/f.CB67710031ECE0A7CD4532C8C161DE9A.d.27367CD86A90D92B628B579168C5AFA2.e.27/enabled
+2025-01-23 06:33:36,315 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fa70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element/f.CB67710031ECE0A7CD4532C8C161DE9A.d.27367CD86A90D92B628B579168C5AFA2.e.27/enabled
+2025-01-23 06:33:36,316 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f43b34ec0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,317 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407813d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,317 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781130>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,318 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780dd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,319 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780b00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,319 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780aa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,320 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407806e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,321 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407818b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,321 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f43b16c90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,322 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fc20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,323 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fdd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,323 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074f830>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/element
+2025-01-23 06:33:36,324 - WARNING - Timeout during verification iteration
+2025-01-23 06:33:36,325 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074ff20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:33:36,325 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780530>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:33:36,326 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780050>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:33:36,326 - WARNING - edge_detection failed on attempt 1
+2025-01-23 06:33:36,327 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780bf0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:33:36,327 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780d70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:33:36,328 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781190>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:33:36,328 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=50289): Max retries exceeded with url: /session/458ab17956b53061d528213115253462/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407813d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:33:36,329 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781ac0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:33:36,329 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781ca0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:33:36,330 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781e80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:33:36,331 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=50289): Max retries exceeded with url: /session/458ab17956b53061d528213115253462/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074f3b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:33:51,331 - INFO - Testing edge_detection - Attempt 2/10
+2025-01-23 06:33:51,331 - INFO - Waiting 11.0 seconds before next attempt...
+2025-01-23 06:34:03,005 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fb60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/actions
+2025-01-23 06:34:03,006 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fc80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/actions
+2025-01-23 06:34:03,006 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fa10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/actions
+2025-01-23 06:34:03,007 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f43ab55e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/url
+2025-01-23 06:34:03,008 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f43b36060>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/url
+2025-01-23 06:34:03,008 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407810d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/url
+2025-01-23 06:34:03,009 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=50289): Max retries exceeded with url: /session/458ab17956b53061d528213115253462/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781460>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:34:03,009 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781280>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:03,010 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780dd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:03,010 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780a10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:03,011 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=50289): Max retries exceeded with url: /session/458ab17956b53061d528213115253462/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:34:03,012 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781a60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:03,012 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40782120>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:03,013 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f43b34ec0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:03,013 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=50289): Max retries exceeded with url: /session/458ab17956b53061d528213115253462/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f444fc410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:34:18,014 - INFO - Testing edge_detection - Attempt 3/10
+2025-01-23 06:34:18,014 - INFO - Waiting 10.0 seconds before next attempt...
+2025-01-23 06:34:29,281 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074f9e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/actions
+2025-01-23 06:34:29,282 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fce0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/actions
+2025-01-23 06:34:29,282 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fa10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/actions
+2025-01-23 06:34:29,283 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074ff50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/url
+2025-01-23 06:34:29,284 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780ef0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/url
+2025-01-23 06:34:29,284 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780290>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/url
+2025-01-23 06:34:29,285 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=50289): Max retries exceeded with url: /session/458ab17956b53061d528213115253462/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407801a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:34:29,286 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40780f80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:29,286 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407812e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:29,287 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407810d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:29,287 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=50289): Max retries exceeded with url: /session/458ab17956b53061d528213115253462/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f40781d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:34:29,288 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f407823c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:29,288 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074c770>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:29,289 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fc50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/458ab17956b53061d528213115253462/execute/sync
+2025-01-23 06:34:29,289 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=50289): Max retries exceeded with url: /session/458ab17956b53061d528213115253462/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f4074fa70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:38:02,355 - INFO - Started virtual display
+2025-01-23 06:38:04,401 - INFO - Chrome cleanup completed successfully
+2025-01-23 06:38:04,401 - INFO - 
+Attempt 1 to initialize Chrome
+2025-01-23 06:38:04,401 - INFO - Using new user data directory: /tmp/chrome_test_1737614284_4ea714eb
+2025-01-23 06:38:04,401 - INFO - Removed existing user data directory
+2025-01-23 06:38:04,401 - INFO - Created fresh user data directory
+2025-01-23 06:38:06,430 - INFO - Chrome cleanup completed successfully
+2025-01-23 06:38:09,438 - INFO - No Chrome processes found
+2025-01-23 06:38:09,439 - INFO - Installing ChromeDriver...
+2025-01-23 06:38:09,439 - INFO - ====== WebDriver manager ======
+2025-01-23 06:38:09,509 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:38:09,535 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 06:38:09,558 - INFO - Driver [/home/ubuntu/.wdm/drivers/chromedriver/linux64/132.0.6834.110/chromedriver-linux64/chromedriver] found in cache
+2025-01-23 06:38:09,558 - INFO - Using debug port: 9222
+2025-01-23 06:38:09,558 - INFO - Creating undetected-chromedriver instance...
+2025-01-23 06:38:09,803 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-23 06:38:15,132 - INFO - Configuring timeouts...
+2025-01-23 06:38:15,135 - INFO - Testing browser initialization...
+2025-01-23 06:38:17,175 - INFO - Verifying browser responsiveness...
+2025-01-23 06:38:17,183 - INFO - Browser title: 
+2025-01-23 06:38:17,183 - INFO - Testing JavaScript execution...
+2025-01-23 06:38:17,188 - INFO - UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-23 06:38:17,188 - INFO - Chrome initialization successful!
+2025-01-23 06:38:17,189 - INFO - 
+Testing strategy: edge_detection
+2025-01-23 06:38:19,217 - INFO - Waiting 17.6 seconds before starting edge_detection...
+2025-01-23 06:38:36,835 - INFO - Testing edge_detection - Attempt 1/10
+2025-01-23 06:38:36,835 - INFO - Waiting 10.8 seconds before next attempt...
+2025-01-23 06:39:03,913 - INFO - Found slider element with selector: [class*='slider']
+2025-01-23 06:39:05,456 - INFO - Capture area: x=0, y=525.0, width=1200.0, height=138.0
+2025-01-23 06:39:05,657 - INFO - Saved slider area screenshot to: captcha_data/images/slider_1737614345.png
+2025-01-23 06:39:05,689 - INFO - Saved debug image for edge_detection to: captcha_data/images/debug_edge_detection_1737614345.png
+2025-01-23 06:39:05,691 - INFO - Saved debug image for template_matching to: captcha_data/images/debug_template_matching_1737614345.png
+2025-01-23 06:39:05,693 - INFO - Saved debug image for feature_matching to: captcha_data/images/debug_feature_matching_1737614345.png
+2025-01-23 06:39:05,693 - INFO - Strategy template_matching found target at x=120 with weight=0.3
+2025-01-23 06:39:05,693 - INFO - Strategy feature_matching found target at x=300 with weight=0.3
+2025-01-23 06:39:05,693 - INFO - Combined result from 2 strategies: x=210
+2025-01-23 06:39:05,695 - INFO - Saved final debug image to: captcha_data/images/debug_final_1737614345.png
+2025-01-23 06:39:05,695 - INFO - Calculated movement distance: 48.45px
+2025-01-23 06:39:16,190 - INFO - Starting verification process with strict timeout and signal handler...
+2025-01-23 06:39:22,183 - WARNING - Parent timeout triggered - forcing verification exit
+2025-01-23 06:39:22,216 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034b830>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,217 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bc20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,218 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034be00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,219 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603802c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,219 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603804a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,220 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380680>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,221 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380b00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,221 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380ce0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,222 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1662e9fe30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,223 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bd70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,223 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034ba40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,224 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1662eb6c90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,225 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380860>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,225 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603805c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,226 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380410>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,227 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381010>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,228 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603811f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,228 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603813d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,229 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381850>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,230 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381a30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,231 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1662eb5fa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,232 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034ba40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element/f.1708E090FBD08B43C01C0BC15AC9C13F.d.6739F12A9A5CAC175B6B626379B3C4F9.e.33/enabled
+2025-01-23 06:39:22,232 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bc20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element/f.1708E090FBD08B43C01C0BC15AC9C13F.d.6739F12A9A5CAC175B6B626379B3C4F9.e.33/enabled
+2025-01-23 06:39:22,233 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bd10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element/f.1708E090FBD08B43C01C0BC15AC9C13F.d.6739F12A9A5CAC175B6B626379B3C4F9.e.33/enabled
+2025-01-23 06:39:22,234 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380770>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,234 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381580>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,235 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381460>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,236 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380740>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,236 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380080>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,237 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603802c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,238 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380260>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,238 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381c10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,239 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1662f33050>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,240 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bdd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,240 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034ba40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,241 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034be60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/element
+2025-01-23 06:39:22,241 - WARNING - Timeout during verification iteration
+2025-01-23 06:39:22,242 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380470>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:22,243 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380680>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:22,243 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380140>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:22,244 - WARNING - edge_detection failed on attempt 1
+2025-01-23 06:39:22,244 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381610>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:22,245 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381040>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:22,245 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381520>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:22,246 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381100>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:39:22,246 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381e20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:22,247 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660382000>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:22,248 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603821e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:22,248 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1662eb6c90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:39:37,248 - INFO - Testing edge_detection - Attempt 2/10
+2025-01-23 06:39:37,249 - INFO - Waiting 10.1 seconds before next attempt...
+2025-01-23 06:39:48,470 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bfb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/actions
+2025-01-23 06:39:48,470 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034be30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/actions
+2025-01-23 06:39:48,471 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bb90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/actions
+2025-01-23 06:39:48,472 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660382300>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/url
+2025-01-23 06:39:48,472 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381550>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/url
+2025-01-23 06:39:48,473 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603812e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/url
+2025-01-23 06:39:48,473 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381040>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:39:48,474 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380fb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:48,474 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380440>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:48,475 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380410>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:48,476 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380860>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:39:48,476 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381dc0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:48,477 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660382480>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:48,477 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034b830>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:39:48,478 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034ba10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:40:03,478 - INFO - Testing edge_detection - Attempt 3/10
+2025-01-23 06:40:03,478 - INFO - Waiting 10.1 seconds before next attempt...
+2025-01-23 06:40:14,755 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034b740>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/actions
+2025-01-23 06:40:14,755 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034b6b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/actions
+2025-01-23 06:40:14,756 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16638fc110>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/actions
+2025-01-23 06:40:14,757 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380500>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/url
+2025-01-23 06:40:14,757 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603807a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/url
+2025-01-23 06:40:14,758 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380740>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/url
+2025-01-23 06:40:14,758 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381070>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:40:14,759 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603811f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:14,759 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381520>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:14,760 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660381430>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:14,760 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603820f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:40:14,761 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660382720>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:14,762 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16638fcaa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:14,762 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1662eb5fa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:14,763 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bcb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:40:29,763 - INFO - Testing edge_detection - Attempt 4/10
+2025-01-23 06:40:29,764 - INFO - Waiting 8.5 seconds before next attempt...
+2025-01-23 06:40:38,827 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bf80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/actions
+2025-01-23 06:40:38,828 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034baa0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/actions
+2025-01-23 06:40:38,828 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660382690>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/actions
+2025-01-23 06:40:38,829 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660382180>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/url
+2025-01-23 06:40:38,830 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380dd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/url
+2025-01-23 06:40:38,830 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380830>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/url
+2025-01-23 06:40:38,831 - ERROR - Network error in edge_detection: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603808f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:40:38,832 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660380740>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:38,832 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603805c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:38,833 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1660382570>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:38,833 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f16603824e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:40:38,834 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034bb90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:38,834 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034b890>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:38,835 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f166034b800>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ed7d03a930db07f16a7973165e92d36c/execute/sync
+2025-01-23 06:40:38,836 - ERROR - Cleanup error: HTTPConnectionPool(host='localhost', port=38313): Max retries exceeded with url: /session/ed7d03a930db07f16a7973165e92d36c/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1662e9fe30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-23 06:40:53,836 - INFO - Testing edge_detection - Attempt 5/10
+2025-01-23 06:40:53,836 - INFO - Waiting 10.6 seconds before next attempt...

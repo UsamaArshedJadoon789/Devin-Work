@@ -1,0 +1,12 @@
+{
+  "timestamp": 1737636570860,
+  "image_size": [
+    47,
+    600,
+    3
+  ],
+  "debug_paths": {
+    "input": "captcha_data/debug/1737636570860/input.png",
+    "gray": "captcha_data/debug/1737636570860/gray.png"
+  }
+}

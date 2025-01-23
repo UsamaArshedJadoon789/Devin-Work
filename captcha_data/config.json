@@ -1,0 +1,57 @@
+{
+    "image_processing": {
+        "threshold": 0.8,
+        "edge_detection": {
+            "low_threshold": 50,
+            "high_threshold": 150
+        },
+        "template_matching": {
+            "method": "cv2.TM_CCOEFF_NORMED",
+            "confidence": 0.8
+        }
+    },
+    "interaction": {
+        "delays": {
+            "min_delay": 0.1,
+            "max_delay": 0.3,
+            "movement_delay": 0.05
+        },
+        "movement": {
+            "initial_pause": 0.2,
+            "acceleration": 0.3,
+            "deceleration": 0.7
+        }
+    },
+    "logging": {
+        "level": "INFO",
+        "file_path": "captcha_data/logs/solver.log",
+        "max_file_size": 5242880,
+        "backup_count": 3
+    },
+    "solution_approaches": [
+        {
+            "name": "edge_detection",
+            "enabled": true,
+            "params": {
+                "blur_kernel": 5,
+                "edge_threshold": 100
+            }
+        },
+        {
+            "name": "template_matching",
+            "enabled": true,
+            "params": {
+                "scale_factor": 1.0,
+                "template_size": [50, 50]
+            }
+        },
+        {
+            "name": "feature_matching",
+            "enabled": true,
+            "params": {
+                "feature_algorithm": "SIFT",
+                "match_threshold": 0.7
+            }
+        }
+    ]
+}

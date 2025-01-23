@@ -1,0 +1,1546 @@
+2025-01-22 22:50:37,569 - INFO - Using display number :99
+2025-01-22 22:50:37,572 - INFO - Created .Xauthority file
+2025-01-22 22:50:37,572 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_2jh85kjp/.Xauthority
+2025-01-22 22:50:40,574 - INFO - Virtual display started successfully on :99
+2025-01-22 22:50:40,579 - INFO - Display connection test successful
+2025-01-22 22:50:41,587 - INFO - Removed lock file: /tmp/.X99-lock
+2025-01-22 22:50:41,587 - INFO - Using display number :99
+2025-01-22 22:50:41,590 - INFO - Created .Xauthority file
+2025-01-22 22:50:41,590 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_ohe63n8j/.Xauthority
+2025-01-22 22:50:44,591 - INFO - Virtual display started successfully on :99
+2025-01-22 22:50:44,595 - INFO - Display connection test successful
+2025-01-22 22:50:44,596 - INFO - Verifying clean environment...
+2025-01-22 22:50:45,625 - INFO - Terminated process: chrome (PID: 337682)
+2025-01-22 22:50:45,626 - INFO - Terminated process: chrome_crashpad_handler (PID: 337689)
+2025-01-22 22:50:45,626 - INFO - Terminated process: chrome_crashpad_handler (PID: 337692)
+2025-01-22 22:50:45,627 - INFO - Terminated process: chrome (PID: 337695)
+2025-01-22 22:50:45,627 - INFO - Terminated process: chrome (PID: 337697)
+2025-01-22 22:50:45,628 - INFO - Terminated process: chrome (PID: 337717)
+2025-01-22 22:50:45,628 - INFO - Terminated process: chrome (PID: 337718)
+2025-01-22 22:50:45,628 - INFO - Terminated process: chrome (PID: 337719)
+2025-01-22 22:50:45,629 - INFO - Terminated process: chrome (PID: 337774)
+2025-01-22 22:50:45,630 - INFO - Terminated process: chrome_crashpad_handler (PID: 337786)
+2025-01-22 22:50:45,630 - INFO - Terminated process: chrome_crashpad_handler (PID: 337789)
+2025-01-22 22:50:45,630 - INFO - Terminated process: chrome (PID: 337790)
+2025-01-22 22:50:45,631 - INFO - Terminated process: chrome (PID: 337793)
+2025-01-22 22:50:45,633 - INFO - Terminated process: chrome (PID: 337813)
+2025-01-22 22:50:45,634 - INFO - Terminated process: chrome (PID: 337814)
+2025-01-22 22:50:45,634 - INFO - Terminated process: chrome (PID: 337815)
+2025-01-22 22:50:45,635 - INFO - Terminated process: xvfb (PID: 352500)
+2025-01-22 22:50:45,636 - INFO - Removed: /tmp/.com.google.Chrome.yiX7oE
+2025-01-22 22:50:45,637 - INFO - Removed: /tmp/.com.google.Chrome.yrVmn4
+2025-01-22 22:50:45,637 - INFO - Removed: /tmp/.com.google.Chrome.LhAIYO
+2025-01-22 22:50:45,637 - INFO - Removed: /tmp/.com.google.Chrome.etyAoc
+2025-01-22 22:50:45,637 - INFO - Removed: /tmp/.com.google.Chrome.QpDmTO
+2025-01-22 22:50:45,637 - INFO - Removed: /tmp/.com.google.Chrome.OTtAhh
+2025-01-22 22:50:45,637 - INFO - Removed: /tmp/.com.google.Chrome.Ji40mQ
+2025-01-22 22:50:45,637 - INFO - Removed: /tmp/.com.google.Chrome.1EpqdD
+2025-01-22 22:50:45,638 - INFO - Removed: /tmp/.com.google.Chrome.8hPgKI
+2025-01-22 22:50:45,638 - INFO - Removed: /tmp/.com.google.Chrome.sjLYiu
+2025-01-22 22:50:45,638 - INFO - Removed: /tmp/.com.google.Chrome.mky3U9
+2025-01-22 22:50:45,638 - INFO - Removed: /tmp/.com.google.Chrome.30FRCu
+2025-01-22 22:50:45,638 - INFO - Removed: /tmp/.com.google.Chrome.Ys62MZ
+2025-01-22 22:50:45,638 - INFO - Removed: /tmp/.com.google.Chrome.PKIZeC
+2025-01-22 22:50:45,638 - INFO - Removed: /tmp/.com.google.Chrome.WMy5cw
+2025-01-22 22:50:45,638 - INFO - Removed: /tmp/.com.google.Chrome.aKDnxA
+2025-01-22 22:50:45,639 - INFO - Removed: /tmp/.com.google.Chrome.yqYshO
+2025-01-22 22:50:45,639 - INFO - Removed: /tmp/.com.google.Chrome.jJxFv5
+2025-01-22 22:50:45,639 - INFO - Removed: /tmp/.com.google.Chrome.NHikbL
+2025-01-22 22:50:45,639 - INFO - Removed: /tmp/.com.google.Chrome.LqAVUy
+2025-01-22 22:50:45,639 - INFO - Removed: /tmp/.com.google.Chrome.GugDf6
+2025-01-22 22:50:45,639 - INFO - Removed: /tmp/.com.google.Chrome.JMtFqu
+2025-01-22 22:50:45,639 - INFO - Removed: /tmp/.com.google.Chrome.RLmmtq
+2025-01-22 22:50:45,639 - INFO - Removed: /tmp/.com.google.Chrome.ssJZLg
+2025-01-22 22:50:45,640 - INFO - Removed: /tmp/.com.google.Chrome.FAE1QY
+2025-01-22 22:50:45,640 - INFO - Removed: /tmp/.com.google.Chrome.S23B8h
+2025-01-22 22:50:45,640 - INFO - Removed: /tmp/.com.google.Chrome.TlTfzn
+2025-01-22 22:50:45,640 - INFO - Removed: /tmp/.com.google.Chrome.iSn7ci
+2025-01-22 22:50:45,649 - INFO - Removed: /dev/shm/chrome_profiles
+2025-01-22 22:50:45,649 - INFO - Removed: /tmp/.X99-lock
+2025-01-22 22:50:45,650 - INFO - Removed: /tmp/.X11-unix/X99
+2025-01-22 22:50:45,650 - INFO - Environment verification passed
+2025-01-22 22:50:45,650 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 22:50:45,650 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 22:50:45,650 - INFO - Using debugging port: 9222
+2025-01-22 22:50:45,650 - INFO - Starting Chrome process...
+2025-01-22 22:50:45,651 - INFO - Started Chrome process with PID: 352526
+2025-01-22 22:50:46,653 - INFO - Chrome debugging endpoint verified on attempt 1
+2025-01-22 22:50:46,654 - INFO - Chrome debugging endpoint is ready and verified
+2025-01-22 22:50:51,658 - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2025-01-22 22:50:51,682 - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.110/linux64/chromedriver-linux64.zip
+2025-01-22 22:50:51,844 - DEBUG - unzipping /tmp/tmpdkd25spf
+2025-01-22 22:50:51,967 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-22 22:50:51,987 - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-01-22 22:50:51,992 - DEBUG - patching took us 0.03 seconds
+2025-01-22 22:50:52,010 - DEBUG - Started executable: `/home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver` in a child process with pid: 352755
+2025-01-22 22:50:52,513 - DEBUG - POST http://localhost:36869/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "binary": "/usr/bin/google-chrome-stable", "args": ["--no-sandbox", "--disable-dev-shm-usage", "--window-size=1920,1080", "--start-maximized", "--remote-debugging-port=9222", "--remote-debugging-address=127.0.0.1", "--remote-allow-origins=*", "--remote-debugging-host=127.0.0.1", "--remote-debugging-port=9222", "--user-data-dir=/tmp/tmpx1pycm5b", "--lang=C", "--no-default-browser-check", "--no-first-run", "--no-sandbox", "--test-type", "--window-size=1920,1080", "--start-maximized", "--no-sandbox", "--log-level=0"], "debuggerAddress": "127.0.0.1:9222"}}}}
+2025-01-22 22:50:52,513 - DEBUG - Starting new HTTP connection (1): localhost:36869
+2025-01-22 22:51:52,562 - DEBUG - http://localhost:36869 "POST /session HTTP/1.1" 500 0
+2025-01-22 22:51:52,562 - DEBUG - Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: cannot connect to chrome at 127.0.0.1:9222\nfrom unknown error: unable to discover open pages","stacktrace":"#0 0x557c7b89cdca \u003Cunknown>\n#1 0x557c7b3933f0 \u003Cunknown>\n#2 0x557c7b3d0608 \u003Cunknown>\n#3 0x557c7b3c61ea \u003Cunknown>\n#4 0x557c7b413ca6 \u003Cunknown>\n#5 0x557c7b4132f6 \u003Cunknown>\n#6 0x557c7b407833 \u003Cunknown>\n#7 0x557c7b3d45a0 \u003Cunknown>\n#8 0x557c7b3d5ece \u003Cunknown>\n#9 0x557c7b866bdb \u003Cunknown>\n#10 0x557c7b86ab67 \u003Cunknown>\n#11 0x557c7b8523bc \u003Cunknown>\n#12 0x557c7b86b727 \u003Cunknown>\n#13 0x557c7b83674f \u003Cunknown>\n#14 0x557c7b88b938 \u003Cunknown>\n#15 0x557c7b88bb00 \u003Cunknown>\n#16 0x557c7b89bc46 \u003Cunknown>\n#17 0x7f7582401ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '804', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-22 22:51:52,562 - DEBUG - Finished Request
+2025-01-22 22:51:52,564 - ERROR - Connection attempt 1 failed: Message: session not created: cannot connect to chrome at 127.0.0.1:9222
+from unknown error: unable to discover open pages
+Stacktrace:
+#0 0x557c7b89cdca <unknown>
+#1 0x557c7b3933f0 <unknown>
+#2 0x557c7b3d0608 <unknown>
+#3 0x557c7b3c61ea <unknown>
+#4 0x557c7b413ca6 <unknown>
+#5 0x557c7b4132f6 <unknown>
+#6 0x557c7b407833 <unknown>
+#7 0x557c7b3d45a0 <unknown>
+#8 0x557c7b3d5ece <unknown>
+#9 0x557c7b866bdb <unknown>
+#10 0x557c7b86ab67 <unknown>
+#11 0x557c7b8523bc <unknown>
+#12 0x557c7b86b727 <unknown>
+#13 0x557c7b83674f <unknown>
+#14 0x557c7b88b938 <unknown>
+#15 0x557c7b88bb00 <unknown>
+#16 0x557c7b89bc46 <unknown>
+#17 0x7f7582401ac3 <unknown>
+
+2025-01-22 22:51:52,564 - INFO - Stopped virtual display
+2025-01-22 22:51:52,564 - INFO - Killed process 352526
+2025-01-22 22:51:52,569 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737586245650_4900c844
+2025-01-22 22:51:52,850 - INFO - Received signal 2
+2025-01-22 22:51:52,850 - INFO - Stopped virtual display
+2025-01-22 22:51:53,857 - INFO - Stopped virtual display
+2025-01-22 22:51:54,864 - INFO - Virtual display stopped
+2025-01-22 22:51:54,866 - INFO - Stopped virtual display
+2025-01-22 22:51:55,873 - DEBUG - cleaning up pid 352753 
+2025-01-22 22:59:04,964 - INFO - Using display number :99
+2025-01-22 22:59:04,966 - INFO - Created .Xauthority file
+2025-01-22 22:59:04,966 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_q3o_vkld/.Xauthority
+2025-01-22 22:59:07,968 - INFO - Virtual display started successfully on :99
+2025-01-22 22:59:07,972 - INFO - Display connection test successful
+2025-01-22 22:59:08,979 - INFO - Removed lock file: /tmp/.X99-lock
+2025-01-22 22:59:08,979 - INFO - Using display number :99
+2025-01-22 22:59:08,982 - INFO - Created .Xauthority file
+2025-01-22 22:59:08,982 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_cby_9jjl/.Xauthority
+2025-01-22 22:59:11,984 - INFO - Virtual display started successfully on :99
+2025-01-22 22:59:11,988 - INFO - Display connection test successful
+2025-01-22 22:59:11,988 - INFO - Verifying clean environment...
+2025-01-22 22:59:13,017 - INFO - Terminated process: xvfb (PID: 358375)
+2025-01-22 22:59:13,018 - INFO - Removed: /tmp/.com.google.Chrome.cgIgjA
+2025-01-22 22:59:13,018 - INFO - Removed: /tmp/.com.google.Chrome.F88LWg
+2025-01-22 22:59:13,018 - INFO - Removed: /dev/shm/chrome_profiles
+2025-01-22 22:59:13,018 - INFO - Removed: /tmp/.X99-lock
+2025-01-22 22:59:13,019 - INFO - Removed: /tmp/.X11-unix/X99
+2025-01-22 22:59:13,019 - INFO - Environment verification passed
+2025-01-22 22:59:13,019 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 22:59:13,019 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 22:59:13,020 - INFO - Using debugging port: 9222
+2025-01-22 22:59:13,020 - DEBUG - Chrome not ready (attempt 1): [Errno 111] Connection refused
+2025-01-22 22:59:15,021 - DEBUG - Chrome not ready (attempt 2): [Errno 111] Connection refused
+2025-01-22 22:59:17,021 - DEBUG - Chrome not ready (attempt 3): [Errno 111] Connection refused
+2025-01-22 22:59:19,022 - DEBUG - Chrome not ready (attempt 4): [Errno 111] Connection refused
+2025-01-22 22:59:21,022 - DEBUG - Chrome not ready (attempt 5): [Errno 111] Connection refused
+2025-01-22 22:59:23,023 - DEBUG - Chrome not ready (attempt 6): [Errno 111] Connection refused
+2025-01-22 22:59:25,024 - DEBUG - Chrome not ready (attempt 7): [Errno 111] Connection refused
+2025-01-22 22:59:27,024 - DEBUG - Chrome not ready (attempt 8): [Errno 111] Connection refused
+2025-01-22 22:59:29,025 - DEBUG - Chrome not ready (attempt 9): [Errno 111] Connection refused
+2025-01-22 22:59:31,026 - DEBUG - Chrome not ready (attempt 10): [Errno 111] Connection refused
+2025-01-22 22:59:33,026 - ERROR - Chrome failed to become ready after 10 attempts
+2025-01-22 22:59:33,026 - ERROR - Connection attempt 1 failed: Chrome failed to initialize properly
+2025-01-22 22:59:33,027 - INFO - Stopped virtual display
+2025-01-22 22:59:33,027 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737586753019_ea69c375
+2025-01-22 22:59:36,034 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 22:59:36,035 - INFO - Using debugging port: 9222
+2025-01-22 22:59:36,035 - DEBUG - Chrome not ready (attempt 1): [Errno 111] Connection refused
+2025-01-22 22:59:38,036 - DEBUG - Chrome not ready (attempt 2): [Errno 111] Connection refused
+2025-01-22 22:59:40,036 - DEBUG - Chrome not ready (attempt 3): [Errno 111] Connection refused
+2025-01-22 22:59:42,037 - DEBUG - Chrome not ready (attempt 4): [Errno 111] Connection refused
+2025-01-22 22:59:44,038 - DEBUG - Chrome not ready (attempt 5): [Errno 111] Connection refused
+2025-01-22 22:59:46,039 - DEBUG - Chrome not ready (attempt 6): [Errno 111] Connection refused
+2025-01-22 22:59:48,039 - DEBUG - Chrome not ready (attempt 7): [Errno 111] Connection refused
+2025-01-22 22:59:50,040 - DEBUG - Chrome not ready (attempt 8): [Errno 111] Connection refused
+2025-01-22 22:59:52,041 - DEBUG - Chrome not ready (attempt 9): [Errno 111] Connection refused
+2025-01-22 22:59:54,041 - DEBUG - Chrome not ready (attempt 10): [Errno 111] Connection refused
+2025-01-22 22:59:56,042 - ERROR - Chrome failed to become ready after 10 attempts
+2025-01-22 22:59:56,042 - ERROR - Connection attempt 2 failed: Chrome failed to initialize properly
+2025-01-22 22:59:56,042 - INFO - Stopped virtual display
+2025-01-22 23:00:01,049 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:00:01,049 - INFO - Using debugging port: 9222
+2025-01-22 23:00:01,050 - DEBUG - Chrome not ready (attempt 1): [Errno 111] Connection refused
+2025-01-22 23:00:03,050 - DEBUG - Chrome not ready (attempt 2): [Errno 111] Connection refused
+2025-01-22 23:00:05,051 - DEBUG - Chrome not ready (attempt 3): [Errno 111] Connection refused
+2025-01-22 23:00:07,052 - DEBUG - Chrome not ready (attempt 4): [Errno 111] Connection refused
+2025-01-22 23:00:09,053 - DEBUG - Chrome not ready (attempt 5): [Errno 111] Connection refused
+2025-01-22 23:00:11,053 - DEBUG - Chrome not ready (attempt 6): [Errno 111] Connection refused
+2025-01-22 23:00:13,054 - DEBUG - Chrome not ready (attempt 7): [Errno 111] Connection refused
+2025-01-22 23:02:44,897 - INFO - Using display number :99
+2025-01-22 23:02:44,900 - INFO - Created .Xauthority file
+2025-01-22 23:02:44,900 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_bv1_zjk9/.Xauthority
+2025-01-22 23:02:47,902 - INFO - Virtual display started successfully on :99
+2025-01-22 23:02:47,906 - INFO - Display connection test successful
+2025-01-22 23:02:48,913 - INFO - Removed lock file: /tmp/.X99-lock
+2025-01-22 23:02:48,913 - INFO - Using display number :99
+2025-01-22 23:02:48,916 - INFO - Created .Xauthority file
+2025-01-22 23:02:48,916 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_tkbswdb8/.Xauthority
+2025-01-22 23:02:51,917 - INFO - Virtual display started successfully on :99
+2025-01-22 23:02:51,922 - INFO - Display connection test successful
+2025-01-22 23:02:51,922 - INFO - Verifying clean environment...
+2025-01-22 23:02:52,949 - INFO - Terminated process: xvfb (PID: 361399)
+2025-01-22 23:02:52,951 - INFO - Removed: /dev/shm/chrome_profiles
+2025-01-22 23:02:52,951 - INFO - Removed: /tmp/.X99-lock
+2025-01-22 23:02:52,951 - INFO - Removed: /tmp/.X11-unix/X99
+2025-01-22 23:02:52,951 - INFO - Environment verification passed
+2025-01-22 23:02:52,952 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:02:52,952 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:02:52,952 - INFO - Using debugging port: 9222
+2025-01-22 23:02:52,952 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.4s)
+2025-01-22 23:02:52,966 - ERROR - Chrome process not found
+2025-01-22 23:02:52,967 - ERROR - Connection attempt 1 failed: Chrome failed to initialize properly
+2025-01-22 23:02:52,967 - INFO - Stopped virtual display
+2025-01-22 23:02:52,967 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737586972952_f549d814
+2025-01-22 23:02:55,974 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:02:55,974 - INFO - Using debugging port: 9222
+2025-01-22 23:02:55,974 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.5s)
+2025-01-22 23:02:55,989 - ERROR - Chrome process not found
+2025-01-22 23:02:55,989 - ERROR - Connection attempt 2 failed: Chrome failed to initialize properly
+2025-01-22 23:02:55,989 - INFO - Stopped virtual display
+2025-01-22 23:03:00,996 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:03:00,996 - INFO - Using debugging port: 9222
+2025-01-22 23:03:00,996 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.3s)
+2025-01-22 23:03:01,011 - ERROR - Chrome process not found
+2025-01-22 23:03:01,011 - ERROR - Connection attempt 3 failed: Chrome failed to initialize properly
+2025-01-22 23:03:01,011 - INFO - Stopped virtual display
+2025-01-22 23:03:02,018 - ERROR - Chrome initialization error: Chrome failed to initialize properly
+2025-01-22 23:03:02,018 - INFO - Stopped virtual display
+2025-01-22 23:03:08,025 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737586972952_f549d814
+2025-01-22 23:03:08,025 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:03:08,026 - ERROR - Attempt 1 failed: Chrome failed to initialize properly
+2025-01-22 23:03:08,026 - INFO - Stopped virtual display
+2025-01-22 23:03:12,033 - INFO - Attempting to initialize Chrome (attempt 2/3)...
+2025-01-22 23:03:12,033 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:03:12,034 - INFO - Using debugging port: 9222
+2025-01-22 23:03:12,034 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.4s)
+2025-01-22 23:03:12,049 - ERROR - Chrome process not found
+2025-01-22 23:03:12,049 - ERROR - Connection attempt 1 failed: Chrome failed to initialize properly
+2025-01-22 23:03:12,049 - INFO - Stopped virtual display
+2025-01-22 23:03:12,049 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737586992033_84fc3d07
+2025-01-22 23:03:15,056 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:03:15,057 - INFO - Using debugging port: 9222
+2025-01-22 23:03:15,057 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.3s)
+2025-01-22 23:03:15,071 - ERROR - Chrome process not found
+2025-01-22 23:03:15,072 - ERROR - Connection attempt 2 failed: Chrome failed to initialize properly
+2025-01-22 23:03:15,072 - INFO - Stopped virtual display
+2025-01-22 23:03:20,079 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:03:20,079 - INFO - Using debugging port: 9222
+2025-01-22 23:03:20,079 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.3s)
+2025-01-22 23:03:20,094 - ERROR - Chrome process not found
+2025-01-22 23:03:20,094 - ERROR - Connection attempt 3 failed: Chrome failed to initialize properly
+2025-01-22 23:03:20,094 - INFO - Stopped virtual display
+2025-01-22 23:03:21,101 - ERROR - Chrome initialization error: Chrome failed to initialize properly
+2025-01-22 23:03:21,101 - INFO - Stopped virtual display
+2025-01-22 23:03:27,109 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737586992033_84fc3d07
+2025-01-22 23:03:27,109 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:03:27,109 - ERROR - Attempt 2 failed: Chrome failed to initialize properly
+2025-01-22 23:03:27,109 - INFO - Stopped virtual display
+2025-01-22 23:03:31,116 - INFO - Attempting to initialize Chrome (attempt 3/3)...
+2025-01-22 23:03:31,117 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:03:31,117 - INFO - Using debugging port: 9222
+2025-01-22 23:03:31,117 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.2s)
+2025-01-22 23:03:31,131 - ERROR - Chrome process not found
+2025-01-22 23:03:31,131 - ERROR - Connection attempt 1 failed: Chrome failed to initialize properly
+2025-01-22 23:03:31,131 - INFO - Stopped virtual display
+2025-01-22 23:03:31,131 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587011116_12acc291
+2025-01-22 23:03:34,138 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:03:34,139 - INFO - Using debugging port: 9222
+2025-01-22 23:03:34,139 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.1s)
+2025-01-22 23:03:34,153 - ERROR - Chrome process not found
+2025-01-22 23:03:34,153 - ERROR - Connection attempt 2 failed: Chrome failed to initialize properly
+2025-01-22 23:03:34,153 - INFO - Stopped virtual display
+2025-01-22 23:03:39,160 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:03:39,160 - INFO - Using debugging port: 9222
+2025-01-22 23:03:39,160 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.5s)
+2025-01-22 23:03:39,175 - ERROR - Chrome process not found
+2025-01-22 23:03:39,176 - ERROR - Connection attempt 3 failed: Chrome failed to initialize properly
+2025-01-22 23:03:39,176 - INFO - Stopped virtual display
+2025-01-22 23:03:40,182 - ERROR - Chrome initialization error: Chrome failed to initialize properly
+2025-01-22 23:03:40,183 - INFO - Stopped virtual display
+2025-01-22 23:03:46,190 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587011116_12acc291
+2025-01-22 23:03:46,190 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:03:46,190 - ERROR - Attempt 3 failed: Chrome failed to initialize properly
+2025-01-22 23:03:46,191 - INFO - Stopped virtual display
+2025-01-22 23:03:50,198 - ERROR - Fatal error: Chrome failed to initialize properly
+2025-01-22 23:03:50,198 - INFO - Stopped virtual display
+2025-01-22 23:03:51,205 - INFO - Virtual display stopped
+2025-01-22 23:03:51,205 - INFO - Stopped virtual display
+2025-01-22 23:05:31,367 - INFO - Using display number :99
+2025-01-22 23:05:31,369 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:05:31,372 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_nssvvexv/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1
+2025-01-22 23:05:34,378 - INFO - Display connection test successful
+2025-01-22 23:05:35,392 - INFO - Removed X11 file: /tmp/.X11-unix/X99
+2025-01-22 23:05:35,392 - INFO - Using display number :99
+2025-01-22 23:05:35,394 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:05:35,396 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_cle2sw5e/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1
+2025-01-22 23:05:38,402 - INFO - Display connection test successful
+2025-01-22 23:05:38,402 - INFO - Verifying clean environment...
+2025-01-22 23:05:39,428 - INFO - Terminated process: xvfb (PID: 363799)
+2025-01-22 23:05:39,429 - INFO - Removed: /tmp/.X11-unix/X99
+2025-01-22 23:05:39,429 - INFO - Environment verification passed
+2025-01-22 23:05:39,429 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:05:39,430 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:05:39,430 - INFO - Using debugging port: 9222
+2025-01-22 23:05:39,430 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.1s)
+2025-01-22 23:05:39,444 - ERROR - Chrome process not found
+2025-01-22 23:05:39,444 - ERROR - Connection attempt 1 failed: Chrome failed to initialize properly
+2025-01-22 23:05:39,444 - INFO - Stopped virtual display
+2025-01-22 23:05:39,444 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587139429_bea23cde
+2025-01-22 23:05:42,451 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:05:42,451 - INFO - Using debugging port: 9222
+2025-01-22 23:05:42,451 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.2s)
+2025-01-22 23:05:42,466 - ERROR - Chrome process not found
+2025-01-22 23:05:42,466 - ERROR - Connection attempt 2 failed: Chrome failed to initialize properly
+2025-01-22 23:05:42,466 - INFO - Stopped virtual display
+2025-01-22 23:05:47,473 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:05:47,473 - INFO - Using debugging port: 9222
+2025-01-22 23:05:47,474 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.3s)
+2025-01-22 23:05:47,488 - ERROR - Chrome process not found
+2025-01-22 23:05:47,488 - ERROR - Connection attempt 3 failed: Chrome failed to initialize properly
+2025-01-22 23:05:47,488 - INFO - Stopped virtual display
+2025-01-22 23:05:48,495 - ERROR - Chrome initialization error: Chrome failed to initialize properly
+2025-01-22 23:05:48,496 - INFO - Stopped virtual display
+2025-01-22 23:05:54,503 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587139429_bea23cde
+2025-01-22 23:05:54,503 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:05:54,503 - ERROR - Attempt 1 failed: Chrome failed to initialize properly
+2025-01-22 23:05:54,503 - INFO - Stopped virtual display
+2025-01-22 23:05:58,510 - INFO - Attempting to initialize Chrome (attempt 2/3)...
+2025-01-22 23:05:58,511 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:05:58,511 - INFO - Using debugging port: 9222
+2025-01-22 23:05:58,512 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.5s)
+2025-01-22 23:05:58,526 - ERROR - Chrome process not found
+2025-01-22 23:05:58,526 - ERROR - Connection attempt 1 failed: Chrome failed to initialize properly
+2025-01-22 23:05:58,526 - INFO - Stopped virtual display
+2025-01-22 23:05:58,526 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587158511_2ae64df3
+2025-01-22 23:06:01,533 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:06:01,534 - INFO - Using debugging port: 9222
+2025-01-22 23:06:01,534 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.4s)
+2025-01-22 23:06:01,548 - ERROR - Chrome process not found
+2025-01-22 23:06:01,548 - ERROR - Connection attempt 2 failed: Chrome failed to initialize properly
+2025-01-22 23:06:01,548 - INFO - Stopped virtual display
+2025-01-22 23:06:06,555 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:06:06,555 - INFO - Using debugging port: 9222
+2025-01-22 23:06:06,556 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.3s)
+2025-01-22 23:06:06,570 - ERROR - Chrome process not found
+2025-01-22 23:06:06,571 - ERROR - Connection attempt 3 failed: Chrome failed to initialize properly
+2025-01-22 23:06:06,571 - INFO - Stopped virtual display
+2025-01-22 23:06:07,578 - ERROR - Chrome initialization error: Chrome failed to initialize properly
+2025-01-22 23:06:07,578 - INFO - Stopped virtual display
+2025-01-22 23:06:13,585 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587158511_2ae64df3
+2025-01-22 23:06:13,585 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:06:13,586 - ERROR - Attempt 2 failed: Chrome failed to initialize properly
+2025-01-22 23:06:13,586 - INFO - Stopped virtual display
+2025-01-22 23:06:17,593 - INFO - Attempting to initialize Chrome (attempt 3/3)...
+2025-01-22 23:06:17,593 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:06:17,593 - INFO - Using debugging port: 9222
+2025-01-22 23:06:17,594 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.1s)
+2025-01-22 23:06:17,608 - ERROR - Chrome process not found
+2025-01-22 23:06:17,608 - ERROR - Connection attempt 1 failed: Chrome failed to initialize properly
+2025-01-22 23:06:17,608 - INFO - Stopped virtual display
+2025-01-22 23:06:17,609 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587177593_f4f80dad
+2025-01-22 23:06:20,616 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:06:20,616 - INFO - Using debugging port: 9222
+2025-01-22 23:06:20,616 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.2s)
+2025-01-22 23:06:20,631 - ERROR - Chrome process not found
+2025-01-22 23:06:20,631 - ERROR - Connection attempt 2 failed: Chrome failed to initialize properly
+2025-01-22 23:06:20,631 - INFO - Stopped virtual display
+2025-01-22 23:06:25,638 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:06:25,638 - INFO - Using debugging port: 9222
+2025-01-22 23:06:25,639 - INFO - Checking Chrome readiness (attempt 1/10, timeout=2.3s)
+2025-01-22 23:06:25,655 - ERROR - Chrome process not found
+2025-01-22 23:06:25,655 - ERROR - Connection attempt 3 failed: Chrome failed to initialize properly
+2025-01-22 23:06:25,655 - INFO - Stopped virtual display
+2025-01-22 23:06:26,663 - ERROR - Chrome initialization error: Chrome failed to initialize properly
+2025-01-22 23:06:26,663 - INFO - Stopped virtual display
+2025-01-22 23:06:32,670 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587177593_f4f80dad
+2025-01-22 23:06:32,671 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:06:32,671 - ERROR - Attempt 3 failed: Chrome failed to initialize properly
+2025-01-22 23:06:32,671 - INFO - Stopped virtual display
+2025-01-22 23:06:36,678 - ERROR - Fatal error: Chrome failed to initialize properly
+2025-01-22 23:06:36,678 - INFO - Stopped virtual display
+2025-01-22 23:06:37,685 - INFO - Virtual display stopped
+2025-01-22 23:06:37,686 - INFO - Stopped virtual display
+2025-01-22 23:08:21,370 - INFO - Using display number :99
+2025-01-22 23:08:21,373 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:08:21,375 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_cix4pz3e/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1
+2025-01-22 23:08:24,381 - INFO - Display connection test successful
+2025-01-22 23:08:25,395 - INFO - Removed X11 file: /tmp/.X11-unix/X99
+2025-01-22 23:08:25,395 - INFO - Using display number :99
+2025-01-22 23:08:25,397 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:08:25,399 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /tmp/xvfb_9li4rjyk/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1
+2025-01-22 23:08:28,405 - INFO - Display connection test successful
+2025-01-22 23:08:28,405 - INFO - Verifying clean environment...
+2025-01-22 23:08:29,432 - INFO - Terminated process: xvfb (PID: 366297)
+2025-01-22 23:08:29,433 - INFO - Removed: /tmp/.X11-unix/X99
+2025-01-22 23:08:29,433 - INFO - Environment verification passed
+2025-01-22 23:08:29,433 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:08:29,433 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:08:29,433 - INFO - Using debugging port: 9222
+2025-01-22 23:08:29,434 - INFO - Starting Chrome process...
+2025-01-22 23:08:29,434 - INFO - Starting Chrome process...
+2025-01-22 23:08:29,436 - ERROR - Connection attempt 1 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:08:29,436 - INFO - Stopped virtual display
+2025-01-22 23:08:29,437 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587309433_f5d7fff0
+2025-01-22 23:08:32,443 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:08:32,444 - INFO - Using debugging port: 9222
+2025-01-22 23:08:32,444 - INFO - Starting Chrome process...
+2025-01-22 23:08:32,444 - INFO - Starting Chrome process...
+2025-01-22 23:08:32,447 - ERROR - Connection attempt 2 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:08:32,447 - INFO - Stopped virtual display
+2025-01-22 23:08:37,454 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:08:37,454 - INFO - Using debugging port: 9222
+2025-01-22 23:08:37,455 - INFO - Starting Chrome process...
+2025-01-22 23:08:37,455 - INFO - Starting Chrome process...
+2025-01-22 23:08:37,457 - ERROR - Connection attempt 3 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:08:37,458 - INFO - Stopped virtual display
+2025-01-22 23:08:38,464 - ERROR - Chrome initialization error: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:08:38,464 - INFO - Stopped virtual display
+2025-01-22 23:08:44,471 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587309433_f5d7fff0
+2025-01-22 23:08:44,472 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:08:44,472 - ERROR - Attempt 1 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:08:44,472 - INFO - Stopped virtual display
+2025-01-22 23:08:48,479 - INFO - Attempting to initialize Chrome (attempt 2/3)...
+2025-01-22 23:08:48,479 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:08:48,480 - INFO - Using debugging port: 9222
+2025-01-22 23:08:48,480 - INFO - Starting Chrome process...
+2025-01-22 23:08:48,480 - INFO - Starting Chrome process...
+2025-01-22 23:08:48,483 - ERROR - Connection attempt 1 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:08:48,483 - INFO - Stopped virtual display
+2025-01-22 23:08:48,483 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587328479_cd4156ab
+2025-01-22 23:08:51,490 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:08:51,491 - INFO - Using debugging port: 9222
+2025-01-22 23:08:51,491 - INFO - Starting Chrome process...
+2025-01-22 23:08:51,491 - INFO - Starting Chrome process...
+2025-01-22 23:08:51,494 - ERROR - Connection attempt 2 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:08:51,494 - INFO - Stopped virtual display
+2025-01-22 23:08:56,501 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:08:56,502 - INFO - Using debugging port: 9222
+2025-01-22 23:08:56,502 - INFO - Starting Chrome process...
+2025-01-22 23:08:56,502 - INFO - Starting Chrome process...
+2025-01-22 23:08:56,505 - ERROR - Connection attempt 3 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:08:56,505 - INFO - Stopped virtual display
+2025-01-22 23:08:57,512 - ERROR - Chrome initialization error: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:08:57,512 - INFO - Stopped virtual display
+2025-01-22 23:09:03,520 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587328479_cd4156ab
+2025-01-22 23:09:03,520 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:09:03,520 - ERROR - Attempt 2 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:09:03,520 - INFO - Stopped virtual display
+2025-01-22 23:09:07,527 - INFO - Attempting to initialize Chrome (attempt 3/3)...
+2025-01-22 23:09:07,528 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:09:07,528 - INFO - Using debugging port: 9222
+2025-01-22 23:09:07,528 - INFO - Starting Chrome process...
+2025-01-22 23:09:07,528 - INFO - Starting Chrome process...
+2025-01-22 23:09:07,531 - ERROR - Connection attempt 1 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:09:07,531 - INFO - Stopped virtual display
+2025-01-22 23:09:07,532 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587347528_f982a207
+2025-01-22 23:09:10,539 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:09:10,539 - INFO - Using debugging port: 9222
+2025-01-22 23:09:10,540 - INFO - Starting Chrome process...
+2025-01-22 23:09:10,540 - INFO - Starting Chrome process...
+2025-01-22 23:09:10,543 - ERROR - Connection attempt 2 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:09:10,543 - INFO - Stopped virtual display
+2025-01-22 23:09:15,550 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:09:15,550 - INFO - Using debugging port: 9222
+2025-01-22 23:09:15,551 - INFO - Starting Chrome process...
+2025-01-22 23:09:15,551 - INFO - Starting Chrome process...
+2025-01-22 23:09:15,555 - ERROR - Connection attempt 3 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:09:15,555 - INFO - Stopped virtual display
+2025-01-22 23:09:16,563 - ERROR - Chrome initialization error: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:09:16,564 - INFO - Stopped virtual display
+2025-01-22 23:09:22,571 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587347528_f982a207
+2025-01-22 23:09:22,572 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:09:22,572 - ERROR - Attempt 3 failed: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:09:22,572 - INFO - Stopped virtual display
+2025-01-22 23:09:26,579 - ERROR - Fatal error: X display not accessible: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:09:26,579 - INFO - Stopped virtual display
+2025-01-22 23:09:27,590 - INFO - Virtual display stopped
+2025-01-22 23:09:27,591 - INFO - Stopped virtual display
+2025-01-22 23:10:45,674 - INFO - Fixed permissions for /dev/shm/xvfb/1737587445_368311/.X11-unix: 0o775 -> 1777
+2025-01-22 23:10:45,674 - INFO - Using display number :99
+2025-01-22 23:10:45,677 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:10:45,679 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737587445_368311/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1
+2025-01-22 23:10:48,685 - INFO - Display connection test successful
+2025-01-22 23:10:49,699 - INFO - Removed X11 file: /tmp/.X11-unix/X99
+2025-01-22 23:10:49,699 - INFO - Fixed permissions for /dev/shm/xvfb/1737587449_368311/.X11-unix: 0o775 -> 1777
+2025-01-22 23:10:49,699 - INFO - Using display number :99
+2025-01-22 23:10:49,702 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:10:49,704 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737587449_368311/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1
+2025-01-22 23:10:52,710 - INFO - Display connection test successful
+2025-01-22 23:10:52,710 - INFO - Verifying clean environment...
+2025-01-22 23:10:53,739 - INFO - Terminated process: xvfb (PID: 368460)
+2025-01-22 23:10:53,740 - INFO - Removed: /tmp/.X11-unix/X99
+2025-01-22 23:10:53,740 - INFO - Environment verification passed
+2025-01-22 23:10:53,740 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:10:53,741 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:10:53,741 - INFO - Using debugging port: 9222
+2025-01-22 23:10:53,741 - INFO - Starting Chrome process...
+2025-01-22 23:10:53,741 - INFO - Starting Chrome process...
+2025-01-22 23:10:53,744 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:10:54,747 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:10:55,750 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:10:55,750 - INFO - Stopped virtual display
+2025-01-22 23:10:55,751 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587453740_880daac2
+2025-01-22 23:10:58,758 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:10:58,758 - INFO - Using debugging port: 9222
+2025-01-22 23:10:58,759 - INFO - Starting Chrome process...
+2025-01-22 23:10:58,759 - INFO - Starting Chrome process...
+2025-01-22 23:10:58,762 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:10:59,765 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:11:00,768 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:00,768 - INFO - Stopped virtual display
+2025-01-22 23:11:05,776 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:11:05,776 - INFO - Using debugging port: 9222
+2025-01-22 23:11:05,776 - INFO - Starting Chrome process...
+2025-01-22 23:11:05,777 - INFO - Starting Chrome process...
+2025-01-22 23:11:05,779 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:11:06,783 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:11:07,786 - ERROR - Connection attempt 3 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:07,786 - INFO - Stopped virtual display
+2025-01-22 23:11:08,793 - ERROR - Chrome initialization error: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:08,793 - INFO - Stopped virtual display
+2025-01-22 23:11:14,800 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587453740_880daac2
+2025-01-22 23:11:14,800 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:11:14,800 - ERROR - Attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:14,800 - INFO - Stopped virtual display
+2025-01-22 23:11:18,807 - INFO - Attempting to initialize Chrome (attempt 2/3)...
+2025-01-22 23:11:18,808 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:11:18,808 - INFO - Using debugging port: 9222
+2025-01-22 23:11:18,808 - INFO - Starting Chrome process...
+2025-01-22 23:11:18,808 - INFO - Starting Chrome process...
+2025-01-22 23:11:18,811 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:11:19,815 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:11:20,818 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:20,818 - INFO - Stopped virtual display
+2025-01-22 23:11:20,818 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587478808_55d4c47c
+2025-01-22 23:11:23,826 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:11:23,826 - INFO - Using debugging port: 9222
+2025-01-22 23:11:23,826 - INFO - Starting Chrome process...
+2025-01-22 23:11:23,826 - INFO - Starting Chrome process...
+2025-01-22 23:11:23,829 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:11:24,832 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:11:25,836 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:25,836 - INFO - Stopped virtual display
+2025-01-22 23:11:30,843 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:11:30,843 - INFO - Using debugging port: 9222
+2025-01-22 23:11:30,844 - INFO - Starting Chrome process...
+2025-01-22 23:11:30,844 - INFO - Starting Chrome process...
+2025-01-22 23:11:30,847 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:11:31,850 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:11:32,854 - ERROR - Connection attempt 3 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:32,854 - INFO - Stopped virtual display
+2025-01-22 23:11:33,861 - ERROR - Chrome initialization error: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:33,861 - INFO - Stopped virtual display
+2025-01-22 23:11:39,868 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587478808_55d4c47c
+2025-01-22 23:11:39,868 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:11:39,869 - ERROR - Attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:39,869 - INFO - Stopped virtual display
+2025-01-22 23:11:43,876 - INFO - Attempting to initialize Chrome (attempt 3/3)...
+2025-01-22 23:11:43,876 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:11:43,876 - INFO - Using debugging port: 9222
+2025-01-22 23:11:43,877 - INFO - Starting Chrome process...
+2025-01-22 23:11:43,877 - INFO - Starting Chrome process...
+2025-01-22 23:11:43,880 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:11:44,884 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:11:45,887 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:45,887 - INFO - Stopped virtual display
+2025-01-22 23:11:45,888 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587503876_5e1cdc6d
+2025-01-22 23:11:48,895 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:11:48,895 - INFO - Using debugging port: 9222
+2025-01-22 23:11:48,896 - INFO - Starting Chrome process...
+2025-01-22 23:11:48,896 - INFO - Starting Chrome process...
+2025-01-22 23:11:48,898 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:11:49,902 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:11:50,905 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:11:50,905 - INFO - Stopped virtual display
+2025-01-22 23:15:53,038 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:15:53,038 - ERROR - Error in display initialization (attempt 1): name 'cleanup_resources' is not defined
+2025-01-22 23:16:59,878 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:17:00,892 - INFO - Removed X11 file: /dev/shm/xvfb/1737587449_368311
+2025-01-22 23:17:00,892 - INFO - Removed X11 file: /dev/shm/xvfb/1737587445_368311
+2025-01-22 23:17:02,893 - INFO - Verifying clean environment...
+2025-01-22 23:17:03,921 - INFO - Removed: /dev/shm/chrome_profiles
+2025-01-22 23:17:03,921 - INFO - Environment verification passed
+2025-01-22 23:17:04,934 - INFO - Fixed permissions for /dev/shm/xvfb/1737587824_373533/.X11-unix: 0o775 -> 1777
+2025-01-22 23:17:04,934 - INFO - Using display number :99
+2025-01-22 23:17:04,937 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:17:04,939 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737587824_373533/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1
+2025-01-22 23:17:07,945 - INFO - Display connection test successful
+2025-01-22 23:17:07,950 - INFO - Virtual display initialized and verified successfully
+2025-01-22 23:17:07,951 - INFO - Verifying clean environment...
+2025-01-22 23:17:08,972 - INFO - Terminated process: xvfb (PID: 373675)
+2025-01-22 23:17:08,973 - INFO - Removed: /tmp/.X11-unix/X99
+2025-01-22 23:17:08,973 - INFO - Environment verification passed
+2025-01-22 23:17:08,973 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:17:08,973 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:17:08,974 - INFO - Using debugging port: 9222
+2025-01-22 23:17:08,974 - INFO - Starting Chrome process...
+2025-01-22 23:17:08,974 - INFO - Starting Chrome process...
+2025-01-22 23:17:08,976 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:17:09,980 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:17:10,983 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:10,983 - INFO - Stopped virtual display
+2025-01-22 23:17:10,983 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587828973_b89fb624
+2025-01-22 23:17:11,997 - INFO - Removed X11 file: /dev/shm/xvfb/1737587824_373533
+2025-01-22 23:17:13,997 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:17:13,997 - INFO - Using debugging port: 9222
+2025-01-22 23:17:13,998 - INFO - Starting Chrome process...
+2025-01-22 23:17:13,998 - INFO - Starting Chrome process...
+2025-01-22 23:17:14,001 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:17:15,004 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:17:16,009 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:21,022 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:17:21,022 - INFO - Using debugging port: 9222
+2025-01-22 23:17:21,022 - INFO - Starting Chrome process...
+2025-01-22 23:17:21,023 - INFO - Starting Chrome process...
+2025-01-22 23:17:21,026 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:17:22,029 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:17:23,032 - ERROR - Connection attempt 3 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:24,045 - ERROR - Chrome initialization error: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:30,058 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587828973_b89fb624
+2025-01-22 23:17:30,058 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:17:30,059 - ERROR - Attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:34,072 - INFO - Attempting to initialize Chrome (attempt 2/3)...
+2025-01-22 23:17:34,072 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:17:34,072 - INFO - Using debugging port: 9222
+2025-01-22 23:17:34,073 - INFO - Starting Chrome process...
+2025-01-22 23:17:34,073 - INFO - Starting Chrome process...
+2025-01-22 23:17:34,076 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:17:35,079 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:17:36,082 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:36,082 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587854072_929a5c23
+2025-01-22 23:17:39,095 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:17:39,095 - INFO - Using debugging port: 9222
+2025-01-22 23:17:39,096 - INFO - Starting Chrome process...
+2025-01-22 23:17:39,096 - INFO - Starting Chrome process...
+2025-01-22 23:17:39,099 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:17:40,102 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:17:41,105 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:46,119 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:17:46,119 - INFO - Using debugging port: 9222
+2025-01-22 23:17:46,119 - INFO - Starting Chrome process...
+2025-01-22 23:17:46,119 - INFO - Starting Chrome process...
+2025-01-22 23:17:46,122 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:17:47,125 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:17:48,128 - ERROR - Connection attempt 3 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:49,142 - ERROR - Chrome initialization error: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:55,155 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587854072_929a5c23
+2025-01-22 23:17:55,155 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:17:55,155 - ERROR - Attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:17:59,169 - INFO - Attempting to initialize Chrome (attempt 3/3)...
+2025-01-22 23:17:59,169 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:17:59,170 - INFO - Using debugging port: 9222
+2025-01-22 23:17:59,170 - INFO - Starting Chrome process...
+2025-01-22 23:17:59,170 - INFO - Starting Chrome process...
+2025-01-22 23:17:59,173 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:18:00,176 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:18:01,179 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:18:01,179 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737587879169_2551f1c2
+2025-01-22 23:18:04,192 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:18:04,192 - INFO - Using debugging port: 9222
+2025-01-22 23:18:04,193 - INFO - Starting Chrome process...
+2025-01-22 23:18:04,193 - INFO - Starting Chrome process...
+2025-01-22 23:18:04,196 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:18:05,199 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:18:06,203 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:18:11,217 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:18:11,217 - INFO - Using debugging port: 9222
+2025-01-22 23:18:11,217 - INFO - Starting Chrome process...
+2025-01-22 23:18:11,217 - INFO - Starting Chrome process...
+2025-01-22 23:18:11,220 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:18:12,223 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:18:13,227 - ERROR - Connection attempt 3 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:18:14,240 - ERROR - Chrome initialization error: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:18:20,254 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737587879169_2551f1c2
+2025-01-22 23:18:20,255 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:18:20,255 - ERROR - Attempt 3 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:18:24,268 - ERROR - Fatal error: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:22:26,606 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:22:29,620 - INFO - Verifying clean environment...
+2025-01-22 23:22:30,647 - INFO - Environment verification passed
+2025-01-22 23:22:31,660 - INFO - Fixed permissions for /dev/shm/xvfb/1737588151_377244/.X11-unix: 0o775 -> 1777
+2025-01-22 23:22:31,660 - INFO - Using display number :99
+2025-01-22 23:22:31,662 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:22:31,665 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737588151_377244/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1
+2025-01-22 23:22:34,671 - INFO - Display connection test successful
+2025-01-22 23:22:34,677 - INFO - Virtual display initialized and verified successfully
+2025-01-22 23:22:34,677 - INFO - Verifying clean environment...
+2025-01-22 23:22:35,699 - INFO - Terminated process: xvfb (PID: 377386)
+2025-01-22 23:22:35,700 - INFO - Removed: /tmp/.X11-unix/X99
+2025-01-22 23:22:35,700 - INFO - Environment verification passed
+2025-01-22 23:22:35,700 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:22:35,700 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:22:35,701 - INFO - Using debugging port: 9222
+2025-01-22 23:22:35,701 - INFO - Starting Chrome process...
+2025-01-22 23:22:35,701 - INFO - Starting Chrome process...
+2025-01-22 23:22:35,704 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:22:36,707 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:22:37,710 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:22:41,723 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:22:41,724 - INFO - Using debugging port: 9222
+2025-01-22 23:22:41,724 - INFO - Starting Chrome process...
+2025-01-22 23:22:41,724 - INFO - Starting Chrome process...
+2025-01-22 23:22:41,727 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:22:42,730 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:22:43,734 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:22:49,747 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:22:49,748 - INFO - Using debugging port: 9222
+2025-01-22 23:22:49,748 - INFO - Starting Chrome process...
+2025-01-22 23:22:49,748 - INFO - Starting Chrome process...
+2025-01-22 23:22:49,751 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:22:50,754 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:22:51,757 - ERROR - Connection attempt 3 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:22:53,770 - ERROR - Chrome initialization error: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:23:00,783 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737588155700_5ab25bb1
+2025-01-22 23:23:00,784 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:23:00,784 - ERROR - Attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:23:00,784 - INFO - Stopped virtual display
+2025-01-22 23:23:01,797 - INFO - Removed X11 file: /dev/shm/xvfb/1737588151_377244
+2025-01-22 23:23:04,797 - INFO - Attempting to initialize Chrome (attempt 2/3)...
+2025-01-22 23:23:04,798 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:23:04,798 - INFO - Using debugging port: 9222
+2025-01-22 23:23:04,798 - INFO - Starting Chrome process...
+2025-01-22 23:23:04,798 - INFO - Starting Chrome process...
+2025-01-22 23:23:04,801 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:23:05,805 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:23:06,808 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:23:10,822 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:23:10,823 - INFO - Using debugging port: 9222
+2025-01-22 23:23:10,823 - INFO - Starting Chrome process...
+2025-01-22 23:23:10,823 - INFO - Starting Chrome process...
+2025-01-22 23:23:10,826 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:23:11,829 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:23:12,832 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:23:18,846 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:23:18,846 - INFO - Using debugging port: 9222
+2025-01-22 23:23:18,847 - INFO - Starting Chrome process...
+2025-01-22 23:23:18,847 - INFO - Starting Chrome process...
+2025-01-22 23:23:18,850 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:23:19,853 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:23:20,857 - ERROR - Connection attempt 3 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:23:22,870 - ERROR - Chrome initialization error: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:23:29,884 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737588184798_5cdbf58d
+2025-01-22 23:23:29,884 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:23:29,885 - ERROR - Attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:23:33,898 - INFO - Attempting to initialize Chrome (attempt 3/3)...
+2025-01-22 23:23:33,899 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:23:33,899 - INFO - Using debugging port: 9222
+2025-01-22 23:23:33,899 - INFO - Starting Chrome process...
+2025-01-22 23:23:33,899 - INFO - Starting Chrome process...
+2025-01-22 23:23:33,902 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:23:34,906 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:23:35,909 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:23:39,922 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:23:39,923 - INFO - Using debugging port: 9222
+2025-01-22 23:23:39,923 - INFO - Starting Chrome process...
+2025-01-22 23:23:39,923 - INFO - Starting Chrome process...
+2025-01-22 23:23:39,926 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:23:40,929 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:23:41,932 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:25:15,705 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:25:17,706 - INFO - Verifying clean environment...
+2025-01-22 23:25:17,727 - INFO - Removed: /dev/shm/chrome_profiles
+2025-01-22 23:25:17,727 - INFO - Environment verification passed
+2025-01-22 23:25:18,740 - INFO - Fixed permissions for /dev/shm/xvfb/1737588318_379672/.X11-unix: 0o775 -> 1777
+2025-01-22 23:25:18,740 - INFO - Using display number :99
+2025-01-22 23:25:18,743 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:25:18,745 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737588318_379672/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1
+2025-01-22 23:25:21,751 - INFO - Display connection test successful
+2025-01-22 23:25:21,757 - INFO - Virtual display initialized and verified successfully
+2025-01-22 23:25:21,758 - INFO - Verifying clean environment...
+2025-01-22 23:25:21,773 - INFO - Removed: /tmp/.X11-unix/X99
+2025-01-22 23:25:21,774 - INFO - Environment verification passed
+2025-01-22 23:25:21,774 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:25:21,774 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:25:21,774 - INFO - Using debugging port: 9222
+2025-01-22 23:25:21,774 - INFO - Starting Chrome process...
+2025-01-22 23:25:21,774 - INFO - Starting Chrome process...
+2025-01-22 23:25:21,778 - INFO - X display verified accessible
+2025-01-22 23:25:21,778 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:25:21,778 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737588321774_d043ba99
+2025-01-22 23:25:21,778 - ERROR - Connection attempt 1 failed: X11 socket not found: /tmp/.X11-unix/X99
+2025-01-22 23:25:25,792 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:25:25,792 - INFO - Using debugging port: 9222
+2025-01-22 23:25:25,792 - INFO - Starting Chrome process...
+2025-01-22 23:25:25,792 - INFO - Starting Chrome process...
+2025-01-22 23:25:25,796 - INFO - X display verified accessible
+2025-01-22 23:25:25,797 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:25:25,797 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737588321774_d043ba99
+2025-01-22 23:25:25,797 - ERROR - Connection attempt 2 failed: X11 socket not found: /tmp/.X11-unix/X99
+2025-01-22 23:25:31,811 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:25:31,811 - INFO - Using debugging port: 9222
+2025-01-22 23:25:31,812 - INFO - Starting Chrome process...
+2025-01-22 23:25:31,812 - INFO - Starting Chrome process...
+2025-01-22 23:25:31,816 - INFO - X display verified accessible
+2025-01-22 23:25:31,816 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:25:31,816 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737588321774_d043ba99
+2025-01-22 23:25:31,816 - ERROR - Connection attempt 3 failed: X11 socket not found: /tmp/.X11-unix/X99
+2025-01-22 23:25:33,830 - ERROR - Chrome initialization error: X11 socket not found: /tmp/.X11-unix/X99
+2025-01-22 23:25:40,845 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737588321774_d043ba99
+2025-01-22 23:25:40,845 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:25:40,845 - ERROR - Attempt 1 failed: X11 socket not found: /tmp/.X11-unix/X99
+2025-01-22 23:25:40,852 - INFO - Stopped virtual display
+2025-01-22 23:25:43,853 - INFO - Attempting to initialize Chrome (attempt 2/3)...
+2025-01-22 23:25:43,853 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:25:43,854 - INFO - Using debugging port: 9222
+2025-01-22 23:25:43,854 - INFO - Starting Chrome process...
+2025-01-22 23:25:43,854 - INFO - Starting Chrome process...
+2025-01-22 23:25:43,857 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:25:44,860 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:25:45,864 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:28:07,954 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:28:07,954 - WARNING - Failed to verify X11 socket permissions: [Errno 1] Operation not permitted: '/tmp/.X11-unix'
+2025-01-22 23:28:09,955 - INFO - Verifying clean environment...
+2025-01-22 23:28:09,975 - WARNING - Failed to verify X11 socket permissions: [Errno 1] Operation not permitted: '/tmp/.X11-unix'
+2025-01-22 23:28:09,976 - INFO - Removed: /dev/shm/chrome_profiles
+2025-01-22 23:28:09,976 - ERROR - Environment verification failed
+2025-01-22 23:28:09,976 - WARNING - Environment not clean (attempt 1)
+2025-01-22 23:28:09,977 - WARNING - Failed to verify X11 socket permissions: [Errno 1] Operation not permitted: '/tmp/.X11-unix'
+2025-01-22 23:28:11,977 - INFO - Verifying clean environment...
+2025-01-22 23:28:11,992 - WARNING - Failed to verify X11 socket permissions: [Errno 1] Operation not permitted: '/tmp/.X11-unix'
+2025-01-22 23:28:11,992 - ERROR - Environment verification failed
+2025-01-22 23:28:11,992 - WARNING - Environment not clean (attempt 2)
+2025-01-22 23:28:11,993 - WARNING - Failed to verify X11 socket permissions: [Errno 1] Operation not permitted: '/tmp/.X11-unix'
+2025-01-22 23:28:13,993 - INFO - Verifying clean environment...
+2025-01-22 23:28:14,008 - WARNING - Failed to verify X11 socket permissions: [Errno 1] Operation not permitted: '/tmp/.X11-unix'
+2025-01-22 23:28:14,009 - ERROR - Environment verification failed
+2025-01-22 23:28:14,009 - WARNING - Environment not clean (attempt 3)
+2025-01-22 23:28:14,010 - WARNING - Failed to verify X11 socket permissions: [Errno 1] Operation not permitted: '/tmp/.X11-unix'
+2025-01-22 23:34:39,345 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:34:39,346 - INFO - Created new X11 socket directory: /dev/shm/xvfb/1737588879_386216/.X11-unix
+2025-01-22 23:34:41,346 - INFO - Verifying clean environment...
+2025-01-22 23:34:41,366 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737588881_386216/.X11-unix
+2025-01-22 23:34:41,367 - INFO - Environment verification passed
+2025-01-22 23:34:41,367 - INFO - Created X11 directory structure in /dev/shm/xvfb/1737588881_386216
+2025-01-22 23:34:42,380 - INFO - Fixed permissions for /dev/shm/xvfb/1737588882_386216/.X11-unix: 0o775 -> 1777
+2025-01-22 23:34:42,380 - INFO - Using display number :99
+2025-01-22 23:34:42,382 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:34:42,384 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737588882_386216/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1 -shmem -unix-socket-dir=/dev/shm/xvfb/1737588882_386216/.X11-unix
+2025-01-22 23:34:45,386 - ERROR - Failed to start virtual display: Xvfb failed to start. Log output:
+Unrecognized option: -unix-socket-dir=/dev/shm/xvfb/1737588882_386216/.X11-unix
+use: X [:<display>] [option]
+-a #                   default pointer acceleration (factor)
+-ac                    disable access control restrictions
+-audit int             set audit trail level
+-auth file             select authorization file
+-br                    create root window with black background
++bs                    enable any backing store support
+-bs                    disable any backing store support
+-c                     turns off key-click
+c #                    key-click volume (0-100)
+-cc int                default color visual class
+-nocursor              disable the cursor
+-core                  generate core dump on fatal error
+-displayfd fd          file descriptor to write display number to when ready to connect
+-dpi int               screen resolution in dots per inch
+-dpms                  disables VESA DPMS monitor control
+-deferglyphs [none|all|16] defer loading of [no|all|16-bit] glyphs
+-f #                   bell base (0-100)
+-fakescreenfps #       fake screen default fps (1-600)
+-fp string             default font path
+-help                  prints message with these options
++iglx                  Allow creating indirect GLX contexts
+-iglx                  Prohibit creating indirect GLX contexts (default)
+-I                     ignore all remaining arguments
+-ld int                limit data space to N Kb
+-lf int                limit number of open files to N
+-ls int                limit stack space to N Kb
+-nolock                disable the locking mechanism
+-maxclients n          set maximum number of clients (power of two)
+-nolisten string       don't listen on protocol
+-listen string         listen on protocol
+-noreset               don't reset after last client exists
+-background [none]     create root window with no background
+-reset                 reset after last client exists
+-p #                   screen-saver pattern duration (minutes)
+-pn                    accept failure to listen on all ports
+-nopn                  reject failure to listen on all ports
+-r                     turns off auto-repeat
+r                      turns on auto-repeat 
+-render [default|mono|gray|color] set render color alloc policy
+-retro                 start with classic stipple and cursor
+-s #                   screen-saver timeout (minutes)
+-seat string           seat to run on
+-t #                   default pointer threshold (pixels/t)
+-terminate [delay]     terminate at server reset (optional delay in sec)
+-tst                   disable testing extensions
+ttyxx                  server started from init on /dev/ttyxx
+v                      video blanking for screen-saver
+-v                     screen-saver without video blanking
+-wr                    create root window with white background
+-maxbigreqsize         set maximal bigrequest size 
++xinerama              Enable XINERAMA extension
+-xinerama              Disable XINERAMA extension
+-dumbSched             Disable smart scheduling and threaded input, enable old behavior
+-schedInterval int     Set scheduler interval in msec
+-sigstop               Enable SIGSTOP based startup
++extension name        Enable extension
+-extension name        Disable extension
+ Only the following extensions can be run-time enabled/disabled:
+	Generic Event Extension
+	MIT-SHM
+	XTEST
+	SECURITY
+	XINERAMA
+	XFIXES
+	RENDER
+	RANDR
+	COMPOSITE
+	DAMAGE
+	MIT-SCREEN-SAVER
+	DOUBLE-BUFFER
+	RECORD
+	DPMS
+	X-Resource
+	XVideo
+	XVideo-MotionCompensation
+	SELinux
+	GLX
+-query host-name       contact named host for XDMCP
+-broadcast             broadcast for XDMCP
+-multicast [addr [hops]] IPv6 multicast for XDMCP
+-indirect host-name    contact named host for indirect XDMCP
+-port port-num         UDP port number to send messages to
+-from local-address    specify the local address to connect from
+-once                  Terminate server after one session
+-class display-class   specify display class to send in manage
+-cookie xdm-auth-bits  specify the magic cookie for XDMCP
+-displayID display-id  manufacturer display ID for request
+[+-]accessx [ timeout [ timeout_mask [ feedback [ options_mask] ] ] ]
+                       enable/disable accessx key sequences
+-ardelay               set XKB autorepeat delay
+-arinterval            set XKB autorepeat interval
+-screen scrn WxHxD     set screen's width, height, depth
+-pixdepths list-of-int support given pixmap depths
++/-render		   turn on/off RENDER extension support(default on)
+-linebias n            adjust thin line pixelization
+-blackpixel n          pixel value for black
+-whitepixel n          pixel value for white
+-fbdir directory       put framebuffers in mmap'ed files in directory
+-shmem                 put framebuffers in shared memory
+(EE) 
+Fatal server error:
+(EE) Unrecognized option: -unix-socket-dir=/dev/shm/xvfb/1737588882_386216/.X11-unix
+(EE) 
+shmdt: Invalid argument
+shmdt failed, Invalid argument
+2025-01-22 23:34:45,387 - WARNING - Virtual display setup failed (attempt 1)
+2025-01-22 23:34:47,387 - INFO - Stopped virtual display
+2025-01-22 23:34:47,388 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737588882_386216/.X11-unix
+2025-01-22 23:34:49,388 - INFO - Verifying clean environment...
+2025-01-22 23:34:49,404 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737588889_386216/.X11-unix
+2025-01-22 23:34:49,404 - INFO - Environment verification passed
+2025-01-22 23:34:49,404 - INFO - Created X11 directory structure in /dev/shm/xvfb/1737588889_386216
+2025-01-22 23:34:50,417 - INFO - Fixed permissions for /dev/shm/xvfb/1737588890_386216/.X11-unix: 0o775 -> 1777
+2025-01-22 23:34:50,417 - INFO - Using display number :99
+2025-01-22 23:34:50,420 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:34:50,422 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737588890_386216/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1 -shmem -unix-socket-dir=/dev/shm/xvfb/1737588890_386216/.X11-unix
+2025-01-22 23:34:53,424 - ERROR - Failed to start virtual display: Xvfb failed to start. Log output:
+Unrecognized option: -unix-socket-dir=/dev/shm/xvfb/1737588890_386216/.X11-unix
+use: X [:<display>] [option]
+-a #                   default pointer acceleration (factor)
+-ac                    disable access control restrictions
+-audit int             set audit trail level
+-auth file             select authorization file
+-br                    create root window with black background
++bs                    enable any backing store support
+-bs                    disable any backing store support
+-c                     turns off key-click
+c #                    key-click volume (0-100)
+-cc int                default color visual class
+-nocursor              disable the cursor
+-core                  generate core dump on fatal error
+-displayfd fd          file descriptor to write display number to when ready to connect
+-dpi int               screen resolution in dots per inch
+-dpms                  disables VESA DPMS monitor control
+-deferglyphs [none|all|16] defer loading of [no|all|16-bit] glyphs
+-f #                   bell base (0-100)
+-fakescreenfps #       fake screen default fps (1-600)
+-fp string             default font path
+-help                  prints message with these options
++iglx                  Allow creating indirect GLX contexts
+-iglx                  Prohibit creating indirect GLX contexts (default)
+-I                     ignore all remaining arguments
+-ld int                limit data space to N Kb
+-lf int                limit number of open files to N
+-ls int                limit stack space to N Kb
+-nolock                disable the locking mechanism
+-maxclients n          set maximum number of clients (power of two)
+-nolisten string       don't listen on protocol
+-listen string         listen on protocol
+-noreset               don't reset after last client exists
+-background [none]     create root window with no background
+-reset                 reset after last client exists
+-p #                   screen-saver pattern duration (minutes)
+-pn                    accept failure to listen on all ports
+-nopn                  reject failure to listen on all ports
+-r                     turns off auto-repeat
+r                      turns on auto-repeat 
+-render [default|mono|gray|color] set render color alloc policy
+-retro                 start with classic stipple and cursor
+-s #                   screen-saver timeout (minutes)
+-seat string           seat to run on
+-t #                   default pointer threshold (pixels/t)
+-terminate [delay]     terminate at server reset (optional delay in sec)
+-tst                   disable testing extensions
+ttyxx                  server started from init on /dev/ttyxx
+v                      video blanking for screen-saver
+-v                     screen-saver without video blanking
+-wr                    create root window with white background
+-maxbigreqsize         set maximal bigrequest size 
++xinerama              Enable XINERAMA extension
+-xinerama              Disable XINERAMA extension
+-dumbSched             Disable smart scheduling and threaded input, enable old behavior
+-schedInterval int     Set scheduler interval in msec
+-sigstop               Enable SIGSTOP based startup
++extension name        Enable extension
+-extension name        Disable extension
+ Only the following extensions can be run-time enabled/disabled:
+	Generic Event Extension
+	MIT-SHM
+	XTEST
+	SECURITY
+	XINERAMA
+	XFIXES
+	RENDER
+	RANDR
+	COMPOSITE
+	DAMAGE
+	MIT-SCREEN-SAVER
+	DOUBLE-BUFFER
+	RECORD
+	DPMS
+	X-Resource
+	XVideo
+	XVideo-MotionCompensation
+	SELinux
+	GLX
+-query host-name       contact named host for XDMCP
+-broadcast             broadcast for XDMCP
+-multicast [addr [hops]] IPv6 multicast for XDMCP
+-indirect host-name    contact named host for indirect XDMCP
+-port port-num         UDP port number to send messages to
+-from local-address    specify the local address to connect from
+-once                  Terminate server after one session
+-class display-class   specify display class to send in manage
+-cookie xdm-auth-bits  specify the magic cookie for XDMCP
+-displayID display-id  manufacturer display ID for request
+[+-]accessx [ timeout [ timeout_mask [ feedback [ options_mask] ] ] ]
+                       enable/disable accessx key sequences
+-ardelay               set XKB autorepeat delay
+-arinterval            set XKB autorepeat interval
+-screen scrn WxHxD     set screen's width, height, depth
+-pixdepths list-of-int support given pixmap depths
++/-render		   turn on/off RENDER extension support(default on)
+-linebias n            adjust thin line pixelization
+-blackpixel n          pixel value for black
+-whitepixel n          pixel value for white
+-fbdir directory       put framebuffers in mmap'ed files in directory
+-shmem                 put framebuffers in shared memory
+(EE) 
+Fatal server error:
+(EE) Unrecognized option: -unix-socket-dir=/dev/shm/xvfb/1737588890_386216/.X11-unix
+(EE) 
+shmdt: Invalid argument
+shmdt failed, Invalid argument
+2025-01-22 23:34:53,424 - WARNING - Virtual display setup failed (attempt 2)
+2025-01-22 23:34:57,425 - INFO - Stopped virtual display
+2025-01-22 23:34:57,425 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737588890_386216/.X11-unix
+2025-01-22 23:34:59,425 - INFO - Verifying clean environment...
+2025-01-22 23:34:59,441 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737588899_386216/.X11-unix
+2025-01-22 23:34:59,441 - INFO - Environment verification passed
+2025-01-22 23:34:59,441 - INFO - Created X11 directory structure in /dev/shm/xvfb/1737588899_386216
+2025-01-22 23:35:00,454 - INFO - Fixed permissions for /dev/shm/xvfb/1737588900_386216/.X11-unix: 0o775 -> 1777
+2025-01-22 23:35:00,454 - INFO - Using display number :99
+2025-01-22 23:35:00,457 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:35:00,460 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737588900_386216/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1 -shmem -unix-socket-dir=/dev/shm/xvfb/1737588900_386216/.X11-unix
+2025-01-22 23:35:03,462 - ERROR - Failed to start virtual display: Xvfb failed to start. Log output:
+Unrecognized option: -unix-socket-dir=/dev/shm/xvfb/1737588900_386216/.X11-unix
+use: X [:<display>] [option]
+-a #                   default pointer acceleration (factor)
+-ac                    disable access control restrictions
+-audit int             set audit trail level
+-auth file             select authorization file
+-br                    create root window with black background
++bs                    enable any backing store support
+-bs                    disable any backing store support
+-c                     turns off key-click
+c #                    key-click volume (0-100)
+-cc int                default color visual class
+-nocursor              disable the cursor
+-core                  generate core dump on fatal error
+-displayfd fd          file descriptor to write display number to when ready to connect
+-dpi int               screen resolution in dots per inch
+-dpms                  disables VESA DPMS monitor control
+-deferglyphs [none|all|16] defer loading of [no|all|16-bit] glyphs
+-f #                   bell base (0-100)
+-fakescreenfps #       fake screen default fps (1-600)
+-fp string             default font path
+-help                  prints message with these options
++iglx                  Allow creating indirect GLX contexts
+-iglx                  Prohibit creating indirect GLX contexts (default)
+-I                     ignore all remaining arguments
+-ld int                limit data space to N Kb
+-lf int                limit number of open files to N
+-ls int                limit stack space to N Kb
+-nolock                disable the locking mechanism
+-maxclients n          set maximum number of clients (power of two)
+-nolisten string       don't listen on protocol
+-listen string         listen on protocol
+-noreset               don't reset after last client exists
+-background [none]     create root window with no background
+-reset                 reset after last client exists
+-p #                   screen-saver pattern duration (minutes)
+-pn                    accept failure to listen on all ports
+-nopn                  reject failure to listen on all ports
+-r                     turns off auto-repeat
+r                      turns on auto-repeat 
+-render [default|mono|gray|color] set render color alloc policy
+-retro                 start with classic stipple and cursor
+-s #                   screen-saver timeout (minutes)
+-seat string           seat to run on
+-t #                   default pointer threshold (pixels/t)
+-terminate [delay]     terminate at server reset (optional delay in sec)
+-tst                   disable testing extensions
+ttyxx                  server started from init on /dev/ttyxx
+v                      video blanking for screen-saver
+-v                     screen-saver without video blanking
+-wr                    create root window with white background
+-maxbigreqsize         set maximal bigrequest size 
++xinerama              Enable XINERAMA extension
+-xinerama              Disable XINERAMA extension
+-dumbSched             Disable smart scheduling and threaded input, enable old behavior
+-schedInterval int     Set scheduler interval in msec
+-sigstop               Enable SIGSTOP based startup
++extension name        Enable extension
+-extension name        Disable extension
+ Only the following extensions can be run-time enabled/disabled:
+	Generic Event Extension
+	MIT-SHM
+	XTEST
+	SECURITY
+	XINERAMA
+	XFIXES
+	RENDER
+	RANDR
+	COMPOSITE
+	DAMAGE
+	MIT-SCREEN-SAVER
+	DOUBLE-BUFFER
+	RECORD
+	DPMS
+	X-Resource
+	XVideo
+	XVideo-MotionCompensation
+	SELinux
+	GLX
+-query host-name       contact named host for XDMCP
+-broadcast             broadcast for XDMCP
+-multicast [addr [hops]] IPv6 multicast for XDMCP
+-indirect host-name    contact named host for indirect XDMCP
+-port port-num         UDP port number to send messages to
+-from local-address    specify the local address to connect from
+-once                  Terminate server after one session
+-class display-class   specify display class to send in manage
+-cookie xdm-auth-bits  specify the magic cookie for XDMCP
+-displayID display-id  manufacturer display ID for request
+[+-]accessx [ timeout [ timeout_mask [ feedback [ options_mask] ] ] ]
+                       enable/disable accessx key sequences
+-ardelay               set XKB autorepeat delay
+-arinterval            set XKB autorepeat interval
+-screen scrn WxHxD     set screen's width, height, depth
+-pixdepths list-of-int support given pixmap depths
++/-render		   turn on/off RENDER extension support(default on)
+-linebias n            adjust thin line pixelization
+-blackpixel n          pixel value for black
+-whitepixel n          pixel value for white
+-fbdir directory       put framebuffers in mmap'ed files in directory
+-shmem                 put framebuffers in shared memory
+(EE) 
+Fatal server error:
+(EE) Unrecognized option: -unix-socket-dir=/dev/shm/xvfb/1737588900_386216/.X11-unix
+(EE) 
+shmdt: Invalid argument
+shmdt failed, Invalid argument
+2025-01-22 23:35:03,462 - WARNING - Virtual display setup failed (attempt 3)
+2025-01-22 23:35:03,462 - INFO - Virtual display stopped
+2025-01-22 23:35:03,464 - INFO - Stopped virtual display
+2025-01-22 23:35:03,464 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737588900_386216/.X11-unix
+2025-01-22 23:40:00,300 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:40:00,301 - INFO - Created new X11 socket directory: /dev/shm/xvfb/1737589200_390109/.X11-unix
+2025-01-22 23:40:02,301 - INFO - Verifying clean environment...
+2025-01-22 23:40:02,322 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589202_390109/.X11-unix
+2025-01-22 23:40:02,322 - INFO - Environment verification passed
+2025-01-22 23:40:02,322 - INFO - Verified X11 directory structure: /tmp/.X11-unix
+2025-01-22 23:40:03,336 - INFO - Fixed permissions for /dev/shm/xvfb/1737589203_390109/.X11-unix: 0o775 -> 1777
+2025-01-22 23:40:03,336 - INFO - Using display number :99
+2025-01-22 23:40:03,338 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:40:03,340 - ERROR - Failed to start virtual display: [Errno 13] Permission denied: '/run/user/1000'
+2025-01-22 23:40:03,340 - WARNING - Virtual display setup failed (attempt 1)
+2025-01-22 23:40:05,341 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589202_390109/.X11-unix
+2025-01-22 23:40:07,341 - INFO - Verifying clean environment...
+2025-01-22 23:40:07,356 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589207_390109/.X11-unix
+2025-01-22 23:40:07,356 - INFO - Environment verification passed
+2025-01-22 23:40:07,356 - INFO - Verified X11 directory structure: /tmp/.X11-unix
+2025-01-22 23:40:08,370 - INFO - Fixed permissions for /dev/shm/xvfb/1737589208_390109/.X11-unix: 0o775 -> 1777
+2025-01-22 23:40:08,370 - INFO - Using display number :99
+2025-01-22 23:40:08,372 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:40:08,374 - ERROR - Failed to start virtual display: [Errno 13] Permission denied: '/run/user/1000'
+2025-01-22 23:40:08,374 - WARNING - Virtual display setup failed (attempt 2)
+2025-01-22 23:40:12,375 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589207_390109/.X11-unix
+2025-01-22 23:40:14,376 - INFO - Verifying clean environment...
+2025-01-22 23:40:14,390 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589214_390109/.X11-unix
+2025-01-22 23:40:14,390 - INFO - Environment verification passed
+2025-01-22 23:40:14,391 - INFO - Verified X11 directory structure: /tmp/.X11-unix
+2025-01-22 23:40:15,403 - INFO - Fixed permissions for /dev/shm/xvfb/1737589215_390109/.X11-unix: 0o775 -> 1777
+2025-01-22 23:40:15,403 - INFO - Using display number :99
+2025-01-22 23:40:15,405 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:40:15,407 - ERROR - Failed to start virtual display: [Errno 13] Permission denied: '/run/user/1000'
+2025-01-22 23:40:15,407 - WARNING - Virtual display setup failed (attempt 3)
+2025-01-22 23:40:15,409 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589214_390109/.X11-unix
+2025-01-22 23:41:43,441 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:41:43,442 - INFO - Created new X11 socket directory: /dev/shm/xvfb/1737589303_391795/.X11-unix
+2025-01-22 23:41:45,442 - INFO - Verifying clean environment...
+2025-01-22 23:41:45,463 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589305_391795/.X11-unix
+2025-01-22 23:41:45,463 - INFO - Environment verification passed
+2025-01-22 23:41:45,464 - INFO - Verified X11 directory structure: /tmp/.X11-unix
+2025-01-22 23:41:46,478 - INFO - Fixed permissions for /dev/shm/xvfb/1737589306_391795/.X11-unix: 0o775 -> 1777
+2025-01-22 23:41:46,478 - INFO - Using display number :99
+2025-01-22 23:41:46,480 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:41:46,483 - INFO - Verified directory XDG_RUNTIME_DIR=/dev/shm/chrome-runtime/runtime-391795/runtime exists with correct permissions
+2025-01-22 23:41:46,483 - INFO - Verified directory XDG_CACHE_HOME=/dev/shm/chrome-runtime/runtime-391795/cache exists with correct permissions
+2025-01-22 23:41:46,483 - INFO - Verified directory XDG_CONFIG_HOME=/dev/shm/chrome-runtime/runtime-391795/config exists with correct permissions
+2025-01-22 23:41:46,483 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737589306_391795/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1 -shmem
+2025-01-22 23:41:49,490 - INFO - Display connection test successful
+2025-01-22 23:41:49,497 - INFO - Virtual display initialized and verified successfully
+2025-01-22 23:41:49,497 - INFO - Verifying clean environment...
+2025-01-22 23:41:49,512 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589309_391795/.X11-unix
+2025-01-22 23:41:49,513 - INFO - Removed: /dev/shm/chrome-runtime
+2025-01-22 23:41:49,513 - INFO - Environment verification passed
+2025-01-22 23:41:49,513 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:41:49,513 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:41:49,513 - INFO - Using debugging port: 9222
+2025-01-22 23:41:49,514 - INFO - Starting Chrome process...
+2025-01-22 23:41:49,514 - INFO - Starting Chrome process...
+2025-01-22 23:41:49,517 - INFO - X display verified accessible
+2025-01-22 23:41:49,517 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:41:49,517 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737589309513_db55a8f7
+2025-01-22 23:41:49,517 - ERROR - Connection attempt 1 failed: [Errno 13] Permission denied: '/run/user/1000'
+2025-01-22 23:41:53,531 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:41:53,531 - INFO - Using debugging port: 9222
+2025-01-22 23:41:53,532 - INFO - Starting Chrome process...
+2025-01-22 23:41:53,532 - INFO - Starting Chrome process...
+2025-01-22 23:41:53,535 - INFO - X display verified accessible
+2025-01-22 23:41:53,535 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:41:53,536 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737589309513_db55a8f7
+2025-01-22 23:41:53,536 - ERROR - Connection attempt 2 failed: [Errno 13] Permission denied: '/run/user/1000'
+2025-01-22 23:41:59,550 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:41:59,551 - INFO - Using debugging port: 9222
+2025-01-22 23:41:59,551 - INFO - Starting Chrome process...
+2025-01-22 23:41:59,551 - INFO - Starting Chrome process...
+2025-01-22 23:41:59,555 - INFO - X display verified accessible
+2025-01-22 23:41:59,555 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:41:59,555 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737589309513_db55a8f7
+2025-01-22 23:41:59,556 - ERROR - Connection attempt 3 failed: [Errno 13] Permission denied: '/run/user/1000'
+2025-01-22 23:42:01,569 - ERROR - Chrome initialization error: [Errno 13] Permission denied: '/run/user/1000'
+2025-01-22 23:42:08,584 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737589309513_db55a8f7
+2025-01-22 23:42:08,584 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:42:08,584 - ERROR - Attempt 1 failed: [Errno 13] Permission denied: '/run/user/1000'
+2025-01-22 23:42:08,592 - INFO - Stopped virtual display
+2025-01-22 23:42:08,592 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589309_391795/.X11-unix
+2025-01-22 23:42:11,593 - INFO - Attempting to initialize Chrome (attempt 2/3)...
+2025-01-22 23:42:11,593 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:42:11,593 - INFO - Using debugging port: 9222
+2025-01-22 23:42:11,594 - INFO - Starting Chrome process...
+2025-01-22 23:42:11,594 - INFO - Starting Chrome process...
+2025-01-22 23:42:11,597 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:42:12,600 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:42:13,604 - ERROR - Connection attempt 1 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:42:17,618 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:42:17,618 - INFO - Using debugging port: 9222
+2025-01-22 23:42:17,618 - INFO - Starting Chrome process...
+2025-01-22 23:42:17,618 - INFO - Starting Chrome process...
+2025-01-22 23:42:17,621 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:42:18,624 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:42:19,628 - ERROR - Connection attempt 2 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:42:25,641 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:42:25,642 - INFO - Using debugging port: 9222
+2025-01-22 23:42:25,642 - INFO - Starting Chrome process...
+2025-01-22 23:42:25,642 - INFO - Starting Chrome process...
+2025-01-22 23:42:25,646 - WARNING - X display check failed (attempt 1), retrying...
+2025-01-22 23:42:26,649 - WARNING - X display check failed (attempt 2), retrying...
+2025-01-22 23:42:27,652 - ERROR - Connection attempt 3 failed: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:42:29,666 - ERROR - Chrome initialization error: X display not accessible after 3 attempts: Command '['xdpyinfo']' returned non-zero exit status 1.
+2025-01-22 23:45:50,063 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:45:50,064 - INFO - Created new X11 socket directory: /dev/shm/xvfb/1737589550_394890/.X11-unix
+2025-01-22 23:45:52,064 - INFO - Verifying clean environment...
+2025-01-22 23:45:52,086 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589552_394890/.X11-unix
+2025-01-22 23:45:52,086 - INFO - Removed: /dev/shm/chrome_profiles
+2025-01-22 23:45:52,086 - INFO - Environment verification passed
+2025-01-22 23:45:52,087 - INFO - Verified X11 directory structure: /tmp/.X11-unix
+2025-01-22 23:45:53,100 - INFO - Fixed permissions for /dev/shm/xvfb/1737589553_394890/.X11-unix: 0o775 -> 1777
+2025-01-22 23:45:53,100 - INFO - Using display number :99
+2025-01-22 23:45:53,103 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:45:53,105 - INFO - Verified directory XDG_RUNTIME_DIR=/dev/shm/chrome-runtime/runtime-394890/runtime exists with correct permissions
+2025-01-22 23:45:53,106 - INFO - Verified directory XDG_CACHE_HOME=/dev/shm/chrome-runtime/runtime-394890/cache exists with correct permissions
+2025-01-22 23:45:53,106 - INFO - Verified directory XDG_CONFIG_HOME=/dev/shm/chrome-runtime/runtime-394890/config exists with correct permissions
+2025-01-22 23:45:53,106 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737589553_394890/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1 -shmem
+2025-01-22 23:45:56,111 - INFO - Display connection test successful
+2025-01-22 23:45:56,117 - INFO - Virtual display initialized and verified successfully
+2025-01-22 23:45:56,118 - INFO - Verifying clean environment...
+2025-01-22 23:45:56,133 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589556_394890/.X11-unix
+2025-01-22 23:45:56,133 - INFO - Removed: /dev/shm/chrome-runtime
+2025-01-22 23:45:56,133 - INFO - Environment verification passed
+2025-01-22 23:45:56,134 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:45:56,134 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:45:56,134 - INFO - Using debugging port: 9222
+2025-01-22 23:45:56,134 - INFO - Starting Chrome process...
+2025-01-22 23:45:56,134 - INFO - Starting Chrome process...
+2025-01-22 23:45:56,139 - INFO - X display verified accessible
+2025-01-22 23:45:56,139 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:45:56,139 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737589556134_0c199b82
+2025-01-22 23:45:56,139 - INFO - Launching Chrome with command: /usr/bin/google-chrome-stable --headless=new --disable-gpu --no-sandbox --remote-debugging-port=9222 --remote-debugging-address=127.0.0.1 --enable-automation --no-first-run --no-default-browser-check --disable-background-networking --disable-background-timer-throttling --disable-client-side-phishing-detection --disable-popup-blocking --disable-prompt-on-repost --window-size=1920,1080 --hide-scrollbars --disable-notifications --disable-extensions --force-color-profile=srgb --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --user-data-dir=/dev/shm/chrome_profiles/profile_1737589556134_0c199b82 --no-startup-window --disable-dev-shm-usage --disable-web-security --disable-site-isolation-trials --disable-hang-monitor --disable-ipc-flooding-protection --use-gl=swiftshader --ignore-certificate-errors --disable-software-rasterizer about:blank
+2025-01-22 23:45:57,140 - INFO - Chrome process started with PID: 395046
+2025-01-22 23:45:59,141 - INFO - Waiting for Chrome to be ready...
+2025-01-22 23:45:59,141 - INFO - Checking Chrome readiness (attempt 1/15, timeout=2.1s)
+2025-01-22 23:45:59,156 - INFO - Chrome ready on port 9222 (version: Chrome)
+2025-01-22 23:45:59,157 - INFO - Started Chrome process with PID: 395046
+2025-01-22 23:46:00,159 - INFO - Chrome debugging endpoint verified on attempt 1
+2025-01-22 23:46:00,159 - INFO - Chrome debugging endpoint is ready and verified
+2025-01-22 23:46:05,164 - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2025-01-22 23:46:05,202 - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.110/linux64/chromedriver-linux64.zip
+2025-01-22 23:46:05,308 - DEBUG - unzipping /tmp/tmpgj8hy7ak
+2025-01-22 23:46:05,433 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-22 23:46:05,452 - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-01-22 23:46:05,457 - DEBUG - patching took us 0.02 seconds
+2025-01-22 23:46:05,474 - DEBUG - Started executable: `/home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver` in a child process with pid: 395235
+2025-01-22 23:46:05,977 - DEBUG - POST http://localhost:34735/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "binary": "/usr/bin/google-chrome-stable", "args": ["--no-sandbox", "--disable-dev-shm-usage", "--window-size=1920,1080", "--start-maximized", "--remote-debugging-port=9222", "--remote-debugging-address=127.0.0.1", "--remote-allow-origins=*", "--remote-debugging-host=127.0.0.1", "--remote-debugging-port=9222", "--user-data-dir=/tmp/tmpgnpvotoi", "--lang=C", "--no-default-browser-check", "--no-first-run", "--no-sandbox", "--test-type", "--window-size=1920,1080", "--start-maximized", "--no-sandbox", "--log-level=0"], "debuggerAddress": "127.0.0.1:9222"}}}}
+2025-01-22 23:46:05,977 - DEBUG - Starting new HTTP connection (1): localhost:34735
+2025-01-22 23:47:06,022 - DEBUG - http://localhost:34735 "POST /session HTTP/1.1" 500 0
+2025-01-22 23:47:06,022 - DEBUG - Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: cannot connect to chrome at 127.0.0.1:9222\nfrom unknown error: unable to discover open pages","stacktrace":"#0 0x56144f6c0dca \u003Cunknown>\n#1 0x56144f1b73f0 \u003Cunknown>\n#2 0x56144f1f4608 \u003Cunknown>\n#3 0x56144f1ea1ea \u003Cunknown>\n#4 0x56144f237ca6 \u003Cunknown>\n#5 0x56144f2372f6 \u003Cunknown>\n#6 0x56144f22b833 \u003Cunknown>\n#7 0x56144f1f85a0 \u003Cunknown>\n#8 0x56144f1f9ece \u003Cunknown>\n#9 0x56144f68abdb \u003Cunknown>\n#10 0x56144f68eb67 \u003Cunknown>\n#11 0x56144f6763bc \u003Cunknown>\n#12 0x56144f68f727 \u003Cunknown>\n#13 0x56144f65a74f \u003Cunknown>\n#14 0x56144f6af938 \u003Cunknown>\n#15 0x56144f6afb00 \u003Cunknown>\n#16 0x56144f6bfc46 \u003Cunknown>\n#17 0x7efc1fa11ac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '804', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-22 23:47:06,022 - DEBUG - Finished Request
+2025-01-22 23:47:06,135 - ERROR - Connection attempt 1 failed: Message: session not created: cannot connect to chrome at 127.0.0.1:9222
+from unknown error: unable to discover open pages
+Stacktrace:
+#0 0x56144f6c0dca <unknown>
+#1 0x56144f1b73f0 <unknown>
+#2 0x56144f1f4608 <unknown>
+#3 0x56144f1ea1ea <unknown>
+#4 0x56144f237ca6 <unknown>
+#5 0x56144f2372f6 <unknown>
+#6 0x56144f22b833 <unknown>
+#7 0x56144f1f85a0 <unknown>
+#8 0x56144f1f9ece <unknown>
+#9 0x56144f68abdb <unknown>
+#10 0x56144f68eb67 <unknown>
+#11 0x56144f6763bc <unknown>
+#12 0x56144f68f727 <unknown>
+#13 0x56144f65a74f <unknown>
+#14 0x56144f6af938 <unknown>
+#15 0x56144f6afb00 <unknown>
+#16 0x56144f6bfc46 <unknown>
+#17 0x7efc1fa11ac3 <unknown>
+
+2025-01-22 23:47:10,151 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:47:10,152 - INFO - Using debugging port: 9222
+2025-01-22 23:47:10,152 - INFO - Starting Chrome process...
+2025-01-22 23:47:10,152 - INFO - Starting Chrome process...
+2025-01-22 23:47:10,156 - INFO - X display verified accessible
+2025-01-22 23:47:10,156 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:47:10,156 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737589556134_0c199b82
+2025-01-22 23:47:10,157 - INFO - Launching Chrome with command: /usr/bin/google-chrome-stable --headless=new --disable-gpu --no-sandbox --remote-debugging-port=9222 --remote-debugging-address=127.0.0.1 --enable-automation --no-first-run --no-default-browser-check --disable-background-networking --disable-background-timer-throttling --disable-client-side-phishing-detection --disable-popup-blocking --disable-prompt-on-repost --window-size=1920,1080 --hide-scrollbars --disable-notifications --disable-extensions --force-color-profile=srgb --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --user-data-dir=/dev/shm/chrome_profiles/profile_1737589556134_0c199b82 --no-startup-window --disable-dev-shm-usage --disable-web-security --disable-site-isolation-trials --disable-hang-monitor --disable-ipc-flooding-protection --use-gl=swiftshader --ignore-certificate-errors --disable-software-rasterizer about:blank
+2025-01-22 23:47:11,158 - INFO - Chrome process started with PID: 396147
+2025-01-22 23:47:13,158 - INFO - Waiting for Chrome to be ready...
+2025-01-22 23:47:13,158 - INFO - Checking Chrome readiness (attempt 1/15, timeout=2.3s)
+2025-01-22 23:47:13,175 - INFO - Chrome ready on port 9222 (version: Chrome)
+2025-01-22 23:47:13,175 - INFO - Started Chrome process with PID: 396147
+2025-01-22 23:47:13,730 - INFO - Received signal 2
+2025-01-22 23:47:13,737 - INFO - Stopped virtual display
+2025-01-22 23:47:13,738 - INFO - Killed process 396147
+2025-01-22 23:47:13,738 - WARNING - Process 396147 still exists after SIGKILL
+2025-01-22 23:47:13,751 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737589556134_0c199b82
+2025-01-22 23:47:13,751 - INFO - Removed Chrome file: /tmp/.com.google.Chrome.siwxL8
+2025-01-22 23:47:13,752 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589556_394890/.X11-unix
+2025-01-22 23:47:13,752 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589556_394890/.X11-unix
+2025-01-22 23:47:13,753 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589556_394890/.X11-unix
+2025-01-22 23:47:13,753 - DEBUG - cleaning up pid 395233 
+2025-01-22 23:48:50,914 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:48:50,915 - INFO - Created new X11 socket directory: /dev/shm/xvfb/1737589730_397246/.X11-unix
+2025-01-22 23:48:52,915 - INFO - Verifying clean environment...
+2025-01-22 23:48:52,936 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589732_397246/.X11-unix
+2025-01-22 23:48:52,938 - INFO - Removed: /dev/shm/chrome-runtime
+2025-01-22 23:48:52,938 - INFO - Removed: /dev/shm/chrome_profiles
+2025-01-22 23:48:52,938 - INFO - Environment verification passed
+2025-01-22 23:48:52,938 - INFO - Verified X11 directory structure: /tmp/.X11-unix
+2025-01-22 23:48:53,951 - INFO - Fixed permissions for /dev/shm/xvfb/1737589733_397246/.X11-unix: 0o775 -> 1777
+2025-01-22 23:48:53,951 - INFO - Using display number :99
+2025-01-22 23:48:53,954 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:48:53,956 - INFO - Verified directory XDG_RUNTIME_DIR=/dev/shm/chrome-runtime/runtime-397246/runtime exists with correct permissions
+2025-01-22 23:48:53,956 - INFO - Verified directory XDG_CACHE_HOME=/dev/shm/chrome-runtime/runtime-397246/cache exists with correct permissions
+2025-01-22 23:48:53,956 - INFO - Verified directory XDG_CONFIG_HOME=/dev/shm/chrome-runtime/runtime-397246/config exists with correct permissions
+2025-01-22 23:48:53,956 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737589733_397246/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1 -shmem
+2025-01-22 23:48:56,962 - INFO - Display connection test successful
+2025-01-22 23:48:56,968 - INFO - Virtual display initialized and verified successfully
+2025-01-22 23:48:56,968 - INFO - Verifying clean environment...
+2025-01-22 23:48:56,984 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589736_397246/.X11-unix
+2025-01-22 23:48:56,985 - INFO - Removed: /dev/shm/chrome-runtime
+2025-01-22 23:48:56,985 - INFO - Environment verification passed
+2025-01-22 23:48:56,985 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:48:56,985 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:48:56,985 - INFO - Using debugging port: 9222
+2025-01-22 23:48:56,985 - INFO - Starting Chrome process...
+2025-01-22 23:48:56,985 - INFO - Starting Chrome process...
+2025-01-22 23:48:56,989 - INFO - X display verified accessible
+2025-01-22 23:48:56,989 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:48:56,989 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737589736985_98d02a9e
+2025-01-22 23:48:56,989 - INFO - Launching Chrome with command: /usr/bin/google-chrome-stable --headless=new --disable-gpu --no-sandbox --remote-debugging-port=9222 --remote-debugging-address=127.0.0.1 --enable-automation --no-first-run --no-default-browser-check --disable-background-networking --disable-background-timer-throttling --disable-client-side-phishing-detection --disable-popup-blocking --disable-prompt-on-repost --window-size=1920,1080 --hide-scrollbars --disable-notifications --disable-extensions --force-color-profile=srgb --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --user-data-dir=/dev/shm/chrome_profiles/profile_1737589736985_98d02a9e --no-startup-window --disable-dev-shm-usage --disable-web-security --disable-site-isolation-trials --disable-hang-monitor --disable-ipc-flooding-protection --use-gl=swiftshader --ignore-certificate-errors --disable-software-rasterizer about:blank
+2025-01-22 23:48:57,990 - INFO - Chrome process started with PID: 397402
+2025-01-22 23:48:59,990 - INFO - Waiting for Chrome to be ready...
+2025-01-22 23:48:59,991 - INFO - Checking Chrome readiness (attempt 1/15, timeout=2.4s)
+2025-01-22 23:49:00,008 - INFO - Chrome ready on port 9222 (version: Chrome)
+2025-01-22 23:49:00,008 - INFO - Started Chrome process with PID: 397402
+2025-01-22 23:49:01,010 - INFO - Chrome debugging endpoint verified on attempt 1
+2025-01-22 23:49:01,010 - INFO - Chrome debugging endpoint is ready and verified
+2025-01-22 23:49:06,015 - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2025-01-22 23:49:06,039 - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.110/linux64/chromedriver-linux64.zip
+2025-01-22 23:49:06,138 - DEBUG - unzipping /tmp/tmpfsi_jyax
+2025-01-22 23:49:06,255 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-22 23:49:06,274 - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-01-22 23:49:06,279 - DEBUG - patching took us 0.02 seconds
+2025-01-22 23:49:06,296 - DEBUG - Started executable: `/home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver` in a child process with pid: 397593
+2025-01-22 23:49:06,797 - DEBUG - POST http://localhost:35347/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "binary": "/usr/bin/google-chrome", "args": ["--no-sandbox", "--disable-dev-shm-usage", "--window-size=1920,1080", "--start-maximized", "--remote-debugging-port=9222", "--remote-debugging-address=127.0.0.1", "--remote-allow-origins=*", "--remote-debugging-host=127.0.0.1", "--remote-debugging-port=9222", "--user-data-dir=/tmp/tmpozwp52en", "--lang=C", "--no-default-browser-check", "--no-first-run", "--no-sandbox", "--test-type", "--window-size=1920,1080", "--start-maximized", "--no-sandbox", "--log-level=0"], "debuggerAddress": "127.0.0.1:9222"}}}}
+2025-01-22 23:49:06,798 - DEBUG - Starting new HTTP connection (1): localhost:35347
+2025-01-22 23:50:06,848 - DEBUG - http://localhost:35347 "POST /session HTTP/1.1" 500 0
+2025-01-22 23:50:06,849 - DEBUG - Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: cannot connect to chrome at 127.0.0.1:9222\nfrom unknown error: unable to discover open pages","stacktrace":"#0 0x55a4c1367dca \u003Cunknown>\n#1 0x55a4c0e5e3f0 \u003Cunknown>\n#2 0x55a4c0e9b608 \u003Cunknown>\n#3 0x55a4c0e911ea \u003Cunknown>\n#4 0x55a4c0edeca6 \u003Cunknown>\n#5 0x55a4c0ede2f6 \u003Cunknown>\n#6 0x55a4c0ed2833 \u003Cunknown>\n#7 0x55a4c0e9f5a0 \u003Cunknown>\n#8 0x55a4c0ea0ece \u003Cunknown>\n#9 0x55a4c1331bdb \u003Cunknown>\n#10 0x55a4c1335b67 \u003Cunknown>\n#11 0x55a4c131d3bc \u003Cunknown>\n#12 0x55a4c1336727 \u003Cunknown>\n#13 0x55a4c130174f \u003Cunknown>\n#14 0x55a4c1356938 \u003Cunknown>\n#15 0x55a4c1356b00 \u003Cunknown>\n#16 0x55a4c1366c46 \u003Cunknown>\n#17 0x7f49db51eac3 \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '804', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-22 23:50:06,849 - DEBUG - Finished Request
+2025-01-22 23:50:06,962 - ERROR - Connection attempt 1 failed: Message: session not created: cannot connect to chrome at 127.0.0.1:9222
+from unknown error: unable to discover open pages
+Stacktrace:
+#0 0x55a4c1367dca <unknown>
+#1 0x55a4c0e5e3f0 <unknown>
+#2 0x55a4c0e9b608 <unknown>
+#3 0x55a4c0e911ea <unknown>
+#4 0x55a4c0edeca6 <unknown>
+#5 0x55a4c0ede2f6 <unknown>
+#6 0x55a4c0ed2833 <unknown>
+#7 0x55a4c0e9f5a0 <unknown>
+#8 0x55a4c0ea0ece <unknown>
+#9 0x55a4c1331bdb <unknown>
+#10 0x55a4c1335b67 <unknown>
+#11 0x55a4c131d3bc <unknown>
+#12 0x55a4c1336727 <unknown>
+#13 0x55a4c130174f <unknown>
+#14 0x55a4c1356938 <unknown>
+#15 0x55a4c1356b00 <unknown>
+#16 0x55a4c1366c46 <unknown>
+#17 0x7f49db51eac3 <unknown>
+
+2025-01-22 23:50:08,962 - INFO - Retrying connection (attempt 2)
+2025-01-22 23:50:08,967 - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2025-01-22 23:50:08,991 - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.110/linux64/chromedriver-linux64.zip
+2025-01-22 23:50:09,087 - DEBUG - unzipping /tmp/tmpi0wycaro
+2025-01-22 23:50:09,210 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-22 23:50:09,226 - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-01-22 23:50:09,232 - DEBUG - patching took us 0.02 seconds
+2025-01-22 23:50:09,244 - ERROR - Connection attempt 2 failed: you cannot reuse the ChromeOptions object
+2025-01-22 23:50:09,728 - INFO - Received signal 2
+2025-01-22 23:50:09,736 - INFO - Stopped virtual display
+2025-01-22 23:50:09,736 - INFO - Killed process 397402
+2025-01-22 23:50:09,736 - WARNING - Process 397402 still exists after SIGKILL
+2025-01-22 23:50:09,741 - INFO - Removed directory /dev/shm/chrome_profiles/profile_1737589736985_98d02a9e
+2025-01-22 23:50:09,741 - INFO - Removed Chrome file: /tmp/.com.google.Chrome.OVWhIf
+2025-01-22 23:50:09,741 - INFO - Removed Chrome file: /tmp/.com.google.Chrome.UHYJeO
+2025-01-22 23:50:09,741 - INFO - Removed Chrome file: /tmp/.com.google.Chrome.0Pv9wF
+2025-01-22 23:50:09,741 - INFO - Removed Chrome file: /tmp/.com.google.Chrome.2FWGnm
+2025-01-22 23:50:09,742 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589736_397246/.X11-unix
+2025-01-22 23:50:09,742 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589736_397246/.X11-unix
+2025-01-22 23:50:09,743 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589736_397246/.X11-unix
+2025-01-22 23:50:09,743 - DEBUG - cleaning up pid 397592 
+2025-01-22 23:52:09,168 - INFO - Starting virtual display initialization sequence...
+2025-01-22 23:52:09,169 - INFO - Created new X11 socket directory: /dev/shm/xvfb/1737589929_399696/.X11-unix
+2025-01-22 23:52:11,169 - INFO - Verifying clean environment...
+2025-01-22 23:52:11,190 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589931_399696/.X11-unix
+2025-01-22 23:52:11,191 - INFO - Removed: /dev/shm/chrome-runtime
+2025-01-22 23:52:11,191 - INFO - Removed: /dev/shm/chrome_profiles
+2025-01-22 23:52:11,191 - INFO - Environment verification passed
+2025-01-22 23:52:11,191 - INFO - Verified X11 directory structure: /tmp/.X11-unix
+2025-01-22 23:52:12,204 - INFO - Fixed permissions for /dev/shm/xvfb/1737589932_399696/.X11-unix: 0o775 -> 1777
+2025-01-22 23:52:12,204 - INFO - Using display number :99
+2025-01-22 23:52:12,207 - INFO - Created enhanced .Xauthority file
+2025-01-22 23:52:12,209 - INFO - Verified directory XDG_RUNTIME_DIR=/dev/shm/chrome-runtime/runtime-399696/runtime exists with correct permissions
+2025-01-22 23:52:12,209 - INFO - Verified directory XDG_CACHE_HOME=/dev/shm/chrome-runtime/runtime-399696/cache exists with correct permissions
+2025-01-22 23:52:12,209 - INFO - Verified directory XDG_CONFIG_HOME=/dev/shm/chrome-runtime/runtime-399696/config exists with correct permissions
+2025-01-22 23:52:12,209 - INFO - Starting Xvfb with command: Xvfb :99 -screen 0 1920x1080x24 -ac +extension RANDR +render -noreset -nolisten tcp -auth /dev/shm/xvfb/1737589932_399696/.Xauthority -tst +extension XINERAMA +extension COMPOSITE -displayfd 1 -shmem
+2025-01-22 23:52:15,215 - INFO - Display connection test successful
+2025-01-22 23:52:15,221 - INFO - Virtual display initialized and verified successfully
+2025-01-22 23:52:15,221 - INFO - Verifying clean environment...
+2025-01-22 23:52:15,237 - INFO - Created user-specific X11 socket directory: /dev/shm/xvfb/1737589935_399696/.X11-unix
+2025-01-22 23:52:15,237 - INFO - Removed: /dev/shm/chrome-runtime
+2025-01-22 23:52:15,237 - INFO - Environment verification passed
+2025-01-22 23:52:15,237 - INFO - Attempting to initialize Chrome (attempt 1/3)...
+2025-01-22 23:52:15,238 - INFO - Using Chrome binary: /usr/bin/google-chrome-stable
+2025-01-22 23:52:15,238 - INFO - Using debugging port: 9222
+2025-01-22 23:52:15,238 - INFO - Starting Chrome process...
+2025-01-22 23:52:15,238 - INFO - Starting Chrome process...
+2025-01-22 23:52:15,241 - INFO - X display verified accessible
+2025-01-22 23:52:15,241 - INFO - Chrome binary verified: /usr/bin/google-chrome-stable
+2025-01-22 23:52:15,241 - INFO - Profile directory verified: /dev/shm/chrome_profiles/profile_1737589935237_5f931239
+2025-01-22 23:52:15,242 - INFO - Launching Chrome with command: /usr/bin/google-chrome-stable --headless=new --disable-gpu --no-sandbox --remote-debugging-port=9222 --remote-debugging-address=127.0.0.1 --enable-automation --no-first-run --no-default-browser-check --disable-background-networking --disable-background-timer-throttling --disable-client-side-phishing-detection --disable-popup-blocking --disable-prompt-on-repost --window-size=1920,1080 --hide-scrollbars --disable-notifications --disable-extensions --force-color-profile=srgb --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --user-data-dir=/dev/shm/chrome_profiles/profile_1737589935237_5f931239 --no-startup-window --disable-dev-shm-usage --disable-web-security --disable-site-isolation-trials --disable-hang-monitor --disable-ipc-flooding-protection --use-gl=swiftshader --ignore-certificate-errors --disable-software-rasterizer about:blank
+2025-01-22 23:52:16,242 - INFO - Chrome process started with PID: 399852
+2025-01-22 23:52:18,243 - INFO - Waiting for Chrome to be ready...
+2025-01-22 23:52:18,243 - INFO - Checking Chrome readiness (attempt 1/15, timeout=2.4s)
+2025-01-22 23:52:18,259 - INFO - Chrome ready on port 9222 (version: Chrome)
+2025-01-22 23:52:18,259 - INFO - Started Chrome process with PID: 399852
+2025-01-22 23:52:19,261 - INFO - Chrome debugging endpoint verified on attempt 1
+2025-01-22 23:52:19,261 - INFO - Chrome debugging endpoint is ready and verified
+2025-01-22 23:52:24,263 - INFO - Found available debug port: 9223
+2025-01-22 23:52:26,284 - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2025-01-22 23:52:26,308 - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.110/linux64/chromedriver-linux64.zip
+2025-01-22 23:52:26,447 - DEBUG - unzipping /tmp/tmpkrga9nbl
+2025-01-22 23:52:26,571 - INFO - patching driver executable /home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-01-22 23:52:26,590 - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-01-22 23:52:26,596 - DEBUG - patching took us 0.03 seconds
+2025-01-22 23:52:26,615 - DEBUG - Started executable: `/home/ubuntu/.local/share/undetected_chromedriver/undetected_chromedriver` in a child process with pid: 400067
+2025-01-22 23:52:27,116 - DEBUG - POST http://localhost:56301/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "binary": "/usr/bin/google-chrome-stable", "args": ["--no-sandbox", "--disable-dev-shm-usage", "--window-size=1920,1080", "--start-maximized", "--remote-debugging-port=9223", "--remote-debugging-address=127.0.0.1", "--remote-allow-origins=*", "--disable-blink-features=AutomationControlled", "--disable-features=IsolateOrigins,site-per-process", "--remote-debugging-host=127.0.0.1", "--remote-debugging-port=9223", "--user-data-dir=/tmp/tmppf42y556", "--lang=C", "--no-default-browser-check", "--no-first-run", "--no-sandbox", "--test-type", "--window-size=1920,1080", "--start-maximized", "--no-sandbox", "--log-level=0"], "debuggerAddress": "127.0.0.1:9223"}}}}
+2025-01-22 23:52:27,117 - DEBUG - Starting new HTTP connection (1): localhost:56301
+2025-01-22 23:52:27,132 - DEBUG - http://localhost:56301 "POST /session HTTP/1.1" 200 0
+2025-01-22 23:52:27,132 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"132.0.6834.83","chrome":{"chromedriverVersion":"132.0.6834.110 (df453a35f099772fdb954e33551388add2ca3cde-refs/branch-heads/6834_101@{#3})"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"127.0.0.1:9223"},"pageLoadStrategy":"normal","platformName":"","proxy":{},"setWindowRect":false,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"5115ba90977c24d7c6e5561e4d611eca"}} | headers=HTTPHeaderDict({'Content-Length': '761', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-22 23:52:27,132 - DEBUG - Finished Request
+2025-01-22 23:52:27,133 - DEBUG - POST http://localhost:56301/session/5115ba90977c24d7c6e5561e4d611eca/url {"url": "about:blank"}
+2025-01-22 23:52:27,171 - DEBUG - http://localhost:56301 "POST /session/5115ba90977c24d7c6e5561e4d611eca/url HTTP/1.1" 200 0
+2025-01-22 23:52:27,171 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-22 23:52:27,171 - DEBUG - Finished Request
+2025-01-22 23:52:27,171 - DEBUG - GET http://localhost:56301/session/5115ba90977c24d7c6e5561e4d611eca/title {}
+2025-01-22 23:52:27,180 - DEBUG - http://localhost:56301 "GET /session/5115ba90977c24d7c6e5561e4d611eca/title HTTP/1.1" 200 0
+2025-01-22 23:52:27,180 - DEBUG - Remote response: status=200 | data={"value":""} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-22 23:52:27,180 - DEBUG - Finished Request
+2025-01-22 23:52:27,180 - INFO - Chrome driver initialized and verified successfully
+2025-01-22 23:52:27,184 - INFO - Cleaned up profile directory: /dev/shm/chrome_profiles/profile_1737589935237_5f931239
+2025-01-22 23:52:27,184 - INFO - Removed empty parent directory: /dev/shm/chrome_profiles
+2025-01-22 23:52:27,295 - INFO - Stopped virtual display
+2025-01-22 23:52:27,296 - INFO - Killed process 399852
+2025-01-22 23:52:27,296 - WARNING - Process 399852 still exists after SIGKILL
+2025-01-22 23:52:27,296 - INFO - Removed Chrome file: /tmp/.com.google.Chrome.DC49Ry
+2025-01-22 23:52:27,296 - INFO - Removed Chrome file: /tmp/.com.google.Chrome.Plobng
+2025-01-22 23:52:27,297 - INFO - Removed Chrome file: /tmp/.com.google.Chrome.hAj2Tm
+2025-01-22 23:52:27,297 - INFO - Removed Chrome file: /tmp/.com.google.Chrome.yWMXqA
+2025-01-22 23:52:27,297 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589935_399696/.X11-unix
+2025-01-22 23:52:27,298 - INFO - Using existing X11 socket directory: /dev/shm/xvfb/1737589935_399696/.X11-unix
+2025-01-22 23:52:27,298 - DEBUG - cleaning up pid 400064 

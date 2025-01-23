@@ -1,0 +1,4 @@
+# Playwright Test Files
+- [x] /home/ubuntu/playwright-tests/tests/login.spec.ts (Completed: Enhanced with timing adjustments and Cloudflare bypass)
+- [x] /home/ubuntu/playwright-tests/tests/captcha.spec.ts (Completed: Implemented CAPTCHA solving with fallback)
+- [x] /home/ubuntu/playwright-tests/jest-tests/solver.test.ts (Completed: Verified CAPTCHA solver fallback mechanism)

@@ -1,0 +1,545 @@
+2025-01-23 07:03:05,197 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 07:03:05,197 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 07:03:05,197 - INFO -  * Restarting with stat
+2025-01-23 07:03:05,989 - WARNING -  * Debugger is active!
+2025-01-23 07:03:05,991 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 07:56:06,533 - INFO -  * Detected change in '/home/ubuntu/python_captcha_service.py', reloading
+2025-01-23 07:56:06,631 - INFO -  * Restarting with stat
+2025-01-23 07:56:07,432 - WARNING -  * Debugger is active!
+2025-01-23 07:56:07,434 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 08:08:33,344 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737619713.png
+2025-01-23 08:08:33,345 - INFO - 127.0.0.1 - - [23/Jan/2025 08:08:33] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:09:10,178 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737619750.png
+2025-01-23 08:09:10,178 - INFO - 127.0.0.1 - - [23/Jan/2025 08:09:10] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:09:39,957 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737619779.png
+2025-01-23 08:09:39,957 - INFO - 127.0.0.1 - - [23/Jan/2025 08:09:39] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:22:08,146 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737620528.png
+2025-01-23 08:22:08,146 - INFO - 127.0.0.1 - - [23/Jan/2025 08:22:08] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:22:46,408 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737620566.png
+2025-01-23 08:22:46,409 - INFO - 127.0.0.1 - - [23/Jan/2025 08:22:46] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:23:25,785 - INFO - 127.0.0.1 - - [23/Jan/2025 08:23:25] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 08:23:41,056 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737620621.png
+2025-01-23 08:23:41,056 - INFO - 127.0.0.1 - - [23/Jan/2025 08:23:41] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:24:20,381 - INFO - 127.0.0.1 - - [23/Jan/2025 08:24:20] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 08:27:24,134 - INFO -  * Detected change in '/home/ubuntu/python_captcha_service.py', reloading
+2025-01-23 08:27:24,226 - INFO -  * Restarting with stat
+2025-01-23 08:27:25,036 - WARNING -  * Debugger is active!
+2025-01-23 08:27:25,039 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 08:30:39,990 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737621039.png
+2025-01-23 08:30:39,992 - INFO - 127.0.0.1 - - [23/Jan/2025 08:30:39] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:30:49,857 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737621049.png
+2025-01-23 08:30:49,858 - INFO - 127.0.0.1 - - [23/Jan/2025 08:30:49] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:31:01,639 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737621061.png
+2025-01-23 08:31:01,640 - INFO - 127.0.0.1 - - [23/Jan/2025 08:31:01] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:34:46,078 - INFO -  * Detected change in '/home/ubuntu/python_captcha_service.py', reloading
+2025-01-23 08:34:46,165 - INFO -  * Restarting with stat
+2025-01-23 08:34:46,966 - WARNING -  * Debugger is active!
+2025-01-23 08:34:46,968 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 08:35:36,226 - INFO -  * Detected change in '/home/ubuntu/python_captcha_service.py', reloading
+2025-01-23 08:35:36,459 - INFO -  * Restarting with stat
+2025-01-23 08:35:37,773 - WARNING -  * Debugger is active!
+2025-01-23 08:35:37,776 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 08:37:25,727 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 08:37:25,728 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 08:37:25,728 - INFO -  * Restarting with stat
+2025-01-23 08:37:26,572 - WARNING -  * Debugger is active!
+2025-01-23 08:37:26,575 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 08:38:20,373 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737621500.png
+2025-01-23 08:38:20,374 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737621500.png
+2025-01-23 08:38:20,375 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737621500.png
+2025-01-23 08:38:20,375 - INFO - Found 1 contours
+2025-01-23 08:38:20,375 - INFO - Saved green mask debug image: captcha_data/images/verify_debug_green_1737621500.png
+2025-01-23 08:38:20,375 - INFO - Found 0 green pixels
+2025-01-23 08:38:20,376 - INFO - Green pixel ratio: 0.0000
+2025-01-23 08:38:20,376 - INFO - Verification complete: No success indicators found
+2025-01-23 08:38:20,376 - INFO - 127.0.0.1 - - [23/Jan/2025 08:38:20] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:38:33,722 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737621513.png
+2025-01-23 08:38:33,722 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737621513.png
+2025-01-23 08:38:33,723 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737621513.png
+2025-01-23 08:38:33,723 - INFO - Found 1 contours
+2025-01-23 08:38:33,723 - INFO - Saved green mask debug image: captcha_data/images/verify_debug_green_1737621513.png
+2025-01-23 08:38:33,723 - INFO - Found 0 green pixels
+2025-01-23 08:38:33,724 - INFO - Green pixel ratio: 0.0000
+2025-01-23 08:38:33,724 - INFO - Verification complete: No success indicators found
+2025-01-23 08:38:33,724 - INFO - 127.0.0.1 - - [23/Jan/2025 08:38:33] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:38:46,237 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737621526.png
+2025-01-23 08:38:46,237 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737621526.png
+2025-01-23 08:38:46,238 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737621526.png
+2025-01-23 08:38:46,238 - INFO - Found 1 contours
+2025-01-23 08:38:46,238 - INFO - Saved green mask debug image: captcha_data/images/verify_debug_green_1737621526.png
+2025-01-23 08:38:46,238 - INFO - Found 0 green pixels
+2025-01-23 08:38:46,239 - INFO - Green pixel ratio: 0.0000
+2025-01-23 08:38:46,239 - INFO - Verification complete: No success indicators found
+2025-01-23 08:38:46,239 - INFO - 127.0.0.1 - - [23/Jan/2025 08:38:46] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:39:37,190 - INFO -  * Detected change in '/home/ubuntu/python_captcha_service.py', reloading
+2025-01-23 08:39:37,279 - INFO -  * Restarting with stat
+2025-01-23 08:39:38,080 - WARNING -  * Debugger is active!
+2025-01-23 08:39:38,082 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 08:40:41,949 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 08:40:41,949 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 08:40:41,950 - INFO -  * Restarting with stat
+2025-01-23 08:40:42,769 - WARNING -  * Debugger is active!
+2025-01-23 08:40:42,772 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 08:41:50,031 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737621710.png
+2025-01-23 08:41:50,032 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737621710.png
+2025-01-23 08:41:50,032 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737621710.png
+2025-01-23 08:41:50,032 - INFO - Found 1 contours
+2025-01-23 08:41:50,032 - INFO - Saved green mask debug image: captcha_data/images/verify_debug_green_1737621710.png
+2025-01-23 08:41:50,033 - INFO - Found 0 green pixels
+2025-01-23 08:41:50,033 - INFO - Green pixel ratio: 0.0000
+2025-01-23 08:41:50,033 - INFO - Verification complete: No success indicators found
+2025-01-23 08:41:50,033 - INFO - 127.0.0.1 - - [23/Jan/2025 08:41:50] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:42:04,246 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737621724.png
+2025-01-23 08:42:04,246 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737621724.png
+2025-01-23 08:42:04,247 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737621724.png
+2025-01-23 08:42:04,247 - INFO - Found 1 contours
+2025-01-23 08:42:04,247 - INFO - Saved green mask debug image: captcha_data/images/verify_debug_green_1737621724.png
+2025-01-23 08:42:04,247 - INFO - Found 0 green pixels
+2025-01-23 08:42:04,247 - INFO - Green pixel ratio: 0.0000
+2025-01-23 08:42:04,247 - INFO - Verification complete: No success indicators found
+2025-01-23 08:42:04,248 - INFO - 127.0.0.1 - - [23/Jan/2025 08:42:04] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:42:26,261 - INFO - Saved debug input image to: captcha_data/images/debug_input_1737621746.png
+2025-01-23 08:42:26,261 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737621746.png
+2025-01-23 08:42:26,261 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737621746.png
+2025-01-23 08:42:26,262 - INFO - Found 1 contours
+2025-01-23 08:42:26,262 - INFO - Saved green mask debug image: captcha_data/images/verify_debug_green_1737621746.png
+2025-01-23 08:42:26,262 - INFO - Found 0 green pixels
+2025-01-23 08:42:26,262 - INFO - Green pixel ratio: 0.0000
+2025-01-23 08:42:26,262 - INFO - Verification complete: No success indicators found
+2025-01-23 08:42:26,262 - INFO - 127.0.0.1 - - [23/Jan/2025 08:42:26] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:43:09,476 - INFO -  * Detected change in '/home/ubuntu/python_captcha_service.py', reloading
+2025-01-23 08:43:09,569 - INFO -  * Restarting with stat
+2025-01-23 08:43:10,387 - WARNING -  * Debugger is active!
+2025-01-23 08:43:10,389 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 08:44:02,644 - INFO -  * Detected change in '/home/ubuntu/python_captcha_service.py', reloading
+2025-01-23 08:44:02,734 - INFO -  * Restarting with stat
+2025-01-23 08:50:27,582 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 08:50:27,583 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 08:50:27,583 - INFO -  * Restarting with stat
+2025-01-23 08:50:28,745 - WARNING -  * Debugger is active!
+2025-01-23 08:50:28,747 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 08:51:19,390 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737622279380)
+2025-01-23 08:51:19,391 - INFO - Created debug directory: captcha_data/debug/1737622279380
+2025-01-23 08:51:19,392 - INFO - Saved input image to: captcha_data/debug/1737622279380/input.png
+2025-01-23 08:51:19,392 - INFO - Saved grayscale image to: captcha_data/debug/1737622279380/gray.png
+2025-01-23 08:51:19,393 - INFO - Saved debug info
+2025-01-23 08:51:19,393 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 08:51:19,393 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737622279.png
+2025-01-23 08:51:19,393 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737622279.png
+2025-01-23 08:51:19,394 - INFO - Found 1 contours
+2025-01-23 08:51:19,394 - INFO - Verification complete: Success
+2025-01-23 08:51:19,394 - INFO - 127.0.0.1 - - [23/Jan/2025 08:51:19] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:52:00,799 - INFO - Starting CAPTCHA verification...
+2025-01-23 08:52:00,799 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737622320.png
+2025-01-23 08:52:00,799 - INFO - Contour 0: area=5934.0, bounds=(470, 0, 130, 47), aspect_ratio=2.77
+2025-01-23 08:52:00,799 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737622320.png
+2025-01-23 08:52:00,800 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 08:52:00,800 - INFO - 127.0.0.1 - - [23/Jan/2025 08:52:00] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 08:52:21,087 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737622341079)
+2025-01-23 08:52:21,088 - INFO - Created debug directory: captcha_data/debug/1737622341079
+2025-01-23 08:52:21,089 - INFO - Saved input image to: captcha_data/debug/1737622341079/input.png
+2025-01-23 08:52:21,089 - INFO - Saved grayscale image to: captcha_data/debug/1737622341079/gray.png
+2025-01-23 08:52:21,090 - INFO - Saved debug info
+2025-01-23 08:52:21,090 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 08:52:21,090 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737622341.png
+2025-01-23 08:52:21,091 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737622341.png
+2025-01-23 08:52:21,091 - INFO - Found 1 contours
+2025-01-23 08:52:21,091 - INFO - Verification complete: Success
+2025-01-23 08:52:21,092 - INFO - 127.0.0.1 - - [23/Jan/2025 08:52:21] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:53:02,602 - INFO - Starting CAPTCHA verification...
+2025-01-23 08:53:02,603 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737622382.png
+2025-01-23 08:53:02,603 - INFO - Contour 0: area=5934.0, bounds=(470, 0, 130, 47), aspect_ratio=2.77
+2025-01-23 08:53:02,603 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737622382.png
+2025-01-23 08:53:02,604 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 08:53:02,604 - INFO - 127.0.0.1 - - [23/Jan/2025 08:53:02] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 08:53:24,218 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737622404209)
+2025-01-23 08:53:24,218 - INFO - Created debug directory: captcha_data/debug/1737622404209
+2025-01-23 08:53:24,219 - INFO - Saved input image to: captcha_data/debug/1737622404209/input.png
+2025-01-23 08:53:24,219 - INFO - Saved grayscale image to: captcha_data/debug/1737622404209/gray.png
+2025-01-23 08:53:24,219 - INFO - Saved debug info
+2025-01-23 08:53:24,220 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 08:53:24,220 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737622404.png
+2025-01-23 08:53:24,220 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737622404.png
+2025-01-23 08:53:24,220 - INFO - Found 1 contours
+2025-01-23 08:53:24,221 - INFO - Verification complete: Success
+2025-01-23 08:53:24,221 - INFO - 127.0.0.1 - - [23/Jan/2025 08:53:24] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:57:24,875 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737622644866)
+2025-01-23 08:57:24,875 - INFO - Created debug directory: captcha_data/debug/1737622644866
+2025-01-23 08:57:24,876 - INFO - Saved input image to: captcha_data/debug/1737622644866/input.png
+2025-01-23 08:57:24,876 - INFO - Saved grayscale image to: captcha_data/debug/1737622644866/gray.png
+2025-01-23 08:57:24,877 - INFO - Saved debug info
+2025-01-23 08:57:24,877 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 08:57:24,877 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737622644.png
+2025-01-23 08:57:24,878 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737622644.png
+2025-01-23 08:57:24,878 - INFO - Found 1 contours
+2025-01-23 08:57:24,878 - INFO - Verification complete: Success
+2025-01-23 08:57:24,879 - INFO - 127.0.0.1 - - [23/Jan/2025 08:57:24] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:58:06,251 - INFO - Starting CAPTCHA verification...
+2025-01-23 08:58:06,251 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737622686.png
+2025-01-23 08:58:06,251 - INFO - Contour 0: area=5934.0, bounds=(470, 0, 130, 47), aspect_ratio=2.77
+2025-01-23 08:58:06,252 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737622686.png
+2025-01-23 08:58:06,252 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 08:58:06,252 - INFO - 127.0.0.1 - - [23/Jan/2025 08:58:06] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 08:58:25,140 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737622705131)
+2025-01-23 08:58:25,140 - INFO - Created debug directory: captcha_data/debug/1737622705131
+2025-01-23 08:58:25,141 - INFO - Saved input image to: captcha_data/debug/1737622705131/input.png
+2025-01-23 08:58:25,141 - INFO - Saved grayscale image to: captcha_data/debug/1737622705131/gray.png
+2025-01-23 08:58:25,141 - INFO - Saved debug info
+2025-01-23 08:58:25,141 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 08:58:25,142 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737622705.png
+2025-01-23 08:58:25,142 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737622705.png
+2025-01-23 08:58:25,142 - INFO - Found 1 contours
+2025-01-23 08:58:25,142 - INFO - Verification complete: Success
+2025-01-23 08:58:25,142 - INFO - 127.0.0.1 - - [23/Jan/2025 08:58:25] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 08:59:06,568 - INFO - Starting CAPTCHA verification...
+2025-01-23 08:59:06,568 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737622746.png
+2025-01-23 08:59:06,568 - INFO - Contour 0: area=5934.0, bounds=(470, 0, 130, 47), aspect_ratio=2.77
+2025-01-23 08:59:06,569 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737622746.png
+2025-01-23 08:59:06,569 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 08:59:06,569 - INFO - 127.0.0.1 - - [23/Jan/2025 08:59:06] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 09:01:34,585 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 09:01:34,585 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 09:01:34,586 - INFO -  * Restarting with stat
+2025-01-23 09:01:35,766 - WARNING -  * Debugger is active!
+2025-01-23 09:01:35,769 - INFO -  * Debugger PIN: 917-776-210
+2025-01-23 09:04:06,842 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737623046833)
+2025-01-23 09:04:06,842 - INFO - Created debug directory: captcha_data/debug/1737623046833
+2025-01-23 09:04:06,844 - INFO - Saved input image to: captcha_data/debug/1737623046833/input.png
+2025-01-23 09:04:06,844 - INFO - Saved grayscale image to: captcha_data/debug/1737623046833/gray.png
+2025-01-23 09:04:06,844 - INFO - Saved debug info
+2025-01-23 09:04:06,844 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:04:06,845 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737623046.png
+2025-01-23 09:04:06,845 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737623046.png
+2025-01-23 09:04:06,845 - INFO - Found 1 contours
+2025-01-23 09:04:06,845 - INFO - Verification complete: Success
+2025-01-23 09:04:06,846 - INFO - 127.0.0.1 - - [23/Jan/2025 09:04:06] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:04:44,507 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737623084499)
+2025-01-23 09:04:44,507 - INFO - Created debug directory: captcha_data/debug/1737623084499
+2025-01-23 09:04:44,508 - INFO - Saved input image to: captcha_data/debug/1737623084499/input.png
+2025-01-23 09:04:44,508 - INFO - Saved grayscale image to: captcha_data/debug/1737623084499/gray.png
+2025-01-23 09:04:44,509 - INFO - Saved debug info
+2025-01-23 09:04:44,509 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:04:44,509 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737623084.png
+2025-01-23 09:04:44,509 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737623084.png
+2025-01-23 09:04:44,510 - INFO - Found 1 contours
+2025-01-23 09:04:44,510 - INFO - Verification complete: Success
+2025-01-23 09:04:44,510 - INFO - 127.0.0.1 - - [23/Jan/2025 09:04:44] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:05:26,622 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737623126613)
+2025-01-23 09:05:26,622 - INFO - Created debug directory: captcha_data/debug/1737623126613
+2025-01-23 09:05:26,624 - INFO - Saved input image to: captcha_data/debug/1737623126613/input.png
+2025-01-23 09:05:26,624 - INFO - Saved grayscale image to: captcha_data/debug/1737623126613/gray.png
+2025-01-23 09:05:26,624 - INFO - Saved debug info
+2025-01-23 09:05:26,624 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:05:26,625 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737623126.png
+2025-01-23 09:05:26,625 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737623126.png
+2025-01-23 09:05:26,625 - INFO - Found 1 contours
+2025-01-23 09:05:26,625 - INFO - Verification complete: Success
+2025-01-23 09:05:26,626 - INFO - 127.0.0.1 - - [23/Jan/2025 09:05:26] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:07:14,953 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737623234943)
+2025-01-23 09:07:14,953 - INFO - Created debug directory: captcha_data/debug/1737623234943
+2025-01-23 09:07:14,954 - INFO - Saved input image to: captcha_data/debug/1737623234943/input.png
+2025-01-23 09:07:14,954 - INFO - Saved grayscale image to: captcha_data/debug/1737623234943/gray.png
+2025-01-23 09:07:14,955 - INFO - Saved debug info
+2025-01-23 09:07:14,955 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:07:14,955 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737623234.png
+2025-01-23 09:07:14,956 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737623234.png
+2025-01-23 09:07:14,956 - INFO - Found 1 contours
+2025-01-23 09:07:14,956 - INFO - Verification complete: Success
+2025-01-23 09:07:14,956 - INFO - 127.0.0.1 - - [23/Jan/2025 09:07:14] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:08:11,083 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737623291074)
+2025-01-23 09:08:11,083 - INFO - Created debug directory: captcha_data/debug/1737623291074
+2025-01-23 09:08:11,084 - INFO - Saved input image to: captcha_data/debug/1737623291074/input.png
+2025-01-23 09:08:11,085 - INFO - Saved grayscale image to: captcha_data/debug/1737623291074/gray.png
+2025-01-23 09:08:11,085 - INFO - Saved debug info
+2025-01-23 09:08:11,085 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:08:11,085 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737623291.png
+2025-01-23 09:08:11,086 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737623291.png
+2025-01-23 09:08:11,086 - INFO - Found 1 contours
+2025-01-23 09:08:11,086 - INFO - Verification complete: Success
+2025-01-23 09:08:11,086 - INFO - 127.0.0.1 - - [23/Jan/2025 09:08:11] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:09:09,069 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737623349056)
+2025-01-23 09:09:09,070 - INFO - Created debug directory: captcha_data/debug/1737623349056
+2025-01-23 09:09:09,071 - INFO - Saved input image to: captcha_data/debug/1737623349056/input.png
+2025-01-23 09:09:09,071 - INFO - Saved grayscale image to: captcha_data/debug/1737623349056/gray.png
+2025-01-23 09:09:09,071 - INFO - Saved debug info
+2025-01-23 09:09:09,071 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:09:09,072 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737623349.png
+2025-01-23 09:09:09,072 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737623349.png
+2025-01-23 09:09:09,072 - INFO - Found 1 contours
+2025-01-23 09:09:09,072 - INFO - Verification complete: Success
+2025-01-23 09:09:09,072 - INFO - 127.0.0.1 - - [23/Jan/2025 09:09:09] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:24:31,677 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737624271668)
+2025-01-23 09:24:31,678 - INFO - Created debug directory: captcha_data/debug/1737624271668
+2025-01-23 09:24:31,679 - INFO - Saved input image to: captcha_data/debug/1737624271668/input.png
+2025-01-23 09:24:31,679 - INFO - Saved grayscale image to: captcha_data/debug/1737624271668/gray.png
+2025-01-23 09:24:31,679 - INFO - Saved debug info
+2025-01-23 09:24:31,679 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:24:31,680 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737624271.png
+2025-01-23 09:24:31,680 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737624271.png
+2025-01-23 09:24:31,680 - INFO - Found 1 contours
+2025-01-23 09:24:31,680 - INFO - Verification complete: Success
+2025-01-23 09:24:31,681 - INFO - 127.0.0.1 - - [23/Jan/2025 09:24:31] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:24:56,827 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737624296818)
+2025-01-23 09:24:56,827 - INFO - Created debug directory: captcha_data/debug/1737624296818
+2025-01-23 09:24:56,828 - INFO - Saved input image to: captcha_data/debug/1737624296818/input.png
+2025-01-23 09:24:56,828 - INFO - Saved grayscale image to: captcha_data/debug/1737624296818/gray.png
+2025-01-23 09:24:56,828 - INFO - Saved debug info
+2025-01-23 09:24:56,828 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:24:56,829 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737624296.png
+2025-01-23 09:24:56,829 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737624296.png
+2025-01-23 09:24:56,829 - INFO - Found 1 contours
+2025-01-23 09:24:56,829 - INFO - Verification complete: Success
+2025-01-23 09:24:56,829 - INFO - 127.0.0.1 - - [23/Jan/2025 09:24:56] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:25:32,758 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737624332749)
+2025-01-23 09:25:32,758 - INFO - Created debug directory: captcha_data/debug/1737624332749
+2025-01-23 09:25:32,759 - INFO - Saved input image to: captcha_data/debug/1737624332749/input.png
+2025-01-23 09:25:32,759 - INFO - Saved grayscale image to: captcha_data/debug/1737624332749/gray.png
+2025-01-23 09:25:32,759 - INFO - Saved debug info
+2025-01-23 09:25:32,759 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:25:32,760 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737624332.png
+2025-01-23 09:25:32,760 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737624332.png
+2025-01-23 09:25:32,760 - INFO - Found 1 contours
+2025-01-23 09:25:32,760 - INFO - Verification complete: Success
+2025-01-23 09:25:32,760 - INFO - 127.0.0.1 - - [23/Jan/2025 09:25:32] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:42:22,667 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737625342658)
+2025-01-23 09:42:22,667 - INFO - Created debug directory: captcha_data/debug/1737625342658
+2025-01-23 09:42:22,669 - INFO - Saved input image to: captcha_data/debug/1737625342658/input.png
+2025-01-23 09:42:22,669 - INFO - Saved grayscale image to: captcha_data/debug/1737625342658/gray.png
+2025-01-23 09:42:22,669 - INFO - Saved debug info
+2025-01-23 09:42:22,669 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:42:22,670 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737625342.png
+2025-01-23 09:42:22,670 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737625342.png
+2025-01-23 09:42:22,670 - INFO - Found 1 contours
+2025-01-23 09:42:22,670 - INFO - Verification complete: Success
+2025-01-23 09:42:22,671 - INFO - 127.0.0.1 - - [23/Jan/2025 09:42:22] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:42:50,750 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737625370741)
+2025-01-23 09:42:50,750 - INFO - Created debug directory: captcha_data/debug/1737625370741
+2025-01-23 09:42:50,751 - INFO - Saved input image to: captcha_data/debug/1737625370741/input.png
+2025-01-23 09:42:50,752 - INFO - Saved grayscale image to: captcha_data/debug/1737625370741/gray.png
+2025-01-23 09:42:50,752 - INFO - Saved debug info
+2025-01-23 09:42:50,752 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:42:50,753 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737625370.png
+2025-01-23 09:42:50,753 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737625370.png
+2025-01-23 09:42:50,753 - INFO - Found 1 contours
+2025-01-23 09:42:50,753 - INFO - Verification complete: Success
+2025-01-23 09:42:50,754 - INFO - 127.0.0.1 - - [23/Jan/2025 09:42:50] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:43:23,097 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737625403089)
+2025-01-23 09:43:23,097 - INFO - Created debug directory: captcha_data/debug/1737625403089
+2025-01-23 09:43:23,098 - INFO - Saved input image to: captcha_data/debug/1737625403089/input.png
+2025-01-23 09:43:23,098 - INFO - Saved grayscale image to: captcha_data/debug/1737625403089/gray.png
+2025-01-23 09:43:23,099 - INFO - Saved debug info
+2025-01-23 09:43:23,099 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:43:23,099 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737625403.png
+2025-01-23 09:43:23,100 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737625403.png
+2025-01-23 09:43:23,100 - INFO - Found 1 contours
+2025-01-23 09:43:23,100 - INFO - Verification complete: Success
+2025-01-23 09:43:23,100 - INFO - 127.0.0.1 - - [23/Jan/2025 09:43:23] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:52:16,011 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737625936002)
+2025-01-23 09:52:16,012 - INFO - Created debug directory: captcha_data/debug/1737625936002
+2025-01-23 09:52:16,017 - INFO - Saved input image to: captcha_data/debug/1737625936002/input.png
+2025-01-23 09:52:16,017 - INFO - Saved grayscale image to: captcha_data/debug/1737625936002/gray.png
+2025-01-23 09:52:16,017 - INFO - Saved debug info
+2025-01-23 09:52:16,017 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:52:16,018 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737625936.png
+2025-01-23 09:52:16,018 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737625936.png
+2025-01-23 09:52:16,018 - INFO - Found 1 contours
+2025-01-23 09:52:16,018 - INFO - Verification complete: Success
+2025-01-23 09:52:16,019 - INFO - 127.0.0.1 - - [23/Jan/2025 09:52:16] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:52:53,860 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737625973850)
+2025-01-23 09:52:53,860 - INFO - Created debug directory: captcha_data/debug/1737625973850
+2025-01-23 09:52:53,861 - INFO - Saved input image to: captcha_data/debug/1737625973850/input.png
+2025-01-23 09:52:53,862 - INFO - Saved grayscale image to: captcha_data/debug/1737625973850/gray.png
+2025-01-23 09:52:53,862 - INFO - Saved debug info
+2025-01-23 09:52:53,862 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:52:53,863 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737625973.png
+2025-01-23 09:52:53,863 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737625973.png
+2025-01-23 09:52:53,863 - INFO - Found 1 contours
+2025-01-23 09:52:53,863 - INFO - Verification complete: Success
+2025-01-23 09:52:53,864 - INFO - 127.0.0.1 - - [23/Jan/2025 09:52:53] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 09:53:23,791 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737626003782)
+2025-01-23 09:53:23,791 - INFO - Created debug directory: captcha_data/debug/1737626003782
+2025-01-23 09:53:23,792 - INFO - Saved input image to: captcha_data/debug/1737626003782/input.png
+2025-01-23 09:53:23,792 - INFO - Saved grayscale image to: captcha_data/debug/1737626003782/gray.png
+2025-01-23 09:53:23,793 - INFO - Saved debug info
+2025-01-23 09:53:23,793 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 09:53:23,793 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737626003.png
+2025-01-23 09:53:23,793 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737626003.png
+2025-01-23 09:53:23,794 - INFO - Found 1 contours
+2025-01-23 09:53:23,794 - INFO - Verification complete: Success
+2025-01-23 09:53:23,794 - INFO - 127.0.0.1 - - [23/Jan/2025 09:53:23] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 10:32:26,793 - INFO - 127.0.0.1 - - [23/Jan/2025 10:32:26] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-23 10:36:00,300 - INFO - 127.0.0.1 - - [23/Jan/2025 10:36:00] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-23 10:36:01,036 - INFO - 127.0.0.1 - - [23/Jan/2025 10:36:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-23 11:22:39,115 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 11:22:39,116 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 11:22:39,116 - INFO -  * Restarting with stat
+2025-01-23 11:22:40,299 - WARNING -  * Debugger is active!
+2025-01-23 11:22:40,302 - INFO -  * Debugger PIN: 938-224-716
+2025-01-23 11:22:59,734 - INFO - 127.0.0.1 - - [23/Jan/2025 11:22:59] "[31m[1mPOST /health HTTP/1.1[0m" 405 -
+2025-01-23 11:23:17,889 - INFO - 127.0.0.1 - - [23/Jan/2025 11:23:17] "GET /health HTTP/1.1" 200 -
+2025-01-23 11:23:17,896 - INFO - Processing CAPTCHA verification request (debug=False, timestamp=1737631397)
+2025-01-23 11:23:17,900 - INFO - 127.0.0.1 - - [23/Jan/2025 11:23:17] "[31m[1mPOST /solve_captcha HTTP/1.1[0m" 400 -
+2025-01-23 12:39:45,505 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 12:39:45,505 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 12:39:45,505 - INFO -  * Restarting with stat
+2025-01-23 12:39:46,655 - WARNING -  * Debugger is active!
+2025-01-23 12:39:46,658 - INFO -  * Debugger PIN: 938-224-716
+2025-01-23 12:40:49,849 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737636049830)
+2025-01-23 12:40:49,850 - INFO - Created debug directory: captcha_data/debug/1737636049830
+2025-01-23 12:40:49,856 - INFO - Saved input image to: captcha_data/debug/1737636049830/input.png
+2025-01-23 12:40:49,858 - INFO - Saved grayscale image to: captcha_data/debug/1737636049830/gray.png
+2025-01-23 12:40:49,858 - INFO - Saved debug info
+2025-01-23 12:40:49,858 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 12:40:49,859 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737636049.png
+2025-01-23 12:40:49,860 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737636049.png
+2025-01-23 12:40:49,861 - INFO - Found 1 contours
+2025-01-23 12:40:49,861 - INFO - Verification complete: Success
+2025-01-23 12:40:49,861 - INFO - 127.0.0.1 - - [23/Jan/2025 12:40:49] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 12:40:49,868 - INFO - Starting CAPTCHA verification...
+2025-01-23 12:40:49,869 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737636049.png
+2025-01-23 12:40:49,869 - INFO - Contour 0: area=26880.0, bounds=(0, 0, 600, 47), aspect_ratio=12.77
+2025-01-23 12:40:49,870 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737636049.png
+2025-01-23 12:40:49,871 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 12:40:49,871 - INFO - 127.0.0.1 - - [23/Jan/2025 12:40:49] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 12:41:08,811 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737636068800)
+2025-01-23 12:41:08,812 - INFO - Created debug directory: captcha_data/debug/1737636068800
+2025-01-23 12:41:08,813 - INFO - Saved input image to: captcha_data/debug/1737636068800/input.png
+2025-01-23 12:41:08,813 - INFO - Saved grayscale image to: captcha_data/debug/1737636068800/gray.png
+2025-01-23 12:41:08,813 - INFO - Saved debug info
+2025-01-23 12:41:08,813 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 12:41:08,814 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737636068.png
+2025-01-23 12:41:08,814 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737636068.png
+2025-01-23 12:41:08,814 - INFO - Found 1 contours
+2025-01-23 12:41:08,814 - INFO - Verification complete: Success
+2025-01-23 12:41:08,814 - INFO - 127.0.0.1 - - [23/Jan/2025 12:41:08] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 12:41:08,821 - INFO - Starting CAPTCHA verification...
+2025-01-23 12:41:08,822 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737636068.png
+2025-01-23 12:41:08,822 - INFO - Contour 0: area=26880.0, bounds=(0, 0, 600, 47), aspect_ratio=12.77
+2025-01-23 12:41:08,822 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737636068.png
+2025-01-23 12:41:08,822 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 12:41:08,822 - INFO - 127.0.0.1 - - [23/Jan/2025 12:41:08] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 12:44:19,259 - INFO - Logging system initialized
+2025-01-23 12:44:19,276 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 12:44:19,276 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 12:44:19,277 - INFO -  * Restarting with stat
+2025-01-23 12:44:20,410 - INFO - Logging system initialized
+2025-01-23 12:44:20,424 - WARNING -  * Debugger is active!
+2025-01-23 12:44:20,427 - INFO -  * Debugger PIN: 938-224-716
+2025-01-23 12:45:02,999 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737636302988)
+2025-01-23 12:45:02,999 - INFO - Created debug directory: captcha_data/debug/1737636302988
+2025-01-23 12:45:03,001 - INFO - Saved input image to: captcha_data/debug/1737636302988/input.png
+2025-01-23 12:45:03,001 - INFO - Saved grayscale image to: captcha_data/debug/1737636302988/gray.png
+2025-01-23 12:45:03,001 - INFO - Saved debug info
+2025-01-23 12:45:03,001 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 12:45:03,002 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737636303.png
+2025-01-23 12:45:03,002 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737636303.png
+2025-01-23 12:45:03,002 - INFO - Found 1 contours
+2025-01-23 12:45:03,002 - INFO - Verification complete: Success
+2025-01-23 12:45:03,003 - INFO - 127.0.0.1 - - [23/Jan/2025 12:45:03] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 12:45:03,009 - INFO - Starting CAPTCHA verification...
+2025-01-23 12:45:03,010 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737636303.png
+2025-01-23 12:45:03,010 - INFO - Contour 0: area=26880.0, bounds=(0, 0, 600, 47), aspect_ratio=12.77
+2025-01-23 12:45:03,010 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737636303.png
+2025-01-23 12:45:03,011 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 12:45:03,011 - INFO - 127.0.0.1 - - [23/Jan/2025 12:45:03] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 12:45:20,466 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737636320453)
+2025-01-23 12:45:20,466 - INFO - Created debug directory: captcha_data/debug/1737636320453
+2025-01-23 12:45:20,467 - INFO - Saved input image to: captcha_data/debug/1737636320453/input.png
+2025-01-23 12:45:20,467 - INFO - Saved grayscale image to: captcha_data/debug/1737636320453/gray.png
+2025-01-23 12:45:20,467 - INFO - Saved debug info
+2025-01-23 12:45:20,467 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 12:45:20,468 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737636320.png
+2025-01-23 12:45:20,468 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737636320.png
+2025-01-23 12:45:20,468 - INFO - Found 1 contours
+2025-01-23 12:45:20,468 - INFO - Verification complete: Success
+2025-01-23 12:45:20,469 - INFO - 127.0.0.1 - - [23/Jan/2025 12:45:20] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 12:45:20,476 - INFO - Starting CAPTCHA verification...
+2025-01-23 12:45:20,476 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737636320.png
+2025-01-23 12:45:20,477 - INFO - Contour 0: area=26880.0, bounds=(0, 0, 600, 47), aspect_ratio=12.77
+2025-01-23 12:45:20,477 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737636320.png
+2025-01-23 12:45:20,477 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 12:45:20,478 - INFO - 127.0.0.1 - - [23/Jan/2025 12:45:20] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 12:48:44,843 - INFO - Logging system initialized
+2025-01-23 12:48:44,860 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 12:48:44,860 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 12:48:44,860 - INFO -  * Restarting with stat
+2025-01-23 12:48:46,009 - INFO - Logging system initialized
+2025-01-23 12:48:46,023 - WARNING -  * Debugger is active!
+2025-01-23 12:48:46,026 - INFO -  * Debugger PIN: 938-224-716
+2025-01-23 12:49:30,872 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737636570860)
+2025-01-23 12:49:30,872 - INFO - Created debug directory: captcha_data/debug/1737636570860
+2025-01-23 12:49:30,874 - INFO - Saved input image to: captcha_data/debug/1737636570860/input.png
+2025-01-23 12:49:30,874 - INFO - Saved grayscale image to: captcha_data/debug/1737636570860/gray.png
+2025-01-23 12:49:30,874 - INFO - Saved debug info
+2025-01-23 12:49:30,874 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 12:49:30,875 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737636570.png
+2025-01-23 12:49:30,875 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737636570.png
+2025-01-23 12:49:30,875 - INFO - Found 1 contours
+2025-01-23 12:49:30,875 - INFO - Verification complete: Success
+2025-01-23 12:49:30,876 - INFO - 127.0.0.1 - - [23/Jan/2025 12:49:30] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 12:49:30,883 - INFO - Starting CAPTCHA verification...
+2025-01-23 12:49:30,883 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737636570.png
+2025-01-23 12:49:30,883 - INFO - Contour 0: area=26880.0, bounds=(0, 0, 600, 47), aspect_ratio=12.77
+2025-01-23 12:49:30,884 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737636570.png
+2025-01-23 12:49:30,884 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 12:49:30,884 - INFO - 127.0.0.1 - - [23/Jan/2025 12:49:30] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 12:49:59,422 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737636599409)
+2025-01-23 12:49:59,422 - INFO - Created debug directory: captcha_data/debug/1737636599409
+2025-01-23 12:49:59,423 - INFO - Saved input image to: captcha_data/debug/1737636599409/input.png
+2025-01-23 12:49:59,423 - INFO - Saved grayscale image to: captcha_data/debug/1737636599409/gray.png
+2025-01-23 12:49:59,423 - INFO - Saved debug info
+2025-01-23 12:49:59,424 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 12:49:59,424 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737636599.png
+2025-01-23 12:49:59,424 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737636599.png
+2025-01-23 12:49:59,424 - INFO - Found 1 contours
+2025-01-23 12:49:59,425 - INFO - Verification complete: Success
+2025-01-23 12:49:59,425 - INFO - 127.0.0.1 - - [23/Jan/2025 12:49:59] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 12:49:59,432 - INFO - Starting CAPTCHA verification...
+2025-01-23 12:49:59,433 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737636599.png
+2025-01-23 12:49:59,433 - INFO - Contour 0: area=26880.0, bounds=(0, 0, 600, 47), aspect_ratio=12.77
+2025-01-23 12:49:59,434 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737636599.png
+2025-01-23 12:49:59,434 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 12:49:59,434 - INFO - 127.0.0.1 - - [23/Jan/2025 12:49:59] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 12:50:24,324 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737636624310)
+2025-01-23 12:50:24,324 - INFO - Created debug directory: captcha_data/debug/1737636624310
+2025-01-23 12:50:24,325 - INFO - Saved input image to: captcha_data/debug/1737636624310/input.png
+2025-01-23 12:50:24,326 - INFO - Saved grayscale image to: captcha_data/debug/1737636624310/gray.png
+2025-01-23 12:50:24,326 - INFO - Saved debug info
+2025-01-23 12:50:24,326 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 12:50:24,326 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737636624.png
+2025-01-23 12:50:24,327 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737636624.png
+2025-01-23 12:50:24,327 - INFO - Found 1 contours
+2025-01-23 12:50:24,327 - INFO - Verification complete: Success
+2025-01-23 12:50:24,327 - INFO - 127.0.0.1 - - [23/Jan/2025 12:50:24] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 12:50:24,334 - INFO - Starting CAPTCHA verification...
+2025-01-23 12:50:24,335 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737636624.png
+2025-01-23 12:50:24,335 - INFO - Contour 0: area=26880.0, bounds=(0, 0, 600, 47), aspect_ratio=12.77
+2025-01-23 12:50:24,335 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737636624.png
+2025-01-23 12:50:24,335 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 12:50:24,336 - INFO - 127.0.0.1 - - [23/Jan/2025 12:50:24] "POST /verify_solution HTTP/1.1" 200 -
+2025-01-23 12:50:50,855 - INFO - Processing CAPTCHA verification request (debug=True, timestamp=1737636650842)
+2025-01-23 12:50:50,855 - INFO - Created debug directory: captcha_data/debug/1737636650842
+2025-01-23 12:50:50,856 - INFO - Saved input image to: captcha_data/debug/1737636650842/input.png
+2025-01-23 12:50:50,856 - INFO - Saved grayscale image to: captcha_data/debug/1737636650842/gray.png
+2025-01-23 12:50:50,856 - INFO - Saved debug info
+2025-01-23 12:50:50,856 - INFO - Click-to-verify CAPTCHA element detected
+2025-01-23 12:50:50,857 - INFO - Saved original debug image: captcha_data/images/verify_debug_original_1737636650.png
+2025-01-23 12:50:50,857 - INFO - Saved threshold debug image: captcha_data/images/verify_debug_thresh_1737636650.png
+2025-01-23 12:50:50,857 - INFO - Found 1 contours
+2025-01-23 12:50:50,857 - INFO - Verification complete: Success
+2025-01-23 12:50:50,857 - INFO - 127.0.0.1 - - [23/Jan/2025 12:50:50] "POST /solve_captcha HTTP/1.1" 200 -
+2025-01-23 12:50:50,863 - INFO - Starting CAPTCHA verification...
+2025-01-23 12:50:50,864 - INFO - Saved threshold debug image: captcha_data/images/verify_thresh_1737636650.png
+2025-01-23 12:50:50,864 - INFO - Contour 0: area=26880.0, bounds=(0, 0, 600, 47), aspect_ratio=12.77
+2025-01-23 12:50:50,864 - INFO - Saved green mask debug image: captcha_data/images/verify_green_1737636650.png
+2025-01-23 12:50:50,864 - INFO - Green pixel analysis: pixels=0, ratio=0.0000
+2025-01-23 12:50:50,865 - INFO - 127.0.0.1 - - [23/Jan/2025 12:50:50] "POST /verify_solution HTTP/1.1" 200 -
