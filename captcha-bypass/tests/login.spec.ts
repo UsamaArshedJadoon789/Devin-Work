@@ -172,7 +172,7 @@ async function solveCaptcha(page) {
     let initializationAttempts = 0;
     const maxInitAttempts = 10;
     
-    // Initialize page state tracking
+    // Initialize enhanced page state tracking with detailed metrics
     await page.evaluate(() => {
       window._pageState = {
         networkRequests: new Set(),
@@ -183,26 +183,101 @@ async function solveCaptcha(page) {
         captchaState: {
           frameDetected: false,
           verificationAttempted: false,
-          verificationSuccess: false
+          verificationSuccess: false,
+          frameLoadTime: null,
+          verificationTime: null,
+          attempts: 0,
+          loadingState: 'initial'
+        },
+        pageMetrics: {
+          loadStartTime: Date.now(),
+          navigationComplete: false,
+          domContentLoaded: false,
+          resourcesLoaded: false,
+          angularBootstrapped: false
         }
       };
 
-      // Setup mutation observer for DOM changes
+      // Track page load events
+      document.addEventListener('DOMContentLoaded', () => {
+        window._pageState.pageMetrics.domContentLoaded = true;
+      });
+
+      window.addEventListener('load', () => {
+        window._pageState.pageMetrics.resourcesLoaded = true;
+      });
+
+      // Enhanced CAPTCHA detection strategies
+      window._captchaDetectionStrategies = {
+        checkIframe: (node) => {
+          if (node instanceof HTMLIFrameElement) {
+            const src = node.src || '';
+            const title = node.title || '';
+            return src.includes('recaptcha') || 
+                   title.includes('reCAPTCHA') || 
+                   node.name?.startsWith('a-');
+          }
+          return false;
+        },
+        checkDiv: (node) => {
+          if (node instanceof HTMLDivElement) {
+            return node.classList.contains('g-recaptcha') ||
+                   node.getAttribute('data-sitekey') !== null;
+          }
+          return false;
+        },
+        checkScript: (node) => {
+          if (node instanceof HTMLScriptElement) {
+            const src = node.src || '';
+            return src.includes('recaptcha') || src.includes('api.js');
+          }
+          return false;
+        }
+      };
+
+      // Enhanced mutation observer with sophisticated CAPTCHA detection
       const observer = new MutationObserver(mutations => {
         window._pageState.domMutations += mutations.length;
+        
         mutations.forEach(mutation => {
-          if (mutation.target instanceof HTMLElement) {
-            const iframes = Array.from(document.getElementsByTagName('iframe'));
-            const captchaFrame = iframes.find(frame => 
-              frame.src?.includes('recaptcha') || 
-              frame.title?.includes('reCAPTCHA') ||
-              frame.name?.startsWith('a-')
-            );
-            if (captchaFrame) {
-              window._pageState.captchaState.frameDetected = true;
-            }
+          // Check added nodes
+          mutation.addedNodes.forEach(node => {
+            Object.entries(window._captchaDetectionStrategies).some(([strategy, check]) => {
+              if (check(node)) {
+                window._pageState.captchaState.frameDetected = true;
+                window._pageState.captchaState.frameLoadTime = Date.now();
+                window._pageState.captchaState.loadingState = 'detected';
+                console.log('[CAPTCHA] Frame detected by strategy:', strategy);
+                return true;
+              }
+              return false;
+            });
+          });
+
+          // Check attribute modifications
+          if (mutation.type === 'attributes' && mutation.target instanceof Element) {
+            Object.entries(window._captchaDetectionStrategies).some(([strategy, check]) => {
+              if (check(mutation.target)) {
+                window._pageState.captchaState.frameDetected = true;
+                window._pageState.captchaState.frameLoadTime = Date.now();
+                window._pageState.captchaState.loadingState = 'detected';
+                console.log('[CAPTCHA] Frame detected through attribute change:', strategy);
+                return true;
+              }
+              return false;
+            });
           }
         });
+
+        // Check overall page state after mutations
+        if (window._pageState.captchaState.frameDetected && 
+            !window._pageState.captchaState.verificationAttempted) {
+          const readyForVerification = document.querySelector('.recaptcha-checkbox') !== null;
+          if (readyForVerification) {
+            window._pageState.captchaState.loadingState = 'ready';
+            console.log('[CAPTCHA] Frame ready for verification');
+          }
+        }
       });
 
       observer.observe(document.body, {
