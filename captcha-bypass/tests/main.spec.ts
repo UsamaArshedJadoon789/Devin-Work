@@ -172,35 +172,6 @@ test('Automated login with CAPTCHA bypass', async ({ page }) => {
             throw new Error('Login process failed after all attempts');
         }
 
-        // Enhanced login attempt with retry mechanism
-        console.log('[Login] Starting login process...');
-        let loginAttempted = false;
-        let loginSuccess = false;
-        
-        for (let attempt = 1; attempt <= 3 && !loginSuccess; attempt++) {
-            try {
-                console.log(`[Login] Attempt ${attempt}/3`);
-                loginAttempted = true;
-                loginSuccess = await performLogin(page);
-                
-                if (loginSuccess) {
-                    console.log('[Login] Successfully logged in');
-                    break;
-                } else {
-                    console.log(`[Login] Attempt ${attempt} failed, retrying...`);
-                    await page.waitForTimeout(2000);
-                }
-            } catch (error) {
-                console.error(`[Login] Attempt ${attempt} failed with error:`, error);
-                if (attempt === 3) throw error;
-                await page.waitForTimeout(2000);
-            }
-        }
-        
-        if (!loginAttempted || !loginSuccess) {
-            throw new Error('Login process failed after all attempts');
-        }
-
         console.log('[Test] Login sequence completed successfully');
         
     } catch (error) {
