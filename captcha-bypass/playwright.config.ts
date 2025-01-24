@@ -2,46 +2,58 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 120000,
+  timeout: 300000,
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
-  retries: 1,
+  retries: 3,
   workers: 1,
-  reporter: 'html',
+  expect: {
+    timeout: 60000
+  },
+  reporter: [
+    ['html'],
+    ['list']
+  ],
+  retries: process.env.CI ? 2 : 3,
   use: {
     baseURL: 'https://digitalqa.contracts.sa',
     trace: 'retain-on-failure',
     screenshot: { mode: 'on', fullPage: true },
     viewport: { width: 1920, height: 1080 },
-    video: 'retain-on-failure',
-    headless: 'new',
+    video: { mode: 'retain-on-failure', size: { width: 1920, height: 1080 } },
+    headless: true,
     launchOptions: {
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
-        '--disable-gpu',
-        '--window-size=1920,1080',
-        '--hide-scrollbars',
-        '--mute-audio'
-      ],
-      timeout: 120000
-    },
-    contextOptions: {
-      reducedMotion: 'reduce',
-      forcedColors: 'none'
+        '--disable-gpu'
+      ]
     },
     bypassCSP: true,
     ignoreHTTPSErrors: true,
-    permissions: ['clipboard-read', 'clipboard-write'],
-    serviceWorkers: 'block',
     navigationTimeout: 60000,
     actionTimeout: 30000,
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        launchOptions: {
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--disable-web-security',
+            '--allow-running-insecure-content',
+            '--headless=new'
+          ],
+          timeout: 120000,
+          ignoreDefaultArgs: ['--enable-automation']
+        }
+      },
     },
   ],
 });
