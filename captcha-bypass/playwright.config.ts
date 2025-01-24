@@ -23,7 +23,9 @@ export default defineConfig({
     video: { mode: 'retain-on-failure', size: { width: 1920, height: 1080 } },
     headless: true,
     launchOptions: {
+      headless: true,
       args: [
+        '--headless=new',
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
@@ -40,46 +42,20 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        launchOptions: {
-          args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--disable-web-security',
-            '--allow-running-insecure-content',
-            '--headless=new'
-          ],
-          timeout: 120000,
-          ignoreDefaultArgs: ['--enable-automation']
-        }
-      },
-    },
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
+        headless: true,
         launchOptions: {
           headless: true,
           args: [
+            '--headless=new',
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
             '--disable-gpu',
             '--disable-web-security',
-            '--allow-running-insecure-content',
-            '-headless'
+            '--allow-running-insecure-content'
           ],
-          firefoxUserPrefs: {
-            'media.navigator.streams.fake': true,
-            'media.navigator.permission.disabled': true,
-            'privacy.trackingprotection.enabled': false,
-            'network.websocket.allowInsecureFromHTTPS': true,
-            'security.fileuri.strict_origin_policy': false,
-            'security.enterprise_roots.enabled': true,
-            'browser.tabs.remote.autostart': false,
-            'browser.tabs.remote.autostart.2': false
-          }
+          timeout: 120000,
+          ignoreDefaultArgs: ['--enable-automation']
         }
       }
     }
