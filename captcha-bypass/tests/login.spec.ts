@@ -168,22 +168,91 @@ async function solveCaptcha(page) {
       });
     });
 
-    // Wait for Angular initialization with timeout
+    // Enhanced initialization and CAPTCHA detection
     let initializationAttempts = 0;
     const maxInitAttempts = 10;
+    
+    // Setup network request interception
+    await page.route('**/*', async route => {
+      const request = route.request();
+      const url = request.url();
+      console.log(`[Network] ${request.method()} ${url.split('?')[0]}`);
+      
+      // Track recaptcha-related requests
+      if (url.includes('recaptcha') || url.includes('anchor')) {
+        await page.evaluate(url => {
+          window._pageState.networkRequests.add(url);
+          if (url.includes('anchor')) {
+            window._pageState.captchaDetected = true;
+          }
+        }, url);
+      }
+      await route.continue();
+    });
+
     while (initializationAttempts < maxInitAttempts) {
-      const pageState = await page.evaluate(() => window._pageState);
-      console.log('[Angular] Page state:', pageState);
+      const pageState = await page.evaluate(() => ({
+        ...window._pageState,
+        networkRequests: Array.from(window._pageState.networkRequests)
+      }));
+      console.log('[Page] Current state:', {
+        ...pageState,
+        networkRequests: pageState.networkRequests.length
+      });
       
       if (pageState.angularInitialized) {
         console.log('[Angular] Application fully initialized');
-        break;
+        
+        // Additional verification for CAPTCHA presence
+        const recaptchaRequests = pageState.networkRequests.filter(url => 
+          url.includes('recaptcha') || url.includes('anchor')
+        );
+        
+        if (recaptchaRequests.length > 0) {
+          console.log('[CAPTCHA] Detected through network requests:', recaptchaRequests);
+          break;
+        }
+        
+        // Check DOM for CAPTCHA elements
+        const hasCaptchaElements = await page.evaluate(() => {
+          const selectors = [
+            'iframe[src*="recaptcha"]',
+            'iframe[title*="reCAPTCHA"]',
+            'iframe[name^="a-"]',
+            'div.g-recaptcha',
+            '#recaptcha-token'
+          ];
+          return selectors.some(selector => document.querySelector(selector) !== null);
+        });
+        
+        if (hasCaptchaElements) {
+          console.log('[CAPTCHA] Detected through DOM elements');
+          break;
+        }
       }
       
       initializationAttempts++;
       console.log(`[Angular] Waiting for initialization (${initializationAttempts}/${maxInitAttempts})`);
       await page.waitForTimeout(2000);
     }
+    
+    // Final verification of CAPTCHA presence
+    const captchaState = await page.evaluate(() => {
+      const frames = Array.from(document.getElementsByTagName('iframe'));
+      return {
+        frames: frames.length,
+        recaptchaFrames: frames.filter(f => 
+          f.src?.includes('recaptcha') || 
+          f.title?.includes('reCAPTCHA') ||
+          f.name?.startsWith('a-')
+        ).length,
+        visibleFrames: frames.filter(f => 
+          f.getBoundingClientRect().width > 0 && 
+          f.getBoundingClientRect().height > 0
+        ).length
+      };
+    });
+    console.log('[CAPTCHA] Frame detection state:', captchaState);
     
     while (!captchaFrame && detectionAttempts < maxAttempts) {
       detectionAttempts++;
