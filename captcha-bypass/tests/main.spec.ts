@@ -100,16 +100,79 @@ test('Automated login with CAPTCHA bypass', async ({ page }) => {
             }
         }
 
-        // Enhanced CAPTCHA detection with reduced timeouts
-        console.log('[CAPTCHA] Starting detection sequence with optimized timeouts...');
+        // Enhanced CAPTCHA detection with dynamic timeouts and retries
+        console.log('[CAPTCHA] Starting advanced detection sequence...');
         
-        // Quick initial check for CAPTCHA elements with parallel detection
-        const quickCheckPromises = [
-            page.waitForSelector('iframe[src*="recaptcha"]', { timeout: 3000 }).catch(() => null),
-            page.waitForSelector('.slidercaptcha', { timeout: 3000 }).catch(() => null),
-            page.waitForSelector('[class*="captcha"]', { timeout: 3000 }).catch(() => null),
-            page.waitForSelector('button:has-text("Verify"), button:has-text("التحقق")', { timeout: 3000 }).catch(() => null)
-        ];
+        // Execute CAPTCHA detection with retries
+        const captchaResult = await (async function detectCaptchaWithRetry(attempt = 1, maxAttempts = 3) {
+            console.log(`[CAPTCHA] Detection attempt ${attempt}/${maxAttempts}`);
+            
+            const timeout = Math.min(3000 * attempt, 10000);
+            const quickCheckPromises = [
+                page.waitForSelector('iframe[src*="recaptcha"]', { timeout }).catch(() => null),
+                page.waitForSelector('.slidercaptcha', { timeout }).catch(() => null),
+                page.waitForSelector('[class*="captcha"]', { timeout }).catch(() => null),
+                page.waitForSelector('button:has-text("Verify"), button:has-text("التحقق")', { timeout }).catch(() => null),
+                page.waitForSelector('[class*="verify"]', { timeout }).catch(() => null),
+                page.waitForSelector('[class*="slider"]', { timeout }).catch(() => null)
+            ];
+
+            const results = await Promise.all(quickCheckPromises);
+            const hasCaptchaIndicator = results.some(result => result !== null);
+
+            if (hasCaptchaIndicator) {
+                console.log('[CAPTCHA] Found CAPTCHA indicators, proceeding with verification...');
+                return {
+                    detected: true,
+                    element: results.find(r => r !== null),
+                    type: results[0] ? 'recaptcha' : 
+                          results[1] ? 'slider' : 
+                          'unknown'
+                };
+            }
+
+            if (attempt < maxAttempts) {
+                console.log(`[CAPTCHA] No indicators found, retrying (${attempt}/${maxAttempts})...`);
+                await page.waitForTimeout(1000);
+                return detectCaptchaWithRetry(attempt + 1, maxAttempts);
+            }
+
+            console.log('[CAPTCHA] No CAPTCHA detected after all attempts');
+            return { detected: false };
+        })(1, 3);
+
+        if (captchaResult.detected) {
+            console.log(`[CAPTCHA] Detected ${captchaResult.type} CAPTCHA, attempting bypass...`);
+            
+            if (captchaResult.type === 'slider') {
+                const verifyButton = await page.waitForSelector(
+                    'button:has-text("Verify"), button:has-text("التحقق")',
+                    { timeout: 5000 }
+                ).catch(() => null);
+                
+                if (verifyButton) {
+                    await page.waitForTimeout(Math.random() * 500 + 300);
+                    await verifyButton.hover();
+                    await page.waitForTimeout(Math.random() * 200 + 100);
+                    await verifyButton.click();
+                    await page.waitForTimeout(2000);
+                }
+            } else if (captchaResult.type === 'recaptcha') {
+                const frame = await page.frameLocator('iframe[src*="recaptcha"]').first();
+                const checkbox = await frame.locator('.recaptcha-checkbox-border').first();
+                
+                if (checkbox) {
+                    await page.waitForTimeout(Math.random() * 500 + 300);
+                    await checkbox.click();
+                    await page.waitForTimeout(2000);
+                }
+            }
+            
+            // Wait for CAPTCHA verification
+            await page.waitForTimeout(2000);
+        } else {
+            console.log('[CAPTCHA] No CAPTCHA detected, proceeding with login');
+        }
         
         const results = await Promise.all(quickCheckPromises);
         const hasCaptchaIndicator = results.some(result => result !== null);

@@ -43,33 +43,143 @@ async function performLogin(page: Page): Promise<boolean> {
             console.log('[Login] Company Admin selection not available:', error.message);
         }
         
-        // Enhanced form field detection with retry
+        // Enhanced form field detection with dynamic selectors
+        console.log('[Login] Starting enhanced form field detection...');
+        
+        const inputSelectors = {
+            email: [
+                'input[type="text"]',
+                'input[type="email"]',
+                'input[name*="user"]',
+                'input[name*="email"]',
+                'input[placeholder*="user"]',
+                'input[placeholder*="email"]'
+            ],
+            password: [
+                'input[type="password"]',
+                'input[name*="pass"]',
+                'input[placeholder*="pass"]'
+            ]
+        };
+
         let formFieldsFound = false;
         let emailInput, passwordInput;
-        
-        for (let attempt = 1; attempt <= 3 && !formFieldsFound; attempt++) {
+
+        for (let attempt = 1; attempt <= 5 && !formFieldsFound; attempt++) {
             try {
-                console.log(`[Login] Attempting to locate form fields (attempt ${attempt}/3)...`);
-                emailInput = await page.waitForSelector('input[type="text"], input[type="email"]', { timeout: 5000 });
-                passwordInput = await page.waitForSelector('input[type="password"]', { timeout: 5000 });
+                console.log(`[Login] Form field detection attempt ${attempt}/5...`);
+                
+                // Try each email selector
+                for (const emailSelector of inputSelectors.email) {
+                    emailInput = await page.$(emailSelector);
+                    if (emailInput) {
+                        console.log(`[Login] Found email input with selector: ${emailSelector}`);
+                        break;
+                    }
+                }
+                
+                // Try each password selector
+                for (const passwordSelector of inputSelectors.password) {
+                    passwordInput = await page.$(passwordSelector);
+                    if (passwordInput) {
+                        console.log(`[Login] Found password input with selector: ${passwordSelector}`);
+                        break;
+                    }
+                }
                 
                 if (emailInput && passwordInput) {
                     formFieldsFound = true;
-                    console.log('[Login] Form fields located successfully');
+                    console.log('[Login] All form fields located successfully');
+                    break;
+                }
+                
+                // If not found, wait before retry
+                if (!formFieldsFound) {
+                    console.log('[Login] Some fields not found, waiting before retry...');
+                    await page.waitForTimeout(1000 * attempt); // Exponential backoff
                 }
             } catch (error) {
                 console.error(`[Login] Form field detection attempt ${attempt} failed:`, error);
-                if (attempt === 3) throw new Error('Login form fields not found after 3 attempts');
-                await page.waitForTimeout(1000);
+                if (attempt === 5) throw new Error('Login form fields not found after all attempts');
+                await page.waitForTimeout(1000 * attempt);
             }
         }
 
-        // Get and validate credentials
+        // Enhanced credential handling with validation
         const email = process.env.email;
         const password = process.env.password;
 
         if (!email || !password) {
             throw new Error('Missing required login credentials');
+        }
+
+        console.log('[Login] Credentials validated, proceeding with login...');
+        
+        // Wait for Angular stability
+        const waitForAngularStability = async (maxAttempts = 5) => {
+            for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+                try {
+                    await page.waitForFunction(() => {
+                        const angular = (window as any).ng;
+                        return angular && angular.getInjector && angular.getInjector().get('$rootScope').$apply;
+                    }, { timeout: 5000 });
+                    console.log('[Angular] Application stable');
+                    return true;
+                } catch (error) {
+                    console.log(`[Angular] Stability check attempt ${attempt}/${maxAttempts} failed`);
+                    if (attempt === maxAttempts) return false;
+                    await page.waitForTimeout(1000);
+                }
+            }
+            return false;
+        };
+        
+        const isStable = await waitForAngularStability();
+        if (!isStable) {
+            console.log('[Angular] Proceeding with login despite stability check failure');
+        }
+        
+        // Enhanced credential entry with retry mechanism
+        const fillCredentials = async () => {
+            console.log('[Login] Entering credentials with human-like timing...');
+            
+            // Clear and fill email
+            await emailInput.click();
+            await page.waitForTimeout(Math.random() * 300 + 200);
+            await emailInput.fill('');
+            await page.waitForTimeout(Math.random() * 200 + 100);
+            await emailInput.fill(email);
+            
+            await page.waitForTimeout(Math.random() * 400 + 300);
+            
+            // Clear and fill password
+            await passwordInput.click();
+            await page.waitForTimeout(Math.random() * 300 + 200);
+            await passwordInput.fill('');
+            await page.waitForTimeout(Math.random() * 200 + 100);
+            await passwordInput.fill(password);
+            
+            // Verify entered values
+            const enteredEmail = await emailInput.inputValue();
+            const enteredPassword = await passwordInput.inputValue();
+            
+            return enteredEmail === email && enteredPassword === password;
+        };
+        
+        // Try filling credentials with retry
+        let credentialsEntered = false;
+        for (let attempt = 1; attempt <= 3 && !credentialsEntered; attempt++) {
+            try {
+                credentialsEntered = await fillCredentials();
+                if (credentialsEntered) {
+                    console.log('[Login] Credentials entered successfully');
+                    break;
+                }
+            } catch (error) {
+                console.error(`[Login] Credential entry attempt ${attempt} failed:`, error);
+                if (attempt === 3) throw error;
+                await page.waitForTimeout(1000 * attempt);
+            }
         }
 
         // Enter credentials with human-like timing and verification
