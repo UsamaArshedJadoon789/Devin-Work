@@ -107,36 +107,174 @@ async function solveCaptcha(page) {
       verificationAttempts: 0
     };
 
-    // Wait for CAPTCHA iframe with detailed state tracking
-    const captchaFrame = await page.frameLocator('iframe[title*="reCAPTCHA"]').first();
-    const frames = await page.frames();
-    frameMetrics.framesFound = frames.length;
+    // Enhanced CAPTCHA frame detection with multiple strategies and retries
+    console.log('[CAPTCHA] Starting enhanced frame detection with extended timeout...');
+    let captchaFrame = null;
+    let detectionAttempts = 0;
+    const maxAttempts = 10; // Increased max attempts
     
-    // Log all frame information for debugging
-    for (const frame of frames) {
-      const frameInfo = {
-        url: frame.url(),
-        name: frame.name(),
-        title: await frame.title().catch(() => 'Unable to get title')
-      };
-      frameMetrics.frameTypes.push(frameInfo);
-      console.log('[CAPTCHA] Found frame:', frameInfo);
+    // Wait for initial page stabilization
+    await page.waitForTimeout(3000);
+    
+    // Setup mutation observer to detect frame injection
+    await page.evaluate(() => {
+      window._captchaFrameDetected = false;
+      const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          if (mutation.addedNodes) {
+            mutation.addedNodes.forEach((node) => {
+              if (node.nodeName === 'IFRAME' && 
+                  (node.src?.includes('recaptcha') || 
+                   node.title?.includes('reCAPTCHA'))) {
+                window._captchaFrameDetected = true;
+              }
+            });
+          }
+        }
+      });
+      observer.observe(document.body, { 
+        childList: true, 
+        subtree: true 
+      });
+    });
+    
+    while (!captchaFrame && detectionAttempts < maxAttempts) {
+      detectionAttempts++;
+      console.log(`[CAPTCHA] Detection attempt ${detectionAttempts}/${maxAttempts}`);
+      
+      // Enhanced frame detection with dynamic waiting
+      await page.waitForTimeout(2000);
+      
+      // Check if frame was detected by mutation observer
+      const captchaDetected = await page.evaluate(() => window._captchaFrameDetected);
+      if (captchaDetected) {
+        console.log('[CAPTCHA] Frame detected by mutation observer');
+      }
+      
+      const frames = await page.frames();
+      frameMetrics.framesFound = frames.length;
+      console.log(`[CAPTCHA] Found ${frames.length} frames`);
+      
+      // Log frame loading state
+      const frameStates = await Promise.all(frames.map(async frame => {
+        try {
+          const url = frame.url();
+          const readyState = await frame.evaluate(() => document.readyState).catch(() => 'unknown');
+          return { url, readyState };
+        } catch (e) {
+          return { url: 'unknown', readyState: 'error' };
+        }
+      }));
+      console.log('[CAPTCHA] Frame states:', frameStates);
+      
+      // Log all frame information for debugging
+      for (const frame of frames) {
+        const frameInfo = {
+          url: frame.url(),
+          name: frame.name(),
+          title: await frame.title().catch(() => 'Unable to get title')
+        };
+        frameMetrics.frameTypes.push(frameInfo);
+        console.log('[CAPTCHA] Found frame:', frameInfo);
+      }
+      
+      // Enhanced detection strategies with additional selectors
+      const strategies = [
+        async () => page.frameLocator('iframe[title*="reCAPTCHA"]').first(),
+        async () => page.frameLocator('iframe[src*="recaptcha"]').first(),
+        async () => page.frameLocator('iframe[src*="google.com/recaptcha"]').first(),
+        async () => page.frameLocator('iframe[name^="a-"]').first(),
+        async () => page.frameLocator('iframe[id*="recaptcha"]').first(),
+        async () => page.frameLocator('iframe[title*="challenge"]').first(),
+        async () => page.frameLocator('iframe[src*="anchor"]').first(),
+        async () => {
+          const frames = await page.frames();
+          const recaptchaFrame = frames.find(f => 
+            f.url().includes('recaptcha') || 
+            f.url().includes('google.com/recaptcha')
+          );
+          return recaptchaFrame ? page.frameLocator(`iframe[name="${recaptchaFrame.name()}"]`).first() : null;
+        }
+      ];
+      
+      for (const strategy of strategies) {
+        try {
+          const frame = await strategy();
+          if (frame) {
+            console.log('[CAPTCHA] Frame detected using strategy:', strategy.toString());
+            captchaFrame = frame;
+            break;
+          }
+        } catch (error) {
+          console.log('[CAPTCHA] Strategy failed:', error.message);
+        }
+      }
+      
+      if (!captchaFrame) {
+        console.log('[CAPTCHA] Frame not found, retrying...');
+        await page.waitForTimeout(1000);
+      }
     }
-
+    
     if (!captchaFrame) {
-      console.log('[CAPTCHA] Frame detection failed. Metrics:', frameMetrics);
+      console.log('[CAPTCHA] Frame detection failed after all attempts');
       return false;
     }
-    console.log('[CAPTCHA] Main CAPTCHA frame detected');
+    
+    console.log('[CAPTCHA] Frame successfully detected');
 
-    // Enhanced CAPTCHA verification button detection
+    // Enhanced CAPTCHA verification button detection with retries and multiple selectors
     try {
-      console.log('[CAPTCHA] Searching for verification button...');
-      const verifyButton = await captchaFrame.locator('.recaptcha-checkbox').first();
+      console.log('[CAPTCHA] Starting verification button detection...');
+      let verifyButton = null;
+      let buttonDetectionAttempts = 0;
+      const maxButtonAttempts = 5;
+      
+      while (!verifyButton && buttonDetectionAttempts < maxButtonAttempts) {
+        buttonDetectionAttempts++;
+        console.log(`[CAPTCHA] Button detection attempt ${buttonDetectionAttempts}/${maxButtonAttempts}`);
+        
+        try {
+          // Try multiple button selectors with visibility check
+          const buttonSelectors = [
+            '.recaptcha-checkbox',
+            '#recaptcha-anchor',
+            '[role="checkbox"]',
+            '.rc-anchor-checkbox',
+            '.recaptcha-checkbox-border'
+          ];
+          
+          for (const selector of buttonSelectors) {
+            const button = captchaFrame.locator(selector).first();
+            const isVisible = await button.isVisible().catch(() => false);
+            const isEnabled = await button.isEnabled().catch(() => false);
+            
+            if (isVisible && isEnabled) {
+              verifyButton = button;
+              console.log(`[CAPTCHA] Button found using selector: ${selector}`);
+              break;
+            }
+          }
+          
+          if (!verifyButton) {
+            console.log('[CAPTCHA] Button not found with current selectors, waiting...');
+            await page.waitForTimeout(1000);
+          }
+        } catch (error) {
+          console.log(`[CAPTCHA] Button detection error:`, error.message);
+        }
+      }
+      
+      if (!verifyButton) {
+        console.log('[CAPTCHA] Button detection failed after all attempts');
+        return false;
+      }
+      
       const buttonState = await verifyButton.evaluate(el => ({
         visible: el.offsetWidth > 0 && el.offsetHeight > 0,
         enabled: !el.disabled,
-        classes: el.className
+        classes: el.className,
+        attributes: Object.fromEntries([...el.attributes].map(attr => [attr.name, attr.value]))
       })).catch(() => null);
 
       if (!buttonState) {
