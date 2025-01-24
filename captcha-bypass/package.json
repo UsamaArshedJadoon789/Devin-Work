@@ -13,9 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "@playwright/test": "^1.49.1",
-    "@tensorflow/tfjs-node": "^4.22.0",
-    "@techstark/opencv-js": "^4.9.0-release.1",
-    "canvas": "^2.11.2",
     "playwright": "^1.49.1"
   }
 }

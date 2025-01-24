@@ -1,177 +1,101 @@
 import { test, expect } from '@playwright/test';
-import { detectCaptcha } from './captcha-detection';
-import { performLogin } from './login-flow';
 
 test('Automated login with CAPTCHA bypass', async ({ page }) => {
     try {
-        console.log('[Test] Starting automated login sequence...');
+        console.log('[Test] Starting login sequence...');
         
-        // Configure page timeout and viewport
+        // Configure viewport and timeouts
         page.setDefaultTimeout(30000);
         await page.setViewportSize({ width: 1920, height: 1080 });
         
-        // Enhanced navigation with retry mechanism
-        let navigationSuccess = false;
-        for (let attempt = 1; attempt <= 3 && !navigationSuccess; attempt++) {
-            try {
-                console.log(`[Navigation] Attempt ${attempt}/3`);
-                await page.goto('https://digitalqa.contracts.sa/login', {
-                    waitUntil: 'networkidle',
-                    timeout: 30000
-                });
-                
-                // Wait for critical content with detailed logging
-                console.log('[Page] Waiting for critical elements...');
-                await Promise.all([
-                    page.waitForLoadState('domcontentloaded').then(() => console.log('[Page] DOM content loaded')),
-                    page.waitForSelector('img[alt*="logo"]', { state: 'visible' })
-                        .then(() => console.log('[Page] Logo found')),
-                    page.waitForSelector('button', { state: 'visible' })
-                        .then(() => console.log('[Page] Buttons visible'))
-                ]);
-                
-                navigationSuccess = true;
-                console.log('[Navigation] Successfully loaded login page');
-            } catch (error) {
-                console.error(`[Navigation] Attempt ${attempt} failed:`, error);
-                if (attempt === 3) throw error;
-                await page.waitForTimeout(2000);
+        // Navigate to login page and wait for load
+        await page.goto('https://digitalqa.contracts.sa/login', {
+            waitUntil: 'networkidle',
+            timeout: 30000
+        });
+        // Click Company Login button and wait for CAPTCHA
+        console.log('[Test] Clicking Company Login button...');
+        await Promise.all([
+            page.click('button:has-text("الدخول للشركات"), button:has-text("Company Login")'),
+            page.waitForLoadState('networkidle')
+        ]);
+        
+        // Handle CAPTCHA
+        console.log('[Test] Checking for CAPTCHA...');
+        try {
+            // Wait for and handle slider CAPTCHA
+            const verifyButton = await page.waitForSelector('button:has-text("Verify"), button:has-text("التحقق")', 
+                { timeout: 5000 });
+            if (verifyButton) {
+                console.log('[Test] Found slider CAPTCHA, handling verification...');
+                await verifyButton.click();
+                await page.waitForLoadState('networkidle');
             }
+        } catch (error) {
+            console.log('[Test] No slider CAPTCHA found:', error.message);
         }
         
-        // Enhanced company login button detection with retry
-        console.log('[Navigation] Searching for company login button...');
-        let buttonSelector = null;
-        const selectors = [
-            'button:has-text("الدخول للشركات")',
-            'button:has-text("Company Login")',
-            '[aria-label*="Company Login"]',
-            '[aria-label*="الدخول للشركات"]'
+        try {
+            // Wait for and handle reCAPTCHA
+            const frame = await page.frameLocator('iframe[src*="recaptcha"]').first();
+            const checkbox = await frame.locator('.recaptcha-checkbox-border');
+            if (await checkbox.count() > 0) {
+                console.log('[Test] Found reCAPTCHA, clicking checkbox...');
+                await checkbox.click();
+                await page.waitForLoadState('networkidle');
+            }
+        } catch (error) {
+            console.log('[Test] No reCAPTCHA found:', error.message);
+        }
+        
+        // Select Company Admin and handle login form
+        console.log('[Test] Handling login form...');
+        try {
+            // Try to select Company Admin
+            await page.selectOption('select#userType, select[name="userType"]', { label: 'Company Admin' });
+            console.log('[Test] Selected Company Admin');
+            
+            // Fill credentials
+            await page.fill('input[type="text"], input[type="email"]', process.env.email);
+            await page.fill('input[type="password"]', process.env.password);
+            
+            // Submit form and wait for navigation
+            await Promise.all([
+                page.click('button[type="submit"]'),
+                page.waitForNavigation({ waitUntil: 'networkidle' })
+            ]);
+        } catch (error) {
+            console.error('[Test] Login form error:', error.message);
+            throw error;
+        }
+        // Wait for navigation and verify login success
+        await Promise.all([
+            page.waitForNavigation({ timeout: 30000 }),
+            page.waitForLoadState('networkidle', { timeout: 30000 })
+        ]);
+        
+        // Check for successful login
+        const dashboardIndicators = [
+            '.dashboard-container',
+            '[data-testid="dashboard"]',
+            '#dashboard-content',
+            '[aria-label*="Dashboard"]',
+            '[aria-label*="لوحة التحكم"]'
         ];
         
-        for (const selector of selectors) {
-            try {
-                console.log(`[Button] Trying selector: ${selector}`);
-                const isVisible = await page.isVisible(selector);
-                if (isVisible) {
-                    buttonSelector = selector;
-                    console.log(`[Button] Found visible button with selector: ${selector}`);
-                    break;
-                }
-            } catch (error) {
-                console.log(`[Button] Selector ${selector} not found:`, error.message);
-            }
-        }
-
-        if (!buttonSelector) {
-            throw new Error('Company login button not found after trying all selectors');
-        }
-
-        console.log(`[Navigation] Found company login button with selector: ${buttonSelector}`);
-        
-        // Enhanced click with retry mechanism
-        let clickSuccess = false;
-        for (let attempt = 1; attempt <= 3 && !clickSuccess; attempt++) {
-            try {
-                console.log(`[Click] Attempt ${attempt}/3 to click company login button`);
-                const button = await page.locator(buttonSelector).first();
-                
-                // Ensure button is visible and clickable
-                await button.scrollIntoViewIfNeeded();
-                await page.waitForTimeout(Math.random() * 300 + 200);
-                
-                // Check if button is actually clickable
-                const isClickable = await button.isEnabled();
-                if (!isClickable) {
-                    throw new Error('Button is not clickable');
-                }
-                
-                // Human-like interaction
-                await button.hover();
-                await page.waitForTimeout(Math.random() * 200 + 100);
-                await button.click({ force: true, timeout: 5000 });
-                
-                clickSuccess = true;
-                console.log('[Click] Successfully clicked company login button');
-            } catch (error) {
-                console.error(`[Click] Attempt ${attempt} failed:`, error);
-                if (attempt === 3) throw error;
-                await page.waitForTimeout(1000);
-            }
-        }
-
-        // Enhanced CAPTCHA detection with dynamic timeouts and retries
-        console.log('[CAPTCHA] Starting advanced detection sequence...');
-        
-        // Wait for potential CAPTCHA to load
-        await page.waitForTimeout(2000);
-        
-        const captchaResult = await detectCaptcha(page);
-        
-        if (captchaResult.detected) {
-            console.log(`[CAPTCHA] Detected ${captchaResult.type} CAPTCHA, attempting bypass...`);
-            
-            if (captchaResult.type === 'slider') {
-                const verifyButton = await page.waitForSelector(
-                    'button:has-text("Verify"), button:has-text("التحقق")',
-                    { timeout: 5000 }
-                ).catch(() => null);
-                
-                if (verifyButton) {
-                    // Click verify with human-like behavior
-                    await page.waitForTimeout(Math.random() * 500 + 300);
-                    await verifyButton.hover();
-                    await page.waitForTimeout(Math.random() * 200 + 100);
-                    await verifyButton.click();
-                    await page.waitForTimeout(2000);
-                }
-            } else if (captchaResult.type === 'recaptcha') {
-                const frame = await page.frameLocator('iframe[src*="recaptcha"]').first();
-                const checkbox = await frame.locator('.recaptcha-checkbox-border').first();
-                
-                if (checkbox) {
-                    await page.waitForTimeout(Math.random() * 500 + 300);
-                    await checkbox.click();
-                    await page.waitForTimeout(2000);
-                }
-            }
-            
-            // Wait for CAPTCHA verification
-            await page.waitForTimeout(2000);
-            console.log('[CAPTCHA] Bypass attempt completed');
-        } else {
-            console.log('[CAPTCHA] No CAPTCHA detected, proceeding with login');
-        }
-        
-        // Enhanced login attempt with retry mechanism
-        console.log('[Login] Starting login process...');
-        let loginAttempted = false;
         let loginSuccess = false;
-        
-        for (let attempt = 1; attempt <= 3 && !loginSuccess; attempt++) {
-            try {
-                console.log(`[Login] Attempt ${attempt}/3`);
-                loginAttempted = true;
-                loginSuccess = await performLogin(page);
-                
-                if (loginSuccess) {
-                    console.log('[Login] Successfully logged in');
-                    break;
-                } else {
-                    console.log(`[Login] Attempt ${attempt} failed, retrying...`);
-                    await page.waitForTimeout(2000);
-                }
-            } catch (error) {
-                console.error(`[Login] Attempt ${attempt} failed with error:`, error);
-                if (attempt === 3) throw error;
-                await page.waitForTimeout(2000);
+        for (const selector of dashboardIndicators) {
+            if (await page.$(selector)) {
+                loginSuccess = true;
+                console.log('[Test] Login successful - Dashboard found');
+                break;
             }
         }
         
-        if (!loginAttempted || !loginSuccess) {
-            throw new Error('Login process failed after all attempts');
+        if (!loginSuccess) {
+            throw new Error('Login failed - Dashboard not found');
         }
-
+        
         console.log('[Test] Login sequence completed successfully');
         
     } catch (error) {

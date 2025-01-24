@@ -1,12 +1,100 @@
 import { test, expect } from '@playwright/test';
-import * as tf from '@tensorflow/tfjs-node';
-import cv from '@techstark/opencv-js';
 
-// Angular stability check utility
-async function waitForAngularStability(page, maxAttempts = 3) {
-  console.log('[Angular] Checking application stability...');
-  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+test('Login Flow with CAPTCHA Bypass', async ({ page }) => {
     try {
+        console.log('[Test] Starting login sequence...');
+        
+        // Configure viewport and timeouts
+        page.setDefaultTimeout(30000);
+        await page.setViewportSize({ width: 1920, height: 1080 });
+        
+        // Navigate to login page and wait for load
+        await page.goto('https://digitalqa.contracts.sa/login', {
+            waitUntil: 'networkidle',
+            timeout: 30000
+        });
+        
+        // Click Company Login button and wait for CAPTCHA
+        console.log('[Test] Clicking Company Login button...');
+        await Promise.all([
+            page.click('button:has-text("الدخول للشركات"), button:has-text("Company Login")'),
+            page.waitForLoadState('networkidle')
+        ]);
+        
+        // Handle CAPTCHA
+        console.log('[Test] Checking for CAPTCHA...');
+        try {
+            // Wait for and handle slider CAPTCHA
+            const verifyButton = await page.waitForSelector('button:has-text("Verify"), button:has-text("التحقق")', 
+                { timeout: 5000 });
+            if (verifyButton) {
+                console.log('[Test] Found slider CAPTCHA, handling verification...');
+                await verifyButton.click();
+                await page.waitForLoadState('networkidle');
+            }
+        } catch (error) {
+            console.log('[Test] No slider CAPTCHA found:', error.message);
+        }
+        
+        try {
+            // Wait for and handle reCAPTCHA
+            const frame = await page.frameLocator('iframe[src*="recaptcha"]').first();
+            const checkbox = await frame.locator('.recaptcha-checkbox-border');
+            if (await checkbox.count() > 0) {
+                console.log('[Test] Found reCAPTCHA, clicking checkbox...');
+                await checkbox.click();
+                await page.waitForLoadState('networkidle');
+            }
+        } catch (error) {
+            console.log('[Test] No reCAPTCHA found:', error.message);
+        }
+        
+        // Select Company Admin and handle login form
+        console.log('[Test] Handling login form...');
+        try {
+            // Try to select Company Admin
+            await page.selectOption('select#userType, select[name="userType"]', { label: 'Company Admin' });
+            console.log('[Test] Selected Company Admin');
+            
+            // Fill credentials
+            await page.fill('input[type="text"], input[type="email"]', process.env.email);
+            await page.fill('input[type="password"]', process.env.password);
+            
+            // Submit form and wait for navigation
+            await Promise.all([
+                page.click('button[type="submit"]'),
+                page.waitForNavigation({ waitUntil: 'networkidle' })
+            ]);
+            
+            // Verify successful login
+            const dashboardSelectors = [
+                '.dashboard-container',
+                '[data-testid="dashboard"]',
+                '#dashboard-content',
+                '[aria-label*="Dashboard"]',
+                '[aria-label*="لوحة التحكم"]'
+            ];
+            
+            for (const selector of dashboardSelectors) {
+                const element = await page.$(selector);
+                if (element) {
+                    console.log('[Test] Successfully logged in - Dashboard verified');
+                    return;
+                }
+            }
+            
+            throw new Error('Login failed - Dashboard not found');
+        } catch (error) {
+            console.error('[Test] Login form error:', error.message);
+            throw error;
+        }
+    } catch (error) {
+        console.error('[Test] Test failed:', error);
+        throw error;
+    } finally {
+        await page.screenshot({ path: 'test-result.png', fullPage: true });
+    }
+});
       await page.waitForFunction(() => {
         const app = document.querySelector('app-root');
         if (!app || window.getComputedStyle(app).opacity === '0') return false;
