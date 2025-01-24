@@ -883,24 +883,14 @@ test.describe('Login Flow with CAPTCHA Bypass', () => {
       bypassCSP: true,
       ignoreHTTPSErrors: true,
       viewport: { width: 1920, height: 1080 },
-      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-      viewport: { width: 1920, height: 1080 },
       userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/121.0',
       deviceScaleFactor: 1,
-      bypassCSP: true,
-      permissions: ['clipboard-read', 'clipboard-write'],
       acceptDownloads: true,
-      ignoreHTTPSErrors: true,
       javaScriptEnabled: true,
       hasTouch: false,
       isMobile: false,
       forcedColors: 'none',
-      reducedMotion: 'reduce',
-      isMobile: false,
-      hasTouch: false,
-      javaScriptEnabled: true,
-      permissions: ['clipboard-read', 'clipboard-write'],
-      bypassCSP: true
+      reducedMotion: 'reduce'
     });
     
     const page = await context.newPage();
