@@ -6,51 +6,90 @@ test('Automated login with CAPTCHA bypass', async ({ page }) => {
     try {
         console.log('[Test] Starting automated login sequence...');
         
-        // Navigate to login page
-        await page.goto('https://digitalqa.contracts.sa/login');
-        await page.waitForLoadState('networkidle');
+        // Navigate to login page with enhanced waiting strategy
+        await page.goto('https://digitalqa.contracts.sa/login', {
+            waitUntil: 'networkidle',
+            timeout: 30000
+        });
         
-        // Wait for and click Company Login button
-        const companyLoginSelectors = [
-            'button:has-text("الدخول للشركات")',
-            'button:has-text("Company Login")',
-            '[aria-label*="Company Login"]',
-            '[aria-label*="الدخول للشركات"]'
-        ];
+        // Wait for critical content to be ready
+        await Promise.all([
+            page.waitForLoadState('domcontentloaded'),
+            page.waitForSelector('img[alt*="logo"]', { state: 'visible' }),
+            page.waitForSelector('button', { state: 'visible' })
+        ]);
+        
+        // Enhanced company login button detection
+        console.log('[Navigation] Searching for company login button...');
+        const buttonSelector = await Promise.race([
+            page.waitForSelector('button:has-text("الدخول للشركات")', { timeout: 5000 })
+                .then(() => 'button:has-text("الدخول للشركات")'),
+            page.waitForSelector('button:has-text("Company Login")', { timeout: 5000 })
+                .then(() => 'button:has-text("Company Login")')
+        ]).catch(() => null);
 
-        let companyLoginButton = null;
-        for (const selector of companyLoginSelectors) {
-            try {
-                companyLoginButton = await page.waitForSelector(selector, { timeout: 5000 });
-                if (companyLoginButton) {
-                    console.log(`[Navigation] Found company login button with selector: ${selector}`);
-                    break;
-                }
-            } catch (e) {
-                continue;
-            }
-        }
-
-        if (!companyLoginButton) {
+        if (!buttonSelector) {
             throw new Error('Company login button not found');
         }
 
-        // Click with human-like behavior
-        await page.waitForTimeout(Math.random() * 500 + 300);
-        await companyLoginButton.hover();
-        await page.waitForTimeout(Math.random() * 200 + 100);
-        await companyLoginButton.click();
-
-        // Check for CAPTCHA
-        const isCaptchaPresent = await detectCaptcha(page);
+        console.log(`[Navigation] Found company login button with selector: ${buttonSelector}`);
         
-        if (isCaptchaPresent) {
-            console.log('[CAPTCHA] CAPTCHA detected, implementing bypass...');
-            // CAPTCHA handling will be implemented in next iteration
+        // Click with human-like behavior
+        const button = await page.locator(buttonSelector).first();
+        await button.scrollIntoViewIfNeeded();
+        await page.waitForTimeout(Math.random() * 300 + 200);
+        await button.hover();
+        await page.waitForTimeout(Math.random() * 200 + 100);
+        await button.click({ force: true });
+
+        // Enhanced CAPTCHA detection and handling
+        console.log('[CAPTCHA] Starting detection sequence...');
+        
+        // Wait for potential CAPTCHA to load
+        await page.waitForTimeout(2000);
+        
+        const captchaResult = await detectCaptcha(page);
+        
+        if (captchaResult.detected) {
+            console.log(`[CAPTCHA] Detected ${captchaResult.type} CAPTCHA`);
+            
+            if (captchaResult.type === 'slider') {
+                // Handle slider CAPTCHA
+                const verifyButton = await page.waitForSelector(
+                    'button:has-text("Verify"), button:has-text("التحقق")',
+                    { timeout: 5000 }
+                ).catch(() => null);
+                
+                if (verifyButton) {
+                    // Click verify with human-like behavior
+                    await page.waitForTimeout(Math.random() * 500 + 300);
+                    await verifyButton.hover();
+                    await page.waitForTimeout(Math.random() * 200 + 100);
+                    await verifyButton.click();
+                    
+                    // Wait for verification result
+                    await page.waitForTimeout(2000);
+                }
+            } else if (captchaResult.type === 'checkbox') {
+                // Handle checkbox CAPTCHA
+                const frame = await page.frameLocator('iframe[src*="recaptcha"]').first();
+                const checkbox = await frame.locator('.recaptcha-checkbox-border').first();
+                
+                if (checkbox) {
+                    await page.waitForTimeout(Math.random() * 500 + 300);
+                    await checkbox.click();
+                    await page.waitForTimeout(2000);
+                }
+            }
+            
+            // Wait for any CAPTCHA animations to complete
             await page.waitForTimeout(2000);
+        } else {
+            console.log('[CAPTCHA] No CAPTCHA detected, proceeding with login');
         }
 
-        // Attempt login
+        // Proceed with login regardless of CAPTCHA status
+        console.log('[Login] Attempting login with credentials...');
         const loginSuccess = await performLogin(page);
         
         if (!loginSuccess) {
@@ -62,5 +101,8 @@ test('Automated login with CAPTCHA bypass', async ({ page }) => {
     } catch (error) {
         console.error('[Test] Test failed:', error);
         throw error;
+    } finally {
+        // Ensure we capture a screenshot of the final state
+        await page.screenshot({ path: 'test-result.png', fullPage: true });
     }
 });

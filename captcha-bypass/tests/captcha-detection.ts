@@ -1,51 +1,87 @@
 import { test, expect, Page } from '@playwright/test';
 
-async function detectCaptcha(page: Page): Promise<boolean> {
+interface CaptchaDetectionResult {
+  detected: boolean;
+  type?: 'slider' | 'checkbox' | 'invisible' | 'unknown';
+  element?: any;
+}
+
+async function detectCaptcha(page: Page): Promise<CaptchaDetectionResult> {
   console.log('[CAPTCHA] Starting enhanced detection sequence...');
   
-  // Setup performance observer for network requests
-  await page.evaluate(() => {
-    window._captchaRequests = [];
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach(entry => {
-        if (entry.name.includes('recaptcha') || entry.name.includes('gstatic')) {
-          window._captchaRequests.push(entry.name);
-        }
-      });
-    });
-    observer.observe({ entryTypes: ['resource'] });
-  });
-
   try {
-    // Try multiple detection methods in parallel
-    const [hasIframe, hasWidget, hasAPI] = await Promise.all([
-      page.waitForSelector('iframe[src*="recaptcha"]', { timeout: 5000 })
-        .then(() => true)
-        .catch(() => false),
-      page.waitForSelector('.g-recaptcha', { timeout: 5000 })
-        .then(() => true)
-        .catch(() => false),
-      page.evaluate(() => typeof window.grecaptcha !== 'undefined')
-        .catch(() => false)
-    ]);
+    // Monitor network requests for CAPTCHA-related resources
+    const captchaNetworkPromise = page.waitForResponse(
+      response => response.url().includes('recaptcha') || response.url().includes('gstatic'),
+      { timeout: 5000 }
+    ).catch(() => null);
 
-    // Check network requests
-    const captchaRequests = await page.evaluate(() => window._captchaRequests || []);
-    const hasNetworkRequests = captchaRequests.length > 0;
+    // Check for various CAPTCHA elements
+    const selectors = {
+      slider: [
+        '.slidercaptcha',
+        '.slider-captcha',
+        '.captcha-slider',
+        '[class*="slider"][class*="captcha"]'
+      ],
+      checkbox: [
+        'iframe[src*="recaptcha"]',
+        '.g-recaptcha',
+        '.recaptcha-checkbox',
+        '[class*="recaptcha"][class*="checkbox"]'
+      ],
+      verify: [
+        'button:has-text("Verify")',
+        'button:has-text("التحقق")',
+        '[class*="verify-button"]',
+        '[aria-label*="verify"]',
+        '[aria-label*="التحقق"]'
+      ]
+    };
 
-    const isDetected = hasIframe || hasWidget || hasAPI || hasNetworkRequests;
-    console.log('[CAPTCHA] Detection results:', {
-      iframe: hasIframe,
-      widget: hasWidget,
-      api: hasAPI,
-      networkRequests: hasNetworkRequests,
-      detected: isDetected
+    // Try to find any CAPTCHA elements
+    for (const [type, selectorList] of Object.entries(selectors)) {
+      for (const selector of selectorList) {
+        const element = await page.$(selector).catch(() => null);
+        if (element) {
+          console.log(`[CAPTCHA] Detected ${type} CAPTCHA with selector: ${selector}`);
+          return {
+            detected: true,
+            type: type as 'slider' | 'checkbox' | 'invisible' | 'unknown',
+            element
+          };
+        }
+      }
+    }
+
+    // Check if CAPTCHA was loaded via network
+    const captchaResponse = await captchaNetworkPromise;
+    if (captchaResponse) {
+      console.log('[CAPTCHA] Detected via network request:', captchaResponse.url());
+      return {
+        detected: true,
+        type: 'unknown'
+      };
+    }
+
+    // Check for invisible reCAPTCHA
+    const hasInvisibleCaptcha = await page.evaluate(() => {
+      return typeof (window as any).grecaptcha !== 'undefined' ||
+             document.querySelector('iframe[src*="recaptcha"]') !== null;
     });
 
-    return isDetected;
+    if (hasInvisibleCaptcha) {
+      return {
+        detected: true,
+        type: 'invisible'
+      };
+    }
+
+    console.log('[CAPTCHA] No CAPTCHA detected');
+    return { detected: false };
   } catch (error) {
     console.error('[CAPTCHA] Detection error:', error);
-    return false;
+    return { detected: false };
   }
 }
 

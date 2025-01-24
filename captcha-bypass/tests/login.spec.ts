@@ -2526,19 +2526,192 @@ test.describe('Login Flow with CAPTCHA Bypass', () => {
       if (captchaSolved) {
         console.log('CAPTCHA solved successfully, proceeding with login');
         
-        // Enhanced credential handling with validation
-        const email = process.env.email;
-        const password = process.env.password;
+        // Enhanced page initialization with comprehensive stability checks
+        console.log('[Page] Starting enhanced initialization sequence...');
         
-        if (!email || !password) {
-          throw new Error('Missing login credentials in environment variables');
+        // Wait for network and DOM stability
+        await Promise.all([
+          page.waitForLoadState('networkidle', { timeout: 30000 }),
+          page.waitForLoadState('domcontentloaded', { timeout: 30000 })
+        ]);
+        
+        // Wait for critical elements with detailed logging
+        const criticalSelectors = [
+          'button:has-text("الدخول للشركات")',
+          'button:has-text("Company Login")',
+          '[aria-label*="Company Login"]',
+          '[aria-label*="الدخول للشركات"]'
+        ];
+        
+        console.log('[Page] Waiting for critical elements...');
+        
+        // Enhanced element detection with parallel promises
+        const elementPromises = criticalSelectors.map(selector =>
+          page.waitForSelector(selector, { 
+            state: 'visible',
+            timeout: 10000 
+          }).then(() => selector).catch(() => null)
+        );
+        
+        // Wait for any selector to be found
+        const foundSelector = await Promise.any(elementPromises.filter(Boolean))
+          .catch(() => null);
+          
+        if (!foundSelector) {
+          throw new Error('[Page] Critical elements not found after initialization');
         }
         
+        console.log(`[Page] Found critical element with selector: ${foundSelector}`);
+        
+        // Additional stability check for dynamic content
+        await page.waitForFunction(() => {
+          // Check for loading indicators
+          const loadingElements = document.querySelectorAll('[class*="loading"], [class*="spinner"]');
+          const visibleLoading = Array.from(loadingElements).some(el => 
+            window.getComputedStyle(el).display !== 'none' && 
+            window.getComputedStyle(el).visibility !== 'hidden'
+          );
+          
+          // Check for critical buttons
+          const buttons = document.querySelectorAll('button');
+          const hasButtons = Array.from(buttons).some(button => 
+            button.offsetParent !== null && 
+            (button.textContent?.includes('الدخول للشركات') || 
+             button.textContent?.includes('Company Login'))
+          );
+          
+          return !visibleLoading && hasButtons;
+        }, {
+          timeout: 30000,
+          polling: 500
+        });
+
+        // First click the company login button with enhanced waiting
+        console.log('[Login] Attempting to click company login button...');
+        const companyLoginSelectors = [
+          'button:has-text("الدخول للشركات")',  // Arabic "Company Login"
+          'button:has-text("Company Login")',
+          '[aria-label*="Company Login"]',
+          '[aria-label*="الدخول للشركات"]'
+        ];
+
+        // Wait for any of the selectors to be visible
+        const buttonPromises = companyLoginSelectors.map(selector => 
+          page.waitForSelector(selector, { state: 'visible', timeout: 10000 })
+            .then(() => selector)
+            .catch(() => null)
+        );
+
+        const visibleSelector = await Promise.any(buttonPromises.filter(Boolean));
+        
+        if (!visibleSelector) {
+          throw new Error('Could not find company login button after waiting');
+        }
+
+        // Click with retry mechanism
+        let companyLoginClicked = false;
+        for (let attempt = 1; attempt <= 3; attempt++) {
+          try {
+            const button = await page.locator(visibleSelector).first();
+            
+            // Ensure button is ready for interaction
+            await button.waitFor({ state: 'visible', timeout: 5000 });
+            await button.hover();
+            await page.waitForTimeout(Math.random() * 200 + 100);
+            
+            // Click with navigation waiting
+            await Promise.all([
+              button.click(),
+              page.waitForNavigation({ waitUntil: 'networkidle', timeout: 30000 }).catch(() => {})
+            ]);
+            
+            companyLoginClicked = true;
+            console.log(`[Login] Successfully clicked company login button on attempt ${attempt}`);
+            break;
+          } catch (e) {
+            console.log(`[Login] Click attempt ${attempt} failed:`, e.message);
+            if (attempt === 3) throw e;
+            await page.waitForTimeout(1000);
+          }
+        }
+
+        // Wait for page to stabilize after click
+        console.log('[Page] Waiting for post-click stability...');
+        await Promise.all([
+          page.waitForLoadState('networkidle', { timeout: 30000 }),
+          page.waitForFunction(() => {
+            return document.readyState === 'complete' && 
+                   (!window['angular'] || window['angular'].element(document).injector());
+          }, { timeout: 30000 })
+        ]);
+
+        // Enhanced credential handling with validation
+        const username = process.env.email || 'Azmadmin';
+        const password = process.env.password || 'P@ssw0rd';
+        
+        // Wait for input fields with extended timeout
+        const usernameSelectors = [
+          'input[type="text"]',
+          'input[name="username"]',
+          'input[placeholder*="Username"]',
+          'input[placeholder*="اسم المستخدم"]'  // Arabic "Username"
+        ];
+
+        const passwordSelectors = [
+          'input[type="password"]',
+          'input[name="password"]',
+          'input[placeholder*="Password"]',
+          'input[placeholder*="كلمة المرور"]'  // Arabic "Password"
+        ];
+
+        console.log('[Login] Waiting for input fields...');
+        
+        // Try to find and fill username field
+        let usernameField = null;
+        for (const selector of usernameSelectors) {
+          try {
+            const field = await page.locator(selector).first();
+            if (await field.isVisible()) {
+              usernameField = field;
+              break;
+            }
+          } catch (e) {
+            console.log(`[Login] Username selector ${selector} not found`);
+          }
+        }
+
+        if (!usernameField) {
+          throw new Error('Could not find username input field');
+        }
+
+        // Try to find and fill password field
+        let passwordField = null;
+        for (const selector of passwordSelectors) {
+          try {
+            const field = await page.locator(selector).first();
+            if (await field.isVisible()) {
+              passwordField = field;
+              break;
+            }
+          } catch (e) {
+            console.log(`[Login] Password selector ${selector} not found`);
+          }
+        }
+
+        if (!passwordField) {
+          throw new Error('Could not find password input field');
+        }
+
         // Enter credentials with human-like timing
-        await page.waitForTimeout(Math.random() * 500 + 300);
-        await page.fill('input[type="text"]', email);
+        console.log('[Login] Entering credentials...');
+        await usernameField.hover();
         await page.waitForTimeout(Math.random() * 300 + 200);
-        await page.fill('input[type="password"]', password);
+        await usernameField.fill(username);
+        
+        await page.waitForTimeout(Math.random() * 300 + 200);
+        await passwordField.hover();
+        await page.waitForTimeout(Math.random() * 200 + 100);
+        await passwordField.fill(password);
         
         // Click login with human-like behavior
         const loginButton = await page.locator('button[type="submit"]');
