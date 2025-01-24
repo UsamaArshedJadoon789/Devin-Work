@@ -694,13 +694,74 @@ async function solveCaptcha(page) {
     // Enhanced verification with ML-based success prediction
     await page.waitForTimeout(3000);
     
-    // Collect verification metrics
-    const verificationMetrics = {
-      attempts: [],
-      successfulAttempts: 0,
-      totalDuration: 0,
-      startTime: Date.now()
+    // Initialize comprehensive verification system
+    const verificationSystem = {
+      metrics: {
+        attempts: [],
+        successfulAttempts: 0,
+        totalDuration: 0,
+        startTime: Date.now(),
+        confidence: 0
+      },
+      network: {
+        requests: await page.evaluate(() => window.__pageState.network.captchaRequests),
+        successRate: 0,
+        lastRequestTime: null
+      },
+      dom: {
+        mutations: await page.evaluate(() => window.__pageState.dom.mutations),
+        elements: await page.evaluate(() => window.__pageState.dom.captchaElements),
+        lastUpdate: await page.evaluate(() => window.__pageState.dom.lastUpdate)
+      },
+      captcha: {
+        frameDetected: await page.evaluate(() => window.__pageState.captcha.frameDetected),
+        verificationAttempted: await page.evaluate(() => window.__pageState.captcha.verificationAttempted),
+        verificationSuccess: await page.evaluate(() => window.__pageState.captcha.verificationSuccess),
+        confidence: await page.evaluate(() => window.__pageState.captcha.confidence)
+      }
     };
+
+    // Calculate network success rate
+    if (verificationSystem.network.requests.length > 0) {
+      verificationSystem.network.successRate = 
+        verificationSystem.network.requests.filter(r => r.success).length / 
+        verificationSystem.network.requests.length;
+      verificationSystem.network.lastRequestTime = 
+        Math.max(...verificationSystem.network.requests.map(r => r.timestamp));
+    }
+
+    // Enhanced confidence calculation with multiple factors
+    const confidenceFactors = {
+      networkActivity: {
+        weight: 0.3,
+        value: verificationSystem.network.successRate > 0.7
+      },
+      domMutations: {
+        weight: 0.2,
+        value: verificationSystem.dom.mutations.length > 0
+      },
+      frameVerification: {
+        weight: 0.3,
+        value: verificationSystem.captcha.verificationSuccess
+      },
+      timeBasedAnalysis: {
+        weight: 0.2,
+        value: (Date.now() - verificationSystem.metrics.startTime) < 10000
+      }
+    };
+
+    // Calculate final confidence score
+    const confidenceScore = Object.entries(confidenceFactors).reduce((score, [key, factor]) => {
+      const contribution = factor.value ? factor.weight : 0;
+      console.log(`[Confidence] ${key}: ${contribution}`);
+      return score + contribution;
+    }, 0);
+
+    console.log('[Verification] Final confidence score:', confidenceScore);
+    
+    // Update metrics with final results
+    verificationSystem.metrics.confidence = confidenceScore;
+    verificationSystem.metrics.totalDuration = Date.now() - verificationSystem.metrics.startTime;
 
     // Multi-factor verification
     const stateAnalysis = {
@@ -878,6 +939,35 @@ test.describe('Login Flow with CAPTCHA Bypass', () => {
   });
 
   test('should handle login flow with CAPTCHA', async ({ browser }) => {
+    console.log('[Test] Starting enhanced CAPTCHA bypass test...');
+    
+    // Initialize test metrics
+    const testMetrics = {
+      startTime: Date.now(),
+      captcha: {
+        detectionStart: 0,
+        detectionEnd: 0,
+        verificationStart: 0,
+        verificationEnd: 0,
+        attempts: 0,
+        confidence: 0
+      },
+      stages: {
+        init: { startTime: null, endTime: null, duration: null },
+        navigation: { startTime: null, endTime: null, duration: null },
+        captcha: { startTime: null, endTime: null, duration: null },
+        login: { startTime: null, endTime: null, duration: null }
+      },
+      mlMetrics: {
+        imageConfidence: 0,
+        movementPrecision: 0,
+        networkAnalysis: 0,
+        overallConfidence: 0,
+        verificationAttempts: 0,
+        lastVerificationTime: null
+      }
+    };
+
     // Enhanced browser context with improved stability settings
     const context = await browser.newContext({
       bypassCSP: true,
@@ -895,19 +985,15 @@ test.describe('Login Flow with CAPTCHA Bypass', () => {
     
     const page = await context.newPage();
     
-    const testMetrics = {
-      startTime: Date.now(),
-      stages: {
-        navigation: { success: false, duration: 0, error: null },
-        captcha: { success: false, duration: 0, error: null },
-        verification: { success: false, duration: 0, error: null }
-      },
-      mlMetrics: {
-        imageConfidence: 0,
-        movementPrecision: 0,
-        networkAnalysis: 0,
-        overallConfidence: 0
-      }
+    // Update existing testMetrics with enhanced tracking
+    testMetrics.stages.captcha.startTime = Date.now();
+    testMetrics.mlMetrics = {
+      imageConfidence: 0,
+      movementPrecision: 0,
+      networkAnalysis: 0,
+      overallConfidence: 0,
+      verificationAttempts: 0,
+      lastVerificationTime: null
     };
 
     try {
@@ -915,16 +1001,103 @@ test.describe('Login Flow with CAPTCHA Bypass', () => {
       
       // Configure browser context with enhanced anti-detection and ML verification
       await context.addInitScript(() => {
+        // Enhanced page state tracking for CAPTCHA verification
+        window.__pageState = {
+          angular: {
+            initialized: false,
+            bootstrapped: false,
+            stable: false
+          },
+          captcha: {
+            frameDetected: false,
+            verificationAttempted: false,
+            verificationSuccess: false,
+            confidence: 0,
+            attempts: 0,
+            lastAttempt: null
+          },
+          network: {
+            captchaRequests: [],
+            verificationRequests: [],
+            lastRequest: null
+          },
+          dom: {
+            mutations: [],
+            captchaElements: [],
+            lastUpdate: Date.now()
+          }
+        };
+        
+        // Track network requests
+        const originalFetch = window.fetch;
+        window.fetch = async (...args) => {
+          const response = await originalFetch(...args);
+          if (args[0].includes('recaptcha') || args[0].includes('anchor')) {
+            window.__pageState.network.captchaRequests.push({
+              url: args[0],
+              timestamp: Date.now(),
+              success: response.ok
+            });
+          }
+          return response;
+        };
+
+        // Monitor DOM mutations
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach(mutation => {
+            if (mutation.target.className?.includes('recaptcha') || 
+                mutation.target.id?.includes('recaptcha')) {
+              window.__pageState.dom.mutations.push({
+                type: mutation.type,
+                target: mutation.target.nodeName,
+                timestamp: Date.now()
+              });
+            }
+          });
+        });
+        
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+          attributes: true,
+          characterData: true
+        });
+
+        const angularReadyResolver = () => {
+          const ng = window['ng'];
+          if (ng && ng.probe && ng.probe(document.documentElement)) {
+            window.__angularDetectionState.initialized = true;
+            window.__angularDetectionState.bootstrapped = true;
+            
+            const appRef = ng.probe(document.documentElement).injector.get(ng.coreTokens.ApplicationRef);
+            if (appRef && appRef.isStable) {
+              window.__angularDetectionState.stable = true;
+            }
+          }
+        };
+
+        // Monitor Angular bootstrap
+        const originalBootstrap = window['angular'] && window['angular'].bootstrap;
+        if (originalBootstrap) {
+          window['angular'].bootstrap = (...args) => {
+            window.__angularDetectionState.bootstrapped = true;
+            return originalBootstrap.apply(window['angular'], args);
+          };
+        }
+
+        // Anti-detection measures
         window.onbeforeunload = null;
         Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
         Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en', 'ar'] });
         Object.defineProperty(navigator, 'plugins', { get: () => [
-          { name: 'Chrome PDF Plugin', filename: 'internal-pdf-viewer' },
-          { name: 'Chrome PDF Viewer', filename: 'mhjfbmdgcfjbbpaeojofohoefgiehjai' },
-          { name: 'Native Client', filename: 'internal-nacl-plugin' }
+          { name: 'PDF Viewer', filename: 'internal-pdf-viewer' },
+          { name: 'XPI Plugin', filename: 'internal-xpi-plugin' }
         ]});
         Object.defineProperty(navigator, 'platform', { get: () => 'Win32' });
         Object.defineProperty(navigator, 'hardwareConcurrency', { get: () => 8 });
+
+        // Execute Angular detection after a short delay
+        setTimeout(angularReadyResolver, 1000);
       });
       
       // Initialize TensorFlow and OpenCV for advanced verification
