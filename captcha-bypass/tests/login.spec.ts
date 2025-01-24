@@ -113,30 +113,77 @@ async function solveCaptcha(page) {
     let detectionAttempts = 0;
     const maxAttempts = 10; // Increased max attempts
     
-    // Wait for initial page stabilization
-    await page.waitForTimeout(3000);
+    // Enhanced page and Angular initialization check
+    console.log('[Angular] Waiting for full application initialization...');
     
-    // Setup mutation observer to detect frame injection
+    // Setup comprehensive page monitoring
     await page.evaluate(() => {
-      window._captchaFrameDetected = false;
+      window._pageState = {
+        captchaDetected: false,
+        angularInitialized: false,
+        networkRequests: new Set(),
+        domMutations: 0
+      };
+
+      // Monitor network requests
+      const originalFetch = window.fetch;
+      window.fetch = async (...args) => {
+        const url = args[0]?.toString() || '';
+        window._pageState.networkRequests.add(url);
+        return originalFetch.apply(window, args);
+      };
+
+      // Monitor DOM mutations
       const observer = new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-          if (mutation.addedNodes) {
-            mutation.addedNodes.forEach((node) => {
-              if (node.nodeName === 'IFRAME' && 
-                  (node.src?.includes('recaptcha') || 
-                   node.title?.includes('reCAPTCHA'))) {
-                window._captchaFrameDetected = true;
+        window._pageState.domMutations += mutations.length;
+        
+        // Check for CAPTCHA frame
+        mutations.forEach(mutation => {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeName === 'IFRAME') {
+              const frame = node;
+              if (frame.src?.includes('recaptcha') || 
+                  frame.title?.includes('reCAPTCHA') ||
+                  frame.id?.includes('recaptcha')) {
+                window._pageState.captchaDetected = true;
               }
-            });
-          }
+            }
+          });
+        });
+
+        // Check Angular initialization
+        const ngApp = document.querySelector('[ng-version]');
+        if (ngApp && !window._pageState.angularInitialized) {
+          const bootstrapped = document.querySelector('.ng-scope') !== null;
+          const noSpinners = document.querySelectorAll('[class*="spinner"]').length === 0;
+          window._pageState.angularInitialized = bootstrapped && noSpinners;
         }
       });
+
       observer.observe(document.body, { 
         childList: true, 
-        subtree: true 
+        subtree: true,
+        attributes: true,
+        characterData: true
       });
     });
+
+    // Wait for Angular initialization with timeout
+    let initializationAttempts = 0;
+    const maxInitAttempts = 10;
+    while (initializationAttempts < maxInitAttempts) {
+      const pageState = await page.evaluate(() => window._pageState);
+      console.log('[Angular] Page state:', pageState);
+      
+      if (pageState.angularInitialized) {
+        console.log('[Angular] Application fully initialized');
+        break;
+      }
+      
+      initializationAttempts++;
+      console.log(`[Angular] Waiting for initialization (${initializationAttempts}/${maxInitAttempts})`);
+      await page.waitForTimeout(2000);
+    }
     
     while (!captchaFrame && detectionAttempts < maxAttempts) {
       detectionAttempts++;
