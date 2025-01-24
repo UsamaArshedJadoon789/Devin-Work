@@ -172,18 +172,67 @@ async function solveCaptcha(page) {
     let initializationAttempts = 0;
     const maxInitAttempts = 10;
     
-    // Setup network request interception
+    // Initialize page state tracking
+    await page.evaluate(() => {
+      window._pageState = {
+        networkRequests: new Set(),
+        captchaDetected: false,
+        angularInitialized: false,
+        domMutations: 0,
+        lastError: null,
+        captchaState: {
+          frameDetected: false,
+          verificationAttempted: false,
+          verificationSuccess: false
+        }
+      };
+
+      // Setup mutation observer for DOM changes
+      const observer = new MutationObserver(mutations => {
+        window._pageState.domMutations += mutations.length;
+        mutations.forEach(mutation => {
+          if (mutation.target instanceof HTMLElement) {
+            const iframes = Array.from(document.getElementsByTagName('iframe'));
+            const captchaFrame = iframes.find(frame => 
+              frame.src?.includes('recaptcha') || 
+              frame.title?.includes('reCAPTCHA') ||
+              frame.name?.startsWith('a-')
+            );
+            if (captchaFrame) {
+              window._pageState.captchaState.frameDetected = true;
+            }
+          }
+        });
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true
+      });
+    });
+
+    // Setup enhanced network request interception
     await page.route('**/*', async route => {
       const request = route.request();
       const url = request.url();
       console.log(`[Network] ${request.method()} ${url.split('?')[0]}`);
       
-      // Track recaptcha-related requests
+      // Track recaptcha-related requests with detailed analysis
       if (url.includes('recaptcha') || url.includes('anchor')) {
         await page.evaluate(url => {
           window._pageState.networkRequests.add(url);
           if (url.includes('anchor')) {
             window._pageState.captchaDetected = true;
+          }
+          // Log request timing for analysis
+          const timing = performance.getEntriesByName(url)[0];
+          if (timing) {
+            console.log('[Network] CAPTCHA request timing:', {
+              url: url,
+              duration: timing.duration,
+              startTime: timing.startTime
+            });
           }
         }, url);
       }
@@ -433,10 +482,45 @@ async function solveCaptcha(page) {
     // Implement human-like delay before clicking
     await page.waitForTimeout(Math.random() * 1000 + 500);
     
-    // Click with human-like movement
+    // Enhanced click interaction with advanced verification
+    console.log('[CAPTCHA] Preparing to interact with verify button...');
+    
+    // Verify button state before interaction
+    const buttonState = await verifyButton.evaluate(el => ({
+      isVisible: el.offsetWidth > 0 && el.offsetHeight > 0,
+      isEnabled: !el.disabled,
+      position: el.getBoundingClientRect(),
+      styles: window.getComputedStyle(el)
+    }));
+    
+    console.log('[CAPTCHA] Button state:', buttonState);
+    
+    if (!buttonState.isVisible || !buttonState.isEnabled) {
+      console.log('[CAPTCHA] Button not interactable');
+      return false;
+    }
+    
+    // Execute human-like interaction sequence
     await verifyButton.hover();
     await page.waitForTimeout(Math.random() * 300 + 200);
-    await verifyButton.click();
+    
+    // Track interaction metrics
+    const interactionMetrics = {
+      startTime: Date.now(),
+      attempts: 0,
+      success: false
+    };
+    
+    try {
+      await verifyButton.click();
+      interactionMetrics.success = true;
+    } catch (error) {
+      console.error('[CAPTCHA] Click interaction failed:', error);
+      interactionMetrics.success = false;
+    }
+    
+    interactionMetrics.duration = Date.now() - interactionMetrics.startTime;
+    console.log('[CAPTCHA] Interaction metrics:', interactionMetrics);
 
     // Wait for potential slider CAPTCHA
     const sliderFrame = await page.frameLocator('iframe[title*="challenge"]').first();
