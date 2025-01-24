@@ -55,5 +55,33 @@ export default defineConfig({
         }
       },
     },
+    {
+      name: 'firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+        launchOptions: {
+          headless: true,
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--disable-web-security',
+            '--allow-running-insecure-content',
+            '-headless'
+          ],
+          firefoxUserPrefs: {
+            'media.navigator.streams.fake': true,
+            'media.navigator.permission.disabled': true,
+            'privacy.trackingprotection.enabled': false,
+            'network.websocket.allowInsecureFromHTTPS': true,
+            'security.fileuri.strict_origin_policy': false,
+            'security.enterprise_roots.enabled': true,
+            'browser.tabs.remote.autostart': false,
+            'browser.tabs.remote.autostart.2': false
+          }
+        }
+      }
+    }
   ],
 });
