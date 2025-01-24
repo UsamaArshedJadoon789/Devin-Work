@@ -5,14 +5,28 @@ async function performLogin(page: Page): Promise<boolean> {
     try {
         console.log('[Login] Starting enhanced login sequence...');
         
-        // First try to select Company Admin if the option exists
+        // Enhanced Company Admin selection with multiple strategies
         try {
-            console.log('[Login] Attempting to select Company Admin...');
+            console.log('[Login] Attempting to select Company Admin with enhanced detection...');
             const adminSelectors = [
+                // Direct selectors
                 'select#userType',
                 'select[name="userType"]',
                 '[aria-label*="User Type"]',
-                '[aria-label*="نوع المستخدم"]'
+                '[aria-label*="نوع المستخدم"]',
+                // Button/radio based selectors
+                'button:has-text("Company Admin")',
+                'button:has-text("مسؤول الشركة")',
+                'input[type="radio"][value*="company-admin"]',
+                // Dropdown options
+                'select option[value*="company"]',
+                'select option:has-text("Company Admin")',
+                'select option:has-text("مسؤول الشركة")',
+                // Additional fallback selectors
+                '[role="combobox"]',
+                '[role="listbox"]',
+                'mat-select',
+                '.user-type-select'
             ];
             
             for (const selector of adminSelectors) {

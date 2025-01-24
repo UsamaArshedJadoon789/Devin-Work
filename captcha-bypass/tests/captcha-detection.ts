@@ -10,11 +10,22 @@ async function detectCaptcha(page: Page): Promise<CaptchaDetectionResult> {
   console.log('[CAPTCHA] Starting enhanced detection sequence...');
   
   try {
-    // Monitor network requests for CAPTCHA-related resources
-    const captchaNetworkPromise = page.waitForResponse(
-      response => response.url().includes('recaptcha') || response.url().includes('gstatic'),
-      { timeout: 5000 }
-    ).catch(() => null);
+    // Enhanced network request monitoring with broader patterns
+    const captchaNetworkPromise = Promise.race([
+        page.waitForResponse(
+            response => {
+                const url = response.url().toLowerCase();
+                return url.includes('recaptcha') || 
+                       url.includes('gstatic') ||
+                       url.includes('captcha') ||
+                       url.includes('verify') ||
+                       url.includes('security-check');
+            },
+            { timeout: 3000 }
+        ).catch(() => null),
+        // Fallback timeout
+        new Promise(resolve => setTimeout(() => resolve(null), 3000))
+    ]);
 
     // Check for various CAPTCHA elements
     const selectors = {

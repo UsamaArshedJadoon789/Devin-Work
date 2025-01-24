@@ -100,11 +100,27 @@ test('Automated login with CAPTCHA bypass', async ({ page }) => {
             }
         }
 
-        // Enhanced CAPTCHA detection and handling
-        console.log('[CAPTCHA] Starting detection sequence...');
+        // Enhanced CAPTCHA detection with reduced timeouts
+        console.log('[CAPTCHA] Starting detection sequence with optimized timeouts...');
         
-        // Wait for potential CAPTCHA to load
-        await page.waitForTimeout(2000);
+        // Quick initial check for CAPTCHA elements with parallel detection
+        const quickCheckPromises = [
+            page.waitForSelector('iframe[src*="recaptcha"]', { timeout: 3000 }).catch(() => null),
+            page.waitForSelector('.slidercaptcha', { timeout: 3000 }).catch(() => null),
+            page.waitForSelector('[class*="captcha"]', { timeout: 3000 }).catch(() => null),
+            page.waitForSelector('button:has-text("Verify"), button:has-text("التحقق")', { timeout: 3000 }).catch(() => null)
+        ];
+        
+        const results = await Promise.all(quickCheckPromises);
+        const hasCaptchaIndicator = results.some(result => result !== null);
+        
+        if (hasCaptchaIndicator) {
+            console.log('[CAPTCHA] Initial CAPTCHA indicators found, proceeding with detection...');
+            await page.waitForTimeout(1000);
+        } else {
+            console.log('[CAPTCHA] No immediate CAPTCHA indicators, minimal wait...');
+            await page.waitForTimeout(500);
+        }
         
         const captchaResult = await detectCaptcha(page);
         
