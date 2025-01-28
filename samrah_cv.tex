@@ -4,25 +4,34 @@
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{fontawesome}
-\usepackage{titlesec}
+\usepackage[explicit]{titlesec}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{tabularx}
 \usepackage{ragged2e}
 \usepackage{setspace}
+\usepackage{fancyhdr}
 
-% Custom colors
+% Enhanced colors
 \definecolor{primary}{RGB}{25,54,83}
 \definecolor{secondary}{RGB}{80,80,80}
 \definecolor{accent}{RGB}{0,102,204}
+\definecolor{highlight}{RGB}{242,245,247}
 
-% Page margins and spacing
-\geometry{top=1.8cm, bottom=1.8cm, left=2.2cm, right=2.2cm}
-\setlength{\parskip}{0.5em}
+% Refined page layout
+\geometry{top=2cm, bottom=2cm, left=2.2cm, right=2.2cm}
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
 
-% Custom section style
-\titleformat{\section}{\Large\bfseries\color{primary}}{\thesection}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{16pt}{10pt}
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+
+% Enhanced section style
+\titleformat{\section}[block]{\Large\bfseries}{\textcolor{primary}{#1}}{0em}{}[\vspace{-0.2cm}\titlerule]
+\titlespacing*{\section}{0pt}{20pt}{12pt}
 
 % Hyperlink style
 \hypersetup{
@@ -32,95 +41,144 @@
     urlcolor=accent,
 }
 
-% Custom formatting
-\newcommand{\role}[2]{{\large\textbf{#1}} \textcolor{secondary}{at} \textbf{#2}}
+% Enhanced formatting commands
+\titleformat{\subsection}[block]{\large\bfseries\color{primary}}{}{0em}{\vspace{0.2cm}#1}[\vspace{0.2cm}]
+\titlespacing*{\subsection}{0pt}{12pt}{8pt}
+
+\newcommand{\role}[2]{{\large\textbf{#1}} \textcolor{secondary}{at} {\large\textbf{#2}}}
 \newcommand{\daterange}[1]{{\color{secondary}\hfill#1}}
 \newcommand{\skill}[1]{{\small\textbf{#1}}}
+\newcommand{\achievement}[2]{\textbf{\textcolor{primary}{#1}} #2}
 
 \begin{document}
 
 % Header
 \begin{center}
-{\huge\bfseries\color{primary}SAMRAH SADIQ}\\[0.4cm]
-{\Large\textcolor{secondary}{SOFTWARE QUALITY ASSURANCE ENGINEER}}\\[0.3cm]
-{\small\href{https://linkedin.com/in/samrahsadiq}{\faLinkedin\ linkedin.com/in/samrahsadiq} \textbar{} 
-\href{https://github.com/samrahsadiq}{\faGithub\ github.com/samrahsadiq}}\\[0.4cm]
-
-% Contact Info
-{\small
-\faMapMarker\ Lahore (54000), Pakistan \textbar{} 
-\faMobile\ +92 325 741 4576 \textbar{} 
-\faEnvelope\ samrahsadiq111@gmail.com}
+{\huge\bfseries\color{primary}SAMRAH SADIQ}\\[0.3cm]
+{\Large\textcolor{secondary}{SOFTWARE QUALITY ASSURANCE ENGINEER}}\\[0.4cm]
+\begin{tabular}{ccc}
+\href{https://linkedin.com/in/samrahsadiq}{\textcolor{accent}{\faLinkedin}\ \textcolor{secondary}{linkedin.com/in/samrahsadiq}} & 
+\href{https://github.com/samrahsadiq}{\textcolor{accent}{\faGithub}\ \textcolor{secondary}{github.com/samrahsadiq}}
+\end{tabular}\\[0.4cm]
+\begin{tabular}{ccc}
+\textcolor{primary}{\faMapMarker}\ \textcolor{secondary}{Lahore (54000), Pakistan} & 
+\textcolor{primary}{\faMobile}\ \textcolor{secondary}{+92 325 741 4576} & 
+\textcolor{primary}{\faEnvelope}\ \textcolor{secondary}{samrahsadiq111@gmail.com}
+\end{tabular}
 \end{center}
 
 \section*{PROFESSIONAL SUMMARY}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X}
-Results-driven Software Quality Assurance Engineer with demonstrated expertise in comprehensive testing strategies and quality control processes. Proven track record of:
-\begin{itemize}[leftmargin=*,nosep,itemsep=3pt]
-\item Reducing defect rates by 45\% through systematic quality control implementation
-\item Improving testing efficiency by 60\% via strategic test automation
-\item Leading cross-functional teams in agile environments
-\item Implementing robust quality management systems
-\item Driving continuous improvement initiatives
+A results-driven Software Quality Assurance Engineer with over 2 years of experience in ensuring product excellence through comprehensive testing strategies and quality control processes. Demonstrated expertise in automated testing, performance optimization, and implementing robust QA methodologies.
+
+\vspace{0.3cm}
+\textbf{\textcolor{primary}{Key Achievements:}}
+\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
+\item Achieved 45\% reduction in defect rates through systematic quality control implementation
+\item Enhanced testing efficiency by 60\% through strategic automation initiatives
+\item Successfully led cross-functional teams in agile development environments
+\item Established and maintained comprehensive quality management systems
+\item Spearheaded continuous improvement initiatives across multiple projects
 \end{itemize}
 \end{tabularx}
 
 \section*{PROFESSIONAL EXPERIENCE}
+
 \role{Senior Quality Auditor}{US Apparel Unit 2} \daterange{June 2024 - Present}
-\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
-\item \textbf{Quality Management:} Spearheaded initiatives across production lines, achieving 99.8\% compliance with international standards through systematic quality control processes
-\item \textbf{Process Improvement:} Implemented digital tracking system, improving audit efficiency by 40\% and enabling real-time reporting capabilities
-\item \textbf{Team Leadership:} Directed team of 3 junior auditors, conducting comprehensive batch audits and reducing defect rates by 25\%
-\item \textbf{Data Analytics:} Developed executive dashboard for quality metrics, driving data-informed decision making and process optimization
-\item \textbf{Cross-functional Collaboration:} Partnered with production teams to implement preventive measures, reducing quality-related delays by 30\%
-\end{itemize}
+\vspace{0.2cm}
+
+Led comprehensive quality assurance initiatives across production lines, implementing systematic processes that significantly improved product quality and operational efficiency. Developed and maintained quality metrics dashboard for data-driven decision making.
 
 \vspace{0.3cm}
+\textbf{\textcolor{primary}{Key Contributions:}}
+\begin{itemize}[leftmargin=*,nosep,itemsep=5pt]
+\item \achievement{Quality Management}{Achieved 99.8\% compliance with international standards through systematic quality control implementation}
+\item \achievement{Process Optimization}{Enhanced audit efficiency by 40\% through digital tracking system deployment}
+\item \achievement{Team Leadership}{Led team of 3 junior auditors, reducing defect rates by 25\% through improved audit processes}
+\item \achievement{Analytics}{Developed executive dashboard enabling data-driven quality optimization}
+\item \achievement{Cross-functional Impact}{Reduced quality-related delays by 30\% through preventive measures}
+\end{itemize}
+
+\vspace{0.4cm}
 \role{WordPress Development \& SEO Specialist}{Acrobat Systems} \daterange{Jan 2024 – June 2024}
-\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
-\item \textbf{Frontend Development:} Managed WordPress development and maintenance for multiple client websites, ensuring optimal performance
-\item \textbf{SEO Strategy:} Led comprehensive on-page and off-page optimization initiatives for client web-stores
-\item \textbf{Content Strategy:} Directed team efforts in backlink generation and content creation, enhancing digital presence
-\item \textbf{Performance Analysis:} Created and presented weekly reports, tracking KPIs and implementing data-driven improvements
-\item \textbf{Technical Optimization:} Implemented advanced SEO techniques, significantly improving site visibility and search rankings
-\end{itemize}
+\vspace{0.2cm}
+
+Spearheaded WordPress development and SEO optimization initiatives for multiple client websites, focusing on performance enhancement and search visibility improvement. Led team efforts in content strategy and backlink generation.
 
 \vspace{0.3cm}
+\textbf{\textcolor{primary}{Key Achievements:}}
+\begin{itemize}[leftmargin=*,nosep,itemsep=5pt]
+\item \achievement{Frontend Development}{Managed end-to-end WordPress development for client websites}
+\item \achievement{SEO Strategy}{Implemented comprehensive on-page and off-page optimization}
+\item \achievement{Content Leadership}{Directed content creation and backlink generation initiatives}
+\item \achievement{Analytics}{Developed weekly performance reports tracking key metrics}
+\item \achievement{Technical Excellence}{Enhanced site visibility through advanced SEO techniques}
+\end{itemize}
+
+\vspace{0.4cm}
 \role{SQA Engineer}{Invo Zone Private Ltd.} \daterange{Jan 2023 - Dec 2023}
-\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
-\item \textbf{Test Leadership:} Managed end-to-end testing of 3 major web applications, reducing post-release defects by 45\%
-\item \textbf{Test Automation:} Automated 70\% of test cases using Selenium WebDriver, improving testing efficiency by 60\%
-\item \textbf{API Testing:} Implemented comprehensive testing strategy using Postman, achieving 95\% REST endpoint coverage
-\item \textbf{Quality Assurance:} Designed and executed 500+ test cases covering functional, regression, and UAT scenarios
-\item \textbf{Mentorship:} Guided 2 junior QA engineers in test automation best practices while maintaining agile collaboration
+\vspace{0.2cm}
+
+Managed end-to-end quality assurance for multiple web applications, implementing automated testing strategies and comprehensive quality control processes. Mentored junior team members while maintaining high testing standards.
+
+\vspace{0.3cm}
+\textbf{\textcolor{primary}{Key Accomplishments:}}
+\begin{itemize}[leftmargin=*,nosep,itemsep=5pt]
+\item \achievement{Test Strategy}{Reduced post-release defects by 45\% through comprehensive testing}
+\item \achievement{Automation}{Improved efficiency by 60\% through test automation implementation}
+\item \achievement{API Quality}{Achieved 95\% REST endpoint coverage using Postman}
+\item \achievement{Test Coverage}{Designed and executed 500+ comprehensive test cases}
+\item \achievement{Leadership}{Mentored 2 junior QA engineers in automation practices}
 \end{itemize}
 
 \section*{EDUCATION}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X}
-\textbf{\large BS Computer Sciences} \\[0.1cm]
-\textit{Government College University, Faisalabad} \hfill \textcolor{secondary}{2019 - 2023} \\[0.1cm]
-\small{Focused on Software Engineering, Database Management, and Quality Assurance methodologies}
+\textbf{\large BS Computer Sciences} \\[0.2cm]
+{\large\textit{Government College University, Faisalabad}} \hfill \textcolor{secondary}{2019 - 2023} \\[0.3cm]
+
+A comprehensive computer science education with specialized focus on Software Engineering principles, Database Management Systems, and Quality Assurance methodologies. Coursework emphasized practical application of testing frameworks, development methodologies, and quality control processes.
 \end{tabularx}
 
 \section*{TECHNICAL EXPERTISE}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
-\textbf{\textcolor{primary}{Testing \& Quality Assurance}} & \textbf{\textcolor{primary}{Development \& Tools}} \\[0.2cm]
-\skill{Manual \& Automated Testing} & \skill{SQL Server \& Database Management} \\
-\skill{Test Case Design \& Execution} & \skill{HTML5/CSS3 Development} \\
-\skill{JIRA \& Bug Tracking Systems} & \skill{WordPress CMS \& Plugins} \\
-\skill{API Testing (Postman/REST)} & \skill{Git Version Control} \\
-\skill{Performance \& Load Testing} & \skill{Selenium WebDriver} \\
-\skill{Test Planning \& Strategy} & \skill{TestNG/JUnit Frameworks}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X}
+\subsection{Testing \& Quality Assurance}
+A comprehensive skill set in quality assurance and testing methodologies, including:
+\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
+\item \achievement{Test Automation}{Expertise in Selenium WebDriver, TestNG, and JUnit frameworks}
+\item \achievement{API Testing}{Advanced proficiency with Postman for REST API testing}
+\item \achievement{Quality Processes}{Experience in test planning, execution, and defect management}
+\item \achievement{Performance Testing}{Skilled in load testing and performance optimization}
+\end{itemize}
+
+\vspace{0.4cm}
+\subsection{Development \& Tools}
+Strong foundation in development tools and technologies, including:
+\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
+\item \achievement{Database}{Proficient in SQL Server management and optimization}
+\item \achievement{Web Development}{Experience with HTML5, CSS3, and WordPress CMS}
+\item \achievement{Version Control}{Advanced Git workflow and collaboration practices}
+\item \achievement{Project Management}{Expertise in JIRA and Confluence for team coordination}
+\end{itemize}
 \end{tabularx}
 
-\section*{CERTIFICATIONS \& SKILLS}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
-\textbf{\textcolor{primary}{Professional Certifications}} & \textbf{\textcolor{primary}{Technical Skills}} \\[0.2cm]
-\skill{ISTQB Foundation Level (2023)} & \skill{Languages:} Python, JavaScript, SQL \\
-\skill{Selenium WebDriver Advanced} & \skill{Testing:} Selenium, JUnit, TestNG, Postman \\
-\skill{API Testing \& Integration} & \skill{Version Control:} Git, GitHub \\
-\skill{Agile \& Scrum Methodologies} & \skill{Project Management:} JIRA, Confluence \\
-& \skill{Development:} HTML5, CSS3, WordPress
+\section*{CERTIFICATIONS \& PROFESSIONAL DEVELOPMENT}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X}
+\subsection{Professional Certifications}
+\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
+\item \achievement{ISTQB}{Foundation Level Software Testing Certification (2023)}
+\item \achievement{Selenium}{Advanced Automation Testing with WebDriver}
+\item \achievement{API Testing}{Comprehensive API Testing \& Integration}
+\item \achievement{Agile}{Certified in Scrum and Agile Methodologies}
+\end{itemize}
+
+\vspace{0.4cm}
+\subsection{Technical Proficiencies}
+\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
+\item \achievement{Programming}{Python, JavaScript, SQL for test automation and scripting}
+\item \achievement{Testing Tools}{Selenium, JUnit, TestNG, Postman for comprehensive testing}
+\item \achievement{Development}{HTML5, CSS3, WordPress for web development}
+\item \achievement{Collaboration}{Git, GitHub, JIRA, Confluence for project management}
+\end{itemize}
 \end{tabularx}
 
 \end{document}
