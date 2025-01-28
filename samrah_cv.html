@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Samrah Sadiq - SQA Engineer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 60px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.05);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #4a90e2, #87ceeb);
+            margin-top: 20px;
+        }
+
+        .name {
+            font-size: 36px;
+            color: #2c3e50;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .title {
+            font-size: 22px;
+            color: #4a90e2;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5a6c7f;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item:hover {
+            color: #4a90e2;
+        }
+
+        .section {
+            margin: 35px 0;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4a90e2;
+            position: relative;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8fafc;
+            border-left: 3px solid #4a90e2;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .role-company {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .date {
+            color: #5a6c7f;
+            font-size: 14px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        li::before {
+            content: "→";
+            color: #4a90e2;
+            position: absolute;
+            left: -20px;
+            font-weight: 600;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-bottom: 2px solid #4a90e2;
+        }
+
+        .skill-category-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+                padding: 30px;
+            }
+            .experience-item {
+                break-inside: avoid;
+            }
+            .section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="name">SAMRAH SADIQ</h1>
+            <h2 class="title">SOFTWARE QUALITY ASSURANCE ENGINEER</h2>
+            <div class="contact-info">
+                <span class="contact-item">📍 Lahore (54000), Pakistan</span>
+                <span class="contact-item">📱 +92 325 741 4576</span>
+                <span class="contact-item">📧 samrahsadiq111@gmail.com</span>
+            </div>
+            <div class="contact-info">
+                <a href="https://linkedin.com/in/samrahsadiq" class="contact-item">LinkedIn</a>
+                <a href="https://github.com/samrahsadiq" class="contact-item">GitHub</a>
+            </div>
+        </header>
+
+        <section class="section">
+            <h3 class="section-title">PROFESSIONAL SUMMARY</h3>
+            <p>Results-driven Software Quality Assurance Engineer with 2+ years of experience in ensuring product excellence through comprehensive testing strategies and quality control processes. Demonstrated expertise in automated testing, performance optimization, and implementing robust QA methodologies. Track record of reducing defect rates by 45% and improving testing efficiency by 60% through automation. Skilled in leading cross-functional teams and implementing quality management systems that drive continuous improvement and product reliability.</p>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">WORK EXPERIENCE</h3>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="role-company">Senior Quality Auditor | US Apparel Unit 2</span>
+                    <span class="date">June 2024 - Present</span>
+                </div>
+                <ul>
+                    <li>Spearhead quality assurance initiatives across multiple production lines, ensuring 99.8% compliance with international quality standards</li>
+                    <li>Conduct comprehensive inspections of garment products, reducing defect rate by 25% through systematic quality control processes</li>
+                    <li>Implement digital quality tracking system, improving audit efficiency by 40% and enabling real-time reporting</li>
+                    <li>Lead team of 3 junior auditors in conducting detailed batch audits of packaging accuracy and product quality</li>
+                    <li>Develop and maintain quality metrics dashboard for executive reporting, facilitating data-driven decision making</li>
+                    <li>Collaborate with production supervisors to implement preventive measures, resulting in 30% reduction in quality-related delays</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="role-company">WordPress Development &amp; SEO Specialist | Acrobat Systems</span>
+                    <span class="date">Jan 2024 &ndash; June 2024</span>
+                </div>
+                <ul>
+                    <li>Managed WordPress front-end development and maintenance for multiple client websites</li>
+                    <li>Led on-page and off-page SEO optimization strategies for client web-stores</li>
+                    <li>Directed team efforts in backlink generation and content creation initiatives</li>
+                    <li>Created and presented comprehensive weekly performance reports to stakeholders</li>
+                    <li>Implemented technical SEO improvements resulting in enhanced site visibility</li>
+                    <li>Coordinated with content team to ensure SEO-optimized content delivery</li>
+                    <li>Monitored and analyzed key performance metrics to drive continuous improvement</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="role-company">SQA Engineer | Invo Zone Private Ltd.</span>
+                    <span class="date">Jan 2023 - Dec 2023</span>
+                </div>
+                <ul>
+                    <li>Led end-to-end testing of 3 major web applications, reducing post-release defects by 45%</li>
+                    <li>Designed and executed 500+ test cases covering functional, regression, and UAT scenarios</li>
+                    <li>Automated 70% of repetitive test cases using Selenium WebDriver, reducing testing time by 60%</li>
+                    <li>Implemented API testing strategy using Postman, achieving 95% test coverage for REST endpoints</li>
+                    <li>Managed defect lifecycle in JIRA, maintaining 24-hour average response time for critical issues</li>
+                    <li>Collaborated with cross-functional teams in an Agile environment, participating in daily scrums</li>
+                    <li>Mentored 2 junior QA engineers in test automation best practices and tools</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">EDUCATION</h3>
+            <div class="experience-header">
+                <span class="role-company">BS Computer Sciences | Government College University, Faisalabad</span>
+                <span class="date">2019 - 2023</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">CORE COMPETENCIES</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Testing &amp; QA</h4>
+                    <ul>
+                        <li>Manual and Automated Testing</li>
+                        <li>Test Case Design &amp; Execution</li>
+                        <li>Bug Tracking &amp; Reporting (JIRA)</li>
+                        <li>API Testing (Postman)</li>
+                        <li>Performance Testing</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Development &amp; Tools</h4>
+                    <ul>
+                        <li>SQL Server</li>
+                        <li>HTML/CSS</li>
+                        <li>WordPress CMS</li>
+                        <li>Git Version Control</li>
+                        <li>Selenium WebDriver</li>
+                        <li>TestNG/JUnit</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">CERTIFICATIONS &amp; PROFESSIONAL DEVELOPMENT</h3>
+            <ul>
+                <li>ISTQB Foundation Level Software Testing (2023)</li>
+                <li>Advanced Automation Testing with Selenium WebDriver</li>
+                <li>API Testing &amp; Integration with Postman</li>
+                <li>Agile Software Development &amp; Scrum Methodologies</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">LANGUAGES &amp; TOOLS</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Programming</h4>
+                    <p>Python, JavaScript, SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Testing</h4>
+                    <p>Selenium, JUnit, TestNG, Postman</p>
+                </div>
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Version Control</h4>
+                    <p>Git, GitHub</p>
+                </div>
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Project Management</h4>
+                    <p>JIRA, Confluence</p>
+                </div>
+                <div class="skill-category">
+                    <h4 class="skill-category-title">Development</h4>
+                    <p>HTML5, CSS3, WordPress</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
