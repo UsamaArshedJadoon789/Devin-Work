@@ -30,8 +30,12 @@
 \fancyfoot[C]{\thepage}
 
 % Enhanced section style
-\titleformat{\section}[block]{\Large\bfseries}{\textcolor{primary}{#1}}{0em}{}[\vspace{-0.2cm}\titlerule]
-\titlespacing*{\section}{0pt}{20pt}{12pt}
+\titleformat{\section}[block]{\Large\bfseries}{}{0em}{%
+    \colorbox{highlight}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+        \vspace{0.3cm}\hspace{0.5cm}\textcolor{primary}{#1}\vspace{0.3cm}%
+    }}%
+}
+\titlespacing*{\section}{0pt}{25pt}{15pt}
 
 % Hyperlink style
 \hypersetup{
@@ -45,7 +49,15 @@
 \titleformat{\subsection}[block]{\large\bfseries\color{primary}}{}{0em}{\vspace{0.2cm}#1}[\vspace{0.2cm}]
 \titlespacing*{\subsection}{0pt}{12pt}{8pt}
 
-\newcommand{\role}[2]{{\large\textbf{#1}} \textcolor{secondary}{at} {\large\textbf{#2}}}
+\newcommand{\role}[2]{%
+    \colorbox{highlight}{%
+        \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+            \vspace{0.2cm}\hspace{0.3cm}%
+            {\large\textbf{\textcolor{primary}{#1}}} \textcolor{secondary}{at} {\large\textbf{\textcolor{primary}{#2}}}%
+            \vspace{0.2cm}%
+        }%
+    }%
+}
 \newcommand{\daterange}[1]{{\color{secondary}\hfill#1}}
 \newcommand{\skill}[1]{{\small\textbf{#1}}}
 \newcommand{\achievement}[2]{\textbf{\textcolor{primary}{#1}} #2}
@@ -73,7 +85,7 @@ A results-driven Software Quality Assurance Engineer with over 2 years of experi
 
 \vspace{0.3cm}
 \textbf{\textcolor{primary}{Key Achievements:}}
-\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
+\begin{itemize}[leftmargin=*,nosep,itemsep=6pt,label=\textcolor{accent}{$\bullet$}]
 \item Achieved 45\% reduction in defect rates through systematic quality control implementation
 \item Enhanced testing efficiency by 60\% through strategic automation initiatives
 \item Successfully led cross-functional teams in agile development environments
@@ -91,7 +103,7 @@ Led comprehensive quality assurance initiatives across production lines, impleme
 
 \vspace{0.3cm}
 \textbf{\textcolor{primary}{Key Contributions:}}
-\begin{itemize}[leftmargin=*,nosep,itemsep=5pt]
+\begin{itemize}[leftmargin=*,nosep,itemsep=7pt,label=\textcolor{accent}{$\rightarrow$}]
 \item \achievement{Quality Management}{Achieved 99.8\% compliance with international standards through systematic quality control implementation}
 \item \achievement{Process Optimization}{Enhanced audit efficiency by 40\% through digital tracking system deployment}
 \item \achievement{Team Leadership}{Led team of 3 junior auditors, reducing defect rates by 25\% through improved audit processes}

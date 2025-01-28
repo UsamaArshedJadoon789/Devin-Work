@@ -9,6 +9,11 @@
             --primary-color: rgb(25,54,83);
             --secondary-color: rgb(80,80,80);
             --accent-color: rgb(0,102,204);
+            --bg-light: rgb(248,249,250);
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
         }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -17,42 +22,172 @@
             margin: 2rem auto;
             padding: 0 2rem;
             color: var(--secondary-color);
+            background-color: #ffffff;
+            letter-spacing: 0.01em;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 1.5cm;
+                background: none;
+                color: black;
+            }
+            .header {
+                background: none;
+                box-shadow: none;
+                padding: 1rem 0;
+            }
+            .section {
+                margin: 2rem 0;
+                padding: 0;
+                background: none !important;
+            }
+            .section-title {
+                background: none;
+                padding: 0.5rem 0;
+                margin: 0 0 1rem 0;
+                page-break-after: avoid;
+            }
+            .section-title::before {
+                display: none;
+            }
+            .experience-item, .skill-category {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                background: none !important;
+                box-shadow: none;
+                border-left: 2px solid var(--primary-color);
+            }
+            .summary-points li, .experience-points li {
+                background: none;
+            }
+            a {
+                text-decoration: none;
+                color: var(--primary-color);
+            }
+            .contact {
+                background: none;
+            }
+            .name {
+                background: none;
+            }
         }
         .header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
         }
         .name {
             color: var(--primary-color);
             font-size: 2.5rem;
             font-weight: bold;
             margin: 0;
+            letter-spacing: 0.05em;
+            position: relative;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(120deg, var(--bg-light) 0%, rgba(255,255,255,0) 100%);
+            border-radius: var(--border-radius);
         }
         .title {
             color: var(--secondary-color);
             font-size: 1.5rem;
-            margin: 0.5rem 0;
+            margin: 1rem 0;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            position: relative;
+            padding: 0.25rem 0;
+        }
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-color), transparent);
         }
         .contact {
-            font-size: 0.9rem;
-            margin: 1rem 0;
+            font-size: 0.95rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: linear-gradient(to right, var(--bg-light), white);
+            border-radius: var(--border-radius);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+        }
+        .contact a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        .contact a:hover {
+            color: var(--primary-color);
+            background-color: rgba(0,0,0,0.05);
+            transform: translateY(-1px);
         }
         .section {
-            margin: 2rem 0;
+            margin: 3rem 0;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+        }
+        .section:hover {
+            background: linear-gradient(to right, var(--bg-light) 2%, transparent);
         }
         .section-title {
             color: var(--primary-color);
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
+            padding: 1rem 1.5rem;
+            margin: -1rem -1rem 2rem -1rem;
+            position: relative;
+            background: linear-gradient(to right, var(--bg-light), transparent);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: '◆';
+            color: var(--accent-color);
+            margin-right: 1rem;
+            font-size: 0.8em;
+            transform: rotate(45deg);
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, var(--accent-color), transparent);
         }
         .role {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
+            padding: 0.75rem;
+            border-radius: var(--border-radius);
+            background: linear-gradient(to right, var(--bg-light), transparent);
+            transition: all 0.2s ease;
+        }
+        .role:hover {
+            transform: translateX(5px);
+            background: linear-gradient(to right, var(--bg-light) 70%, transparent);
         }
         .role-title {
             font-weight: bold;
@@ -70,7 +205,16 @@
             gap: 1.5rem;
         }
         .skill-category {
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-unit);
+            padding: var(--spacing-unit);
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease;
+        }
+        .skill-category:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
         .skill-title {
             color: var(--primary-color);
@@ -83,7 +227,26 @@
             margin: 0;
         }
         .skill-item {
-            margin: 0.3rem 0;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .skill-item:hover {
+            background-color: rgba(0,0,0,0.03);
+        }
+        .skill-item::before {
+            content: '▹';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+        }
+        .skill-item strong {
+            color: var(--primary-color);
+            font-weight: 600;
         }
         a {
             color: var(--accent-color);
@@ -95,29 +258,73 @@
         .summary-points {
             list-style: none;
             padding-left: 1.5rem;
+            margin: 1.5rem 0;
         }
         .summary-points li {
             position: relative;
-            margin: 0.5rem 0;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            padding-left: 2rem;
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+            background-color: var(--bg-light);
         }
         .summary-points li:before {
-            content: "•";
+            content: "★";
             position: absolute;
-            left: -1.5rem;
-            color: var(--primary-color);
+            left: 0.5rem;
+            color: var(--accent-color);
+            font-size: 0.9em;
+        }
+        .summary-points li:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-sm);
         }
         .experience-item {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        .experience-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
         .experience-points {
             list-style: none;
             padding-left: 0;
+            margin-top: 1rem;
         }
         .experience-points li {
-            margin: 0.7rem 0;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+            position: relative;
+            padding-left: 2rem;
+        }
+        .experience-points li::before {
+            content: '→';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            font-size: 1.1em;
+            transition: transform 0.2s ease;
+        }
+        .experience-points li:hover {
+            background-color: rgba(0,0,0,0.02);
+        }
+        .experience-points li:hover::before {
+            transform: translateX(3px);
         }
         .experience-points li strong {
             color: var(--primary-color);
+            font-weight: 600;
+            margin-right: 0.5rem;
         }
     </style>
 </head>
@@ -167,10 +374,10 @@
         <div class="experience-item">
             <div class="role">
                 <div>
-                    <span class="role-title">WordPress Development & SEO Specialist</span> at 
+                    <span class="role-title">WordPress Development and SEO Specialist</span> at 
                     <span class="role-company">Acrobat Systems</span>
                 </div>
-                <div class="role-date">Jan 2024 – June 2024</div>
+                <div class="role-date">Jan 2024 - June 2024</div>
             </div>
             <ul class="experience-points">
                 <li><strong>Frontend Development:</strong> Managed WordPress development for multiple client websites</li>
@@ -215,22 +422,22 @@
         <h2 class="section-title">TECHNICAL EXPERTISE</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <div class="skill-title">Testing & Quality Assurance</div>
+                <div class="skill-title">Testing and Quality Assurance</div>
                 <ul class="skill-list">
-                    <li class="skill-item">Manual & Automated Testing</li>
-                    <li class="skill-item">Test Case Design & Execution</li>
-                    <li class="skill-item">JIRA & Bug Tracking Systems</li>
+                    <li class="skill-item">Manual and Automated Testing</li>
+                    <li class="skill-item">Test Case Design and Execution</li>
+                    <li class="skill-item">JIRA and Bug Tracking Systems</li>
                     <li class="skill-item">API Testing (Postman/REST)</li>
-                    <li class="skill-item">Performance & Load Testing</li>
-                    <li class="skill-item">Test Planning & Strategy</li>
+                    <li class="skill-item">Performance and Load Testing</li>
+                    <li class="skill-item">Test Planning and Strategy</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <div class="skill-title">Development & Tools</div>
+                <div class="skill-title">Development and Tools</div>
                 <ul class="skill-list">
-                    <li class="skill-item">SQL Server & Database Management</li>
+                    <li class="skill-item">SQL Server and Database Management</li>
                     <li class="skill-item">HTML5/CSS3 Development</li>
-                    <li class="skill-item">WordPress CMS & Plugins</li>
+                    <li class="skill-item">WordPress CMS and Plugins</li>
                     <li class="skill-item">Git Version Control</li>
                     <li class="skill-item">Selenium WebDriver</li>
                     <li class="skill-item">TestNG/JUnit Frameworks</li>
@@ -240,15 +447,15 @@
     </div>
 
     <div class="section">
-        <h2 class="section-title">CERTIFICATIONS & SKILLS</h2>
+        <h2 class="section-title">CERTIFICATIONS AND SKILLS</h2>
         <div class="skills-grid">
             <div class="skill-category">
                 <div class="skill-title">Professional Certifications</div>
                 <ul class="skill-list">
                     <li class="skill-item">ISTQB Foundation Level (2023)</li>
                     <li class="skill-item">Selenium WebDriver Advanced</li>
-                    <li class="skill-item">API Testing & Integration</li>
-                    <li class="skill-item">Agile & Scrum Methodologies</li>
+                    <li class="skill-item">API Testing and Integration</li>
+                    <li class="skill-item">Agile and Scrum Methodologies</li>
                 </ul>
             </div>
             <div class="skill-category">
