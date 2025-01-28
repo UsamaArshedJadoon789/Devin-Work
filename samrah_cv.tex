@@ -8,110 +8,119 @@
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{setspace}
 
 % Custom colors
-\definecolor{primary}{RGB}{70,130,180}
-\definecolor{secondary}{RGB}{100,100,100}
+\definecolor{primary}{RGB}{25,54,83}
+\definecolor{secondary}{RGB}{80,80,80}
+\definecolor{accent}{RGB}{0,102,204}
 
-% Page margins
-\geometry{top=1.5cm, bottom=1.5cm, left=2cm, right=2cm}
+% Page margins and spacing
+\geometry{top=1.8cm, bottom=1.8cm, left=2.2cm, right=2.2cm}
+\setlength{\parskip}{0.5em}
 
 % Custom section style
 \titleformat{\section}{\Large\bfseries\color{primary}}{\thesection}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{12pt}{8pt}
+\titlespacing*{\section}{0pt}{16pt}{10pt}
+
+% Hyperlink style
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    filecolor=accent,
+    urlcolor=accent,
+}
 
 % Custom formatting
-\newcommand{\role}[2]{{\textbf{#1}} | \textit{#2}}
-\newcommand{\daterange}[1]{{\color{secondary}#1}}
+\newcommand{\role}[2]{{\large\textbf{#1}} \textcolor{secondary}{at} \textbf{#2}}
+\newcommand{\daterange}[1]{{\color{secondary}\hfill#1}}
+\newcommand{\skill}[1]{{\small\textbf{#1}}}
 
 \begin{document}
 
 % Header
-{\huge\bfseries\color{primary} SAMRAH SADIQ}\\[0.3cm]
-{\Large SOFTWARE QUALITY ASSURANCE ENGINEER}\\[0.2cm]
-\href{https://linkedin.com/in/samrahsadiq}{\faLinkedin\ linkedin.com/in/samrahsadiq} | 
-\href{https://github.com/samrahsadiq}{\faGithub\ github.com/samrahsadiq}\\[0.3cm]
+\begin{center}
+{\huge\bfseries\color{primary}SAMRAH SADIQ}\\[0.4cm]
+{\Large\textcolor{secondary}{SOFTWARE QUALITY ASSURANCE ENGINEER}}\\[0.3cm]
+{\small\href{https://linkedin.com/in/samrahsadiq}{\faLinkedin\ linkedin.com/in/samrahsadiq} \textbar{} 
+\href{https://github.com/samrahsadiq}{\faGithub\ github.com/samrahsadiq}}\\[0.4cm]
 
 % Contact Info
-\begin{tabularx}{\textwidth}{XXX}
-\faMapMarker\ Lahore (54000), Pakistan & 
-\faMobile\ +92 325 741 4576 & 
-\faEnvelope\ samrahsadiq111@gmail.com
-\end{tabularx}\\[0.5cm]
+{\small
+\faMapMarker\ Lahore (54000), Pakistan \textbar{} 
+\faMobile\ +92 325 741 4576 \textbar{} 
+\faEnvelope\ samrahsadiq111@gmail.com}
+\end{center}
 
 \section*{PROFESSIONAL SUMMARY}
-Results-driven Software Quality Assurance Engineer with 2+ years of experience in ensuring product excellence through comprehensive testing strategies and quality control processes. Demonstrated expertise in automated testing, performance optimization, and implementing robust QA methodologies. Track record of reducing defect rates by 45\% and improving testing efficiency by 60\% through automation. Skilled in leading cross-functional teams and implementing quality management systems that drive continuous improvement and product reliability.
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X}
+Results-driven Software Quality Assurance Engineer with demonstrated expertise in comprehensive testing strategies and quality control processes. Proven track record of:
+\begin{itemize}[leftmargin=*,nosep,itemsep=3pt]
+\item Reducing defect rates by 45\% through systematic quality control implementation
+\item Improving testing efficiency by 60\% via strategic test automation
+\item Leading cross-functional teams in agile environments
+\item Implementing robust quality management systems
+\item Driving continuous improvement initiatives
+\end{itemize}
+\end{tabularx}
 
-\section*{WORK EXPERIENCE}
+\section*{PROFESSIONAL EXPERIENCE}
 \role{Senior Quality Auditor}{US Apparel Unit 2} \daterange{June 2024 - Present}
-\begin{itemize}[leftmargin=*,nosep]
-\item Spearhead quality assurance initiatives across multiple production lines, ensuring 99.8\% compliance with international quality standards
-\item Conduct comprehensive inspections of garment products, reducing defect rate by 25\% through systematic quality control processes
-\item Implement digital quality tracking system, improving audit efficiency by 40\% and enabling real-time reporting
-\item Lead team of 3 junior auditors in conducting detailed batch audits of packaging accuracy and product quality
-\item Develop and maintain quality metrics dashboard for executive reporting, facilitating data-driven decision making
-\item Collaborate with production supervisors to implement preventive measures, resulting in 30\% reduction in quality-related delays
+\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
+\item \textbf{Quality Management:} Spearheaded initiatives across production lines, achieving 99.8\% compliance with international standards through systematic quality control processes
+\item \textbf{Process Improvement:} Implemented digital tracking system, improving audit efficiency by 40\% and enabling real-time reporting capabilities
+\item \textbf{Team Leadership:} Directed team of 3 junior auditors, conducting comprehensive batch audits and reducing defect rates by 25\%
+\item \textbf{Data Analytics:} Developed executive dashboard for quality metrics, driving data-informed decision making and process optimization
+\item \textbf{Cross-functional Collaboration:} Partnered with production teams to implement preventive measures, reducing quality-related delays by 30\%
 \end{itemize}
 
+\vspace{0.3cm}
 \role{WordPress Development \& SEO Specialist}{Acrobat Systems} \daterange{Jan 2024 – June 2024}
-\begin{itemize}[leftmargin=*,nosep]
-\item Managed WordPress front-end development and maintenance for multiple client websites
-\item Led on-page and off-page SEO optimization strategies for client web-stores
-\item Directed team efforts in backlink generation and content creation initiatives
-\item Created and presented comprehensive weekly performance reports to stakeholders
-\item Implemented technical SEO improvements resulting in enhanced site visibility
-\item Coordinated with content team to ensure SEO-optimized content delivery
-\item Monitored and analyzed key performance metrics to drive continuous improvement
+\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
+\item \textbf{Frontend Development:} Managed WordPress development and maintenance for multiple client websites, ensuring optimal performance
+\item \textbf{SEO Strategy:} Led comprehensive on-page and off-page optimization initiatives for client web-stores
+\item \textbf{Content Strategy:} Directed team efforts in backlink generation and content creation, enhancing digital presence
+\item \textbf{Performance Analysis:} Created and presented weekly reports, tracking KPIs and implementing data-driven improvements
+\item \textbf{Technical Optimization:} Implemented advanced SEO techniques, significantly improving site visibility and search rankings
 \end{itemize}
 
+\vspace{0.3cm}
 \role{SQA Engineer}{Invo Zone Private Ltd.} \daterange{Jan 2023 - Dec 2023}
-\begin{itemize}[leftmargin=*,nosep]
-\item Led end-to-end testing of 3 major web applications, reducing post-release defects by 45\%
-\item Designed and executed 500+ test cases covering functional, regression, and UAT scenarios
-\item Automated 70\% of repetitive test cases using Selenium WebDriver, reducing testing time by 60\%
-\item Implemented API testing strategy using Postman, achieving 95\% test coverage for REST endpoints
-\item Managed defect lifecycle in JIRA, maintaining 24-hour average response time for critical issues
-\item Collaborated with cross-functional teams in an Agile environment, participating in daily scrums
-\item Mentored 2 junior QA engineers in test automation best practices and tools
+\begin{itemize}[leftmargin=*,nosep,itemsep=4pt]
+\item \textbf{Test Leadership:} Managed end-to-end testing of 3 major web applications, reducing post-release defects by 45\%
+\item \textbf{Test Automation:} Automated 70\% of test cases using Selenium WebDriver, improving testing efficiency by 60\%
+\item \textbf{API Testing:} Implemented comprehensive testing strategy using Postman, achieving 95\% REST endpoint coverage
+\item \textbf{Quality Assurance:} Designed and executed 500+ test cases covering functional, regression, and UAT scenarios
+\item \textbf{Mentorship:} Guided 2 junior QA engineers in test automation best practices while maintaining agile collaboration
 \end{itemize}
 
 \section*{EDUCATION}
-\textbf{BS Computer Sciences}\\
-Government College University, Faisalabad \daterange{2019 - 2023}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X}
+\textbf{\large BS Computer Sciences} \\[0.1cm]
+\textit{Government College University, Faisalabad} \hfill \textcolor{secondary}{2019 - 2023} \\[0.1cm]
+\small{Focused on Software Engineering, Database Management, and Quality Assurance methodologies}
+\end{tabularx}
 
-\section*{CORE COMPETENCIES}
-\textbf{Testing \& QA:}
-\begin{itemize}[leftmargin=*,nosep]
-\item Manual and Automated Testing
-\item Test Case Design \& Execution
-\item Bug Tracking \& Reporting (JIRA)
-\item API Testing (Postman)
-\item Performance Testing
-\end{itemize}
+\section*{TECHNICAL EXPERTISE}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\textbf{\textcolor{primary}{Testing \& Quality Assurance}} & \textbf{\textcolor{primary}{Development \& Tools}} \\[0.2cm]
+\skill{Manual \& Automated Testing} & \skill{SQL Server \& Database Management} \\
+\skill{Test Case Design \& Execution} & \skill{HTML5/CSS3 Development} \\
+\skill{JIRA \& Bug Tracking Systems} & \skill{WordPress CMS \& Plugins} \\
+\skill{API Testing (Postman/REST)} & \skill{Git Version Control} \\
+\skill{Performance \& Load Testing} & \skill{Selenium WebDriver} \\
+\skill{Test Planning \& Strategy} & \skill{TestNG/JUnit Frameworks}
+\end{tabularx}
 
-\textbf{Development \& Tools:}
-\begin{itemize}[leftmargin=*,nosep]
-\item SQL Server
-\item HTML/CSS
-\item WordPress CMS
-\item Git Version Control
-\item Selenium WebDriver
-\item TestNG/JUnit
-\end{itemize}
-
-\section*{CERTIFICATIONS \& PROFESSIONAL DEVELOPMENT}
-\begin{itemize}[leftmargin=*,nosep]
-\item ISTQB Foundation Level Software Testing (2023)
-\item Advanced Automation Testing with Selenium WebDriver
-\item API Testing \& Integration with Postman
-\item Agile Software Development \& Scrum Methodologies
-\end{itemize}
-
-\section*{LANGUAGES \& TOOLS}
-\textbf{Programming:} Python, JavaScript, SQL\\
-\textbf{Testing:} Selenium, JUnit, TestNG, Postman\\
-\textbf{Version Control:} Git, GitHub\\
-\textbf{Project Management:} JIRA, Confluence\\
-\textbf{Development:} HTML5, CSS3, WordPress
+\section*{CERTIFICATIONS \& SKILLS}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\textbf{\textcolor{primary}{Professional Certifications}} & \textbf{\textcolor{primary}{Technical Skills}} \\[0.2cm]
+\skill{ISTQB Foundation Level (2023)} & \skill{Languages:} Python, JavaScript, SQL \\
+\skill{Selenium WebDriver Advanced} & \skill{Testing:} Selenium, JUnit, TestNG, Postman \\
+\skill{API Testing \& Integration} & \skill{Version Control:} Git, GitHub \\
+\skill{Agile \& Scrum Methodologies} & \skill{Project Management:} JIRA, Confluence \\
+& \skill{Development:} HTML5, CSS3, WordPress
+\end{tabularx}
 
 \end{document}
