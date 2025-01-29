@@ -133,6 +133,27 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Content Management System",
+    description: "Enterprise-grade CMS platform with advanced content workflow and publishing capabilities.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis", "GraphQL", "Docker"],
+    features: [
+      "Content versioning",
+      "Role-based access control",
+      "Multi-language support",
+      "Dynamic content types",
+      "Workflow automation",
+      "SEO optimization tools"
+    ],
+    implementation: {
+      frontend: "React with Apollo Client",
+      backend: "Node.js with GraphQL",
+      deployment: "Docker on GCP"
+    },
+    demoUrl: "https://cms-platform.demo.com",
+    githubUrl: "https://github.com/portfolio/cms-platform",
+    imageUrl: "/images/cms-platform.png"
+  },
+  {
     title: "Hotel Booking System",
     description: "Advanced hotel reservation and management platform with real-time availability tracking.",
     tech: ["React", "Node.js", "MongoDB", "Redis", "Socket.io", "Docker"],
