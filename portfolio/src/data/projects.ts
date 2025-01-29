@@ -133,6 +133,27 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Restaurant Management System",
+    description: "Comprehensive restaurant management platform with real-time order tracking and inventory management.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis", "Socket.io", "Docker"],
+    features: [
+      "Real-time order tracking",
+      "Table reservation system",
+      "Inventory management",
+      "Staff scheduling",
+      "Kitchen display system",
+      "Customer loyalty program"
+    ],
+    implementation: {
+      frontend: "React with TailwindCSS",
+      backend: "Node.js with Express",
+      deployment: "Docker containers on GCP"
+    },
+    demoUrl: "https://restaurant-mgmt.demo.com",
+    githubUrl: "https://github.com/portfolio/restaurant-mgmt",
+    imageUrl: "/images/restaurant-mgmt.png"
+  },
+  {
     title: "Real Estate Management System",
     description: "Comprehensive platform for real estate property management and analytics.",
     tech: ["React", "Node.js", "PostgreSQL", "Redis", "ElasticSearch", "AWS"],
