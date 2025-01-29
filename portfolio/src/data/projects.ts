@@ -307,6 +307,29 @@ export const devToolsProjects: Project[] = [
   }
 ];
 
+// Education Projects
+export const educationProjects: Project[] = [
+  {
+    title: "E-Learning Platform",
+    description: "Comprehensive online learning platform with interactive courses and real-time assessments.",
+    tech: ["React", "Node.js", "MongoDB", "Socket.io", "AWS", "FFmpeg"],
+    features: [
+      "Live virtual classrooms",
+      "Interactive quizzes",
+      "Progress tracking",
+      "Video content streaming"
+    ],
+    implementation: {
+      frontend: "React with Material-UI",
+      backend: "Node.js with Express",
+      deployment: "AWS ECS with CloudFront CDN"
+    },
+    demoUrl: "https://elearning.demo.com",
+    githubUrl: "https://github.com/portfolio/elearning",
+    imageUrl: "/images/elearning.png"
+  }
+];
+
 // Combine all projects
 export const allProjects: Project[] = [
   ...aiProjects,
@@ -317,5 +340,6 @@ export const allProjects: Project[] = [
   ...ecommerceProjects,
   ...socialProjects,
   ...arProjects,
-  ...devToolsProjects
+  ...devToolsProjects,
+  ...educationProjects
 ];
