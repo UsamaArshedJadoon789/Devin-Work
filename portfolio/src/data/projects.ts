@@ -133,6 +133,48 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Customer Support Platform",
+    description: "Comprehensive customer service platform with real-time ticket management and analytics.",
+    tech: ["React", "Node.js", "MongoDB", "Redis", "Socket.io", "Docker"],
+    features: [
+      "Real-time ticket tracking",
+      "Live chat integration",
+      "Knowledge base management",
+      "Performance analytics",
+      "SLA monitoring",
+      "Multi-channel support"
+    ],
+    implementation: {
+      frontend: "React with Material-UI",
+      backend: "Node.js with Express",
+      deployment: "Docker on GCP"
+    },
+    demoUrl: "https://customer-support.demo.com",
+    githubUrl: "https://github.com/portfolio/customer-support",
+    imageUrl: "/images/customer-support.png"
+  },
+  {
+    title: "Appointment Scheduling System",
+    description: "Smart scheduling platform for businesses with real-time availability management.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis", "Socket.io", "Docker"],
+    features: [
+      "Real-time calendar management",
+      "Automated reminders",
+      "Multi-timezone support",
+      "Resource allocation",
+      "Integration with popular calendars",
+      "Custom scheduling rules"
+    ],
+    implementation: {
+      frontend: "React with TailwindCSS",
+      backend: "Node.js with Express",
+      deployment: "Docker on AWS"
+    },
+    demoUrl: "https://appointment-scheduler.demo.com",
+    githubUrl: "https://github.com/portfolio/appointment-scheduler",
+    imageUrl: "/images/appointment-scheduler.png"
+  },
+  {
     title: "Library Management System",
     description: "Digital library management platform with inventory tracking and member services.",
     tech: ["React", "Node.js", "MongoDB", "Redis", "ElasticSearch", "Docker"],
