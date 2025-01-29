@@ -133,6 +133,27 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Expense Management Tool",
+    description: "Comprehensive expense tracking and management system with advanced reporting capabilities.",
+    tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker"],
+    features: [
+      "Receipt scanning and OCR",
+      "Expense categorization",
+      "Budget tracking",
+      "Approval workflows",
+      "Real-time reporting",
+      "Multi-currency support"
+    ],
+    implementation: {
+      frontend: "React with TypeScript",
+      backend: "Node.js with Express",
+      deployment: "Docker on AWS ECS"
+    },
+    demoUrl: "https://expense-mgmt.demo.com",
+    githubUrl: "https://github.com/portfolio/expense-mgmt",
+    imageUrl: "/images/expense-mgmt.png"
+  },
+  {
     title: "Fleet Management System",
     description: "Comprehensive fleet management solution with real-time vehicle tracking and maintenance scheduling.",
     tech: ["React", "Node.js", "PostgreSQL", "Redis", "Socket.io", "Docker"],
