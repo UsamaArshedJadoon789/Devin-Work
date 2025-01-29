@@ -492,6 +492,27 @@ export const entertainmentProjects: Project[] = [
 // Education Projects
 export const educationProjects: Project[] = [
   {
+    title: "Virtual Classroom Platform",
+    description: "Interactive virtual classroom platform with real-time collaboration and learning tools.",
+    tech: ["React", "Node.js", "MongoDB", "Socket.io", "WebRTC", "Docker"],
+    features: [
+      "Real-time video conferencing",
+      "Interactive whiteboard",
+      "Screen sharing",
+      "Breakout rooms",
+      "Student engagement analytics",
+      "Resource sharing"
+    ],
+    implementation: {
+      frontend: "React with Material-UI",
+      backend: "Node.js with Express",
+      deployment: "Docker on AWS ECS"
+    },
+    demoUrl: "https://virtual-classroom.demo.com",
+    githubUrl: "https://github.com/portfolio/virtual-classroom",
+    imageUrl: "/images/virtual-classroom.png"
+  },
+  {
     title: "E-Learning Platform",
     description: "Comprehensive online learning platform with interactive courses and real-time assessments.",
     tech: ["React", "Node.js", "MongoDB", "Socket.io", "AWS", "FFmpeg"],
