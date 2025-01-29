@@ -385,6 +385,27 @@ export const realtimeProjects: Project[] = [
 // E-commerce Projects
 export const ecommerceProjects: Project[] = [
   {
+    title: "Auction Platform",
+    description: "Real-time auction platform with live bidding and automated bid management.",
+    tech: ["React", "Node.js", "Socket.io", "Redis", "MongoDB", "Docker"],
+    features: [
+      "Real-time bidding system",
+      "Automated bid management",
+      "Secure payment processing",
+      "Auction scheduling",
+      "Bidder verification",
+      "Analytics dashboard"
+    ],
+    implementation: {
+      frontend: "React with Socket.io client",
+      backend: "Node.js with Express and Socket.io",
+      deployment: "Docker on AWS"
+    },
+    demoUrl: "https://auction-platform.demo.com",
+    githubUrl: "https://github.com/portfolio/auction-platform",
+    imageUrl: "/images/auction-platform.png"
+  },
+  {
     title: "E-commerce Marketplace Platform",
     description: "Multi-vendor e-commerce platform with advanced features.",
     tech: ["React", "Node.js", "PostgreSQL", "Redis", "ElasticSearch", "AWS"],
