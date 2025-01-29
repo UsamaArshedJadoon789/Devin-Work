@@ -208,6 +208,26 @@ export const managementProjects: Project[] = [
     demoUrl: "https://realestate-mgmt.demo.com",
     githubUrl: "https://github.com/portfolio/realestate-mgmt",
     imageUrl: "/images/realestate-mgmt.png"
+  },
+  {
+    title: "Inventory Management System",
+    description: "Real-time inventory tracking and management system with advanced analytics.",
+    tech: ["React", "Node.js", "MongoDB", "Redis", "Docker", "Kubernetes"],
+    features: [
+      "Real-time stock tracking",
+      "Barcode/QR code scanning",
+      "Automated reordering",
+      "Supplier management",
+      "Analytics dashboard"
+    ],
+    implementation: {
+      frontend: "React with Chakra UI",
+      backend: "Node.js with Express",
+      deployment: "Kubernetes on GCP"
+    },
+    demoUrl: "https://inventory-mgmt.demo.com",
+    githubUrl: "https://github.com/portfolio/inventory-mgmt",
+    imageUrl: "/images/inventory-mgmt.png"
   }
 ];
 
