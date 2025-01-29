@@ -237,6 +237,53 @@ export const ecommerceProjects: Project[] = [
   }
 ];
 
+// Social Media Projects
+export const socialProjects: Project[] = [
+  {
+    title: "Social Media Analytics Platform",
+    description: "Advanced analytics platform for social media data with real-time insights and trend analysis.",
+    tech: ["React", "Node.js", "Python", "Apache Kafka", "ElasticSearch", "Redis"],
+    features: [
+      "Real-time sentiment analysis",
+      "Trend detection and tracking",
+      "Influencer identification",
+      "Engagement metrics dashboard"
+    ],
+    implementation: {
+      frontend: "React with D3.js for visualizations",
+      backend: "Node.js with Kafka streams",
+      ml: "Python for NLP and sentiment analysis",
+      deployment: "Kubernetes on GCP"
+    },
+    demoUrl: "https://social-analytics.demo.com",
+    githubUrl: "https://github.com/portfolio/social-analytics",
+    imageUrl: "/images/social-analytics.png"
+  }
+];
+
+// AR/VR Projects
+export const arProjects: Project[] = [
+  {
+    title: "AR Navigation App",
+    description: "Augmented reality navigation system providing real-time directions and points of interest.",
+    tech: ["React Native", "ARKit", "ARCore", "Node.js", "MongoDB", "AWS"],
+    features: [
+      "Real-time AR navigation",
+      "Points of interest overlay",
+      "Offline map caching",
+      "Voice-guided directions"
+    ],
+    implementation: {
+      frontend: "React Native with AR frameworks",
+      backend: "Node.js with MongoDB",
+      deployment: "AWS Amplify"
+    },
+    demoUrl: "https://ar-nav.demo.com",
+    githubUrl: "https://github.com/portfolio/ar-nav",
+    imageUrl: "/images/ar-nav.png"
+  }
+];
+
 // Combine all projects
 export const allProjects: Project[] = [
   ...aiProjects,
@@ -244,5 +291,7 @@ export const allProjects: Project[] = [
   ...iotProjects,
   ...managementProjects,
   ...realtimeProjects,
-  ...ecommerceProjects
+  ...ecommerceProjects,
+  ...socialProjects,
+  ...arProjects
 ];
