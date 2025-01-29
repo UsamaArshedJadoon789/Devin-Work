@@ -347,6 +347,30 @@ export const devToolsProjects: Project[] = [
   }
 ];
 
+// Entertainment Projects
+export const entertainmentProjects: Project[] = [
+  {
+    title: "Music Streaming Service",
+    description: "High-performance music streaming platform with personalized recommendations.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis", "FFmpeg", "AWS"],
+    features: [
+      "Real-time audio streaming",
+      "Personalized playlists",
+      "Social sharing features",
+      "Offline mode support",
+      "Cross-device synchronization"
+    ],
+    implementation: {
+      frontend: "React with Redux",
+      backend: "Node.js with Express",
+      deployment: "AWS ECS with CloudFront CDN"
+    },
+    demoUrl: "https://music-stream.demo.com",
+    githubUrl: "https://github.com/portfolio/music-stream",
+    imageUrl: "/images/music-stream.png"
+  }
+];
+
 // Education Projects
 export const educationProjects: Project[] = [
   {
@@ -381,5 +405,6 @@ export const allProjects: Project[] = [
   ...socialProjects,
   ...arProjects,
   ...devToolsProjects,
+  ...entertainmentProjects,
   ...educationProjects
 ];
