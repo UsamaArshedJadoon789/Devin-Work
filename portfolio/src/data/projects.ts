@@ -133,6 +133,27 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Survey Management Platform",
+    description: "Advanced survey creation and analytics platform with real-time response tracking.",
+    tech: ["React", "TypeScript", "Node.js", "MongoDB", "Redis", "Docker"],
+    features: [
+      "Dynamic form builder",
+      "Real-time response analytics",
+      "Advanced reporting",
+      "Response validation",
+      "Multi-language support",
+      "Custom branding options"
+    ],
+    implementation: {
+      frontend: "React with TypeScript and Material-UI",
+      backend: "Node.js with Express",
+      deployment: "Docker on AWS"
+    },
+    demoUrl: "https://survey-platform.demo.com",
+    githubUrl: "https://github.com/portfolio/survey-platform",
+    imageUrl: "/images/survey-platform.png"
+  },
+  {
     title: "Asset Management System",
     description: "Enterprise asset tracking and management platform with real-time monitoring.",
     tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker"],
