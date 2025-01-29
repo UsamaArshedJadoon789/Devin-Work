@@ -133,6 +133,27 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Library Management System",
+    description: "Digital library management platform with inventory tracking and member services.",
+    tech: ["React", "Node.js", "MongoDB", "Redis", "ElasticSearch", "Docker"],
+    features: [
+      "Book catalog management",
+      "Member management",
+      "Borrowing and returns tracking",
+      "Fine calculation system",
+      "Digital resource access",
+      "Advanced search functionality"
+    ],
+    implementation: {
+      frontend: "React with Chakra UI",
+      backend: "Node.js with Express",
+      deployment: "Docker on Digital Ocean"
+    },
+    demoUrl: "https://library-management.demo.com",
+    githubUrl: "https://github.com/portfolio/library-management",
+    imageUrl: "/images/library-management.png"
+  },
+  {
     title: "HR Management System",
     description: "Comprehensive HR platform for employee management, payroll, and performance tracking.",
     tech: ["React", "Node.js", "PostgreSQL", "Redis", "GraphQL", "Docker"],
