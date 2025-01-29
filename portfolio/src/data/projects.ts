@@ -133,6 +133,90 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Project Management Tool",
+    description: "Comprehensive project management platform with real-time collaboration features.",
+    tech: ["React", "TypeScript", "Node.js", "MongoDB", "Socket.io", "Docker"],
+    features: [
+      "Real-time task tracking",
+      "Team collaboration",
+      "Resource management",
+      "Gantt chart visualization",
+      "Time tracking integration",
+      "Automated reporting"
+    ],
+    implementation: {
+      frontend: "React with TypeScript and Material-UI",
+      backend: "Node.js with Express",
+      deployment: "Docker on AWS"
+    },
+    demoUrl: "https://project-manager.demo.com",
+    githubUrl: "https://github.com/portfolio/project-manager",
+    imageUrl: "/images/project-manager.png"
+  },
+  {
+    title: "Warehouse Management System",
+    description: "Enterprise-grade warehouse and inventory management system with real-time tracking.",
+    tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker"],
+    features: [
+      "Real-time inventory tracking",
+      "Barcode and QR code scanning",
+      "Order fulfillment automation",
+      "Warehouse space optimization",
+      "Supply chain integration",
+      "Advanced reporting and analytics"
+    ],
+    implementation: {
+      frontend: "React with TypeScript and Material-UI",
+      backend: "Node.js with Express",
+      deployment: "Docker on AWS"
+    },
+    demoUrl: "https://warehouse-manager.demo.com",
+    githubUrl: "https://github.com/portfolio/warehouse-manager",
+    imageUrl: "/images/warehouse-manager.png"
+  },
+  {
+    title: "Time Tracking System",
+    description: "Advanced time tracking and productivity analytics platform for teams and individuals.",
+    tech: ["React", "TypeScript", "Node.js", "MongoDB", "Redis", "Docker"],
+    features: [
+      "Real-time activity tracking",
+      "Project time allocation",
+      "Automated timesheet generation",
+      "Productivity analytics",
+      "Team performance insights",
+      "Integration with project management tools"
+    ],
+    implementation: {
+      frontend: "React with TypeScript and Chakra UI",
+      backend: "Node.js with Express",
+      deployment: "Docker on GCP"
+    },
+    demoUrl: "https://time-tracker.demo.com",
+    githubUrl: "https://github.com/portfolio/time-tracker",
+    imageUrl: "/images/time-tracker.png"
+  },
+  {
+    title: "Subscription Management System",
+    description: "Comprehensive subscription billing and management platform with analytics.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis", "Stripe", "Docker"],
+    features: [
+      "Recurring billing automation",
+      "Plan management",
+      "Usage tracking",
+      "Revenue analytics",
+      "Customer portal",
+      "Payment gateway integration"
+    ],
+    implementation: {
+      frontend: "React with Redux",
+      backend: "Node.js with Express",
+      deployment: "Docker on AWS"
+    },
+    demoUrl: "https://subscription-manager.demo.com",
+    githubUrl: "https://github.com/portfolio/subscription-manager",
+    imageUrl: "/images/subscription-manager.png"
+  },
+  {
     title: "Survey Management Platform",
     description: "Advanced survey creation and analytics platform with real-time response tracking.",
     tech: ["React", "TypeScript", "Node.js", "MongoDB", "Redis", "Docker"],
