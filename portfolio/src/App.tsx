@@ -2,15 +2,33 @@ import { useState } from 'react'
 import { Tabs, TabsList, TabsTrigger } from '@radix-ui/react-tabs'
 import { cn } from './lib/utils'
 import { Project } from './types'
-import { projects } from './data/projects'
+import { 
+  allProjects,
+  aiProjects,
+  blockchainProjects,
+  iotProjects,
+  managementProjects,
+  realtimeProjects,
+  ecommerceProjects
+} from './data/projects'
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const categories = ['all', 'AI & ML', 'Blockchain', 'IoT', 'Management Systems', 'Real-time', 'E-commerce']
 
-  const filteredProjects = selectedCategory === 'all'
-    ? projects
-    : projects.filter(project => getProjectCategories(project).includes(selectedCategory))
+  const getProjectsByCategory = (category: string): Project[] => {
+    switch (category) {
+      case 'AI & ML': return aiProjects
+      case 'Blockchain': return blockchainProjects
+      case 'IoT': return iotProjects
+      case 'Management Systems': return managementProjects
+      case 'Real-time': return realtimeProjects
+      case 'E-commerce': return ecommerceProjects
+      default: return allProjects
+    }
+  }
+
+  const filteredProjects = getProjectsByCategory(selectedCategory)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -148,27 +166,6 @@ export default function App() {
   )
 }
 
-function getProjectCategories(project: Project): string[] {
-  const categories: string[] = []
-  
-  if (project.implementation.ml) categories.push('AI & ML')
-  if (project.implementation.blockchain) categories.push('Blockchain')
-  if (project.tech.some(t => t.toLowerCase().includes('iot'))) categories.push('IoT')
-  if (project.title.toLowerCase().includes('management')) categories.push('Management Systems')
-  if (project.features.some(f => f.toLowerCase().includes('real-time'))) categories.push('Real-time')
-  if (project.title.toLowerCase().includes('e-commerce')) categories.push('E-commerce')
-  
-  return categories
-}
-
 function getProjectImage(project: Project): string {
-  const categories = getProjectCategories(project)
-  
-  if (categories.includes('AI & ML')) return '/assets/placeholders/ai.jpg'
-  if (categories.includes('Blockchain')) return '/assets/placeholders/blockchain.jpg'
-  if (categories.includes('IoT')) return '/assets/placeholders/iot.jpg'
-  if (categories.includes('Management Systems')) return '/assets/placeholders/management.jpg'
-  if (categories.includes('E-commerce')) return '/assets/placeholders/ecommerce.jpg'
-  
-  return '/assets/placeholders/default.jpg'
+  return project.imageUrl
 }
