@@ -16,4 +16,5 @@ export interface Project {
   implementation: Implementation;
   demoUrl: string;
   githubUrl: string;
+  imageUrl: string;
 }
