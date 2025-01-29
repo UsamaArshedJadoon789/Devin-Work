@@ -133,6 +133,27 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Fleet Management System",
+    description: "Comprehensive fleet management solution with real-time vehicle tracking and maintenance scheduling.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis", "Socket.io", "Docker"],
+    features: [
+      "Real-time GPS tracking",
+      "Fuel consumption monitoring",
+      "Maintenance scheduling",
+      "Driver performance analytics",
+      "Route optimization",
+      "Vehicle diagnostics"
+    ],
+    implementation: {
+      frontend: "React with Redux",
+      backend: "Node.js with Express",
+      deployment: "Docker on Azure"
+    },
+    demoUrl: "https://fleet-mgmt.demo.com",
+    githubUrl: "https://github.com/portfolio/fleet-mgmt",
+    imageUrl: "/images/fleet-mgmt.png"
+  },
+  {
     title: "Restaurant Management System",
     description: "Comprehensive restaurant management platform with real-time order tracking and inventory management.",
     tech: ["React", "Node.js", "PostgreSQL", "Redis", "Socket.io", "Docker"],
