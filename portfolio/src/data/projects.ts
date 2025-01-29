@@ -133,6 +133,27 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Hotel Booking System",
+    description: "Advanced hotel reservation and management platform with real-time availability tracking.",
+    tech: ["React", "Node.js", "MongoDB", "Redis", "Socket.io", "Docker"],
+    features: [
+      "Real-time room availability",
+      "Dynamic pricing",
+      "Online payments",
+      "Booking management",
+      "Guest profiles",
+      "Analytics dashboard"
+    ],
+    implementation: {
+      frontend: "React with Material-UI",
+      backend: "Node.js with Express",
+      deployment: "Docker on AWS ECS"
+    },
+    demoUrl: "https://hotel-booking.demo.com",
+    githubUrl: "https://github.com/portfolio/hotel-booking",
+    imageUrl: "/images/hotel-booking.png"
+  },
+  {
     title: "Expense Management Tool",
     description: "Comprehensive expense tracking and management system with advanced reporting capabilities.",
     tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker"],
