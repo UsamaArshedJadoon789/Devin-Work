@@ -394,6 +394,31 @@ export const healthProjects: Project[] = [
   }
 ];
 
+// Career & Jobs Projects
+export const careerProjects: Project[] = [
+  {
+    title: "Job Board Platform",
+    description: "Advanced job listing and application management platform with real-time notifications.",
+    tech: ["React", "Node.js", "MongoDB", "Redis", "ElasticSearch", "AWS"],
+    features: [
+      "Real-time job notifications",
+      "Advanced job search and filtering",
+      "Application tracking system",
+      "Resume parsing and analysis",
+      "Company profiles and reviews",
+      "Salary insights and analytics"
+    ],
+    implementation: {
+      frontend: "React with Chakra UI",
+      backend: "Node.js with Express",
+      deployment: "AWS ECS with auto-scaling"
+    },
+    demoUrl: "https://job-board.demo.com",
+    githubUrl: "https://github.com/portfolio/job-board",
+    imageUrl: "/images/job-board.png"
+  }
+];
+
 // Event Management Projects
 export const eventProjects: Project[] = [
   {
@@ -478,6 +503,7 @@ export const allProjects: Project[] = [
   ...arProjects,
   ...devToolsProjects,
   ...healthProjects,
+  ...careerProjects,
   ...eventProjects,
   ...entertainmentProjects,
   ...educationProjects
