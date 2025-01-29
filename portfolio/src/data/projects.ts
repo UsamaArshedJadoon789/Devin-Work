@@ -188,6 +188,26 @@ export const managementProjects: Project[] = [
     demoUrl: "https://project-mgmt.demo.com",
     githubUrl: "https://github.com/portfolio/project-mgmt",
     imageUrl: "/images/project-mgmt.png"
+  },
+  {
+    title: "Real Estate Management System",
+    description: "Comprehensive platform for real estate property management and analytics.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis", "ElasticSearch", "AWS"],
+    features: [
+      "Property listing management",
+      "Tenant portal",
+      "Maintenance tracking",
+      "Financial reporting",
+      "Real-time availability updates"
+    ],
+    implementation: {
+      frontend: "React with Material-UI",
+      backend: "Node.js with Express",
+      deployment: "AWS ECS with CloudFront"
+    },
+    demoUrl: "https://realestate-mgmt.demo.com",
+    githubUrl: "https://github.com/portfolio/realestate-mgmt",
+    imageUrl: "/images/realestate-mgmt.png"
   }
 ];
 
