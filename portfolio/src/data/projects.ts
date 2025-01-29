@@ -133,6 +133,27 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "Asset Management System",
+    description: "Enterprise asset tracking and management platform with real-time monitoring.",
+    tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker"],
+    features: [
+      "Real-time asset tracking",
+      "Maintenance scheduling",
+      "Depreciation calculation",
+      "Asset lifecycle management",
+      "Inventory forecasting",
+      "Audit trail logging"
+    ],
+    implementation: {
+      frontend: "React with TypeScript and Chakra UI",
+      backend: "Node.js with Express",
+      deployment: "Docker on Azure"
+    },
+    demoUrl: "https://asset-management.demo.com",
+    githubUrl: "https://github.com/portfolio/asset-management",
+    imageUrl: "/images/asset-management.png"
+  },
+  {
     title: "Customer Support Platform",
     description: "Comprehensive customer service platform with real-time ticket management and analytics.",
     tech: ["React", "Node.js", "MongoDB", "Redis", "Socket.io", "Docker"],
