@@ -228,6 +228,29 @@ export const managementProjects: Project[] = [
     demoUrl: "https://inventory-mgmt.demo.com",
     githubUrl: "https://github.com/portfolio/inventory-mgmt",
     imageUrl: "/images/inventory-mgmt.png"
+  },
+  {
+    title: "Document Management System",
+    description: "Enterprise document management solution with advanced search and version control.",
+    tech: ["React", "Node.js", "ElasticSearch", "PostgreSQL", "MinIO", "Docker"],
+    features: [
+      "Full-text search capabilities",
+      "Version control system",
+      "Document collaboration",
+      "Access control management",
+      "Automated OCR processing",
+      "Audit trail tracking"
+    ],
+    implementation: {
+      frontend: "React with Material-UI",
+      backend: "Node.js with Express",
+      storage: "MinIO for object storage",
+      search: "ElasticSearch for document indexing",
+      deployment: "Docker Swarm on AWS"
+    },
+    demoUrl: "https://docs-mgmt.demo.com",
+    githubUrl: "https://github.com/portfolio/docs-mgmt",
+    imageUrl: "/images/docs-mgmt.png"
   }
 ];
 
