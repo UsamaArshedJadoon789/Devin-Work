@@ -394,6 +394,31 @@ export const healthProjects: Project[] = [
   }
 ];
 
+// Event Management Projects
+export const eventProjects: Project[] = [
+  {
+    title: "Event Management Platform",
+    description: "Comprehensive event planning and management platform with real-time attendee tracking.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis", "Socket.io", "AWS"],
+    features: [
+      "Real-time attendee tracking",
+      "Ticket management system",
+      "Event scheduling",
+      "Vendor coordination",
+      "Analytics dashboard",
+      "Mobile check-in system"
+    ],
+    implementation: {
+      frontend: "React with Material-UI",
+      backend: "Node.js with Express",
+      deployment: "AWS ECS with auto-scaling"
+    },
+    demoUrl: "https://event-mgmt.demo.com",
+    githubUrl: "https://github.com/portfolio/event-mgmt",
+    imageUrl: "/images/event-mgmt.png"
+  }
+];
+
 // Entertainment Projects
 export const entertainmentProjects: Project[] = [
   {
@@ -453,6 +478,7 @@ export const allProjects: Project[] = [
   ...arProjects,
   ...devToolsProjects,
   ...healthProjects,
+  ...eventProjects,
   ...entertainmentProjects,
   ...educationProjects
 ];
