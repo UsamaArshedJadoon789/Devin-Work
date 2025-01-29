@@ -347,6 +347,30 @@ export const devToolsProjects: Project[] = [
   }
 ];
 
+// Health & Fitness Projects
+export const healthProjects: Project[] = [
+  {
+    title: "Fitness Tracking App",
+    description: "Comprehensive fitness tracking application with real-time workout monitoring and analytics.",
+    tech: ["React Native", "Node.js", "MongoDB", "WebSocket", "Redis", "AWS"],
+    features: [
+      "Real-time workout tracking",
+      "Custom workout plans",
+      "Progress analytics",
+      "Social fitness challenges",
+      "Integration with wearable devices"
+    ],
+    implementation: {
+      frontend: "React Native with Redux",
+      backend: "Node.js with Express",
+      deployment: "AWS ECS with CloudFront"
+    },
+    demoUrl: "https://fitness-tracker.demo.com",
+    githubUrl: "https://github.com/portfolio/fitness-tracker",
+    imageUrl: "/images/fitness-tracker.png"
+  }
+];
+
 // Entertainment Projects
 export const entertainmentProjects: Project[] = [
   {
@@ -405,6 +429,7 @@ export const allProjects: Project[] = [
   ...socialProjects,
   ...arProjects,
   ...devToolsProjects,
+  ...healthProjects,
   ...entertainmentProjects,
   ...educationProjects
 ];
