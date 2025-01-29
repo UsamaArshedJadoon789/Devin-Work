@@ -133,6 +133,27 @@ export const iotProjects: Project[] = [
 // Management Systems
 export const managementProjects: Project[] = [
   {
+    title: "HR Management System",
+    description: "Comprehensive HR platform for employee management, payroll, and performance tracking.",
+    tech: ["React", "Node.js", "PostgreSQL", "Redis", "GraphQL", "Docker"],
+    features: [
+      "Employee onboarding workflow",
+      "Performance evaluation system",
+      "Leave management",
+      "Payroll processing",
+      "Benefits administration",
+      "Time and attendance tracking"
+    ],
+    implementation: {
+      frontend: "React with Material-UI",
+      backend: "Node.js with GraphQL",
+      deployment: "Docker on Azure"
+    },
+    demoUrl: "https://hr-management.demo.com",
+    githubUrl: "https://github.com/portfolio/hr-management",
+    imageUrl: "/images/hr-management.png"
+  },
+  {
     title: "Content Management System",
     description: "Enterprise-grade CMS platform with advanced content workflow and publishing capabilities.",
     tech: ["React", "Node.js", "PostgreSQL", "Redis", "GraphQL", "Docker"],
