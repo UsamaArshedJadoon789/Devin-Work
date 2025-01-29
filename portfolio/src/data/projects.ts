@@ -284,6 +284,29 @@ export const arProjects: Project[] = [
   }
 ];
 
+// Development Tools Projects
+export const devToolsProjects: Project[] = [
+  {
+    title: "Cloud-based IDE",
+    description: "Browser-based integrated development environment with real-time collaboration features.",
+    tech: ["React", "Monaco Editor", "WebSocket", "Docker", "Kubernetes", "Redis"],
+    features: [
+      "Real-time code collaboration",
+      "Multi-language support",
+      "Git integration",
+      "Terminal emulation"
+    ],
+    implementation: {
+      frontend: "React with Monaco Editor",
+      backend: "Node.js with WebSocket",
+      deployment: "Kubernetes on GCP"
+    },
+    demoUrl: "https://cloud-ide.demo.com",
+    githubUrl: "https://github.com/portfolio/cloud-ide",
+    imageUrl: "/images/cloud-ide.png"
+  }
+];
+
 // Combine all projects
 export const allProjects: Project[] = [
   ...aiProjects,
@@ -293,5 +316,6 @@ export const allProjects: Project[] = [
   ...realtimeProjects,
   ...ecommerceProjects,
   ...socialProjects,
-  ...arProjects
+  ...arProjects,
+  ...devToolsProjects
 ];
