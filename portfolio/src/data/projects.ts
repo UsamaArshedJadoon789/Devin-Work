@@ -20,7 +20,7 @@ export const aiProjects: Project[] = [
     },
     demoUrl: "https://healthcare-ai.demo.com",
     githubUrl: "https://github.com/portfolio/healthcare-ai",
-    imageUrl: "/images/healthcare-ai.png"
+    imageUrl: "/images/management.png"
   },
   {
     title: "AI Image Recognition API",
@@ -40,7 +40,7 @@ export const aiProjects: Project[] = [
     },
     demoUrl: "https://image-recognition.demo.com",
     githubUrl: "https://github.com/portfolio/image-recognition",
-    imageUrl: "/images/image-recognition.png"
+    imageUrl: "/images/blockchain.png"
   },
   {
     title: "AI Chat Assistant",
@@ -126,7 +126,7 @@ export const iotProjects: Project[] = [
     },
     demoUrl: "https://smart-home.demo.com",
     githubUrl: "https://github.com/portfolio/smart-home",
-    imageUrl: "/images/smart-home.png"
+    imageUrl: "/images/iot.png"
   }
 ];
 
@@ -151,7 +151,7 @@ export const managementProjects: Project[] = [
     },
     demoUrl: "https://project-manager.demo.com",
     githubUrl: "https://github.com/portfolio/project-manager",
-    imageUrl: "/images/project-manager.png"
+    imageUrl: "/images/project-mgmt.png"
   },
   {
     title: "Warehouse Management System",
@@ -172,7 +172,7 @@ export const managementProjects: Project[] = [
     },
     demoUrl: "https://warehouse-manager.demo.com",
     githubUrl: "https://github.com/portfolio/warehouse-manager",
-    imageUrl: "/images/warehouse-manager.png"
+    imageUrl: "/images/smart-home.png"
   },
   {
     title: "Time Tracking System",
@@ -277,7 +277,7 @@ export const managementProjects: Project[] = [
     },
     demoUrl: "https://customer-support.demo.com",
     githubUrl: "https://github.com/portfolio/customer-support",
-    imageUrl: "/images/customer-support.png"
+    imageUrl: "/images/hrms.png"
   },
   {
     title: "Appointment Scheduling System",
@@ -298,7 +298,7 @@ export const managementProjects: Project[] = [
     },
     demoUrl: "https://appointment-scheduler.demo.com",
     githubUrl: "https://github.com/portfolio/appointment-scheduler",
-    imageUrl: "/images/appointment-scheduler.png"
+    imageUrl: "/images/realestate-mgmt.png"
   },
   {
     title: "Library Management System",
@@ -319,7 +319,7 @@ export const managementProjects: Project[] = [
     },
     demoUrl: "https://library-management.demo.com",
     githubUrl: "https://github.com/portfolio/library-management",
-    imageUrl: "/images/library-management.png"
+    imageUrl: "/images/project-manager.png"
   },
   {
     title: "HR Management System",
@@ -361,7 +361,7 @@ export const managementProjects: Project[] = [
     },
     demoUrl: "https://cms-platform.demo.com",
     githubUrl: "https://github.com/portfolio/cms-platform",
-    imageUrl: "/images/cms-platform.png"
+    imageUrl: "/images/ai.png"
   },
   {
     title: "Hotel Booking System",
@@ -447,63 +447,9 @@ export const managementProjects: Project[] = [
     githubUrl: "https://github.com/portfolio/restaurant-mgmt",
     imageUrl: "/images/restaurant-mgmt.png"
   },
-  {
-    title: "Real Estate Management System",
-    description: "Comprehensive platform for real estate property management and analytics.",
-    tech: ["React", "Node.js", "PostgreSQL", "Redis", "ElasticSearch", "AWS"],
-    features: [
-      "Property listing management",
-      "Tenant portal",
-      "Maintenance tracking",
-      "Financial reporting"
-    ],
-    implementation: {
-      frontend: "React with Material-UI",
-      backend: "Node.js with Express",
-      deployment: "AWS ECS"
-    },
-    demoUrl: "https://realestate.demo.com",
-    githubUrl: "https://github.com/portfolio/realestate",
-    imageUrl: "/images/realestate.png"
-  },
-  {
-    title: "HR Management System",
-    description: "Employee management platform with advanced HR features and analytics.",
-    tech: ["React", "Python", "Django", "PostgreSQL", "Redis", "Docker"],
-    features: [
-      "Employee onboarding",
-      "Performance tracking",
-      "Leave management",
-      "Payroll processing"
-    ],
-    implementation: {
-      frontend: "React with Ant Design",
-      backend: "Django REST framework",
-      deployment: "Docker on Azure"
-    },
-    demoUrl: "https://hrms.demo.com",
-    githubUrl: "https://github.com/portfolio/hrms",
-    imageUrl: "/images/hrms.png"
-  },
-  {
-    title: "Project Management Tool",
-    description: "Collaborative project management platform with real-time updates.",
-    tech: ["React", "Node.js", "MongoDB", "Socket.io", "Redis", "AWS"],
-    features: [
-      "Task management",
-      "Team collaboration",
-      "Time tracking",
-      "Resource allocation"
-    ],
-    implementation: {
-      frontend: "React with Redux",
-      backend: "Node.js with Express",
-      deployment: "AWS ECS"
-    },
-    demoUrl: "https://project-mgmt.demo.com",
-    githubUrl: "https://github.com/portfolio/project-mgmt",
-    imageUrl: "/images/project-mgmt.png"
-  },
+
+
+
   {
     title: "Real Estate Management System",
     description: "Comprehensive platform for real estate property management and analytics.",
@@ -522,7 +468,7 @@ export const managementProjects: Project[] = [
     },
     demoUrl: "https://realestate-mgmt.demo.com",
     githubUrl: "https://github.com/portfolio/realestate-mgmt",
-    imageUrl: "/images/realestate-mgmt.png"
+    imageUrl: "/images/realestate.png"
   },
   {
     title: "Inventory Management System",

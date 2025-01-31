@@ -9,12 +9,36 @@ import {
   iotProjects,
   managementProjects,
   realtimeProjects,
-  ecommerceProjects
+  ecommerceProjects,
+  socialProjects,
+  arProjects,
+  devToolsProjects,
+  healthProjects,
+  careerProjects,
+  eventProjects,
+  entertainmentProjects,
+  educationProjects
 } from './data/projects'
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
-  const categories = ['all', 'AI & ML', 'Blockchain', 'IoT', 'Management Systems', 'Real-time', 'E-commerce']
+  const categories = [
+    'all',
+    'AI & ML',
+    'Blockchain',
+    'IoT',
+    'Management Systems',
+    'Real-time',
+    'E-commerce',
+    'Social Media',
+    'AR/VR',
+    'Dev Tools',
+    'Health & Fitness',
+    'Career & Jobs',
+    'Event Management',
+    'Entertainment',
+    'Education'
+  ]
 
   const getProjectsByCategory = (category: string): Project[] => {
     switch (category) {
@@ -24,6 +48,14 @@ export default function App() {
       case 'Management Systems': return managementProjects
       case 'Real-time': return realtimeProjects
       case 'E-commerce': return ecommerceProjects
+      case 'Social Media': return socialProjects
+      case 'AR/VR': return arProjects
+      case 'Dev Tools': return devToolsProjects
+      case 'Health & Fitness': return healthProjects
+      case 'Career & Jobs': return careerProjects
+      case 'Event Management': return eventProjects
+      case 'Entertainment': return entertainmentProjects
+      case 'Education': return educationProjects
       default: return allProjects
     }
   }
