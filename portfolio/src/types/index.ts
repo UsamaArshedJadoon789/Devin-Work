@@ -5,6 +5,8 @@ export interface Implementation {
   backend: string;
   ml?: string;
   blockchain?: string;
+  storage?: string;
+  search?: string;
   deployment: string;
 }
 
