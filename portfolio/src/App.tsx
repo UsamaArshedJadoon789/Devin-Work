@@ -2,23 +2,7 @@ import { useState } from 'react'
 import { Tabs, TabsList, TabsTrigger } from '@radix-ui/react-tabs'
 import { cn } from './lib/utils'
 import { Project } from './types'
-import { 
-  allProjects,
-  aiProjects,
-  blockchainProjects,
-  iotProjects,
-  managementProjects,
-  realtimeProjects,
-  ecommerceProjects,
-  socialProjects,
-  arProjects,
-  devToolsProjects,
-  healthProjects,
-  careerProjects,
-  eventProjects,
-  entertainmentProjects,
-  educationProjects
-} from './data/projects'
+import { allProjects } from './data/todo'
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -41,23 +25,30 @@ export default function App() {
   ]
 
   const getProjectsByCategory = (category: string): Project[] => {
-    switch (category) {
-      case 'AI & ML': return aiProjects
-      case 'Blockchain': return blockchainProjects
-      case 'IoT': return iotProjects
-      case 'Management Systems': return managementProjects
-      case 'Real-time': return realtimeProjects
-      case 'E-commerce': return ecommerceProjects
-      case 'Social Media': return socialProjects
-      case 'AR/VR': return arProjects
-      case 'Dev Tools': return devToolsProjects
-      case 'Health & Fitness': return healthProjects
-      case 'Career & Jobs': return careerProjects
-      case 'Event Management': return eventProjects
-      case 'Entertainment': return entertainmentProjects
-      case 'Education': return educationProjects
-      default: return allProjects
-    }
+    if (category === 'all') return allProjects
+    return allProjects.filter((project: Project) => {
+      const title = project.title.toLowerCase()
+      const desc = project.description.toLowerCase()
+      const text = `${title} ${desc}`
+      
+      switch(category) {
+        case 'AI & ML': return text.includes('ai') || text.includes('ml') || text.includes('intelligence') || text.includes('recognition') || text.includes('chat')
+        case 'Blockchain': return text.includes('blockchain') || text.includes('crypto') || text.includes('smart contract')
+        case 'IoT': return text.includes('iot') || text.includes('smart') || text.includes('device')
+        case 'Management Systems': return text.includes('management') || text.includes('tracking') || text.includes('system')
+        case 'Real-time': return text.includes('real-time') || text.includes('live') || text.includes('streaming')
+        case 'E-commerce': return text.includes('ecommerce') || text.includes('shop') || text.includes('store') || text.includes('marketplace')
+        case 'Social Media': return text.includes('social') || text.includes('community') || text.includes('chat')
+        case 'AR/VR': return text.includes('ar') || text.includes('vr') || text.includes('reality') || text.includes('navigation')
+        case 'Dev Tools': return text.includes('ide') || text.includes('development') || text.includes('cloud')
+        case 'Health & Fitness': return text.includes('health') || text.includes('fitness') || text.includes('medical')
+        case 'Career & Jobs': return text.includes('job') || text.includes('career') || text.includes('recruitment')
+        case 'Event Management': return text.includes('event') || text.includes('scheduling')
+        case 'Entertainment': return text.includes('music') || text.includes('stream') || text.includes('media')
+        case 'Education': return text.includes('learning') || text.includes('classroom') || text.includes('education')
+        default: return true
+      }
+    })
   }
 
   const filteredProjects = getProjectsByCategory(selectedCategory)
