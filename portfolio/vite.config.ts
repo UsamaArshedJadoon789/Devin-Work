@@ -11,6 +11,8 @@ export default defineConfig({
   },
   build: {
     assetsDir: 'assets',
+    outDir: 'dist',
+    publicDir: 'public',
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
@@ -20,7 +22,7 @@ export default defineConfig({
           const info = assetInfo.name.split('.')
           const ext = info[info.length - 1]
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
-            return `assets/images/[name][extname]`
+            return `images/[name][extname]`
           }
           return `assets/[name]-[hash][extname]`
         },

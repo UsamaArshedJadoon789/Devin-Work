@@ -20,7 +20,7 @@ export const aiProjects: Project[] = [
     },
     demoUrl: "https://healthcare-ai.demo.com",
     githubUrl: "https://github.com/portfolio/healthcare-ai",
-    imageUrl: "/images/healthcare-ai.png"
+    imageUrl: "/images/ai.png"
   },
   {
     title: "AI Image Recognition API",
@@ -40,7 +40,7 @@ export const aiProjects: Project[] = [
     },
     demoUrl: "https://image-recognition.demo.com",
     githubUrl: "https://github.com/portfolio/image-recognition",
-    imageUrl: "/images/image-recognition.png"
+    imageUrl: "/images/ai.png"
   },
   {
     title: "AI Chat Assistant",
