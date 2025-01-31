@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Tabs, TabsList, TabsTrigger } from '@radix-ui/react-tabs'
 import { cn } from './lib/utils'
 import { Project } from './types'
@@ -55,11 +55,11 @@ export default function App() {
   const filteredProjects = getProjectsByCategory(selectedCategory)
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-50 via-blue-50/30 to-slate-100 dark:from-slate-900 dark:via-blue-900/10 dark:to-slate-800 transition-colors duration-500">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-50 via-blue-50/30 to-slate-100 dark:from-slate-900 dark:via-blue-900/10 dark:to-slate-800 transition-colors duration-500 motion-safe:animate-fadeInSlow">
       <div className="container mx-auto px-4 py-12">
-        <header className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16 p-8 bg-gradient-to-br from-white/95 via-slate-50/95 to-white/95 dark:from-slate-800/95 dark:via-slate-900/95 dark:to-slate-800/95 rounded-2xl shadow-xl border border-slate-200/50 dark:border-slate-700/50 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl">
+        <header className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16 p-8 bg-gradient-to-br from-white/95 via-slate-50/95 to-white/95 dark:from-slate-800/95 dark:via-slate-900/95 dark:to-slate-800/95 rounded-2xl shadow-xl border border-slate-200/50 dark:border-slate-700/50 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl motion-safe:animate-fadeIn">
           <div className="text-center md:text-left space-y-5">
-            <h1 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 dark:from-blue-400 dark:via-indigo-400 dark:to-blue-400 animate-gradient-x">
+            <h1 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 dark:from-blue-400 dark:via-indigo-400 dark:to-blue-400 motion-safe:animate-gradient-x">
               Project Portfolio
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl font-medium">
@@ -98,6 +98,7 @@ export default function App() {
                 key={category}
                 value={category}
                 className={cn(
+                  "motion-safe:animate-slideIn",
                   "px-6 py-3 rounded-xl transition-all duration-300 font-medium relative overflow-hidden",
                   "before:absolute before:inset-0 before:bg-gradient-to-br before:from-blue-500/0 before:to-indigo-600/0 before:transition-colors before:duration-300",
                   "data-[state=active]:before:from-blue-500 data-[state=active]:before:to-indigo-600",
@@ -116,7 +117,8 @@ export default function App() {
             {filteredProjects.map((project, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-white/95 via-slate-50/95 to-white/95 dark:from-slate-800/95 dark:via-slate-900/95 dark:to-slate-800/95 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group overflow-hidden border border-slate-200/50 dark:border-slate-700/50 relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-blue-500/0 before:to-indigo-600/0 before:transition-all before:duration-500 hover:before:from-blue-500/5 hover:before:to-indigo-600/5"
+                style={{ animationDelay: `${index * 0.1}s` }}
+                className="bg-gradient-to-br from-white/95 via-slate-50/95 to-white/95 dark:from-slate-800/95 dark:via-slate-900/95 dark:to-slate-800/95 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group overflow-hidden border border-slate-200/50 dark:border-slate-700/50 relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-blue-500/0 before:to-indigo-600/0 before:transition-all before:duration-500 hover:before:from-blue-500/5 hover:before:to-indigo-600/5 motion-safe:animate-scaleIn motion-safe:opacity-0"
               >
                 <div className="relative group">
                   <img
@@ -230,8 +232,11 @@ function getProjectImage(project: Project): string {
 }
 
 // Initialize dark mode from localStorage
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark')
-} else {
-  document.documentElement.classList.remove('dark')
-}
+useEffect(() => {
+  if (typeof window === 'undefined') return;
+  
+  const isDark = localStorage.getItem('theme') === 'dark' || 
+    (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  
+  document.documentElement.classList.toggle('dark', isDark);
+}, []);
