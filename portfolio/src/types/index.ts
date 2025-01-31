@@ -5,6 +5,8 @@ export interface Implementation {
   backend: string;
   ml?: string;
   blockchain?: string;
+  storage?: string;
+  search?: string;
   deployment: string;
 }
 
@@ -16,4 +18,5 @@ export interface Project {
   implementation: Implementation;
   demoUrl: string;
   githubUrl: string;
+  imageUrl: string;
 }
