@@ -9,7 +9,6 @@ void check_interrupts(CPU* cpu, IO* io) {
     uint32_t irq0_status = io_read(io, 3);
     uint32_t irq1_status = io_read(io, 4);
     uint32_t irq2_status = io_read(io, 5);
-    uint32_t irq_handler = io_read(io, 6);
     
     if (irq0_enabled && irq0_status) {
         handle_timer_interrupt(cpu, io);
@@ -20,29 +19,24 @@ void check_interrupts(CPU* cpu, IO* io) {
     }
 }
 
-void handle_timer_interrupt(CPU* cpu, IO* io) {
+static void enter_isr(CPU* cpu, IO* io, uint32_t irq_status_reg) {
     if (!cpu->in_isr) {
         cpu->in_isr = true;
-        io_write(io, 3, 0);  // Clear timer interrupt
-        io_write(io, 7, cpu->pc);  // Save return address
-        cpu->pc = io_read(io, 6);  // Jump to interrupt handler
+        io_write(io, irq_status_reg, 0);
+        io_write(io, 7, cpu->pc);
+        cpu->pc = io_read(io, 6);
+        cpu->cycles++;
     }
+}
+
+void handle_timer_interrupt(CPU* cpu, IO* io) {
+    enter_isr(cpu, io, 3);
 }
 
 void handle_disk_interrupt(CPU* cpu, IO* io) {
-    if (!cpu->in_isr) {
-        cpu->in_isr = true;
-        io_write(io, 4, 0);  // Clear disk interrupt
-        io_write(io, 7, cpu->pc);  // Save return address
-        cpu->pc = io_read(io, 6);  // Jump to interrupt handler
-    }
+    enter_isr(cpu, io, 4);
 }
 
 void handle_external_interrupt(CPU* cpu, IO* io) {
-    if (!cpu->in_isr) {
-        cpu->in_isr = true;
-        io_write(io, 5, 0);  // Clear external interrupt
-        io_write(io, 7, cpu->pc);  // Save return address
-        cpu->pc = io_read(io, 6);  // Jump to interrupt handler
-    }
+    enter_isr(cpu, io, 5);
 }

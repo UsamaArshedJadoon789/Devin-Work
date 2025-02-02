@@ -120,7 +120,7 @@ void cpu_execute(CPU* cpu, Memory* mem, IO* io) {
         case 18: // reti
             if (cpu->in_isr) {
                 cpu->in_isr = false;
-                cpu->pc = io_read(io, 6);
+                cpu->pc = io_read(io, 7);
                 cpu->cycles++;
                 io_update(io);
                 return;
