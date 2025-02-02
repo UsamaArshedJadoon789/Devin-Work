@@ -5,13 +5,14 @@
 #include <stdbool.h>
 
 typedef struct {
-    uint32_t registers[23];
-    uint8_t disk[128][512];
-    uint8_t monitor[256][256];
-    uint32_t leds;
-    uint32_t display7seg;
-    uint32_t disk_timer;
-    bool disk_busy;
+    uint32_t registers[23];      // I/O registers
+    uint8_t disk[128][512];      // Disk sectors (128 sectors * 512 bytes)
+    uint8_t monitor[256][256];   // Monitor pixels (256x256 grayscale)
+    uint32_t leds;               // LED state
+    uint32_t display7seg;        // 7-segment display value
+    uint32_t disk_timer;         // Disk operation timer
+    uint32_t cycles;             // Clock cycles counter
+    bool disk_busy;              // Disk busy flag
 } IO;
 
 void io_init(IO* io);
