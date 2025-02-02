@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{SIMP Processor Simulator Documentation}
+\author{Computer Organization Project}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Architecture Overview}
+The SIMP (Simple Instruction Set Processor) is a 16-register processor with a 48-bit instruction format. Key features include:
+\begin{itemize}
+    \item 21 instructions including arithmetic, logical, memory, and control operations
+    \item 4096-line instruction memory (48-bit)
+    \item 4096-line data memory (32-bit)
+    \item Three interrupt sources (timer, disk, external)
+    \item I/O devices: LEDs, 7-segment display, monitor, disk
+\end{itemize}
+
+\section{Implementation Details}
+\subsection{Core Components}
+\begin{itemize}
+    \item CPU: Implements instruction fetch, decode, and execute cycle
+    \item Memory: Separate instruction and data memory management
+    \item I/O: Device control and interrupt handling
+    \item File I/O: Handles all input/output file operations
+\end{itemize}
+
+\subsection{Interrupt Handling}
+\begin{itemize}
+    \item Timer interrupt (IRQ0): Highest priority
+    \item Disk interrupt (IRQ1): Medium priority
+    \item External interrupt (IRQ2): Lowest priority
+    \item No nested interrupts supported
+\end{itemize}
+
+\section{Test Programs}
+\subsection{Matrix Multiplication (mulmat.asm)}
+Implements multiplication of two 4x4 matrices:
+\begin{itemize}
+    \item First matrix: addresses 0x100-0x10F
+    \item Second matrix: addresses 0x110-0x11F
+    \item Result matrix: addresses 0x120-0x12F
+\end{itemize}
+
+\subsection{Binomial Coefficient (binom.asm)}
+Recursive implementation of binomial coefficient calculation:
+\begin{itemize}
+    \item Input n: address 0x100
+    \item Input k: address 0x101
+    \item Result: address 0x102
+    \item Uses stack for recursive calls
+\end{itemize}
+
+\subsection{Circle Drawing (circle.asm)}
+Draws a filled white circle on the monitor:
+\begin{itemize}
+    \item Radius: address 0x100
+    \item Center: (128,128)
+    \item Uses distance formula for pixel selection
+\end{itemize}
+
+\subsection{Disk Test (disktest.asm)}
+Tests disk operations by moving sector contents:
+\begin{itemize}
+    \item Moves contents of sectors 0-7 forward
+    \item Handles disk busy status
+    \item Uses interrupt-driven I/O
+\end{itemize}
+
+\section{File Format Specifications}
+\subsection{Input Files}
+\begin{itemize}
+    \item imemin.txt: 12 hex digits per line (48-bit instructions)
+    \item dmemin.txt: 8 hex digits per line (32-bit data)
+    \item diskin.txt: 2 hex digits per line (8-bit disk data)
+    \item irq2in.txt: Decimal cycle numbers for IRQ2
+\end{itemize}
+
+\subsection{Output Files}
+\begin{itemize}
+    \item dmemout.txt: 8 hex digits per line
+    \item regout.txt: 8 hex digits per line (R2-R15)
+    \item trace.txt: PC, instruction, and register values
+    \item hwregtrace.txt: I/O register access log
+    \item cycles.txt: Total cycle count
+    \item leds.txt: LED states
+    \item display7seg.txt: 7-segment display values
+    \item diskout.txt: Final disk contents
+    \item monitor.txt: Monitor pixel values
+    \item monitor.yuv: Raw monitor output
+\end{itemize}
+
+\end{document}
