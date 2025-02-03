@@ -75,18 +75,46 @@ void split_single(char *str, char **result, const char *separators, int *j)
     }
 }
 
-char **split_sep(char **inputs, const char *separators) 
+static bool is_separator(char c, const char *separators)
+{
+    while (*separators)
+        if (c == *separators++)
+            return true;
+    return false;
+}
+
+static char *create_token(const char *start, size_t len)
+{
+    char *token = malloc(len + 1);
+    if (token) {
+        ft_strlcpy(token, start, len + 1);
+        token[len] = '\0';
+    }
+    return token;
+}
+
+char **split_sep(char **inputs, const char *separators)
 {
     char **result = malloc(1024 * sizeof(char *));
-    if (!result || !inputs || !separators) {
+    if (!result || !inputs || !separators)
         return NULL;
-    }
+        
     int j = 0;
-    int i = 0;
-
-    while (inputs[i] != NULL) {
-        split_single(inputs[i], result, separators, &j);
-        i++;
+    for (int i = 0; inputs[i]; i++) {
+        char *str = inputs[i];
+        char *start = str;
+        
+        while (*str) {
+            if (is_separator(*str, separators)) {
+                if (str > start)
+                    result[j++] = create_token(start, str - start);
+                result[j++] = create_token(str, 1);
+                start = str + 1;
+            }
+            str++;
+        }
+        if (str > start)
+            result[j++] = create_token(start, str - start);
     }
     result[j] = NULL;
     return result;

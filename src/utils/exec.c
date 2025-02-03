@@ -47,23 +47,74 @@ bool ifbuiltin(char **args)
 	return (FALSE);
 }
 
+static bool setup_redirections(t_command *cmd)
+{
+    int stdin_backup = -1, stdout_backup = -1;
+    
+    if (cmd->fd_in != STDIN_FILENO || cmd->fd_out != STDOUT_FILENO)
+    {
+        stdin_backup = dup(STDIN_FILENO);
+        stdout_backup = dup(STDOUT_FILENO);
+        if (stdin_backup == -1 || stdout_backup == -1)
+            return FALSE;
+    }
+    
+    if (cmd->fd_in != STDIN_FILENO && dup2(cmd->fd_in, STDIN_FILENO) == -1)
+    {
+        if (stdin_backup != -1)
+            close(stdin_backup);
+        if (stdout_backup != -1)
+            close(stdout_backup);
+        return FALSE;
+    }
+    
+    if (cmd->fd_out != STDOUT_FILENO && dup2(cmd->fd_out, STDOUT_FILENO) == -1)
+    {
+        if (cmd->fd_in != STDIN_FILENO)
+            dup2(stdin_backup, STDIN_FILENO);
+        if (stdin_backup != -1)
+            close(stdin_backup);
+        if (stdout_backup != -1)
+            close(stdout_backup);
+        return FALSE;
+    }
+    
+    return TRUE;
+}
+
+static void cleanup_redirections(t_command *cmd)
+{
+    if (cmd->fd_in != STDIN_FILENO)
+        close(cmd->fd_in);
+    if (cmd->fd_out != STDOUT_FILENO)
+        close(cmd->fd_out);
+}
+
+static bool handle_pipe_setup(t_data *data, t_command *cmd)
+{
+    if (cmd->next && cmd->next->type == PIPE)
+    {
+        if (pipe(data->pipe) == -1)
+            return FALSE;
+        cmd->next->next->fd_in = data->pipe[0];
+        cmd->fd_out = data->pipe[1];
+    }
+    return TRUE;
+}
+
 bool exec_pipe(t_data *data)
 {
-    t_command *cmd;
-    pid_t *pids;
-    int cmd_count, i, status;
-    
-    cmd = data->commands;
-    cmd_count = 0;
+    t_command *cmd = data->commands;
+    int cmd_count = 0;
     while (cmd && ++cmd_count)
         cmd = cmd->next;
         
-    pids = malloc(sizeof(pid_t) * cmd_count);
+    pid_t *pids = malloc(sizeof(pid_t) * cmd_count);
     if (!pids)
-        return (FALSE);
+        return FALSE;
     
     cmd = data->commands;
-    i = 0;
+    int i = 0;
     while (cmd)
     {
         if (cmd->type != CMD)
@@ -73,29 +124,24 @@ bool exec_pipe(t_data *data)
                 while (--i >= 0)
                 {
                     kill(pids[i], SIGTERM);
-                    waitpid(pids[i], &status, 0);
+                    waitpid(pids[i], NULL, 0);
                 }
                 free(pids);
-                return (FALSE);
+                return FALSE;
             }
             cmd = cmd->next;
             continue;
         }
         
-        if (cmd->next && cmd->next->type == PIPE)
+        if (!handle_pipe_setup(data, cmd))
         {
-            if (pipe(data->pipe) == -1)
+            while (--i >= 0)
             {
-                while (--i >= 0)
-                {
-                    kill(pids[i], SIGTERM);
-                    waitpid(pids[i], &status, 0);
-                }
-                free(pids);
-                return (FALSE);
+                kill(pids[i], SIGTERM);
+                waitpid(pids[i], NULL, 0);
             }
-            cmd->next->next->fd_in = data->pipe[0];
-            cmd->fd_out = data->pipe[1];
+            free(pids);
+            return FALSE;
         }
         
         pids[i] = fork();
@@ -104,38 +150,32 @@ bool exec_pipe(t_data *data)
             while (--i >= 0)
             {
                 kill(pids[i], SIGTERM);
-                waitpid(pids[i], &status, 0);
+                waitpid(pids[i], NULL, 0);
             }
             free(pids);
-            return (FALSE);
+            return FALSE;
         }
         
         if (pids[i] == 0)
         {
             free(pids);
-            if (cmd->fd_in != STDIN_FILENO && dup2(cmd->fd_in, STDIN_FILENO) == -1)
+            if (!setup_redirections(cmd))
                 exit(1);
-            if (cmd->fd_out != STDOUT_FILENO && dup2(cmd->fd_out, STDOUT_FILENO) == -1)
-                exit(1);
-            
-            if (ifbuiltin(cmd->args[0]) == TRUE)
+                
+            if (ifbuiltin(cmd->args[0]))
             {
                 exect_builtin(cmd->args, data);
                 exit(0);
             }
-            else
-                exec_all(cmd->args, data);
+            exec_all(cmd->args, data);
         }
         
-        if (cmd->fd_in != STDIN_FILENO)
-            close(cmd->fd_in);
-        if (cmd->fd_out != STDOUT_FILENO)
-            close(cmd->fd_out);
-            
+        cleanup_redirections(cmd);
         cmd = cmd->next;
         i++;
     }
     
+    int status;
     for (i = 0; i < cmd_count; i++)
     {
         waitpid(pids[i], &status, 0);
@@ -144,86 +184,48 @@ bool exec_pipe(t_data *data)
     }
     
     free(pids);
-    return (TRUE);
+    return TRUE;
 }
-
 
 bool exec_cmd(t_data *data, t_command *cmd)
 {
-    pid_t pid;
-    int status, stdin_backup, stdout_backup;
-    t_command *current;
-    
-    current = cmd;
+    t_command *current = cmd;
     while (current && current->type != CMD)
     {
         if (handle_operator(current, current->next) == -1)
-            return (FALSE);
+            return FALSE;
         current = current->next;
     }
     
     if (!current || !current->args || !current->args[0])
-        return (FALSE);
+        return FALSE;
         
-    stdin_backup = dup(STDIN_FILENO);
-    stdout_backup = dup(STDOUT_FILENO);
-    if (stdin_backup == -1 || stdout_backup == -1)
-        return (FALSE);
-    
-    if (current->fd_in != STDIN_FILENO && dup2(current->fd_in, STDIN_FILENO) == -1)
+    if (ifbuiltin(current->args[0]))
     {
-        close(stdin_backup);
-        close(stdout_backup);
-        return (FALSE);
-    }
-    
-    if (current->fd_out != STDOUT_FILENO && dup2(current->fd_out, STDOUT_FILENO) == -1)
-    {
-        if (current->fd_in != STDIN_FILENO)
-            dup2(stdin_backup, STDIN_FILENO);
-        close(stdin_backup);
-        close(stdout_backup);
-        return (FALSE);
-    }
-    
-    if (ifbuiltin(current->args[0]) == TRUE)
-    {
+        if (!setup_redirections(current))
+            return FALSE;
+            
         exect_builtin(current->args, data);
-        status = g_exit_value;
+        cleanup_redirections(current);
+        return TRUE;
     }
-    else
+    
+    pid_t pid = fork();
+    if (pid == -1)
+        return FALSE;
+        
+    if (pid == 0)
     {
-        pid = fork();
-        if (pid == -1)
-        {
-            dup2(stdin_backup, STDIN_FILENO);
-            dup2(stdout_backup, STDOUT_FILENO);
-            close(stdin_backup);
-            close(stdout_backup);
-            return (FALSE);
-        }
-        
-        if (pid == 0)
-        {
-            close(stdin_backup);
-            close(stdout_backup);
-            exec_all(current->args, data);
-        }
-        
-        waitpid(pid, &status, 0);
-        if (WIFEXITED(status))
-            g_exit_value = WEXITSTATUS(status);
+        if (!setup_redirections(current))
+            exit(1);
+        exec_all(current->args, data);
     }
     
-    if (current->fd_in != STDIN_FILENO)
-        close(current->fd_in);
-    if (current->fd_out != STDOUT_FILENO)
-        close(current->fd_out);
-    
-    dup2(stdin_backup, STDIN_FILENO);
-    dup2(stdout_backup, STDOUT_FILENO);
-    close(stdin_backup);
-    close(stdout_backup);
-    
-    return (TRUE);
+    int status;
+    waitpid(pid, &status, 0);
+    if (WIFEXITED(status))
+        g_exit_value = WEXITSTATUS(status);
+        
+    cleanup_redirections(current);
+    return TRUE;
 }
