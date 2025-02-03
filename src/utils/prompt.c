@@ -1,6 +1,6 @@
 #include "../../include/minishell.h"
 
-char  *get_prompt(void)
+char  *get_prompt(t_data *data)
 {
   char  *prompt;
   char  *current_dir;
@@ -22,6 +22,7 @@ char  *get_prompt(void)
   prompt = ft_strjoin(prompt, "\033[0m");
   prompt = ft_strjoin(prompt, current_dir);
   prompt = ft_strjoin(prompt, "$ ");
+  data->user = user;
   return (prompt);
 }
 

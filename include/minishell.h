@@ -92,7 +92,7 @@ void  list_path_setup(t_data *data);
 void  signal_setup(void);
 bool  emptyline(char *line);
 void  print_prompt(void);
-char  *get_prompt(void);
+char  *get_prompt(t_data *data);
 
 //utils
 int     tablen(char **tab);
@@ -105,14 +105,14 @@ bool    other_cmd(t_token *token);
 t_token  *next_cmd(t_token *token);
 
 //built-in
-void	 echo_command(char **args);
+void	 echo_command(char **args, t_data *data);
 void	 cd_command(char **args, t_data *data);
 bool   do_var_exist(t_data *data, char *var);
 void	 export_command(char **args, t_data *data);
 void   unset_command(char **args, t_data *data);
 void	 free_env(t_env *env);
 void   pwd_command(void);
-void	 exit_command(void);
+void	 exit_command(t_data *data);
 void   env_command(char **args, t_data *data);
 
 //quote
@@ -156,6 +156,9 @@ int	count_replace(char *str);
 int next_dollar(char *str);
 int is_exitcode(char *str);
 char *replace_exitcode(char *str);
+void clear_tab(char **tab);
+void clear_2tab(char ***tab);
+int ft_strtablen(char ***tab);
 
 
 //Exec

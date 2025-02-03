@@ -22,7 +22,8 @@ SRCS =	src/main.c \
 				src/utils/exec.c \
 				src/utils/clear.c \
 				src/list_utils/utils3.c \
-				src/utils/operator.c
+				src/utils/operator.c \
+				src/utils/free_utils.c
 OBJS = $(SRCS:.c=.o)
 NAME = minishell
 

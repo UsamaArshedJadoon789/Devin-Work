@@ -3,7 +3,7 @@
 bool exect_builtin(char **args, t_data *data)
 {
 	if (ft_strncmp(args[0], "echo", 4) == 0)
-		echo_command(args);
+		echo_command(args, data);
 	else if (ft_strncmp(args[0], "cd", 2) == 0)
 		cd_command(args, data);
 	else if (ft_strncmp(args[0], "pwd", 3) == 0)
@@ -15,7 +15,7 @@ bool exect_builtin(char **args, t_data *data)
 	else if (ft_strncmp(args[0], "env", 3) == 0)
 		env_command(args, data);
 	else if (ft_strncmp(args[0], "exit", 4) == 0)
-		exit_command();
+		exit_command(data);
 	return (FALSE);
 }
 
