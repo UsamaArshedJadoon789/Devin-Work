@@ -51,24 +51,30 @@ typedef struct s_token {
 
 // typedef struct s_data 
 
+typedef struct s_command {
+    char **args;
+    int type;        // CMD, PIPE, REDIR_IN, REDIR_OUT, etc.
+    int fd_in;
+    int fd_out;
+    struct s_command *next;
+} t_command;
+
 typedef struct s_data {
-  struct s_env  *env;
-  int     fd_in;
-  int     fd_out;
-  char    *user;
-  bool    *dq;
-  bool    *sq;
-  int     p_index;
-  char    *minishell_path;
-  char    **path;
-  int     nb_path;
-  char    **list_path;
-  struct s_list *cmd;
-  struct s_token *token;
-  char           ***args;
-  int     pipe_nbr;
-  int     id_pipe;
-  int     pipe[2];
+    struct s_env *env;
+    int fd_in;
+    int fd_out;
+    char *user;
+    bool *dq;
+    bool *sq;
+    int p_index;
+    char *minishell_path;
+    char **path;
+    int nb_path;
+    char **list_path;
+    struct s_list *cmd;
+    struct s_token *token;
+    t_command *commands;
+    int pipe[2];
 }      t_data;
 
 //typedef struct s_env
@@ -158,15 +164,18 @@ int is_exitcode(char *str);
 char *replace_exitcode(char *str);
 
 
+//Command management
+t_command *create_command(char **args, int type);
+void add_command(t_command **head, t_command *new_cmd);
+void clear_commands(t_command **head);
+
 //Exec
 bool task_cmd(t_data *data);
-bool	exec_cmd(t_data *data, char ***tab);
-bool 	exec_pipe(t_data *data, char ***tab);
+bool exec_cmd(t_data *data, t_command *cmd);
+bool exec_pipe(t_data *data);
 
 //Operator
-int	ft_trunc(char **args);
-int	ft_append(char **args);
-int operator_choice(char **tab, int *fd);
+int handle_operator(t_command *cmd, t_command *next);
 
 
 # define INPUT 1    //"<"
