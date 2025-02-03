@@ -1,31 +1,6 @@
 #include "../../include/minishell.h"
 
-bool	check_allcmd(char *cmd, t_data *data, t_token *it)
-{
-	char	**tab_path;
-	char	*path;
-	char	*temp;
-	int		i;
-
-	tab_path = data->list_path;
-	i = 0;
-	while (tab_path[i])
-	{
-		temp = ft_strdup(tab_path[i]);
-		path = ft_strjoin(temp, "/");
-		free(temp);
-		temp = ft_strjoin(path, cmd);
-		free(path);
-		if (access(temp, X_OK) == 0)
-		{
-			it->path = temp;
-			return (TRUE);
-		}
-		free(temp);
-		i++;
-	}
-	return (FALSE);
-}
+// Function moved to check_allcmd.c
 
 bool	check_builtin(char *cmd, t_token *it, t_data *data)
 {
@@ -38,8 +13,15 @@ bool	check_builtin(char *cmd, t_token *it, t_data *data)
 		it->builtins = 1;
 		return (TRUE);
 	}
-	else if (check_allcmd(cmd, data, it) == TRUE)
+	else if (check_allcmd(cmd, data) == TRUE)
+	{
+		char *temp = ft_strdup(cmd);
+		if (temp)
+			it->path = temp;
+		else
+			return (FALSE);
 		return (TRUE);
+	}
 	else
 	{
 		printf("\033[0;36mminicoque \033[0;0m: \033[0;31mcommand not \

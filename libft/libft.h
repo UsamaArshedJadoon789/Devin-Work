@@ -16,6 +16,7 @@
 # include <stdlib.h>
 
 int		ft_atoi(const char *str);
+long long	ft_atoll(const char *str);
 int		ft_isprint(int c);
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
@@ -35,6 +36,7 @@ int		ft_memcmp(const void *f, const void *s, size_t n);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strncmp(const char *f, const char *s, size_t size);
+int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strnstr(const char *str, const char *srch, size_t n);
 void	*ft_calloc(size_t nm, size_t n);
 char	*ft_strdup(const char *s);
@@ -51,14 +53,15 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-int	ft_strcount(char const *s1, char c);
+int		ft_strcount(char const *s1, char c);
 char	*ft_strstr(const char *str, const char *srch);
 
-typedef struct s_list {
-	char *str;
-	struct s_list *prev;
-	struct s_list *next;
-} t_list;
+typedef struct s_list
+{
+	char				*str;
+	struct s_list		*prev;
+	struct s_list		*next;
+}									t_list;
 
 t_list	*ft_lstnew(char *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
