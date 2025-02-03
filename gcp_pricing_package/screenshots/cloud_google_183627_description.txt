@@ -1,0 +1,6 @@
+Title: CSV Export Configuration
+
+Technical Description:
+- Detailed cost breakdown export in CSV format for analysis
+- Itemized listing of all services and their associated costs
+- Monthly cost projections with service-specific details

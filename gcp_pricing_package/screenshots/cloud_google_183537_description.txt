@@ -1,0 +1,6 @@
+Title: Service Configuration Overview
+
+Technical Description:
+- Comprehensive view of all configured GCP services and their individual costs
+- N1-standard-4 instance configuration with 5000 GiB Standard Storage
+- Enterprise MySQL database with high availability configuration

@@ -1,0 +1,6 @@
+Title: Share Estimate Dialog
+
+Technical Description:
+- Shareable cost estimate with detailed service breakdowns
+- Export options including CSV download for detailed analysis
+- Disclaimer about estimated fees for discussion purposes
