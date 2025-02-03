@@ -199,6 +199,17 @@ def create_ieee_document():
     add_abstract(doc)
     add_table_of_contents(doc)
     
+    # Add introduction
+    doc.add_heading('I. Introduction', 1)
+    p = doc.add_paragraph()
+    p.add_run('Cloud infrastructure design and cost optimization have become critical considerations for organizations adopting cloud computing solutions [1]. This paper presents a comprehensive analysis of Google Cloud Platform (GCP) infrastructure design, focusing on compute resources, storage solutions, and associated pricing models. The study employs the GCP Pricing Calculator to develop detailed cost estimates for various service configurations while maintaining optimal performance and security standards [2].')
+    
+    p = doc.add_paragraph()
+    p.add_run('The increasing complexity of cloud deployments necessitates careful consideration of resource allocation, security implementations, and cost management strategies [3]. This work contributes to the field by providing a systematic approach to infrastructure planning that balances performance requirements with budget constraints. The analysis encompasses compute engine configurations, storage solutions, networking services, and additional GCP features that enhance system reliability and security [4].')
+    
+    p = doc.add_paragraph()
+    p.add_run('The remainder of this paper is organized as follows: Section II presents the infrastructure overview, Section III details the cost analysis, Section IV examines performance metrics, Section V discusses security implementation, Section VI provides optimization recommendations, Section VII outlines the implementation timeline, Section VIII covers monitoring and maintenance, and Section IX concludes the paper.')
+    
     # Import content generation functions
     from generate_content import (
         add_infrastructure_overview,
