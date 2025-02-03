@@ -98,13 +98,30 @@ bool  setup_tabarg(t_data *data)
 
 bool task_cmd(t_data *data)
 {
-  if (!check_cmd(data))
-    return (FALSE);
-  if (!setup_tabarg(data))
-    return (FALSE);
-  if (data->pipe_nbr == 0 && !exec_cmd(data, data->args))
-    return (FALSE);
-  if (data->pipe_nbr != 0 && !exec_pipe(data, data->args))
-    return (FALSE);
-  return (TRUE);
+    t_token *token;
+    t_command *cmd;
+    
+    if (!check_cmd(data))
+        return (FALSE);
+        
+    token = data->token;
+    data->commands = NULL;
+    
+    while (token)
+    {
+        if (token->type == CMD || token->type == PIPE || 
+            token->type == TRUNC || token->type == APPEND || 
+            token->type == INPUT || token->type == HEREDOC)
+        {
+            cmd = create_command(token->arg, token->type);
+            if (!cmd)
+                return (FALSE);
+            add_command(&data->commands, cmd);
+        }
+        token = token->next;
+    }
+    
+    if (data->pipe_nbr == 0)
+        return (exec_cmd(data, data->commands));
+    return (exec_pipe(data));
 }
