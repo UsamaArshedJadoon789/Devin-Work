@@ -47,12 +47,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        Welcome! I'm a seasoned Software QA Lead at Zigron with 7+ years in software quality management. 
-        Specializing in Agile methodologies, I ensure flawless software delivery through strategic quality 
-        assurance practices. I'm proficient in test automation, performance testing, and penetration testing, 
-        leveraging tools like JMeter, Cypress, and Playwright for web and AWS IoT Core app testing. 
-        With a BSCS degree and certifications in web development and security, I'm committed to 
-        exceeding expectations through collaboration and continuous learning.
+        As a Software QA Lead with over 7 years of experience, I specialize in architecting test automation 
+        frameworks and implementing enterprise-level quality assurance strategies. My expertise spans automated 
+        testing, performance optimization, and security testing, with a proven track record of reducing testing 
+        cycles by 70% and improving product quality by 45%. I lead a team of 8 QA engineers, implementing 
+        cutting-edge testing solutions for web and IoT applications while maintaining 90% test coverage through 
+        robust CI/CD pipelines. Certified in Agile methodologies and test automation, I'm passionate about 
+        driving innovation in software quality assurance.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

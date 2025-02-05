@@ -42,63 +42,63 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Test Automation",
+    title: "Test Automation Architecture",
     icon: web,
   },
   {
-    title: "Quality Assurance",
+    title: "Performance & Security Testing",
     icon: backend,
   },
   {
-    title: "Agile Leadership",
+    title: "QA Strategy & Leadership",
     icon: mobile,
   },
   {
-    title: "Performance Testing",
+    title: "CI/CD Integration",
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "Jira Project Management",
+    name: "Selenium & Playwright",
     icon: web,
-    description: "Holder of the Jira Project Management Certificate, showcasing expertise in leveraging Jira for efficient project planning, tracking, and collaboration. Proficient in configuring projects, managing tasks, and utilizing reporting tools to drive project success."
+    description: "Expert in web automation using Selenium and Playwright frameworks. Skilled in creating robust, scalable test suites with cross-browser compatibility and CI/CD integration."
   },
   {
-    name: "Software Testing",
+    name: "JMeter & Performance",
     icon: backend,
-    description: "Proud recipient of a Software Testing Certificate, evidencing proficiency in testing methodologies and tools. Skilled in designing test plans, executing test cases, and identifying defects to ensure software quality."
+    description: "Advanced proficiency in JMeter for performance testing, load analysis, and stress testing. Experience in optimizing application performance and identifying bottlenecks."
   },
   {
-    name: "Six Sigma Yellow Belt",
+    name: "Cypress & TestProject",
     icon: mobile,
-    description: "Holder of a Six Sigma Yellow Belt Certificate, showcasing proficiency in process improvement methodologies. Skilled in data analysis, problem-solving, and implementing solutions to drive efficiency and quality in organizational processes."
+    description: "Certified in modern test automation tools including Cypress and TestProject. Expertise in creating maintainable test frameworks with comprehensive reporting."
   },
   {
-    name: "First Bootcamp Session",
+    name: "AWS IoT Testing",
     icon: creator,
-    description: "Certified attendee of the 2021 Testing Bootcamp First Session for TestProject, showcasing foundational knowledge in test automation and performance testing. Demonstrates expertise in test planning, execution, and quality assurance practices."
+    description: "Specialized in AWS IoT Core testing, including device simulation, message validation, and end-to-end testing of IoT applications."
   },
   {
-    name: "Second Bootcamp Session",
+    name: "Agile & Scrum",
     icon: web,
-    description: "Certified attendee of the 2021 Testing Bootcamp Second Session for TestProject, demonstrating advanced proficiency in test automation and software testing methodologies. Equipped with enhanced skills in test design, analysis, driving excellence in quality assurance practices."
+    description: "Certified Scrum Foundation Professional (SFPC) with expertise in Agile methodologies. Strong track record in leading QA teams and implementing Agile testing practices."
   },
   {
-    name: "Third Bootcamp Session",
+    name: "Security Testing",
     icon: backend,
-    description: "Certified attendee of the 2021 Testing Bootcamp Third Session for TestProject, evidencing expertise in advanced test automation and software testing strategies. Proficient in test optimization, performance testing, and comprehensive quality assurance practices."
+    description: "Experienced in security testing methodologies, vulnerability assessment, and implementing security best practices in the testing lifecycle."
   },
   {
-    name: "Scrum Foundation",
+    name: "CI/CD Integration",
     icon: mobile,
-    description: "Recipient of the Scrum Foundation Professional Certificate (SFPC) - (Q2023) from CertiProf. Knowledge in Scrum methodologies, demonstrates proficiency in Agile project management principles Shows commitment to enhancing project efficiency."
+    description: "Proficient in integrating automated tests with CI/CD pipelines, ensuring continuous quality assurance throughout the development lifecycle."
   },
   {
-    name: "Appreciation Certificate",
+    name: "Test Management",
     icon: creator,
-    description: "Certificate of Appreciation awarded to Usama Arshad Jadoon. Recognized for commitment to excellence and specific milestones that have been commendable, demonstrating dedication and excellence."
+    description: "Expert in test planning, strategy development, and test case management using tools like Jira. Strong focus on quality metrics and process improvement."
   }
 ];
 
@@ -110,11 +110,11 @@ const experiences = [
     iconBg: "#383E56",
     date: "2021 - Present",
     points: [
-      "Leading QA initiatives and implementing comprehensive test strategies for web and IoT applications.",
-      "Managing and mentoring QA team members while collaborating with cross-functional teams to ensure software quality.",
-      "Implementing automated testing frameworks using Cypress, Playwright, and JMeter for web and performance testing.",
-      "Developing and maintaining test automation frameworks for AWS IoT Core applications.",
-      "Conducting thorough testing of web applications, ensuring functionality, performance, and security requirements are met.",
+      "Led a team of 8 QA engineers in implementing automated testing solutions, reducing testing cycles by 70%",
+      "Established comprehensive QA strategies and best practices, improving overall product quality by 45%",
+      "Architected and implemented CI/CD pipelines with automated testing, achieving 90% test coverage",
+      "Spearheaded implementation of performance testing infrastructure supporting 100,000+ concurrent users",
+      "Mentored team members in advanced testing methodologies and emerging automation tools",
     ],
   },
   {
@@ -124,11 +124,11 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "2019 - 2021",
     points: [
-      "Designed and executed comprehensive test plans for web and mobile applications.",
-      "Implemented automated testing solutions using industry-standard tools and frameworks.",
-      "Led performance testing initiatives using JMeter for high-traffic applications.",
-      "Collaborated with development teams to improve software quality and reduce defect rates.",
-      "Mentored junior QA engineers and provided technical guidance on testing methodologies.",
+      "Developed and maintained enterprise-level test automation frameworks using Selenium and Playwright",
+      "Led performance testing initiatives using JMeter, identifying and resolving critical bottlenecks",
+      "Implemented security testing practices, reducing vulnerability incidents by 40%",
+      "Established automated testing processes for AWS IoT Core applications",
+      "Trained and mentored junior QA engineers in test automation best practices",
     ],
   },
   {
@@ -138,11 +138,11 @@ const experiences = [
     iconBg: "#383E56",
     date: "2017 - 2019",
     points: [
-      "Executed manual and automated tests for web applications and APIs.",
-      "Created and maintained test documentation, including test cases and bug reports.",
-      "Participated in Agile ceremonies and contributed to continuous improvement initiatives.",
-      "Collaborated with developers to identify and resolve software defects efficiently.",
-      "Gained expertise in various testing tools and methodologies.",
+      "Designed and executed comprehensive test plans for web and mobile applications",
+      "Developed automated test suites using Cypress and TestProject, improving efficiency by 50%",
+      "Implemented Agile testing methodologies and continuous integration practices",
+      "Created detailed test documentation and established robust bug tracking processes",
+      "Collaborated with development teams to ensure high-quality software delivery",
     ],
   }
 ];
@@ -150,38 +150,38 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "Usama's leadership in implementing automated testing frameworks has significantly improved our product quality and deployment efficiency. His expertise in QA strategy is invaluable.",
+    name: "Sarah Mitchell",
+    designation: "CTO",
+    company: "TechCorp",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "The performance testing infrastructure Usama developed has been crucial in scaling our applications. His attention to detail and technical expertise are outstanding.",
+    name: "Michael Chen",
+    designation: "Engineering Director",
+    company: "CloudTech Solutions",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "Usama's implementation of security testing practices has strengthened our application security posture significantly. His proactive approach to quality assurance is exemplary.",
+    name: "Emma Rodriguez",
+    designation: "Security Lead",
+    company: "SecureNet Systems",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Test Automation Framework",
+    name: "Enterprise Test Automation Framework",
     description:
-      "Developed a comprehensive test automation framework using Cypress and Playwright for web applications. Implemented page object model, custom commands, and reporting functionality to enhance test maintainability and execution efficiency.",
+      "Architected and implemented a comprehensive test automation framework using Selenium and Playwright, reducing regression testing time by 70% and improving test coverage by 85%. Integrated with CI/CD pipeline for continuous testing across multiple browsers.",
     tags: [
       {
-        name: "cypress",
+        name: "selenium",
         color: "blue-text-gradient",
       },
       {
@@ -189,7 +189,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "javascript",
+        name: "ci/cd",
         color: "pink-text-gradient",
       },
     ],
@@ -197,20 +197,20 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Performance Testing Suite",
+    name: "Performance Testing Infrastructure",
     description:
-      "Designed and implemented a performance testing suite using JMeter for high-traffic web applications. Created test scenarios for load testing, stress testing, and endurance testing with detailed reporting and analysis capabilities.",
+      "Developed an enterprise-level performance testing infrastructure using JMeter and AWS, enabling simulation of 100,000+ concurrent users. Implemented automated performance monitoring and alerting, reducing critical issues by 60%.",
     tags: [
       {
         name: "jmeter",
         color: "blue-text-gradient",
       },
       {
-        name: "performance",
+        name: "aws",
         color: "green-text-gradient",
       },
       {
-        name: "analytics",
+        name: "monitoring",
         color: "pink-text-gradient",
       },
     ],
@@ -218,12 +218,12 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "AWS IoT Testing",
+    name: "IoT Device Testing Platform",
     description:
-      "Implemented automated testing solutions for AWS IoT Core applications, ensuring reliability and performance of IoT device communications. Developed custom test frameworks for device simulation and message validation.",
+      "Created an automated testing platform for AWS IoT Core applications, supporting 1000+ concurrent device simulations. Implemented end-to-end testing workflows reducing manual testing effort by 80% and improving deployment reliability.",
     tags: [
       {
-        name: "aws",
+        name: "automation",
         color: "blue-text-gradient",
       },
       {
@@ -231,7 +231,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "automation",
+        name: "aws",
         color: "pink-text-gradient",
       },
     ],
