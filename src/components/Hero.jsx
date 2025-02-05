@@ -19,8 +19,8 @@ const Hero = () => {
             Hi, I'm <span className='text-[#915EFF]'>Usama Arshad Jadoon</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I ensure software excellence through <br className='sm:block hidden' />
-            strategic QA leadership and automation
+            Senior QA Automation Engineer specializing in <br className='sm:block hidden' />
+            test frameworks and quality excellence
           </p>
         </div>
       </div>

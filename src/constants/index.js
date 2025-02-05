@@ -61,44 +61,34 @@ const services = [
 
 const technologies = [
   {
-    name: "Selenium & Playwright",
+    name: "Test Automation",
     icon: web,
-    description: "Expert in web automation using Selenium and Playwright frameworks. Skilled in creating robust, scalable test suites with cross-browser compatibility and CI/CD integration."
+    description: "Expert in Selenium, Playwright, and Cypress for web automation. Created frameworks reducing testing time by 70% and achieving 85% coverage across platforms."
   },
   {
-    name: "JMeter & Performance",
+    name: "Performance Testing",
     icon: backend,
-    description: "Advanced proficiency in JMeter for performance testing, load analysis, and stress testing. Experience in optimizing application performance and identifying bottlenecks."
-  },
-  {
-    name: "Cypress & TestProject",
-    icon: mobile,
-    description: "Certified in modern test automation tools including Cypress and TestProject. Expertise in creating maintainable test frameworks with comprehensive reporting."
-  },
-  {
-    name: "AWS IoT Testing",
-    icon: creator,
-    description: "Specialized in AWS IoT Core testing, including device simulation, message validation, and end-to-end testing of IoT applications."
-  },
-  {
-    name: "Agile & Scrum",
-    icon: web,
-    description: "Certified Scrum Foundation Professional (SFPC) with expertise in Agile methodologies. Strong track record in leading QA teams and implementing Agile testing practices."
+    description: "JMeter specialist for load testing and performance analysis. Implemented infrastructure supporting 100K+ concurrent users with automated monitoring."
   },
   {
     name: "Security Testing",
-    icon: backend,
-    description: "Experienced in security testing methodologies, vulnerability assessment, and implementing security best practices in the testing lifecycle."
+    icon: mobile,
+    description: "OWASP ZAP implementation reducing vulnerabilities by 40%. Expert in security best practices, compliance testing, and threat modeling."
   },
   {
     name: "CI/CD Integration",
-    icon: mobile,
-    description: "Proficient in integrating automated tests with CI/CD pipelines, ensuring continuous quality assurance throughout the development lifecycle."
+    icon: creator,
+    description: "Jenkins, GitLab CI, Azure DevOps expertise. Achieved 90% test coverage through automated pipeline integration and continuous testing."
   },
   {
     name: "Test Management",
-    icon: creator,
-    description: "Expert in test planning, strategy development, and test case management using tools like Jira. Strong focus on quality metrics and process improvement."
+    icon: web,
+    description: "JIRA and TestRail expert for comprehensive test case management. Led implementation of efficient test tracking and reporting systems."
+  },
+  {
+    name: "AWS IoT Testing",
+    icon: backend,
+    description: "Specialized in AWS IoT Core testing with 1000+ concurrent device simulations. Reduced manual testing effort by 80% through automation."
   }
 ];
 
@@ -176,9 +166,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Enterprise Test Automation Framework",
+    name: "Enterprise Test Framework",
     description:
-      "Architected and implemented a comprehensive test automation framework using Selenium and Playwright, reducing regression testing time by 70% and improving test coverage by 85%. Integrated with CI/CD pipeline for continuous testing across multiple browsers.",
+      "Designed and implemented comprehensive test automation framework using Selenium and Playwright. Reduced regression testing time by 70%, improved coverage to 85%, integrated with CI/CD pipeline for continuous testing across multiple environments.",
     tags: [
       {
         name: "selenium",
@@ -189,7 +179,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "ci/cd",
+        name: "jenkins",
         color: "pink-text-gradient",
       },
     ],
@@ -197,45 +187,45 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Performance Testing Infrastructure",
+    name: "AWS IoT Testing Suite",
     description:
-      "Developed an enterprise-level performance testing infrastructure using JMeter and AWS, enabling simulation of 100,000+ concurrent users. Implemented automated performance monitoring and alerting, reducing critical issues by 60%.",
+      "Developed automated testing platform for AWS IoT Core applications. Supports 1000+ concurrent device simulations, reduced manual testing by 80%, improved deployment reliability through automated end-to-end testing workflows.",
+    tags: [
+      {
+        name: "aws",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "automation",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: mobile,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Performance Testing Platform",
+    description:
+      "Built enterprise-level performance testing infrastructure using JMeter and AWS. Enabled simulation of 100,000+ concurrent users with automated monitoring and alerting, reducing critical performance issues by 60%.",
     tags: [
       {
         name: "jmeter",
         color: "blue-text-gradient",
       },
       {
-        name: "aws",
+        name: "monitoring",
         color: "green-text-gradient",
       },
       {
-        name: "monitoring",
+        name: "ci/cd",
         color: "pink-text-gradient",
       },
     ],
     image: backend,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "IoT Device Testing Platform",
-    description:
-      "Created an automated testing platform for AWS IoT Core applications, supporting 1000+ concurrent device simulations. Implemented end-to-end testing workflows reducing manual testing effort by 80% and improving deployment reliability.",
-    tags: [
-      {
-        name: "automation",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "iot",
-        color: "green-text-gradient",
-      },
-      {
-        name: "aws",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: mobile,
     source_code_link: "https://github.com/",
   },
 ];
