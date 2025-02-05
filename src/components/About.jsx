@@ -47,11 +47,12 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        Welcome! I'm a seasoned Software QA Lead at Zigron with 7+ years in software quality management. 
+        Specializing in Agile methodologies, I ensure flawless software delivery through strategic quality 
+        assurance practices. I'm proficient in test automation, performance testing, and penetration testing, 
+        leveraging tools like JMeter, Cypress, and Playwright for web and AWS IoT Core app testing. 
+        With a BSCS degree and certifications in web development and security, I'm committed to 
+        exceeding expectations through collaboration and continuous learning.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

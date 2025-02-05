@@ -42,131 +42,109 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Test Automation",
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
+    title: "Quality Assurance",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Agile Leadership",
+    icon: mobile,
+  },
+  {
+    title: "Performance Testing",
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Jira Project Management",
+    icon: web,
+    description: "Holder of the Jira Project Management Certificate, showcasing expertise in leveraging Jira for efficient project planning, tracking, and collaboration. Proficient in configuring projects, managing tasks, and utilizing reporting tools to drive project success."
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "Software Testing",
+    icon: backend,
+    description: "Proud recipient of a Software Testing Certificate, evidencing proficiency in testing methodologies and tools. Skilled in designing test plans, executing test cases, and identifying defects to ensure software quality."
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Six Sigma Yellow Belt",
+    icon: mobile,
+    description: "Holder of a Six Sigma Yellow Belt Certificate, showcasing proficiency in process improvement methodologies. Skilled in data analysis, problem-solving, and implementing solutions to drive efficiency and quality in organizational processes."
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "First Bootcamp Session",
+    icon: creator,
+    description: "Certified attendee of the 2021 Testing Bootcamp First Session for TestProject, showcasing foundational knowledge in test automation and performance testing. Demonstrates expertise in test planning, execution, and quality assurance practices."
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "Second Bootcamp Session",
+    icon: web,
+    description: "Certified attendee of the 2021 Testing Bootcamp Second Session for TestProject, demonstrating advanced proficiency in test automation and software testing methodologies. Equipped with enhanced skills in test design, analysis, driving excellence in quality assurance practices."
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Third Bootcamp Session",
+    icon: backend,
+    description: "Certified attendee of the 2021 Testing Bootcamp Third Session for TestProject, evidencing expertise in advanced test automation and software testing strategies. Proficient in test optimization, performance testing, and comprehensive quality assurance practices."
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Scrum Foundation",
+    icon: mobile,
+    description: "Recipient of the Scrum Foundation Professional Certificate (SFPC) - (Q2023) from CertiProf. Knowledge in Scrum methodologies, demonstrates proficiency in Agile project management principles Shows commitment to enhancing project efficiency."
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+    name: "Appreciation Certificate",
+    icon: creator,
+    description: "Certificate of Appreciation awarded to Usama Arshad Jadoon. Recognized for commitment to excellence and specific milestones that have been commendable, demonstrating dedication and excellence."
+  }
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Software QA Lead",
+    company_name: "Zigron",
+    icon: web,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "2021 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Leading QA initiatives and implementing comprehensive test strategies for web and IoT applications.",
+      "Managing and mentoring QA team members while collaborating with cross-functional teams to ensure software quality.",
+      "Implementing automated testing frameworks using Cypress, Playwright, and JMeter for web and performance testing.",
+      "Developing and maintaining test automation frameworks for AWS IoT Core applications.",
+      "Conducting thorough testing of web applications, ensuring functionality, performance, and security requirements are met.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Senior QA Engineer",
+    company_name: "Zigron",
+    icon: mobile,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "2019 - 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed and executed comprehensive test plans for web and mobile applications.",
+      "Implemented automated testing solutions using industry-standard tools and frameworks.",
+      "Led performance testing initiatives using JMeter for high-traffic applications.",
+      "Collaborated with development teams to improve software quality and reduce defect rates.",
+      "Mentored junior QA engineers and provided technical guidance on testing methodologies.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "QA Engineer",
+    company_name: "Zigron",
+    icon: backend,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "2017 - 2019",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Executed manual and automated tests for web applications and APIs.",
+      "Created and maintained test documentation, including test cases and bug reports.",
+      "Participated in Agile ceremonies and contributed to continuous improvement initiatives.",
+      "Collaborated with developers to identify and resolve software defects efficiently.",
+      "Gained expertise in various testing tools and methodologies.",
     ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  }
 ];
 
 const testimonials = [
@@ -198,66 +176,66 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Test Automation Framework",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Developed a comprehensive test automation framework using Cypress and Playwright for web applications. Implemented page object model, custom commands, and reporting functionality to enhance test maintainability and execution efficiency.",
     tags: [
       {
-        name: "react",
+        name: "cypress",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "playwright",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "javascript",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: web,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Performance Testing Suite",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Designed and implemented a performance testing suite using JMeter for high-traffic web applications. Created test scenarios for load testing, stress testing, and endurance testing with detailed reporting and analysis capabilities.",
     tags: [
       {
-        name: "react",
+        name: "jmeter",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "performance",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "analytics",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: backend,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "AWS IoT Testing",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Implemented automated testing solutions for AWS IoT Core applications, ensuring reliability and performance of IoT device communications. Developed custom test frameworks for device simulation and message validation.",
     tags: [
       {
-        name: "nextjs",
+        name: "aws",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "iot",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "automation",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: mobile,
     source_code_link: "https://github.com/",
   },
 ];
