@@ -30,13 +30,13 @@ export const options = {
   thresholds: {
     http_req_duration: ['p(95)<5000'],    // 95% of requests should be below 5s
     http_req_failed: ['rate<0.1'],        // Less than 10% of requests should fail
-    errors: ['rate<0.1'],                 // Custom error rate should be below 10%
+    'checks{type:validation}': ['rate>0.9'],  // 90% of validation checks should pass
+    'checks{type:network}': ['rate>0.95']     // 95% of network checks should pass
   },
   // Add proper headers and cookies handling
-  cookies: {
-    secure: true,
-    sameSite: 'Strict'
-  }
+  discardResponseBodies: false,
+  noConnectionReuse: false,
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 };
 
 // Test data generators for company information
@@ -143,7 +143,7 @@ export default function () {
   };
 
   // Visit company-information page with realistic browser behavior
-  let company-informationResponse = http.get(`${BASE_URL}/company-information`, {
+  let companyInfoResponse = http.get(`${BASE_URL}/company-information`, {
     tags: { name: 'company-information_page' },
     headers: {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -160,53 +160,37 @@ export default function () {
     }
   });
 
-  check(company-informationResponse, {
+  check(companyInfoResponse, {
     'company-information page loaded': (r) => r.status === 200,
     'company-information page contains form': (r) => r.body.includes('form'),
-  }) || errorRate.add(1);
+  });
 
   // Add random think time to simulate user reading the page
   sleep(Math.random() * 5 + 2);
 
-  // Simulate realistic form filling behavior with selected test scenario
-  sleep(Math.random() * 2 + 1); // Time to start typing
-
-  const payload = new FormData();
+  // Simulate realistic form filling behavior
+  sleep(Math.random() * 2 + 1); // Time to start typing first field
   
-  // Use test scenario data
-  if (testData.commercialRegistry !== undefined && testData.commercialRegistry !== null) {
-    payload.append('commercialRegistry', testData.commercialRegistry.toString());
-  }
-  
-  sleep(Math.random() * 1.5 + 0.5); // Realistic delay between fields
-  
-  if (testData.expiryDate !== undefined && testData.expiryDate !== null) {
-    payload.append('expiryDate', testData.expiryDate);
-  }
-
-  // Add more realistic delay between field inputs
-  sleep(Math.random() * 1.5 + 0.5); // Time between fields
-
-  // Create JSON payload from test data
+  // Create JSON payload from test data with proper content type
   const payload = JSON.stringify(testData);
+  
+  // Add realistic delays between field inputs
+  sleep(Math.random() * 1.5 + 0.5); // Time between fields
 
   let submitResponse = http.post(`${BASE_URL}/company-information`, payload, {
     tags: { name: 'company-information_submit' },
     headers: {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
       'Accept-Language': 'en-US,en;q=0.5',
       'Accept-Encoding': 'gzip, deflate, br',
       'Connection': 'keep-alive',
-      'Upgrade-Insecure-Requests': '1',
-      'Sec-Fetch-Dest': 'document',
-      'Sec-Fetch-Mode': 'navigate',
-      'Sec-Fetch-Site': 'same-origin',
-      'Sec-Fetch-User': '?1',
       'Origin': BASE_URL,
-      'Referer': `${BASE_URL}/company-information`
+      'Referer': `${BASE_URL}/company-information`,
+      'X-Requested-With': 'XMLHttpRequest'
     },
-    cookies: company-informationResponse.cookies // Maintain session
+    cookies: companyInfoResponse.cookies // Maintain session
   });
 
   // Check company information submission response and track errors
