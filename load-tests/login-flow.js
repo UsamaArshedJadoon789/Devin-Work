@@ -30,12 +30,7 @@ export const options = {
   thresholds: {
     http_req_duration: ['p(95)<5000'],    // 95% of requests should be below 5s
     http_req_failed: ['rate<0.1'],        // Less than 10% of requests should fail
-    errors: ['rate<0.1'],                 // Custom error rate should be below 10%
-  },
-  // Add proper headers and cookies handling
-  cookies: {
-    secure: true,
-    sameSite: 'Strict'
+    'checks{type:login}': ['rate>0.9']    // Login checks should pass 90% of time
   }
 };
 
