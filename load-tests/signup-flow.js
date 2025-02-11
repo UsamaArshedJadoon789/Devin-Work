@@ -99,10 +99,9 @@ const testScenarios = {
     commercialRegistry: Math.random() > 0.5 ? undefined : null,
     expiryDate: Math.random() > 0.5 ? undefined : null
   })
-}
-  // Test configuration already defined above
 };
 
+// Base URL for all requests
 const BASE_URL = 'https://sandbox.uapi.sa';
 
 export function setup() {
