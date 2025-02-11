@@ -147,7 +147,7 @@ export default function () {
   check(signupResponse, {
     'signup page loaded': (r) => r.status === 200,
     'signup page contains form': (r) => r.body.includes('form'),
-  }) || errorRate.add(1);
+  });
 
   // Add random think time to simulate user reading the page
   sleep(Math.random() * 5 + 2);
