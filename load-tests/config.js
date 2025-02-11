@@ -42,6 +42,16 @@ export const CONFIG = {
       console: true,
       file: true,
       metrics: true
+    },
+    // Error thresholds (rate between 0 and 1)
+    thresholds: {
+      network: 0.1,    // 10% network errors allowed
+      auth: 0.05,      // 5% auth errors allowed
+      validation: 0.2,  // 20% validation errors allowed
+      concurrent: 0.1,  // 10% concurrent errors allowed
+      boundary: 0.15,   // 15% boundary errors allowed
+      overload: 0.1,    // 10% overload errors allowed
+      session: 0.05     // 5% session errors allowed
     }
   },
 
