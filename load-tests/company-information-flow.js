@@ -39,65 +39,81 @@ export const options = {
   }
 };
 
-// Test data generators for boundary and invalid cases
+// Test data generators for company information
 const generateTestData = {
-  // Boundary values for Commercial Registry
-  commercialRegistry: {
-    valid: () => Math.floor(1000000000 + Math.random() * 9000000000),
-    tooShort: () => Math.floor(100000 + Math.random() * 900000),
-    tooLong: () => '1'.repeat(20),
-    invalid: () => 'ABC12345',
+  companyName: {
+    valid: () => `Test Company ${Date.now()}`,
+    tooShort: () => 'Co',
+    tooLong: () => 'A'.repeat(256),
+    invalid: () => ['', '123', '@#$%', ' '.repeat(10)][Math.floor(Math.random() * 4)]
   },
-  // Boundary values for Expiry Date
-  expiryDate: {
-    valid: () => {
-      const date = new Date();
-      date.setFullYear(date.getFullYear() + 1);
-      return date.toISOString().split('T')[0];
-    },
-    past: () => {
-      const date = new Date();
-      date.setFullYear(date.getFullYear() - 1);
-      return date.toISOString().split('T')[0];
-    },
-    tooFarFuture: () => {
-      const date = new Date();
-      date.setFullYear(date.getFullYear() + 100);
-      return date.toISOString().split('T')[0];
-    },
-    invalid: () => 'not-a-date',
+  companyType: {
+    valid: () => ['LLC', 'Corporation', 'Partnership'][Math.floor(Math.random() * 3)],
+    invalid: () => ['', 'Invalid', '123', '@#$%'][Math.floor(Math.random() * 4)]
+  },
+  employeeCount: {
+    valid: () => Math.floor(10 + Math.random() * 990),
+    tooLow: () => Math.floor(0 + Math.random() * 5),
+    tooHigh: () => Math.floor(10000 + Math.random() * 90000),
+    invalid: () => ['', 'abc', '-10', '1.5'][Math.floor(Math.random() * 4)]
+  },
+  address: {
+    valid: () => `${Math.floor(1000 + Math.random() * 9000)} Test Street`,
+    tooShort: () => '123',
+    tooLong: () => 'A'.repeat(512),
+    invalid: () => ['', '@#$%', ' '.repeat(10)][Math.floor(Math.random() * 3)]
+  },
+  phone: {
+    valid: () => `+966${Math.floor(500000000 + Math.random() * 499999999)}`,
+    tooShort: () => '+9665000',
+    tooLong: () => '+966' + '0'.repeat(15),
+    invalid: () => ['', 'abc', '+123', '12345'][Math.floor(Math.random() * 4)]
   }
 };
 
-// Test scenarios
+// Test scenarios for company information
 const testScenarios = {
   valid: () => ({
-    commercialRegistry: generateTestData.commercialRegistry.valid(),
-    expiryDate: generateTestData.expiryDate.valid()
+    companyName: generateTestData.companyName.valid(),
+    companyType: generateTestData.companyType.valid(),
+    employeeCount: generateTestData.employeeCount.valid(),
+    address: generateTestData.address.valid(),
+    phone: generateTestData.phone.valid()
   }),
-  invalidRegistry: () => ({
-    commercialRegistry: generateTestData.commercialRegistry.invalid(),
-    expiryDate: generateTestData.expiryDate.valid()
+  invalidCompanyName: () => ({
+    companyName: generateTestData.companyName.invalid(),
+    companyType: generateTestData.companyType.valid(),
+    employeeCount: generateTestData.employeeCount.valid(),
+    address: generateTestData.address.valid(),
+    phone: generateTestData.phone.valid()
   }),
-  invalidDate: () => ({
-    commercialRegistry: generateTestData.commercialRegistry.valid(),
-    expiryDate: generateTestData.expiryDate.invalid()
+  invalidCompanyType: () => ({
+    companyName: generateTestData.companyName.valid(),
+    companyType: generateTestData.companyType.invalid(),
+    employeeCount: generateTestData.employeeCount.valid(),
+    address: generateTestData.address.valid(),
+    phone: generateTestData.phone.valid()
   }),
-  boundaryRegistry: () => ({
-    commercialRegistry: Math.random() > 0.5 ? 
-      generateTestData.commercialRegistry.tooShort() : 
-      generateTestData.commercialRegistry.tooLong(),
-    expiryDate: generateTestData.expiryDate.valid()
+  invalidEmployeeCount: () => ({
+    companyName: generateTestData.companyName.valid(),
+    companyType: generateTestData.companyType.valid(),
+    employeeCount: generateTestData.employeeCount.invalid(),
+    address: generateTestData.address.valid(),
+    phone: generateTestData.phone.valid()
   }),
-  boundaryDate: () => ({
-    commercialRegistry: generateTestData.commercialRegistry.valid(),
-    expiryDate: Math.random() > 0.5 ? 
-      generateTestData.expiryDate.past() : 
-      generateTestData.expiryDate.tooFarFuture()
+  boundaryValues: () => ({
+    companyName: Math.random() > 0.5 ? generateTestData.companyName.tooShort() : generateTestData.companyName.tooLong(),
+    companyType: generateTestData.companyType.valid(),
+    employeeCount: Math.random() > 0.5 ? generateTestData.employeeCount.tooLow() : generateTestData.employeeCount.tooHigh(),
+    address: Math.random() > 0.5 ? generateTestData.address.tooShort() : generateTestData.address.tooLong(),
+    phone: Math.random() > 0.5 ? generateTestData.phone.tooShort() : generateTestData.phone.tooLong()
   }),
   malformedRequest: () => ({
-    commercialRegistry: Math.random() > 0.5 ? undefined : null,
-    expiryDate: Math.random() > 0.5 ? undefined : null
+    companyName: Math.random() > 0.5 ? undefined : null,
+    companyType: Math.random() > 0.5 ? undefined : null,
+    employeeCount: Math.random() > 0.5 ? undefined : null,
+    address: Math.random() > 0.5 ? undefined : null,
+    phone: Math.random() > 0.5 ? undefined : null
   })
 };
 
@@ -112,7 +128,7 @@ export function setup() {
 export default function () {
   // Select test scenario randomly but weighted towards valid cases
   const scenarioType = Math.random() < 0.7 ? 'valid' : 
-    ['invalidRegistry', 'invalidDate', 'boundaryRegistry', 'boundaryDate', 'malformedRequest'][Math.floor(Math.random() * 5)];
+    ['invalidCompanyName', 'invalidCompanyType', 'invalidEmployeeCount', 'boundaryValues', 'malformedRequest'][Math.floor(Math.random() * 5)];
   
   const testData = testScenarios[scenarioType]();
   
@@ -171,7 +187,10 @@ export default function () {
   // Add more realistic delay between field inputs
   sleep(Math.random() * 1.5 + 0.5); // Time between fields
 
-  let submitResponse = http.post(`${BASE_URL}/company-information/registration`, payload, {
+  // Create JSON payload from test data
+  const payload = JSON.stringify(testData);
+
+  let submitResponse = http.post(`${BASE_URL}/company-information`, payload, {
     tags: { name: 'company-information_submit' },
     headers: {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -190,16 +209,17 @@ export default function () {
     cookies: company-informationResponse.cookies // Maintain session
   });
 
-  // Check form submission response and track errors
+  // Check company information submission response and track errors
   const checks = check(submitResponse, {
-    'form submission successful': (r) => r.status === 200 || r.status === 201 || r.status === 302,
+    'form submission handled': (r) => r.status === 200 || r.status === 302,
     'no server error': (r) => r.status < 500,
     'valid response body': (r) => r.body && r.body.length > 0,
-    'response contains expected fields': (r) => {
+    'response contains expected content': (r) => {
       try {
-        return r.body.includes('Company Information') || // Next step
-               r.body.includes('error') ||              // Error message
-               r.body.includes('success');              // Success message
+        return r.body.includes('National Address') ||   // Next step
+               r.body.includes('error') ||             // Error message
+               r.body.includes('invalid') ||           // Validation error
+               r.body.includes('success');             // Success message
       } catch (e) {
         return false;
       }
