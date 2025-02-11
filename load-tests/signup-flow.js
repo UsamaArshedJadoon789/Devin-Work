@@ -1,7 +1,7 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 import { SharedArray } from 'k6/data';
-import { errorTracker } from './error-tracking.js';
+import { errorTracker, errorCategories } from './error-tracking.js';
 import { CONFIG } from './config.js';
 
 // Session data store
@@ -30,7 +30,8 @@ export const options = {
   thresholds: {
     http_req_duration: ['p(95)<5000'],    // 95% of requests should be below 5s
     http_req_failed: ['rate<0.1'],        // Less than 10% of requests should fail
-    errors: ['rate<0.1'],                 // Custom error rate should be below 10%
+    'checks{type:validation}': ['rate>0.9'],  // 90% of validation checks should pass
+    'checks{type:network}': ['rate>0.95']     // 95% of network checks should pass
   },
   // Add proper headers and cookies handling
   cookies: {
@@ -144,10 +145,27 @@ export default function () {
     }
   });
 
-  check(signupResponse, {
+  const pageChecks = check(signupResponse, {
     'signup page loaded': (r) => r.status === 200,
     'signup page contains form': (r) => r.body.includes('form'),
   });
+
+  if (!pageChecks) {
+    errorTracker.trackError({
+      category: errorCategories.VALIDATION,
+      message: 'Signup page validation failed',
+      code: signupResponse.status
+    }, {
+      url: `${BASE_URL}/signup`,
+      method: 'GET',
+      data: null,
+      status: signupResponse.status,
+      responseTime: Date.now() - testContext.startTime,
+      sessionId: testContext.sessionId,
+      userAgent: signupResponse.request.headers['User-Agent'],
+      retryCount: 0
+    });
+  }
 
   // Add random think time to simulate user reading the page
   sleep(Math.random() * 5 + 2);
@@ -155,35 +173,24 @@ export default function () {
   // Simulate realistic form filling behavior with selected test scenario
   sleep(Math.random() * 2 + 1); // Time to start typing
 
-  const payload = new FormData();
-  
-  // Use test scenario data
-  if (testData.commercialRegistry !== undefined && testData.commercialRegistry !== null) {
-    payload.append('commercialRegistry', testData.commercialRegistry.toString());
-  }
-  
-  sleep(Math.random() * 1.5 + 0.5); // Realistic delay between fields
-  
-  if (testData.expiryDate !== undefined && testData.expiryDate !== null) {
-    payload.append('expiryDate', testData.expiryDate);
-  }
+  // Create JSON payload from test data
+  const payload = JSON.stringify({
+    commercialRegistry: testData.commercialRegistry?.toString(),
+    expiryDate: testData.expiryDate
+  });
 
-  // Add more realistic delay between field inputs
+  // Add realistic delay between field inputs
   sleep(Math.random() * 1.5 + 0.5); // Time between fields
 
   let submitResponse = http.post(`${BASE_URL}/signup/registration`, payload, {
     tags: { name: 'signup_submit' },
     headers: {
+      'Content-Type': 'application/json',
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+      'Accept': 'application/json',
       'Accept-Language': 'en-US,en;q=0.5',
       'Accept-Encoding': 'gzip, deflate, br',
       'Connection': 'keep-alive',
-      'Upgrade-Insecure-Requests': '1',
-      'Sec-Fetch-Dest': 'document',
-      'Sec-Fetch-Mode': 'navigate',
-      'Sec-Fetch-Site': 'same-origin',
-      'Sec-Fetch-User': '?1',
       'Origin': BASE_URL,
       'Referer': `${BASE_URL}/signup`
     },
@@ -209,9 +216,9 @@ export default function () {
   // Track response in error tracking system
   if (!checks) {
     const error = {
-      category: testContext.scenario.includes('invalid') ? 'validation' :
-                testContext.scenario.includes('boundary') ? 'boundary' :
-                testContext.scenario === 'malformedRequest' ? 'malformed' : 'network',
+      category: testContext.scenario.includes('invalid') ? errorCategories.VALIDATION :
+                testContext.scenario.includes('boundary') ? errorCategories.BOUNDARY :
+                testContext.scenario === 'malformedRequest' ? errorCategories.VALIDATION : errorCategories.NETWORK,
       message: `Form submission failed for scenario: ${testContext.scenario}`,
       code: submitResponse.status,
     };
@@ -249,17 +256,47 @@ export default function () {
 
   // If successful, maintain the session
   if (submitResponse.status === 302 || (submitResponse.status === 200 && submitResponse.body.includes('Company Information'))) {
-    // Store cookies for session persistence
-    const cookies = submitResponse.cookies;
-    // Add to shared data for maintaining session
-    const vuData = __VU ? { vu: __VU, cookies } : null;
-    if (vuData) {
-      let data = {};
-      try {
-        data = JSON.parse(SharedArray.toString());
-      } catch (e) {}
-      data[vuData.vu] = vuData.cookies;
-      SharedArray.fromString(JSON.stringify(data));
+    try {
+      const cookies = submitResponse.cookies;
+      const vuData = __VU ? { vu: __VU, cookies } : null;
+      if (vuData) {
+        let data = {};
+        try {
+          data = JSON.parse(SharedArray.toString());
+          data[vuData.vu] = vuData.cookies;
+          SharedArray.fromString(JSON.stringify(data));
+        } catch (e) {
+          errorTracker.trackError({
+            category: errorCategories.SESSION,
+            message: 'Failed to update session data',
+            code: 'SESSION_UPDATE_FAILED'
+          }, {
+            url: `${BASE_URL}/signup/registration`,
+            method: 'POST',
+            data: testData,
+            status: submitResponse.status,
+            responseTime: Date.now() - testContext.startTime,
+            sessionId: testContext.sessionId,
+            userAgent: submitResponse.request.headers['User-Agent'],
+            retryCount: 0
+          });
+        }
+      }
+    } catch (e) {
+      errorTracker.trackError({
+        category: errorCategories.SESSION,
+        message: 'Session management error',
+        code: 'SESSION_ERROR'
+      }, {
+        url: `${BASE_URL}/signup/registration`,
+        method: 'POST',
+        data: testData,
+        status: submitResponse.status,
+        responseTime: Date.now() - testContext.startTime,
+        sessionId: testContext.sessionId,
+        userAgent: submitResponse.request.headers['User-Agent'],
+        retryCount: 0
+      });
     }
   }
 }
