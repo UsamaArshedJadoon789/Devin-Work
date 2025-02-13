@@ -58,21 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-              ))}
-            </div>
-          </div>
-
-          {/* Video Editing */}
-          <div className="mb-32">
-            <h3 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">VIDEO EDITING</h3>
-            <p className="text-xl text-gray-600 mb-12 max-w-3xl">
-              Professional video editing services to enhance your visual content.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                "Video Post-Production",
-                "Color Correction",
-                "Sound Design",
                 "Motion Graphics",
                 "Visual Effects",
                 "Video Transitions",

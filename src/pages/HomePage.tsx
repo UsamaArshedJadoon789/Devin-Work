@@ -3,10 +3,10 @@ import { ServicesGrid } from "../components/sections/ServicesGrid"
 import { AboutSection } from "../components/sections/AboutSection"
 import { FeaturesBanner } from "../components/ui/FeaturesBanner"
 import { ContactForm } from "../components/ui/ContactForm"
-import { Fragment } from "react"
+import { Fragment, type ReactNode } from "react"
 import { Brain, Database, Code } from "lucide-react"
 
-export function HomePage() {
+export function HomePage(): ReactNode {
   return (
     <Fragment>
       <HeroSection
