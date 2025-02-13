@@ -1,5 +1,5 @@
 import { Fragment, type ReactNode } from "react"
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { Mail, Phone, MapPin, Clock, Users } from "lucide-react"
 import { ContactForm } from "../../components/ui/ContactForm"
 
 export function ContactPage(): ReactNode {
@@ -54,6 +54,37 @@ export function ContactPage(): ReactNode {
               <ContactForm />
             </div>
           </div>
+        </div>
+      </section>
+      <section className="bg-[#0A2647] text-white py-6 overflow-hidden whitespace-nowrap">
+        <div className="animate-scroll inline-flex items-center space-x-16">
+          {[
+            { text: "24/7 Support", icon: <Clock className="h-6 w-6" /> },
+            { text: "Fast Response", icon: <Mail className="h-6 w-6" /> },
+            { text: "Global Reach", icon: <MapPin className="h-6 w-6" /> },
+            { text: "Professional Team", icon: <Users className="h-6 w-6" /> }
+          ].map((feature, index) => (
+            <div key={index} className="inline-flex items-center space-x-3">
+              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                {feature.icon}
+              </div>
+              <span className="text-lg font-medium">{feature.text}</span>
+            </div>
+          ))}
+          {/* Duplicate for seamless scrolling */}
+          {[
+            { text: "24/7 Support", icon: <Clock className="h-6 w-6" /> },
+            { text: "Fast Response", icon: <Mail className="h-6 w-6" /> },
+            { text: "Global Reach", icon: <MapPin className="h-6 w-6" /> },
+            { text: "Professional Team", icon: <Users className="h-6 w-6" /> }
+          ].map((feature, index) => (
+            <div key={`duplicate-${index}`} className="inline-flex items-center space-x-3">
+              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                {feature.icon}
+              </div>
+              <span className="text-lg font-medium">{feature.text}</span>
+            </div>
+          ))}
         </div>
       </section>
     </Fragment>
