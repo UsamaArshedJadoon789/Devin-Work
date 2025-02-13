@@ -58,16 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-                  <span className="text-lg">Customized Solutions for Your Business</span>
-                </li>
-              </ul>
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 text-lg py-6 px-12 shadow-lg hover:shadow-xl transition-all duration-300">
-                GET STARTED
-              </Button>
-            </div>
-            <div className="hidden md:block">
-              {/* Placeholder for illustration */}
-              <div className="aspect-square bg-white/10 rounded-lg"></div>
             </div>
           </div>
         </div>

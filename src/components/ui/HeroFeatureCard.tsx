@@ -1,4 +1,4 @@
-import { Fragment, ReactNode } from "react"
+import { ReactNode } from "react"
 
 interface HeroFeatureCardProps {
   icon: ReactNode

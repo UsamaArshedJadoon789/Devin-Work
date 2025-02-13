@@ -1,6 +1,6 @@
 import { Database, Smartphone, Gamepad, LineChart, ShoppingCart, Video, Search, Briefcase, Brain, Code } from "lucide-react"
 import { ServiceCard } from "../ui/ServiceCard"
-import { Fragment } from "react"
+
 
 export function ServicesGrid() {
   const services = [

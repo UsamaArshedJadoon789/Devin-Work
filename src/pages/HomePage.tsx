@@ -4,18 +4,22 @@ import { AboutSection } from "../components/sections/AboutSection"
 import { FeaturesBanner } from "../components/ui/FeaturesBanner"
 import { ContactForm } from "../components/ui/ContactForm"
 import { Fragment } from "react"
+import { Brain, Database, Code } from "lucide-react"
 
 export function HomePage() {
   return (
     <Fragment>
-      <HeroSection />
+      <HeroSection
+        title="AUTOMATION IS A MUST FOR YOUR BRAND'S SUCCESS"
+        subtitle="Transform your business with our cutting-edge solutions"
+      />
       <ServicesGrid />
       <AboutSection />
       <FeaturesBanner
         features={[
-          { text: "AI-Driven Solution", icon: null },
-          { text: "High Security", icon: null },
-          { text: "Leading Code", icon: null }
+          { text: "AI-Driven Solution", icon: <Brain className="h-6 w-6" /> },
+          { text: "High Security", icon: <Database className="h-6 w-6" /> },
+          { text: "Leading Code", icon: <Code className="h-6 w-6" /> }
         ]}
       />
       <ContactForm />
@@ -24,14 +28,17 @@ export function HomePage() {
 export function HomePage() {
   return (
     <Fragment>
-      <HeroSection />
+      <HeroSection
+        title="AUTOMATION IS A MUST FOR YOUR BRAND'S SUCCESS"
+        subtitle="Transform your business with our cutting-edge solutions"
+      />
       <ServicesGrid />
       <AboutSection />
       <FeaturesBanner
         features={[
-          { text: "AI-Driven Solution", icon: null },
-          { text: "High Security", icon: null },
-          { text: "Leading Code", icon: null }
+          { text: "AI-Driven Solution", icon: <Brain className="h-6 w-6" /> },
+          { text: "High Security", icon: <Database className="h-6 w-6" /> },
+          { text: "Leading Code", icon: <Code className="h-6 w-6" /> }
         ]}
       />
       <ContactForm />
