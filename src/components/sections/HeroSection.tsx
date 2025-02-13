@@ -39,9 +39,10 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
           </div>
           <div className="hidden md:block relative">
             <div className="absolute -top-4 -right-4 w-full h-full bg-white/5 rounded-lg"></div>
-            <div className="relative aspect-square bg-white/10 rounded-lg"></div>
-            {/* Placeholder for hero illustration */}
-            <div className="aspect-square bg-white/10 rounded-lg"></div>
+            <div className="relative aspect-square bg-white/10 rounded-lg">
+              {/* Placeholder for hero illustration */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-lg"></div>
+            </div>
           </div>
         </div>
       </div>

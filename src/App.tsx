@@ -58,11 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <span className="text-lg">24/7 Customer Support</span>
-                </li>
-                <li className="flex items-center gap-4 bg-white/10 p-5 rounded-lg hover:bg-white/15 transition-colors">
-                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
                   <span className="text-lg">Customized Solutions for Your Business</span>
                 </li>
               </ul>
