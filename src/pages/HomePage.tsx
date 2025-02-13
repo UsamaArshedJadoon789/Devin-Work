@@ -3,6 +3,7 @@ import { ServiceCard } from "../components/ui/ServiceCard"
 import { FeaturesBanner } from "../components/ui/FeaturesBanner"
 import { ContactForm } from "../components/ui/ContactForm"
 import { Code, Smartphone, Gamepad, LineChart, ShoppingCart, Video, Search, Briefcase, Database, Brain } from "lucide-react"
+import { ReactNode } from "react"
 
 export function HomePage() {
   const services = [

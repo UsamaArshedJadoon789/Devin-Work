@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom"
 import { Footer } from "./Footer"
 import { Button } from "../ui/button"
 import { Menu } from "lucide-react"
+import { ReactNode } from "react"
 
 export function RootLayout() {
   return (
