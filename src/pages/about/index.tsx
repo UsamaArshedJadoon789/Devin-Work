@@ -1,4 +1,4 @@
-import React, { Fragment, type ReactNode } from "react"
+import { Fragment, type ReactNode } from "react"
 import { Lightbulb, Users, Target } from "lucide-react"
 
 export function AboutUsPage(): ReactNode {
