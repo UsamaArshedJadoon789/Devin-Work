@@ -2,7 +2,7 @@ import { HeroSection } from "../../components/sections/HeroSection"
 import { ServiceCard } from "../../components/ui/ServiceCard"
 import { FeaturesBanner } from "../../components/ui/FeaturesBanner"
 import { ContactForm } from "../../components/ui/ContactForm"
-import { Fragment, type ReactNode } from "react"
+import React, { Fragment, type ReactNode } from "react"
 import { Database, Settings, LineChart, Users, Shield, Cloud } from "lucide-react"
 
 export function ErpDevelopmentPage(): ReactNode {

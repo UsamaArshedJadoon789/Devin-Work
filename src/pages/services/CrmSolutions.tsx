@@ -5,7 +5,7 @@ import { ContactForm } from "../../components/ui/ContactForm"
 import { Fragment, type ReactNode } from "react"
 import { Users, Database, MessageSquare, BarChart, Settings, Mail } from "lucide-react"
 
-export function CrmSolutionsPage() {
+export function CrmSolutionsPage(): ReactNode {
   const services = [
     { title: "Contact Management", description: "Centralized customer data management", icon: <Users className="h-6 w-6" /> },
     { title: "Sales Automation", description: "Streamline sales processes and tasks", icon: <Database className="h-6 w-6" /> },
