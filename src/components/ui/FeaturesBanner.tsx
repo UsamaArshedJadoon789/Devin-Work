@@ -1,4 +1,3 @@
-import React from "react"
 import { Shield, Clock, Users, Trophy } from "lucide-react"
 
 export function FeaturesBanner() {
