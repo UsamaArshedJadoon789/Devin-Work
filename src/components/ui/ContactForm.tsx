@@ -2,8 +2,9 @@ import { Button } from "./button"
 import { Input } from "./input"
 import { Textarea } from "./textarea"
 import { Checkbox } from "./checkbox"
+import type { ReactNode } from "react"
 
-export function ContactForm() {
+export function ContactForm(): ReactNode {
   return (
     <form className="space-y-6 max-w-2xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-8">YOU HAVE REQUEST?</h2>

@@ -1,13 +1,11 @@
-import { HeroSection } from "../../components/ui/HeroSection"
 import { Fragment } from "react"
-import { Brain, Database, Code } from "lucide-react"
 import { HeroSection } from "../../components/sections/HeroSection"
 import { FeaturesBanner } from "../../components/ui/FeaturesBanner"
 import { ContactForm } from "../../components/ui/ContactForm"
 
 export function BrandingCreativePage() {
   return (
-    <>
+    <Fragment>
       <HeroSection
         title="BRANDING & CREATIVE"
         subtitle="Crafting impactful branding and creative solutions to elevate your business identity."
@@ -30,6 +28,6 @@ export function BrandingCreativePage() {
       <section className="py-20 bg-gray-50">
         <ContactForm />
       </section>
-    </>
+    </Fragment>
   )
 }
