@@ -58,36 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-                  <div className="text-5xl font-bold text-blue-400 mb-3">5+</div>
-                  <div className="text-lg">Years of Experience</div>
-                </div>
-                <div className="text-center p-6 bg-white/10 rounded-lg hover:bg-white/15 transition-colors">
-                  <div className="text-5xl font-bold text-blue-400 mb-3">500+</div>
-                  <div className="text-lg">Projects Completed</div>
-                </div>
-              </div>
-              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-blue-900 text-lg py-6 px-12">
-                Read More
-              </Button>
-            </div>
-            <div className="hidden md:block">
-              {/* Placeholder for about illustration */}
-              <div className="aspect-square bg-white/10 rounded-lg"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">OUR SERVICES</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Website Development",
-                description: "Create stunning and functional websites",
-                icon: <Database className="h-6 w-6 text-blue-600" />
               },
               {
                 title: "App Development",
