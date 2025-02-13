@@ -59,16 +59,6 @@ const router = createBrowserRouter([
 export default function App() {
   return <RouterProvider router={router} />
 }
-                "Custom Packaging Design",
-                "Listing Optimization",
-                "Keyword Research",
-                "Amazon Brand Registry",
-                "Fulfillment Setup",
-                "Advertising Campaigns",
-                "Inventory Management"
-              ].map((service, index) => (
-                <div key={index} className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
-                  <div className="flex items-center gap-4">
                     <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                     <p className="font-medium text-gray-700 text-lg">{service}</p>
                   </div>
