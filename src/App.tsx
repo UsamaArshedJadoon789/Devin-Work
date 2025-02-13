@@ -59,11 +59,6 @@ const router = createBrowserRouter([
 export default function App() {
   return <RouterProvider router={router} />
 }
-                    <p className="font-medium text-gray-700 text-lg">{service}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Amazon Private Label Services */}
