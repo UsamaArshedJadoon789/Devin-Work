@@ -1,4 +1,4 @@
-import { Fragment, type ReactNode } from "react"
+import React, { Fragment, type ReactNode } from "react"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { ContactForm } from "../../components/ui/ContactForm"
 

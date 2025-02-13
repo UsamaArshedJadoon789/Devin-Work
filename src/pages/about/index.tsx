@@ -90,4 +90,6 @@ export function AboutUsPage(): ReactNode {
       </section>
     </Fragment>
   )
+    </Fragment>
+  )
 }
