@@ -1,27 +1,37 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Button } from "../ui/button"
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
-    <header className="bg-[#0A2647] text-white py-6">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold tracking-wide">The Skyline Strategies</Link>
-        <nav className="hidden lg:flex items-center space-x-10">
-          <Link to="/" className="text-white hover:text-blue-200 transition-colors text-lg font-medium">Home</Link>
-          <Link to="/services" className="text-white hover:text-blue-200 transition-colors text-lg font-medium">Services</Link>
-          <Link to="/pricing" className="text-white hover:text-blue-200 transition-colors text-lg font-medium">Pricing</Link>
-          <Link to="/about" className="text-white hover:text-blue-200 transition-colors text-lg font-medium">About Us</Link>
-          <Link to="/portfolio" className="text-white hover:text-blue-200 transition-colors text-lg font-medium">Our Portfolio</Link>
-          <Link to="/contact" className="text-white hover:text-blue-200 transition-colors text-lg font-medium">Contact</Link>
+    <header className="bg-gradient-to-r from-[#0A2647] to-[#0A3157] py-4 px-6 sticky top-0 z-50">
+      <div className="container mx-auto flex items-center justify-between">
+        <Link to="/" className="text-2xl font-bold text-white">
+          The Skyline Strategies
+        </Link>
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link to="/" className="text-white hover:text-blue-200 transition-colors">Home</Link>
+          <Link to="/about" className="text-white hover:text-blue-200 transition-colors">About</Link>
+          <Link to="/services" className="text-white hover:text-blue-200 transition-colors">Services</Link>
+          <Link to="/contact" className="text-white hover:text-blue-200 transition-colors">Contact</Link>
         </nav>
-        <div className="flex items-center gap-6">
-          <Button variant="outline" className="text-white border-white hover:bg-white hover:text-[#0A2647] text-lg py-3 px-8 hidden lg:flex transition-all duration-300 font-medium">
-            Get Started
-          </Button>
-          <Button variant="outline" className="text-white border-white lg:hidden p-2">
-            <Menu className="h-6 w-6" />
-          </Button>
+        <div className="md:hidden relative">
+          <button 
+            className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+          {mobileMenuOpen && (
+            <div className="absolute top-full right-0 mt-2 w-48 py-2 bg-white rounded-lg shadow-xl animate-fadeInUp">
+              <Link to="/" className="block px-4 py-2 text-[#0A2647] hover:bg-gray-100">Home</Link>
+              <Link to="/about" className="block px-4 py-2 text-[#0A2647] hover:bg-gray-100">About</Link>
+              <Link to="/services" className="block px-4 py-2 text-[#0A2647] hover:bg-gray-100">Services</Link>
+              <Link to="/contact" className="block px-4 py-2 text-[#0A2647] hover:bg-gray-100">Contact</Link>
+            </div>
+          )}
         </div>
       </div>
     </header>
