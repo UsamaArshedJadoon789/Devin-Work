@@ -1,12 +1,12 @@
 import { HeroSection } from "../../components/ui/HeroSection"
-import { ServiceCard } from "../../components/ui/ServiceCard"
+// import { ServiceCard } from "../../components/ui/ServiceCard" // Will be used in implementation phase
 import { FeaturesBanner } from "../../components/ui/FeaturesBanner"
 import { ContactForm } from "../../components/ui/ContactForm"
-import { ReactNode } from "react"
+import { Fragment } from "react"
 
 export function SearchEnginePlatformPage() {
   return (
-    <>
+    <Fragment>
       <HeroSection
         title="SEARCH ENGINE PLATFORM"
         subtitle="Comprehensive search engine optimization services to boost visibility, traffic, and rankings across major platforms."
@@ -29,6 +29,6 @@ export function SearchEnginePlatformPage() {
       <section className="py-20 bg-gray-50">
         <ContactForm />
       </section>
-    </>
+    </Fragment>
   )
 }

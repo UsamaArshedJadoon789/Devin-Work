@@ -1,12 +1,12 @@
 import { HeroSection } from "../../components/ui/HeroSection"
-import { ServiceCard } from "../../components/ui/ServiceCard"
+// import { ServiceCard } from "../../components/ui/ServiceCard" // Will be used in implementation phase
 import { FeaturesBanner } from "../../components/ui/FeaturesBanner"
 import { ContactForm } from "../../components/ui/ContactForm"
-import { ReactNode } from "react"
+import { Fragment } from "react"
 
 export function AmazonServicesPage() {
   return (
-    <>
+    <Fragment>
       <HeroSection
         title="AMAZON SERVICES"
         subtitle="Comprehensive Amazon marketplace solutions to help your business thrive in the e-commerce space."
@@ -29,6 +29,6 @@ export function AmazonServicesPage() {
       <section className="py-20 bg-gray-50">
         <ContactForm />
       </section>
-    </>
+    </Fragment>
   )
 }

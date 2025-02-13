@@ -1,86 +1,63 @@
-import { Facebook, Instagram, LineChart, Menu, Clock, Zap, Users, Database } from "lucide-react"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { RootLayout } from "./components/layout/RootLayout"
+import { HomePage } from "./pages/HomePage"
+import { WebsiteDevelopmentPage } from "./pages/services/WebsiteDevelopment"
+import { AppDevelopmentPage } from "./pages/services/AppDevelopment"
+import { GameDevelopmentPage } from "./pages/services/GameDevelopment"
+import { DigitalMarketingPage } from "./pages/services/DigitalMarketing"
+import { VideoEditingPage } from "./pages/services/VideoEditing"
+import { AmazonServicesPage } from "./pages/services/AmazonServices"
+import { SearchEnginePlatformPage } from "./pages/services/SearchEnginePlatform"
+import { BrandingCreativePage } from "./pages/services/BrandingCreative"
 
 
-function App() {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-gradient-to-br from-blue-900 to-blue-950 text-white">
-        <div className="container mx-auto px-4 py-5 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">The Skyline Strategies</h1>
-          <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-white hover:text-blue-200 transition-colors text-lg">Home</a>
-            <a href="#" className="text-white hover:text-blue-200 transition-colors text-lg">Services</a>
-            <a href="#" className="text-white hover:text-blue-200 transition-colors text-lg">Pricing</a>
-            <a href="#" className="text-white hover:text-blue-200 transition-colors text-lg">About Us</a>
-            <a href="#" className="text-white hover:text-blue-200 transition-colors text-lg">Our Portfolio</a>
-            <a href="#" className="text-white hover:text-blue-200 transition-colors text-lg">Contact</a>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button variant="outline" className="text-white border-white hover:bg-white hover:text-blue-900 text-lg py-2.5 px-6 hidden md:flex transition-all duration-300">
-              Get Started
-            </Button>
-            <Button variant="outline" className="text-white border-white md:hidden p-2">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </div>
-        </div>
-      </header>
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />
+      },
+      {
+        path: "services/website-development",
+        element: <WebsiteDevelopmentPage />
+      },
+      {
+        path: "services/app-development",
+        element: <AppDevelopmentPage />
+      },
+      {
+        path: "services/game-development",
+        element: <GameDevelopmentPage />
+      },
+      {
+        path: "services/digital-marketing",
+        element: <DigitalMarketingPage />
+      },
+      {
+        path: "services/video-editing",
+        element: <VideoEditingPage />
+      },
+      {
+        path: "services/amazon-services",
+        element: <AmazonServicesPage />
+      },
+      {
+        path: "services/search-engine-platform",
+        element: <SearchEnginePlatformPage />
+      },
+      {
+        path: "services/branding-creative",
+        element: <BrandingCreativePage />
+      }
+    ]
+  }
+])
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-950 text-white py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-                AUTOMATION IS A MUST FOR YOUR BRAND'S SUCCESS
-              </h2>
-              <p className="text-xl text-gray-200 mb-10">
-                In today's tech-paced world, automation is key to staying competitive and efficient.
-                Let us help you transform your business with cutting-edge automation solutions.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-10">
-                <div className="flex items-center gap-4 bg-white/10 p-5 rounded-lg hover:bg-white/15 transition-colors">
-                  <Clock className="h-7 w-7 text-blue-400" />
-                  <span className="text-lg">24/7 Efficiency</span>
-                </div>
-                <div className="flex items-center gap-4 bg-white/10 p-5 rounded-lg hover:bg-white/15 transition-colors">
-                  <Zap className="h-7 w-7 text-blue-400" />
-                  <span className="text-lg">Save Time</span>
-                </div>
-                <div className="flex items-center gap-4 bg-white/10 p-5 rounded-lg hover:bg-white/15 transition-colors">
-                  <LineChart className="h-7 w-7 text-blue-400" />
-                  <span className="text-lg">Data-Driven Decision</span>
-                </div>
-                <div className="flex items-center gap-4 bg-white/10 p-5 rounded-lg hover:bg-white/15 transition-colors">
-                  <Users className="h-7 w-7 text-blue-400" />
-                  <span className="text-lg">Work Engagement</span>
-                </div>
-              </div>
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 text-lg py-6 px-12 shadow-lg hover:shadow-xl transition-all duration-300">
-                GET STARTED
-              </Button>
-            </div>
-            <div className="hidden md:block">
-              {/* Placeholder for hero illustration */}
-              <div className="aspect-square bg-white/10 rounded-lg"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Us Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-950 text-white py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                EMPOWERING BUSINESSES WITH INNOVATIVE IT SOLUTIONS
-              </h2>
+export default function App() {
+  return <RouterProvider router={router} />
               <p className="text-xl text-gray-200 mb-12">
                 We deliver cutting-edge technology solutions that drive growth and efficiency for businesses of all sizes.
               </p>

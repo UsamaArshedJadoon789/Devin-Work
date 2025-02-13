@@ -1,12 +1,12 @@
 import { HeroSection } from "../../components/ui/HeroSection"
-import { ServiceCard } from "../../components/ui/ServiceCard"
+// import { ServiceCard } from "../../components/ui/ServiceCard" // Will be used in implementation phase
 import { FeaturesBanner } from "../../components/ui/FeaturesBanner"
 import { ContactForm } from "../../components/ui/ContactForm"
-import { ReactNode } from "react"
+import { Fragment } from "react"
 
 export function AppDevelopmentPage() {
   return (
-    <>
+    <Fragment>
       <HeroSection
         title="APP DEVELOPMENT"
         subtitle="Custom app development services to bring your ideas to life with innovative, user-friendly, and scalable solutions."
@@ -29,6 +29,6 @@ export function AppDevelopmentPage() {
       <section className="py-20 bg-gray-50">
         <ContactForm />
       </section>
-    </>
+    </Fragment>
   )
 }

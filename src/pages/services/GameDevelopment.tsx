@@ -1,12 +1,12 @@
 import { HeroSection } from "../../components/ui/HeroSection"
-import { ServiceCard } from "../../components/ui/ServiceCard"
+// import { ServiceCard } from "../../components/ui/ServiceCard" // Will be used in implementation phase
 import { FeaturesBanner } from "../../components/ui/FeaturesBanner"
 import { ContactForm } from "../../components/ui/ContactForm"
-import { ReactNode } from "react"
+import { Fragment } from "react"
 
 export function GameDevelopmentPage() {
   return (
-    <>
+    <Fragment>
       <HeroSection
         title="GAME DEVELOPMENT"
         subtitle="Create engaging and immersive gaming experiences with our comprehensive game development solutions."
@@ -29,6 +29,6 @@ export function GameDevelopmentPage() {
       <section className="py-20 bg-gray-50">
         <ContactForm />
       </section>
-    </>
+    </Fragment>
   )
 }

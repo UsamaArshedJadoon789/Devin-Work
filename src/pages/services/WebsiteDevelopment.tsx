@@ -1,12 +1,12 @@
 import { HeroSection } from "../../components/ui/HeroSection"
-import { ServiceCard } from "../../components/ui/ServiceCard"
+// import { ServiceCard } from "../../components/ui/ServiceCard" // Will be used in implementation phase
 import { FeaturesBanner } from "../../components/ui/FeaturesBanner"
 import { ContactForm } from "../../components/ui/ContactForm"
-import { ReactNode } from "react"
+import { Fragment } from "react"
 
 export function WebsiteDevelopmentPage() {
   return (
-    <>
+    <Fragment>
       <HeroSection
         title="WEBSITE DEVELOPMENT"
         subtitle="Website development is the process of designing and building websites that are accessible on the internet."
@@ -29,6 +29,6 @@ export function WebsiteDevelopmentPage() {
       <section className="py-20 bg-gray-50">
         <ContactForm />
       </section>
-    </>
+    </Fragment>
   )
 }
