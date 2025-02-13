@@ -58,11 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                BOOST YOUR BUSINESS TO HIGH LEVEL
-              </h2>
               <ul className="space-y-6 mb-12">
                 <li className="flex items-center gap-4 bg-white/10 p-5 rounded-lg hover:bg-white/15 transition-colors">
                   <div className="w-3 h-3 bg-blue-400 rounded-full"></div>

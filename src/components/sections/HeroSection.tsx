@@ -28,10 +28,14 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
             <p className="text-xl text-gray-200 mb-10">
               {subtitle}
             </p>
-            <p className="text-xl text-gray-200 mb-10">
-              In today's tech-paced world, automation is key to staying competitive and efficient.
-              Let us help you transform your business with cutting-edge automation solutions.
-            </p>
+            <div className="grid grid-cols-2 gap-6 mb-10">
+              {features.map((feature, index) => (
+                <HeroFeatureCard key={index} {...feature} />
+              ))}
+            </div>
+            <Button size="lg" className="bg-white text-[#0A2647] hover:bg-blue-50 text-lg py-6 px-12 shadow-lg hover:shadow-xl transition-all duration-300">
+              GET STARTED
+            </Button>
             <div className="grid grid-cols-2 gap-6 mb-10">
               {features.slice(0, 4).map((feature, index) => (
                 <HeroFeatureCard key={index} {...feature} />
