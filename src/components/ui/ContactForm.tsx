@@ -2,7 +2,6 @@ import { Button } from "./button"
 import { Input } from "./input"
 import { Textarea } from "./textarea"
 import { Checkbox } from "./checkbox"
-import { ReactNode } from "react"
 
 export function ContactForm() {
   return (

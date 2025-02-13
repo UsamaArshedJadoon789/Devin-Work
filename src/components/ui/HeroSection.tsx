@@ -1,7 +1,8 @@
 import { cn } from "../../lib/utils"
-import { ReactNode } from "react"
+import { type ReactNode } from "react"
 
 interface HeroSectionProps {
+  children?: ReactNode
   title: string
   subtitle?: string
   children?: React.ReactNode
