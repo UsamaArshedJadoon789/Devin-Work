@@ -4,16 +4,16 @@ import { ServiceCard } from "../ui/ServiceCard"
 
 export function ServicesGrid() {
   const services = [
-    { title: "Website Development", description: "Create stunning and functional websites", icon: <Code className="h-6 w-6" /> },
-    { title: "App Development", description: "Build powerful mobile applications", icon: <Smartphone className="h-6 w-6" /> },
-    { title: "Game Development", description: "Create engaging gaming experiences", icon: <Gamepad className="h-6 w-6" /> },
-    { title: "Digital Marketing", description: "Boost your online presence", icon: <LineChart className="h-6 w-6" /> },
-    { title: "Amazon Services", description: "Grow your Amazon business", icon: <ShoppingCart className="h-6 w-6" /> },
-    { title: "Video Editing", description: "Professional video production", icon: <Video className="h-6 w-6" /> },
-    { title: "Search Engine Platform", description: "Improve your search rankings", icon: <Search className="h-6 w-6" /> },
-    { title: "Branding & Creative", description: "Build your brand identity", icon: <Briefcase className="h-6 w-6" /> },
-    { title: "CRM Solutions", description: "Manage customer relationships", icon: <Database className="h-6 w-6" /> },
-    { title: "ERP Development", description: "Streamline business operations", icon: <Brain className="h-6 w-6" /> }
+    { title: "Website Development", description: "Create stunning and functional websites", icon: <Code className="h-6 w-6" />, link: "/services/website-development" },
+    { title: "App Development", description: "Build powerful mobile applications", icon: <Smartphone className="h-6 w-6" />, link: "/services/app-development" },
+    { title: "Game Development", description: "Create engaging gaming experiences", icon: <Gamepad className="h-6 w-6" />, link: "/services/game-development" },
+    { title: "Digital Marketing", description: "Boost your online presence", icon: <LineChart className="h-6 w-6" />, link: "/services/digital-marketing" },
+    { title: "Amazon Services", description: "Grow your Amazon business", icon: <ShoppingCart className="h-6 w-6" />, link: "/services/amazon-services" },
+    { title: "Video Editing", description: "Professional video production", icon: <Video className="h-6 w-6" />, link: "/services/video-editing" },
+    { title: "Search Engine Platform", description: "Improve your search rankings", icon: <Search className="h-6 w-6" />, link: "/services/search-engine-platform" },
+    { title: "Branding & Creative", description: "Build your brand identity", icon: <Briefcase className="h-6 w-6" />, link: "/services/branding-creative" },
+    { title: "CRM Solutions", description: "Manage customer relationships", icon: <Database className="h-6 w-6" />, link: "/services/crm-solutions" },
+    { title: "ERP Development", description: "Streamline business operations", icon: <Brain className="h-6 w-6" />, link: "/services/erp-development" }
   ]
 
   return (

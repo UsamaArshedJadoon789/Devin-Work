@@ -1,8 +1,9 @@
 import { HeroSection } from "../../components/ui/HeroSection"
-import { ServiceCard } from "../../components/ui/ServiceCard"
+import { Fragment } from "react"
+import { Brain, Database, Code } from "lucide-react"
+import { HeroSection } from "../../components/sections/HeroSection"
 import { FeaturesBanner } from "../../components/ui/FeaturesBanner"
 import { ContactForm } from "../../components/ui/ContactForm"
-import { ReactNode } from "react"
 
 export function BrandingCreativePage() {
   return (
