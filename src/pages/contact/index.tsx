@@ -1,4 +1,4 @@
-import React, { Fragment, type ReactNode } from "react"
+import { Fragment, type ReactNode } from "react"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { ContactForm } from "../../components/ui/ContactForm"
 
@@ -32,13 +32,14 @@ export function ContactPage(): ReactNode {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-4xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#0A2647] to-[#0A3157]">
+              <h2 className="text-4xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#0A2647] to-[#0A3157] relative">
                 LET'S TALK
+                <span className="absolute -bottom-2 left-0 w-24 h-1 bg-gradient-to-r from-[#0A2647] to-[#0A3157]"></span>
               </h2>
               <div className="grid gap-8">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#0A2647] to-[#0A3157] rounded-lg flex items-center justify-center text-white">
+                  <div key={index} className="flex items-start space-x-4 group hover:transform hover:-translate-y-1 transition-all duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#0A2647] to-[#0A3157] rounded-lg flex items-center justify-center text-white transform group-hover:rotate-6 transition-transform duration-300">
                       {info.icon}
                     </div>
                     <div>
@@ -49,7 +50,7 @@ export function ContactPage(): ReactNode {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="bg-white p-8 rounded-2xl shadow-xl">
               <ContactForm />
             </div>
           </div>
