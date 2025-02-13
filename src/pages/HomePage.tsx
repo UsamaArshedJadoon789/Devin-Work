@@ -1,13 +1,26 @@
-import { HeroSection } from "../components/ui/HeroSection"
-import { ServiceCard } from "../components/ui/ServiceCard"
+import { HeroSection } from "../components/sections/HeroSection"
+import { ServicesGrid } from "../components/sections/ServicesGrid"
+import { AboutSection } from "../components/sections/AboutSection"
 import { FeaturesBanner } from "../components/ui/FeaturesBanner"
 import { ContactForm } from "../components/ui/ContactForm"
-import { Code, Smartphone, Gamepad, LineChart, ShoppingCart, Video, Search, Briefcase, Database, Brain } from "lucide-react"
-import { ReactNode } from "react"
+import { Fragment } from "react"
 
 export function HomePage() {
-  const services = [
-    { title: "Website Development", description: "Create stunning and functional websites", icon: <Code /> },
+  return (
+    <Fragment>
+      <HeroSection />
+      <ServicesGrid />
+      <AboutSection />
+      <FeaturesBanner
+        features={[
+          { text: "AI-Driven Solution", icon: null },
+          { text: "High Security", icon: null },
+          { text: "Leading Code", icon: null }
+        ]}
+      />
+      <ContactForm />
+    </Fragment>
+  )
     { title: "App Development", description: "Build powerful mobile applications", icon: <Smartphone /> },
     { title: "Game Development", description: "Create engaging gaming experiences", icon: <Gamepad /> },
     { title: "Digital Marketing", description: "Boost your online presence", icon: <LineChart /> },

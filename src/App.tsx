@@ -60,11 +60,6 @@ export default function App() {
   return <RouterProvider router={router} />
               },
               {
-                title: "App Development",
-                description: "Build powerful mobile applications",
-                icon: <Database className="h-6 w-6 text-blue-600" />
-              },
-              {
                 title: "Game Development",
                 description: "Create engaging gaming experiences",
                 icon: <Database className="h-6 w-6 text-blue-600" />
