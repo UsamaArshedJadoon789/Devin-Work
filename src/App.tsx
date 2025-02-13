@@ -10,7 +10,6 @@ import { AmazonServicesPage } from "./pages/services/AmazonServices"
 import { SearchEnginePlatformPage } from "./pages/services/SearchEnginePlatform"
 import { BrandingCreativePage } from "./pages/services/BrandingCreative"
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -59,11 +58,6 @@ const router = createBrowserRouter([
 export default function App() {
   return <RouterProvider router={router} />
 }
-                    <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                    <p className="font-medium text-gray-700 text-lg">{service}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 
