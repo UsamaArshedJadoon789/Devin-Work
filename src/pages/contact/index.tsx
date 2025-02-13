@@ -16,8 +16,11 @@ export function ContactPage(): ReactNode {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-7xl font-bold mb-8 leading-tight tracking-wide relative">
-              CONTACT US
-              <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-50 transform skew-x-12"></span>
+              <span className="relative inline-block">
+                CONTACT US
+                <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-50 transform skew-x-12"></span>
+                <span className="absolute -bottom-4 left-0 right-0 h-2 bg-gradient-to-r from-white/40 to-transparent transform -skew-x-12"></span>
+              </span>
             </h1>
             <p className="text-2xl text-gray-200">
               Let's discuss your next project
