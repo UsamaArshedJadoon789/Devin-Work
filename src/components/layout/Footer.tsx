@@ -1,4 +1,5 @@
 import { Facebook, Instagram } from "lucide-react"
+import { ReactNode } from "react"
 
 export function Footer() {
   return (

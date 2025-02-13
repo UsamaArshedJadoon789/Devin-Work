@@ -1,7 +1,8 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Button } from "./button"
+import { Input } from "./input"
+import { Textarea } from "./textarea"
+import { Checkbox } from "./checkbox"
+import { ReactNode } from "react"
 
 export function ContactForm() {
   return (
