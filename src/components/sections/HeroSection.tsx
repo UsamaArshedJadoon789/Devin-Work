@@ -1,4 +1,4 @@
-import { type ReactNode } from "react"
+import { Clock, Zap, LineChart, BarChart, Users } from "lucide-react"
 import { Button } from "../ui/button"
 import { HeroFeatureCard } from "../ui/HeroFeatureCard"
 
