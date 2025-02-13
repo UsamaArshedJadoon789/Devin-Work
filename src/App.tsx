@@ -59,16 +59,6 @@ const router = createBrowserRouter([
 export default function App() {
   return <RouterProvider router={router} />
 }
-                "Marketplace Selection Guidance",
-                "Tax Compliance Support",
-                "Storefront Design",
-                "Listing Optimization",
-                "Product Category Selection",
-                "Fulfillment Setup",
-                "Pricing Strategy Development",
-                "Image Compliance Checks",
-                "Keyword Research for Listings",
-                "Policy Compliance Training",
                 "Competitor Analysis"
               ].map((service, index) => (
                 <div key={index} className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
