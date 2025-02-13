@@ -1,4 +1,4 @@
-import { Clock, Zap, LineChart, Users, Brain, ChartBar } from "lucide-react"
+import { Clock, Zap, LineChart, Users, BarChart } from "lucide-react"
 import { Button } from "../ui/button"
 import { HeroFeatureCard } from "../ui/HeroFeatureCard"
 
@@ -12,7 +12,7 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
     { icon: <Clock className="h-7 w-7" />, text: "24/7 Efficiency" },
     { icon: <Zap className="h-7 w-7" />, text: "Save Time" },
     { icon: <LineChart className="h-7 w-7" />, text: "Data-Driven Decision" },
-    { icon: <ChartBar className="h-7 w-7" />, text: "Personalized Overview" },
+    { icon: <BarChart className="h-7 w-7" />, text: "Personalized Overview" },
     { icon: <Users className="h-7 w-7" />, text: "Work Engagement" }
   ]
 
