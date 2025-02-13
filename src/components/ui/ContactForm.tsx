@@ -1,0 +1,40 @@
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Checkbox } from "@/components/ui/checkbox"
+
+export function ContactForm() {
+  return (
+    <form className="space-y-6 max-w-2xl mx-auto">
+      <h2 className="text-3xl font-bold text-center mb-8">YOU HAVE REQUEST?</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Input 
+          placeholder="Name" 
+          className="bg-[#0A2647] text-white border-white/10 placeholder:text-white/60"
+        />
+        <Input 
+          type="email" 
+          placeholder="Email" 
+          className="bg-[#0A2647] text-white border-white/10 placeholder:text-white/60"
+        />
+      </div>
+      <Input 
+        placeholder="Your Inquiry about" 
+        className="bg-[#0A2647] text-white border-white/10 placeholder:text-white/60"
+      />
+      <Textarea 
+        placeholder="Message" 
+        className="h-32 bg-[#0A2647] text-white border-white/10 placeholder:text-white/60 resize-none"
+      />
+      <div className="flex items-center space-x-2">
+        <Checkbox id="terms" />
+        <label htmlFor="terms" className="text-sm">
+          I agree to the Terms & Conditions
+        </label>
+      </div>
+      <Button className="w-full bg-[#0A2647] text-white hover:bg-[#0A3157]">
+        GET STARTED
+      </Button>
+    </form>
+  )
+}
