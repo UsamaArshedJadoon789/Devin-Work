@@ -1,7 +1,7 @@
 import React from "react"
 import { Clock, Zap, LineChart, BarChart, Users } from "lucide-react"
 import { Button } from "../ui/button"
-import { HeroFeatureCard } from "@/components/ui/HeroFeatureCard"
+import { HeroFeatureCard } from "../ui/HeroFeatureCard"
 
 interface HeroSectionProps {
   title: string
