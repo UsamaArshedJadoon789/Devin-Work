@@ -59,11 +59,6 @@ const router = createBrowserRouter([
 export default function App() {
   return <RouterProvider router={router} />
 }
-                "Market Research",
-                "Product Sourcing",
-                "Brand Development",
-                "Supplier Negotiation",
-                "Prototyping",
                 "Custom Packaging Design",
                 "Listing Optimization",
                 "Keyword Research",
