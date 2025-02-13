@@ -1,9 +1,14 @@
 import { Clock, Zap, LineChart, Users, Brain } from "lucide-react"
 import { Button } from "../ui/button"
 import { HeroFeatureCard } from "../ui/HeroFeatureCard"
-import { Fragment } from "react"
 
-export function HeroSection() {
+
+interface HeroSectionProps {
+  title: string;
+  subtitle: string;
+}
+
+export function HeroSection({ title, subtitle }: HeroSectionProps) {
   const features = [
     { icon: <Clock className="h-7 w-7" />, text: "24/7 Efficiency" },
     { icon: <Zap className="h-7 w-7" />, text: "Save Time" },
@@ -18,8 +23,11 @@ export function HeroSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-              AUTOMATION IS A MUST FOR YOUR BRAND'S SUCCESS
+              {title}
             </h1>
+            <p className="text-xl text-gray-200 mb-10">
+              {subtitle}
+            </p>
             <p className="text-xl text-gray-200 mb-10">
               In today's tech-paced world, automation is key to staying competitive and efficient.
               Let us help you transform your business with cutting-edge automation solutions.

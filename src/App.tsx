@@ -58,36 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-                title: "Digital Marketing",
-                description: "Boost your online presence",
-                icon: <LineChart className="h-6 w-6 text-blue-600" />
-              },
-              {
-                title: "Amazon Services",
-                description: "Grow your Amazon business",
-                icon: <Database className="h-6 w-6 text-blue-600" />
-              },
-              {
-                title: "Video Editing",
-                description: "Professional video production",
-                icon: <Database className="h-6 w-6 text-blue-600" />
-              }
-            ].map((service, index) => (
-              <div key={index} className="p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
-                <div className="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-5">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-900 to-blue-950 text-white">
-        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
