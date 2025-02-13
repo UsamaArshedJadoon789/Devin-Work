@@ -18,24 +18,24 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
   ]
 
   return (
-    <section className="bg-gradient-to-br from-[#0A2647] to-[#0A3157] text-white py-12 md:py-16 lg:py-24">
+    <section className="bg-[#0A2647] text-white min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-          <div className="text-center lg:text-left">
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 lg:mb-8 leading-tight tracking-wide">
+          <div className="text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
               {title}
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-8 md:mb-10 lg:mb-12">
+            <p className="text-xl md:text-2xl text-gray-300 mb-10">
               {subtitle}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-10 lg:mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               {features.map((feature, index) => (
                 <HeroFeatureCard key={index} {...feature} />
               ))}
             </div>
             <Button 
               size="lg" 
-              className="w-full sm:w-auto bg-white text-[#0A2647] hover:bg-blue-50 text-base md:text-lg py-4 md:py-6 px-6 md:px-12 shadow-lg hover:shadow-xl transition-all duration-300 font-medium"
+              className="w-full sm:w-auto bg-white text-[#0A2647] hover:bg-gray-100 text-lg py-4 px-8 rounded-lg shadow-lg transition-all duration-300 font-medium"
             >
               GET STARTED
             </Button>
