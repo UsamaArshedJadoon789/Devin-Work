@@ -1,3 +1,4 @@
+import React from "react"
 import { ServiceCard } from "../ui/ServiceCard"
 import { Monitor, Smartphone, Gamepad, Megaphone, ShoppingCart, Video } from "lucide-react"
 

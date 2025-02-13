@@ -1,3 +1,4 @@
+import React from "react"
 import { HeroSection } from "../components/sections/HeroSection"
 import { ServicesGrid } from "../components/sections/ServicesGrid"
 import { FeaturesBanner } from "../components/ui/FeaturesBanner"
