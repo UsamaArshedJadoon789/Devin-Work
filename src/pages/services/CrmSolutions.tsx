@@ -2,7 +2,7 @@ import { HeroSection } from "../../components/sections/HeroSection"
 import { ServiceCard } from "../../components/ui/ServiceCard"
 import { FeaturesBanner } from "../../components/ui/FeaturesBanner"
 import { ContactForm } from "../../components/ui/ContactForm"
-import { Fragment } from "react"
+import { Fragment, type ReactNode } from "react"
 import { Users, Database, MessageSquare, BarChart, Settings, Mail } from "lucide-react"
 
 export function CrmSolutionsPage() {
