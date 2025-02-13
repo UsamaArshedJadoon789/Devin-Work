@@ -7,7 +7,6 @@ interface HeroSectionProps {
   children?: ReactNode
   className?: string
   illustration?: ReactNode
-  illustration?: React.ReactNode
 }
 
 export function HeroSection({

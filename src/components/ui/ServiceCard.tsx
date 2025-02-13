@@ -2,10 +2,9 @@ import { cn } from "../../lib/utils"
 import { type ReactNode } from "react"
 
 interface ServiceCardProps {
-  icon?: ReactNode
   title: string
   description?: string
-  icon?: React.ReactNode
+  icon?: ReactNode
   className?: string
   variant?: 'dark' | 'light'
 }
