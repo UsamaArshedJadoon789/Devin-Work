@@ -21,15 +21,23 @@ export function HomePage() {
       <ContactForm />
     </Fragment>
   )
-    { title: "App Development", description: "Build powerful mobile applications", icon: <Smartphone /> },
-    { title: "Game Development", description: "Create engaging gaming experiences", icon: <Gamepad /> },
-    { title: "Digital Marketing", description: "Boost your online presence", icon: <LineChart /> },
-    { title: "Amazon Services", description: "Grow your Amazon business", icon: <ShoppingCart /> },
-    { title: "Video Editing", description: "Professional video production", icon: <Video /> },
-    { title: "Search Engine Platform", description: "Improve your search rankings", icon: <Search /> },
-    { title: "Branding & Creative", description: "Build your brand identity", icon: <Briefcase /> },
-    { title: "CRM Solutions", description: "Manage customer relationships", icon: <Database /> },
-    { title: "ERP Development", description: "Streamline business operations", icon: <Brain /> }
+export function HomePage() {
+  return (
+    <Fragment>
+      <HeroSection />
+      <ServicesGrid />
+      <AboutSection />
+      <FeaturesBanner
+        features={[
+          { text: "AI-Driven Solution", icon: null },
+          { text: "High Security", icon: null },
+          { text: "Leading Code", icon: null }
+        ]}
+      />
+      <ContactForm />
+    </Fragment>
+  )
+}
   ]
 
   return (

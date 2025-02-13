@@ -58,13 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-              },
-              {
-                title: "Game Development",
-                description: "Create engaging gaming experiences",
-                icon: <Database className="h-6 w-6 text-blue-600" />
-              },
-              {
                 title: "Digital Marketing",
                 description: "Boost your online presence",
                 icon: <LineChart className="h-6 w-6 text-blue-600" />
