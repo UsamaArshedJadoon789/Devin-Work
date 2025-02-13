@@ -26,22 +26,3 @@ export function HomePage(): ReactNode {
     </Fragment>
   )
 }
-  return (
-    <Fragment>
-      <HeroSection
-        title="AUTOMATION IS A MUST FOR YOUR BRAND'S SUCCESS"
-        subtitle="Transform your business with our cutting-edge solutions"
-      />
-      <ServicesGrid />
-      <AboutSection />
-      <FeaturesBanner
-        features={[
-          { text: "AI-Driven Solution", icon: <Brain className="h-6 w-6" /> },
-          { text: "High Security", icon: <Database className="h-6 w-6" /> },
-          { text: "Leading Code", icon: <Code className="h-6 w-6" /> }
-        ]}
-      />
-      <ContactForm />
-    </Fragment>
-  )
-}

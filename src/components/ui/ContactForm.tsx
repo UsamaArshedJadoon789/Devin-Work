@@ -29,11 +29,11 @@ export function ContactForm(): ReactNode {
       />
       <div className="flex items-center space-x-2">
         <Checkbox id="terms" />
-        <label htmlFor="terms" className="text-sm">
+        <label htmlFor="terms" className="text-sm text-white">
           I agree to the Terms & Conditions
         </label>
       </div>
-      <Button className="w-full bg-[#0A2647] text-white hover:bg-[#0A3157]">
+      <Button type="submit" className="w-full bg-white text-[#0A2647] hover:bg-gray-50">
         GET STARTED
       </Button>
     </form>

@@ -58,35 +58,7 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-                "Motion Graphics",
-                "Visual Effects",
-                "Video Transitions",
-                "Subtitle Integration",
-                "Video Optimization",
-                "Format Conversion",
-                "Content Repurposing",
-                "Video Restoration",
-                "Custom Effects"
-              ].map((service, index) => (
-                <div key={index} className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
-                  <div className="flex items-center gap-4">
-                    <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                    <p className="font-medium text-gray-700 text-lg">{service}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Amazon Account Creation */}
-          <div className="mb-32">
-            <h3 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">AMAZON ACCOUNT CREATION</h3>
-            <p className="text-xl text-gray-600 mb-12 max-w-3xl">
-              Setting up Amazon accounts globally, ensuring compliance, smooth approvals, and market-aligned customization.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                "Brand Registry Assistance",
+}
                 "Marketplace Selection Guidance",
                 "Tax Compliance Support",
                 "Storefront Design",
