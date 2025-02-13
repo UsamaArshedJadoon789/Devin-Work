@@ -58,11 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-              <p className="text-xl text-gray-200 mb-12">
-                We deliver cutting-edge technology solutions that drive growth and efficiency for businesses of all sizes.
-              </p>
-              <div className="grid grid-cols-2 gap-10 mb-12">
-                <div className="text-center p-6 bg-white/10 rounded-lg hover:bg-white/15 transition-colors">
                   <div className="text-5xl font-bold text-blue-400 mb-3">5+</div>
                   <div className="text-lg">Years of Experience</div>
                 </div>
