@@ -29,18 +29,13 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
               {subtitle}
             </p>
             <div className="grid grid-cols-2 gap-6 mb-10">
-              {features.map((feature, index) => (
+              {features.slice(0, 4).map((feature, index) => (
                 <HeroFeatureCard key={index} {...feature} />
               ))}
             </div>
             <Button size="lg" className="bg-white text-[#0A2647] hover:bg-blue-50 text-lg py-6 px-12 shadow-lg hover:shadow-xl transition-all duration-300">
               GET STARTED
             </Button>
-            <div className="grid grid-cols-2 gap-6 mb-10">
-              {features.slice(0, 4).map((feature, index) => (
-                <HeroFeatureCard key={index} {...feature} />
-              ))}
-            </div>
             <Button size="lg" className="bg-white text-[#0A2647] hover:bg-blue-50 text-lg py-6 px-12 shadow-lg hover:shadow-xl transition-all duration-300">
               GET STARTED
             </Button>

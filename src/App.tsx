@@ -58,11 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-              <ul className="space-y-6 mb-12">
-                <li className="flex items-center gap-4 bg-white/10 p-5 rounded-lg hover:bg-white/15 transition-colors">
-                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <span className="text-lg">Expert Team with Years of Experience</span>
-                </li>
                 <li className="flex items-center gap-4 bg-white/10 p-5 rounded-lg hover:bg-white/15 transition-colors">
                   <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
                   <span className="text-lg">Cutting-edge Technology Solutions</span>
