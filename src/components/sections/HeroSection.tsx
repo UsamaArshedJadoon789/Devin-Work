@@ -36,11 +36,10 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
             <Button size="lg" className="bg-white text-[#0A2647] hover:bg-blue-50 text-lg py-6 px-12 shadow-lg hover:shadow-xl transition-all duration-300">
               GET STARTED
             </Button>
-            <Button size="lg" className="bg-white text-[#0A2647] hover:bg-blue-50 text-lg py-6 px-12 shadow-lg hover:shadow-xl transition-all duration-300">
-              GET STARTED
-            </Button>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:block relative">
+            <div className="absolute -top-4 -right-4 w-full h-full bg-white/5 rounded-lg"></div>
+            <div className="relative aspect-square bg-white/10 rounded-lg"></div>
             {/* Placeholder for hero illustration */}
             <div className="aspect-square bg-white/10 rounded-lg"></div>
           </div>
