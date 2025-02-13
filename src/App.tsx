@@ -58,36 +58,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return <RouterProvider router={router} />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">FREQUENTLY ASKED QUESTIONS</h2>
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {[
-                {
-                  question: "What services do you offer?",
-                  answer: "We offer a comprehensive range of IT solutions including Digital Marketing, Website Development, App Development, and more."
-                },
-                {
-                  question: "How long does it take to complete a project?",
-                  answer: "Project timelines vary based on complexity and requirements. We provide detailed timelines during consultation."
-                },
-                {
-                  question: "Do you provide ongoing support?",
-                  answer: "Yes, we offer 24/7 support and maintenance services for all our solutions."
-                },
-                {
-                  question: "What is your pricing model?",
-                  answer: "We offer flexible pricing models tailored to your needs. Contact us for a custom quote."
-                },
-                {
-                  question: "How do I get started?",
                   answer: "Simply click the 'Get Started' button or contact us through our form. We'll schedule a consultation."
                 }
               ].map((faq, index) => (
