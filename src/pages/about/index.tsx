@@ -67,6 +67,7 @@ export function AboutUsPage(): ReactNode {
           </div>
         </div>
       </section>
+
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-[#0A2647] to-[#0A3157]">
