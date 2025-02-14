@@ -1,55 +1,61 @@
 import React, { useState } from 'react';
-import { WeeklyReport, DailyActivity, TeamMember } from '../../types/ProgressReport';
-import { DailyReport } from './DailyReport';
-import { WeeklyStats } from './WeeklyStats';
-
-const TEAM_MEMBERS: TeamMember[] = [
-  { name: 'Hamza Sohail', role: 'QA Engineer' },
-  { name: 'Farah Al-Haj Ahmad', role: 'QA Engineer' },
-  { name: 'Moath Abusall', role: 'QA Engineer' },
-];
+import { WeeklyReport } from '../../types/ProgressReport';
+import { FileUploadZone } from '../reports/FileUploadZone';
+import { AnalyticsDashboard } from '../reports/AnalyticsDashboard';
+import { parseWeeklyReport } from '../../utils/reportParser';
 
 export const ProgressReportPage: React.FC = () => {
-  const [report, setReport] = useState<WeeklyReport>({
-    startDate: new Date().toISOString().split('T')[0],
-    endDate: new Date(Date.now() + 6 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-    teamName: 'QC Team',
-    attendees: TEAM_MEMBERS,
-    dailyActivities: {},
-  });
+  const [report, setReport] = useState<WeeklyReport | null>(null);
 
-  const handleDailyReport = (memberName: string, activity: DailyActivity) => {
-    setReport((prev) => ({
-      ...prev,
-      dailyActivities: {
-        ...prev.dailyActivities,
-        [memberName]: [...(prev.dailyActivities[memberName] || []), activity],
-      },
-    }));
+  const handleFileUpload = (content: string, type: 'weekly' | 'daily', resourceName?: string) => {
+    try {
+      const parsedReport = parseWeeklyReport(content);
+      if (type === 'weekly') {
+        setReport(parsedReport as WeeklyReport);
+      } else if (resourceName) {
+        // For daily reports, merge with existing data if available
+        setReport((prevReport) => {
+          if (!prevReport) return parsedReport as WeeklyReport;
+          return {
+            ...prevReport,
+            dailyActivities: {
+              ...prevReport.dailyActivities,
+              [resourceName]: [
+                ...(prevReport.dailyActivities[resourceName] || []),
+                ...(parsedReport.dailyActivities[resourceName] || []),
+              ],
+            },
+          };
+        });
+      }
+    } catch {
+      // Error handling is managed by FileUploadZone component
+    }
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <div className="px-4 py-6 sm:px-0">
-        <h1 className="text-2xl font-bold mb-6">QC Team Progress Report System</h1>
+    <div className="container mx-auto py-8 px-4">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl font-bold tracking-tight mb-8">
+          QA Team Progress Report Analysis
+        </h1>
         
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <div className="space-y-8">
-            <h2 className="text-xl font-bold">Daily Reports</h2>
-            {TEAM_MEMBERS.map((member) => (
-              <div key={member.name} className="bg-white p-4 rounded-lg shadow">
-                <DailyReport
-                  memberName={member.name}
-                  onSubmit={(activity) => handleDailyReport(member.name, activity)}
-                />
-              </div>
-            ))}
-          </div>
+        <div className="grid gap-8">
+          <FileUploadZone onFileUpload={handleFileUpload} />
           
-          <div>
-            <h2 className="text-xl font-bold mb-4">Weekly Statistics</h2>
-            <WeeklyStats report={report} />
-          </div>
+          {report && (
+            <div className="space-y-8">
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-semibold">Analysis Dashboard</h2>
+                {report.startDate && report.endDate && (
+                  <p className="text-sm text-gray-500">
+                    Period: {report.startDate} to {report.endDate}
+                  </p>
+                )}
+              </div>
+              <AnalyticsDashboard report={report} />
+            </div>
+          )}
         </div>
       </div>
     </div>
