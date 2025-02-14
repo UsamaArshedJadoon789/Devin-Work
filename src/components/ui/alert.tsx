@@ -1,6 +1,6 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import type { ElementRef, ComponentPropsWithoutRef } from "react"
+import { type ElementRef, type ComponentPropsWithoutRef } from "react"
 import { cn } from "@/lib/utils"
 
 const alertVariants = cva(
