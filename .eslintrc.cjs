@@ -41,6 +41,7 @@ module.exports = {
       'argsIgnorePattern': '^_',
       'varsIgnorePattern': '^_'
     }],
-    'no-undef': 'off'
+    'no-undef': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
   }
 }
