@@ -25,7 +25,7 @@ export const ProgressReportPage: React.FC = () => {
           };
         });
       }
-    } catch (error) {
+    } catch {
       // Handle error silently - error state is managed by FileUploadZone
     }
   };
