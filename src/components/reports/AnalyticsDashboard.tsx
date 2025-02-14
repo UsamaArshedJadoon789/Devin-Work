@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 import { WeeklyReport } from '../../types/ProgressReport';
+import { DailyProgressData, ResourceMetrics } from '../../types/DailyProgress';
 
 interface AnalyticsDashboardProps {
   report: WeeklyReport;
@@ -20,7 +21,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ report }
   }));
 
   // Calculate daily progress data
-  const dailyProgress = Object.entries(report.dailyActivities || {}).reduce((acc: Record<string, DailyProgressData>, [_name, activities]) => {
+  const dailyProgress = Object.entries(report.dailyActivities || {}).reduce<Record<string, DailyProgressData>>((acc, [_name, activities]) => {
     activities.forEach(activity => {
       const date = activity.date;
       if (!acc[date]) {
