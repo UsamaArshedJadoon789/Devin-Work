@@ -10,8 +10,9 @@ interface AnalyticsDashboardProps {
 
 export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ report }) => {
   // Calculate resource-specific metrics
-  const resourceMetrics = Object.entries(report.dailyActivities || {}).map(([name, activities]) => ({
-    name,
+  const resourceMetrics = Object.entries(report.dailyActivities || {}).map(([resourceName, activities]) => ({
+    name: resourceName,
+
     bugsAdded: activities.reduce((sum, act) => sum + (act.metrics?.bugsAdded || 0), 0),
     bugsClosed: activities.reduce((sum, act) => sum + (act.metrics?.bugsClosed || 0), 0),
     bugsReopened: activities.reduce((sum, act) => sum + (act.metrics?.bugsReopened || 0), 0),
@@ -19,7 +20,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ report }
   }));
 
   // Calculate daily progress data
-  const dailyProgress = Object.entries(report.dailyActivities || {}).reduce((acc, [name, activities]) => {
+  const dailyProgress = Object.entries(report.dailyActivities || {}).reduce((acc: Record<string, any>, [_name, activities]) => {
     activities.forEach(activity => {
       const date = activity.date;
       if (!acc[date]) {
