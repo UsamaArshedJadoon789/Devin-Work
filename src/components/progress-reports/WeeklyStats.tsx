@@ -13,7 +13,7 @@ interface MemberStats {
 }
 
 export const WeeklyStats: React.FC<WeeklyStatsProps> = ({ report }) => {
-  const calculateMemberStats = (memberActivities: any[]): MemberStats => {
+  const calculateMemberStats = (memberActivities: Array<{ metrics?: { [key: string]: number } }>): MemberStats => {
     return memberActivities.reduce((stats, activity) => {
       const metrics = activity.metrics || {};
       return {
