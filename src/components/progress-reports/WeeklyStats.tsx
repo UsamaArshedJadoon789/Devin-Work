@@ -1,17 +1,43 @@
 import React from 'react';
 import { WeeklyReport } from '../../types/ProgressReport';
-import { generateWeeklyStats } from '../../utils/reportAnalytics';
 
 interface WeeklyStatsProps {
-  report: WeeklyReport;
+  report: Partial<WeeklyReport>;
+}
+
+interface MemberStats {
+  bugsAdded: number;
+  bugsClosed: number;
+  bugsReopened: number;
+  requirementsReviewed: number;
 }
 
 export const WeeklyStats: React.FC<WeeklyStatsProps> = ({ report }) => {
-  const stats = generateWeeklyStats(report);
+  const calculateMemberStats = (memberActivities: any[]): MemberStats => {
+    return memberActivities.reduce((stats, activity) => {
+      const metrics = activity.metrics || {};
+      return {
+        bugsAdded: (stats.bugsAdded || 0) + (metrics.bugsAdded || 0),
+        bugsClosed: (stats.bugsClosed || 0) + (metrics.bugsClosed || 0),
+        bugsReopened: (stats.bugsReopened || 0) + (metrics.bugsReopened || 0),
+        requirementsReviewed: (stats.requirementsReviewed || 0) + (metrics.requirementsReviewed || 0),
+      };
+    }, { bugsAdded: 0, bugsClosed: 0, bugsReopened: 0, requirementsReviewed: 0 });
+  };
+
+  const memberStats = report.dailyActivities ? 
+    Object.entries(report.dailyActivities).reduce((acc, [member, activities]) => {
+      acc[member] = calculateMemberStats(activities);
+      return acc;
+    }, {} as Record<string, MemberStats>) : {};
 
   return (
-    <div className="mt-8">
-      <h2 className="text-xl font-bold mb-4">Weekly Statistics</h2>
+    <div className="mt-4">
+      {report.startDate && report.endDate && (
+        <div className="mb-4 text-sm text-gray-600">
+          Period: {report.startDate} to {report.endDate}
+        </div>
+      )}
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
           <thead>
@@ -34,22 +60,22 @@ export const WeeklyStats: React.FC<WeeklyStatsProps> = ({ report }) => {
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {Object.entries(stats).map(([memberName, memberStats]) => (
+            {Object.entries(memberStats).map(([memberName, stats]) => (
               <tr key={memberName}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                   {memberName}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {memberStats.totalBugsAdded}
+                  {stats.bugsAdded}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {memberStats.totalBugsClosed}
+                  {stats.bugsClosed}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {memberStats.totalBugsReopened}
+                  {stats.bugsReopened}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {memberStats.totalRequirementsReviewed}
+                  {stats.requirementsReviewed}
                 </td>
               </tr>
             ))}
