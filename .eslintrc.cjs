@@ -3,7 +3,15 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
+    dom: true
+  },
+  globals: {
+    HTMLDivElement: true,
+    HTMLParagraphElement: true,
+    HTMLHeadingElement: true,
+    File: true,
+    setTimeout: true
   },
   extends: [
     'eslint:recommended',
