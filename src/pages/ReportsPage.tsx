@@ -5,7 +5,10 @@ import { AnalyticsDashboard } from '../components/reports/AnalyticsDashboard';
 
 export const ReportsPage: React.FC = () => {
   const handleFileUpload = (content: string, type: 'weekly' | 'daily', resourceName?: string) => {
-    console.log('File uploaded:', { content, type, resourceName });
+    // Process uploaded file
+    void content;
+    void type;
+    void resourceName;
   };
 
   return (

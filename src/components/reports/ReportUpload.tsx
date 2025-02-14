@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
-import { Upload } from 'lucide-react';
+import { Upload, FileText, AlertCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Alert, AlertDescription } from '../ui/alert';
 import { Progress } from '../ui/progress';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 
-interface FileUploadZoneProps {
-  onFileUpload: (content: string, type: 'weekly' | 'daily', resourceName?: string) => void;
+interface ReportUploadProps {
+  onUpload: (content: string, type: 'weekly' | 'daily', resourceName?: string) => void;
 }
 
-export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) => {
+const teamMembers = [
+  'Hamza Sohail',
+  'Farah Al-Haj Ahmad',
+  'Moath Abusall'
+];
+
+export const ReportUpload: React.FC<ReportUploadProps> = ({ onUpload }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [error, setError] = useState('');
   const [progress, setProgress] = useState(0);
   const [uploadType, setUploadType] = useState<'weekly' | 'daily'>('weekly');
   const [selectedResource, setSelectedResource] = useState<string>('');
 
-  const resources = [
-    'Hamza Sohail',
-    'Farah Al-Haj Ahmad',
-    'Moath Abusall'
-  ];
-
   const handleFile = async (file: globalThis.File) => {
-    globalThis.setTimeout(() => setProgress(0), 1000);
     if (!file.name.endsWith('.txt')) {
       setError('Please upload a text file');
       return;
@@ -35,20 +34,31 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
     }
 
     try {
-      setProgress(50);
+      setProgress(30);
       const text = await file.text();
-      setProgress(100);
-      onFileUpload(text, uploadType, selectedResource);
+      setProgress(60);
+      
+      // Validate report format
+      if (!text.includes('QC Team Weekly Progress')) {
+        setError('Invalid report format');
+        setProgress(0);
+        return;
+      }
+      
+      setProgress(90);
+      onUpload(text, uploadType, selectedResource);
       setError('');
+      setProgress(100);
+      
+      globalThis.setTimeout(() => setProgress(0), 1000);
     } catch {
       setError('Error reading file');
-    } finally {
-      globalThis.setTimeout(() => setProgress(0), 1000);
+      setProgress(0);
     }
   };
 
   return (
-    <Card>
+    <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Upload className="h-5 w-5" />
@@ -57,14 +67,14 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="weekly" onValueChange={(value) => setUploadType(value as 'weekly' | 'daily')}>
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-2 mb-6">
             <TabsTrigger value="weekly">Weekly Report</TabsTrigger>
             <TabsTrigger value="daily">Daily Report</TabsTrigger>
           </TabsList>
           
           <TabsContent value="weekly">
             <div
-              className={`mt-4 border-2 border-dashed rounded-lg ${
+              className={`border-2 border-dashed rounded-lg transition-colors ${
                 isDragging ? 'border-primary' : 'border-muted'
               }`}
             >
@@ -90,6 +100,7 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
                   id="file-upload-weekly"
                 />
                 <label htmlFor="file-upload-weekly" className="cursor-pointer text-center">
+                  <FileText className="h-12 w-12 text-muted-foreground mb-4" />
                   <p className="text-sm text-muted-foreground">
                     Drag and drop your weekly report file here or click to browse
                   </p>
@@ -109,13 +120,13 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
                 className="w-full rounded-md border border-input bg-background px-3 py-2"
               >
                 <option value="">Select Team Member</option>
-                {resources.map(resource => (
+                {teamMembers.map(resource => (
                   <option key={resource} value={resource}>{resource}</option>
                 ))}
               </select>
 
               <div
-                className={`border-2 border-dashed rounded-lg ${
+                className={`border-2 border-dashed rounded-lg transition-colors ${
                   isDragging ? 'border-primary' : 'border-muted'
                 }`}
               >
@@ -141,6 +152,7 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
                     id="file-upload-daily"
                   />
                   <label htmlFor="file-upload-daily" className="cursor-pointer text-center">
+                    <FileText className="h-12 w-12 text-muted-foreground mb-4" />
                     <p className="text-sm text-muted-foreground">
                       Drag and drop your daily report file here or click to browse
                     </p>
@@ -156,10 +168,19 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
         
         {error && (
           <Alert variant="destructive" className="mt-4">
+            <AlertCircle className="h-4 w-4" />
             <AlertDescription>{error}</AlertDescription>
           </Alert>
         )}
-        {progress > 0 && <Progress value={progress} className="mt-4" />}
+        
+        {progress > 0 && (
+          <div className="mt-4 space-y-2">
+            <Progress value={progress} />
+            <p className="text-sm text-muted-foreground text-center">
+              {progress === 100 ? 'Upload complete!' : 'Processing file...'}
+            </p>
+          </div>
+        )}
       </CardContent>
     </Card>
   );

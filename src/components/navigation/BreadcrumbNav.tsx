@@ -21,7 +21,7 @@ export const BreadcrumbNav: React.FC = () => {
         Home
       </Link>
       
-      {breadcrumbs.map((crumb, index) => (
+      {breadcrumbs.map((crumb, _index) => (
         <React.Fragment key={crumb.path}>
           <ChevronRight className="h-4 w-4" />
           <Link
