@@ -36,6 +36,7 @@ export const parseWeeklyReport = (reportText: string): Partial<WeeklyReport> => 
         const activity: DailyActivity = {
           date: new Date().toISOString().split('T')[0],
           description: line.trim(),
+          resourceName: currentMember,
           metrics: parseMetrics(line.trim())
         };
         report.dailyActivities![currentMember].push(activity);

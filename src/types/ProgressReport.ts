@@ -6,6 +6,7 @@ export interface TeamMember {
 export interface DailyActivity {
   date: string;
   description: string;
+  resourceName?: string;
   metrics: {
     bugsAdded?: number;
     bugsClosed?: number;
