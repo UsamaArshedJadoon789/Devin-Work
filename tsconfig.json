@@ -2,9 +2,10 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable", "DOM.Window", "ES2015.Promise"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "ES2015.Promise", "ES2015.Iterable", "ES2015.Symbol"],
     "types": ["node"],
     "typeRoots": ["./node_modules/@types"],
+    "skipDefaultLibCheck": true,
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
