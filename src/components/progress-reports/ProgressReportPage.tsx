@@ -22,7 +22,7 @@ export const ProgressReportPage: React.FC = () => {
               ...prevReport.dailyActivities,
               [resourceName]: [
                 ...(prevReport.dailyActivities[resourceName] || []),
-                ...(parsedReport.dailyActivities[resourceName] || []),
+                ...(parsedReport?.dailyActivities?.[resourceName] || []),
               ],
             },
           };
