@@ -4,7 +4,16 @@
     "browser": true,
     "es2021": true,
     "node": true,
-    "dom": true
+    "dom": true,
+    "worker": true
+  },
+  "globals": {
+    "HTMLDivElement": true,
+    "HTMLParagraphElement": true,
+    "HTMLHeadingElement": true,
+    "setTimeout": true,
+    "clearTimeout": true,
+    "File": true
   },
   "extends": [
     "eslint:recommended",
