@@ -22,7 +22,7 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
     'Moath Abusall'
   ];
 
-  const handleFile = async (file: File) => {
+  const handleFile = async (file: globalThis.File) => {
     if (!file.name.endsWith('.txt')) {
       setError('Please upload a text file');
       return;
