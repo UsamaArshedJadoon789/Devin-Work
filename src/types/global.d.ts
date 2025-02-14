@@ -1,12 +1,11 @@
-interface Window {
-  setTimeout: typeof setTimeout;
-  clearTimeout: typeof clearTimeout;
-}
+/// <reference types="node" />
+/// <reference types="react" />
+/// <reference types="react-dom" />
 
-interface HTMLElementTagNameMap {
-  div: HTMLDivElement;
-  p: HTMLParagraphElement;
-  h3: HTMLHeadingElement;
+declare namespace NodeJS {
+  interface ProcessEnv {
+    readonly NODE_ENV: 'development' | 'production' | 'test';
+  }
 }
 
 declare module '*.css' {
