@@ -20,7 +20,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ report }
   }));
 
   // Calculate daily progress data
-  const dailyProgress = Object.entries(report.dailyActivities || {}).reduce((acc: Record<string, any>, [_name, activities]) => {
+  const dailyProgress = Object.entries(report.dailyActivities || {}).reduce((acc: Record<string, DailyProgressData>, [_name, activities]) => {
     activities.forEach(activity => {
       const date = activity.date;
       if (!acc[date]) {
