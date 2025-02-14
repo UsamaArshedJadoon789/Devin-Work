@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 import { WeeklyReport } from '../../types/ProgressReport';
-import { DailyProgressData, ResourceMetrics } from '../../types/DailyProgress';
+import { DailyProgressData } from '../../types/DailyProgress';
 
 interface AnalyticsDashboardProps {
   report: WeeklyReport;
@@ -37,7 +37,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ report }
       acc[date].totalBugsReopened += activity.metrics?.bugsReopened || 0;
     });
     return acc;
-  }, {} as Record<string, any>);
+  }, {} as Record<string, DailyProgressData>);
 
   const dailyProgressData = Object.values(dailyProgress);
 
