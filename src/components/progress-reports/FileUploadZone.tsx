@@ -15,8 +15,8 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
   const [progress, setProgress] = useState(0);
   const [uploadType, setUploadType] = useState<'weekly' | 'daily'>('weekly');
 
-  const handleFile = async (file: File) => {
-    if (!file.name.endsWith('.txt')) {
+  const handleFile = async (file: Blob) => {
+    if (!(file instanceof File) || !file.name.endsWith('.txt')) {
       setError('Please upload a text file');
       return;
     }
@@ -27,10 +27,10 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
       setProgress(100);
       onFileUpload(text, uploadType);
       setError('');
-    } catch (err) {
+    } catch (_err) {
       setError('Error reading file');
     } finally {
-      setTimeout(() => setProgress(0), 1000);
+      window.setTimeout(() => setProgress(0), 1000);
     }
   };
 

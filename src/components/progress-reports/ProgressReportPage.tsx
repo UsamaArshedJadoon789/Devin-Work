@@ -26,7 +26,7 @@ export const ProgressReportPage: React.FC = () => {
         });
       }
     } catch (error) {
-      console.error('Error parsing report:', error);
+      // Handle error silently - error state is managed by FileUploadZone
     }
   };
 
