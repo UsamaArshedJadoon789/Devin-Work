@@ -23,7 +23,7 @@ export const FileUploadZone: React.FC<FileUploadZoneProps> = ({ onFileUpload }) 
   ];
 
   const handleFile = async (file: File) => {
-    window.setTimeout(() => setProgress(0), 1000);
+    setTimeout(() => setProgress(0), 1000);
     if (!file.name.endsWith('.txt')) {
       setError('Please upload a text file');
       return;
