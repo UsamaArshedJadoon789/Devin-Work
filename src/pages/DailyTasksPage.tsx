@@ -31,28 +31,28 @@ export const DailyTasksPage: React.FC = () => {
           const progress = (tasks.completed / tasks.total) * 100;
           
           return (
-            <Card key={member}>
-              <CardHeader>
-                <CardTitle>{member}</CardTitle>
+            <Card key={member} className="overflow-hidden">
+              <CardHeader className="border-b bg-muted/40">
+                <CardTitle className="text-lg font-semibold">{member}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
+              <CardContent className="p-6">
+                <div className="space-y-6">
                   <div>
-                    <div className="flex justify-between text-sm mb-1">
-                      <span>Daily Progress</span>
-                      <span>{Math.round(progress)}%</span>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-muted-foreground">Efficiency</span>
+                      <span className="text-sm font-bold">{Math.round(progress)}%</span>
                     </div>
-                    <Progress value={progress} />
+                    <Progress value={progress} className="h-2" />
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p className="text-sm text-muted-foreground">Tasks Completed</p>
-                      <p className="text-2xl font-bold">{tasks.completed}</p>
+                    <div className="p-4 rounded-lg bg-muted/50">
+                      <p className="text-sm font-medium text-muted-foreground mb-1">Tasks Completed</p>
+                      <p className="text-2xl font-bold text-foreground">{tasks.completed}</p>
                     </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">Total Tasks</p>
-                      <p className="text-2xl font-bold">{tasks.total}</p>
+                    <div className="p-4 rounded-lg bg-muted/50">
+                      <p className="text-sm font-medium text-muted-foreground mb-1">Total Tasks</p>
+                      <p className="text-2xl font-bold text-foreground">{tasks.total}</p>
                     </div>
                   </div>
                 </div>

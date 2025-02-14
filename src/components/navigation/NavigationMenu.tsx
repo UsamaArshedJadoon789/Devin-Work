@@ -36,9 +36,9 @@ export const NavigationMenu: React.FC = () => {
             <Link
               key={route.path}
               to={route.path}
-              className={`flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+              className={`flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-lg transition-all ${
                 isActive 
-                  ? 'bg-primary text-primary-foreground' 
+                  ? 'bg-primary text-primary-foreground shadow-sm' 
                   : 'text-muted-foreground hover:bg-muted hover:text-foreground'
               }`}
             >
@@ -50,13 +50,17 @@ export const NavigationMenu: React.FC = () => {
       </div>
       
       <div className="border-t border-border pt-4">
-        <h3 className="px-3 text-sm font-medium text-muted-foreground mb-2">Team Members</h3>
+        <h3 className="px-4 text-sm font-medium text-muted-foreground mb-3">Team Members</h3>
         <div className="space-y-1">
           {teamMembers.map((member) => (
             <Link
               key={member}
               to={`/team/${member.toLowerCase().replace(/\s+/g, '-')}`}
-              className="flex items-center gap-3 px-3 py-2 text-sm font-medium text-muted-foreground rounded-md hover:bg-muted hover:text-foreground"
+              className={`flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-lg transition-all ${
+                location.pathname === `/team/${member.toLowerCase().replace(/\s+/g, '-')}` 
+                  ? 'bg-primary/10 text-primary' 
+                  : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+              }`}
             >
               <Users className="h-5 w-5" />
               {member}
