@@ -18,7 +18,7 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
   ]
 
   return (
-    <section className="bg-[#0A2647] text-white min-h-screen relative overflow-hidden">
+    <section className="bg-[#0A2647] text-white min-h-screen relative">
       <div className="container mx-auto px-4 pt-24 lg:pt-32">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           <div className="max-w-3xl">
@@ -35,7 +35,7 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
             </div>
             <Button 
               size="lg" 
-              className="w-full sm:w-auto bg-white text-[#0A2647] hover:bg-gray-100 text-lg py-5 px-14 rounded-xl shadow-lg transition-all duration-300 font-semibold"
+              className="w-full sm:w-auto bg-white text-[#0A2647] hover:bg-gray-100 text-lg py-6 px-16 rounded-xl shadow-lg transition-all duration-300 font-semibold"
             >
               GET STARTED
             </Button>
@@ -45,7 +45,7 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
             <div className="relative aspect-square bg-white/10 rounded-xl flex items-center justify-center overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
               <img 
-                src="/hero-illustration.svg" 
+                src="/images/hero-illustration.png" 
                 alt="Hero Illustration" 
                 className="w-4/5 h-4/5 object-contain relative z-10" 
               />
