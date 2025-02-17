@@ -53,7 +53,7 @@
         const bookingServiceUrl = '/api';
 
         async function loadMusicals() {
-            const response = await fetch(`${showServiceUrl}/api/musicals`);
+            const response = await fetch(`${showServiceUrl}/musicals`);
             const musicals = await response.json();
             
             const musicalsDiv = document.getElementById('musicals');
@@ -94,7 +94,7 @@
                 numberOfSeats: parseInt(document.getElementById('seats').value)
             };
             
-            const response = await fetch(`${bookingServiceUrl}/api/bookings`, {
+            const response = await fetch(`${bookingServiceUrl}/bookings`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(booking)
@@ -110,7 +110,7 @@
 
         async function viewBookings() {
             const studentId = document.getElementById('searchStudentId').value;
-            const response = await fetch(`${bookingServiceUrl}/api/bookings/student/${studentId}`);
+            const response = await fetch(`${bookingServiceUrl}/bookings/student/${studentId}`);
             const bookings = await response.json();
             
             const bookingsDiv = document.getElementById('bookings-list');
