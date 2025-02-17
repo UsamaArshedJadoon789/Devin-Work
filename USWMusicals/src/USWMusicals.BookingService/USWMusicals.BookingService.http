@@ -1,0 +1,6 @@
+@USWMusicals.BookingService_HostAddress = http://localhost:5197
+
+GET {{USWMusicals.BookingService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
