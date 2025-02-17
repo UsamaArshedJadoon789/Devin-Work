@@ -49,12 +49,22 @@
     </div>
 
     <script>
-        const showServiceUrl = '/api';
-        const bookingServiceUrl = '/api';
+        const API_URL = window.location.origin;
+        const showServiceUrl = `${API_URL}/api`;
+        const bookingServiceUrl = `${API_URL}/api`;
 
         async function loadMusicals() {
-            const response = await fetch(`${showServiceUrl}/musicals`);
-            const musicals = await response.json();
+            try {
+                const response = await fetch(`${showServiceUrl}/musicals`, {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const musicals = await response.json();
             
             const musicalsDiv = document.getElementById('musicals');
             const showTimeSelect = document.getElementById('showTimeId');
@@ -85,6 +95,11 @@
                 
                 musicalsDiv.appendChild(musicalDiv);
             });
+            } catch (error) {
+                console.error('Error loading musicals:', error);
+                const musicalsDiv = document.getElementById('musicals');
+                musicalsDiv.innerHTML = '<h2>Available Musicals</h2><p>Error loading musicals. Please try again later.</p>';
+            }
         }
 
         async function bookTickets() {
@@ -96,7 +111,10 @@
             
             const response = await fetch(`${bookingServiceUrl}/bookings`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
                 body: JSON.stringify(booking)
             });
             
@@ -110,7 +128,11 @@
 
         async function viewBookings() {
             const studentId = document.getElementById('searchStudentId').value;
-            const response = await fetch(`${bookingServiceUrl}/bookings/student/${studentId}`);
+            const response = await fetch(`${bookingServiceUrl}/bookings/student/${studentId}`, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             const bookings = await response.json();
             
             const bookingsDiv = document.getElementById('bookings-list');
