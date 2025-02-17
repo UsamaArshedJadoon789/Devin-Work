@@ -59,29 +59,37 @@ public class MusicalsController : ControllerBase
     [Produces("application/json")]
     public ActionResult<IEnumerable<object>> GetAll()
     {
-        Console.WriteLine($"GetAll called at {DateTime.UtcNow}");
-        
-        Response.Headers["Content-Type"] = "application/json; charset=utf-8";
-        Response.Headers.Add("Access-Control-Allow-Origin", "*");
-        Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-        Response.Headers.Add("Access-Control-Allow-Headers", "*");
-        
-        var musicals = _musicals.Select(m => new
+        try
         {
-            id = m.Id,
-            title = m.Title,
-            description = m.Description,
-            showTimes = m.ShowTimes.Select(st => new
+            Console.WriteLine($"GetAll called at {DateTime.UtcNow}");
+            
+            Response.Headers["Content-Type"] = "application/json; charset=utf-8";
+            Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+            Response.Headers.Add("Access-Control-Allow-Headers", "*");
+        
+            var musicals = _musicals.Select(m => new
             {
-                id = st.Id,
-                dateTime = st.DateTime,
-                totalSeats = st.TotalSeats,
-                availableSeats = st.AvailableSeats
-            }).ToList()
-        }).ToList();
+                id = m.Id,
+                title = m.Title,
+                description = m.Description,
+                showTimes = m.ShowTimes.Select(st => new
+                {
+                    id = st.Id,
+                    dateTime = st.DateTime,
+                    totalSeats = st.TotalSeats,
+                    availableSeats = st.AvailableSeats
+                }).ToList()
+            }).ToList();
 
-        Console.WriteLine($"Returning {musicals.Count} musicals");
-        return Ok(musicals);
+            Console.WriteLine($"Returning {musicals.Count} musicals");
+            return Ok(musicals);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in GetAll: {ex.Message}");
+            return StatusCode(500, new { error = "Internal server error", message = ex.Message });
+        }
     }
 
     [HttpGet("{id}")]

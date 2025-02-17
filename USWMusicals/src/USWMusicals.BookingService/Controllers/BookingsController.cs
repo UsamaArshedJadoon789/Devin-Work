@@ -5,19 +5,29 @@ namespace USWMusicals.BookingService.Controllers;
 
 [ApiController]
 [Route("api/bookings")]
+[Produces("application/json")]
 public class BookingsController : ControllerBase
 {
     private static readonly List<Booking> _bookings = new();
 
     [HttpPost]
+    [Produces("application/json")]
     public async Task<ActionResult<Booking>> Create(Booking booking)
     {
-        booking.Id = Guid.NewGuid();
-        booking.BookingTime = DateTime.UtcNow;
-        booking.Status = BookingStatus.Confirmed;
-        
-        _bookings.Add(booking);
-        return CreatedAtAction(nameof(GetById), new { id = booking.Id }, booking);
+        try
+        {
+            booking.Id = Guid.NewGuid();
+            booking.BookingTime = DateTime.UtcNow;
+            booking.Status = BookingStatus.Confirmed;
+            
+            _bookings.Add(booking);
+            return CreatedAtAction(nameof(GetById), new { id = booking.Id }, booking);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error creating booking: {ex.Message}");
+            return StatusCode(500, new { error = "Internal server error", message = ex.Message });
+        }
     }
 
     [HttpGet("{id}")]
