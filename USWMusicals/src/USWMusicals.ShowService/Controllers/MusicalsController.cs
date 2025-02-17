@@ -4,7 +4,7 @@ using USWMusicals.ShowService.Models;
 namespace USWMusicals.ShowService.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/musicals")]
 public class MusicalsController : ControllerBase
 {
     private static readonly List<Musical> _musicals = new();
