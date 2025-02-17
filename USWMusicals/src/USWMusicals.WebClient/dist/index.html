@@ -51,17 +51,41 @@
     </div>
 
     <script>
-        const API_URL = window.location.origin;  // Use relative path for API calls
+        const API_URL = window.location.origin;
+        const RETRY_ATTEMPTS = 3;
+        const RETRY_DELAY = 1000;
 
-        async function fetchWithRetry(url, options = {}, retries = 5) {
+        async function fetchWithRetry(url, options = {}, retries = RETRY_ATTEMPTS) {
             for (let i = 0; i < retries; i++) {
                 try {
-                    const response = await fetch(url, options);
-                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                    return response;
+                    const response = await fetch(url, {
+                        ...options,
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json',
+                            ...options.headers
+                        }
+                    });
+                    
+                    if (!response.ok) {
+                        const contentType = response.headers.get('content-type');
+                        if (contentType && contentType.includes('application/json')) {
+                            const error = await response.json();
+                            throw new Error(error.message || `HTTP error! status: ${response.status}`);
+                        } else {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                    }
+                    
+                    const contentType = response.headers.get('content-type');
+                    if (!contentType || !contentType.includes('application/json')) {
+                        throw new Error('Response is not JSON');
+                    }
+                    
+                    return await response.json();
                 } catch (error) {
                     if (i === retries - 1) throw error;
-                    await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
+                    await new Promise(resolve => setTimeout(resolve, RETRY_DELAY * Math.pow(2, i)));
                 }
             }
         }
@@ -78,8 +102,7 @@
                 
                 const url = `${API_URL}/api/musicals`;
                 console.log('Fetching musicals from:', url);
-                const response = await fetchWithRetry(url);
-                const musicals = await response.json();
+                const musicals = await fetchWithRetry(url);
                 console.log('Musicals data:', musicals);
                 
                 loadingDiv.style.display = 'none';
@@ -120,8 +143,9 @@
                 });
             } catch (error) {
                 console.error('Error loading musicals:', error);
-                const errorMessage = error.message.includes('Failed to fetch') 
-                    ? 'Unable to connect to server. Please check your connection.' 
+                loadingDiv.style.display = 'none';
+                const errorMessage = error.message.includes('Response is not JSON') 
+                    ? 'Server returned invalid response format. Please try again later.' 
                     : `Error loading musicals: ${error.message}`;
                 musicalsContent.innerHTML = `<div class="alert error">${errorMessage}</div>`;
             }
@@ -142,22 +166,19 @@
                 };
                 
                 console.log('Booking tickets:', booking);
-                const response = await fetchWithRetry(`${API_URL}/api/bookings`, {
+                const result = await fetchWithRetry(`${API_URL}/api/bookings`, {
                     method: 'POST',
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
                     body: JSON.stringify(booking)
                 });
                 
-                const result = await response.json();
                 console.log('Booking result:', result);
                 const successMessage = document.createElement('div');
                 successMessage.className = 'alert success';
                 successMessage.textContent = 'Booking successful!';
                 document.querySelector('#booking-form').prepend(successMessage);
                 setTimeout(() => successMessage.remove(), 3000);
+                
+                loadMusicals();
             } catch (error) {
                 console.error('Error booking tickets:', error);
                 const errorMessage = document.createElement('div');
@@ -168,7 +189,6 @@
             } finally {
                 submitButton.disabled = false;
                 submitButton.textContent = 'Book Now';
-                loadMusicals();
             }
         }
 
@@ -188,39 +208,43 @@
                 viewButton.disabled = true;
                 loadingDiv.style.display = 'block';
                 bookingsContent.innerHTML = '';
+                
                 console.log('Fetching bookings for student:', studentId);
-                
-                const response = await fetchWithRetry(`${API_URL}/api/bookings/student/${studentId}`, {
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    }
-                });
-                
-                const result = await response.json();
-                console.log('Student bookings:', result);
+                const bookings = await fetchWithRetry(`${API_URL}/api/bookings/student/${studentId}`);
+                console.log('Student bookings:', bookings);
                 
                 loadingDiv.style.display = 'none';
-                bookingsContent.innerHTML = '<h3>Your Bookings:</h3>';
                 
-                if (!result || result.length === 0) {
-                    bookingsContent.innerHTML += '<p>No bookings found.</p>';
-                } else {
-                    result.forEach(booking => {
-                        bookingsContent.innerHTML += `
-                            <div class="booking">
-                                <p>Booking ID: ${booking.id}</p>
-                                <p>Show Time: ${booking.showTimeId}</p>
-                                <p>Number of Seats: ${booking.numberOfSeats}</p>
-                                <p>Booking Time: ${new Date(booking.bookingTime).toLocaleString()}</p>
-                            </div>
-                        `;
-                    });
+                if (!bookings || bookings.length === 0) {
+                    bookingsContent.innerHTML = '<div class="alert">No bookings found.</div>';
+                    return;
                 }
+                
+                const bookingsList = document.createElement('div');
+                bookingsList.className = 'bookings-list';
+                
+                bookings.forEach(booking => {
+                    const bookingDiv = document.createElement('div');
+                    bookingDiv.className = 'booking';
+                    bookingDiv.innerHTML = `
+                        <div class="booking-details">
+                            <p><strong>Booking ID:</strong> ${booking.id}</p>
+                            <p><strong>Show Time:</strong> ${new Date(booking.showTime.dateTime).toLocaleString()}</p>
+                            <p><strong>Number of Seats:</strong> ${booking.numberOfSeats}</p>
+                            <p><strong>Booking Time:</strong> ${new Date(booking.bookingTime).toLocaleString()}</p>
+                        </div>
+                    `;
+                    bookingsList.appendChild(bookingDiv);
+                });
+                
+                bookingsContent.appendChild(bookingsList);
             } catch (error) {
                 console.error('Error viewing bookings:', error);
                 loadingDiv.style.display = 'none';
-                bookingsContent.innerHTML = '<div class="alert error">Error viewing bookings: ' + error.message + '</div>';
+                const errorMessage = error.message.includes('Response is not JSON')
+                    ? 'Server returned invalid response format. Please try again later.'
+                    : `Error viewing bookings: ${error.message}`;
+                bookingsContent.innerHTML = `<div class="alert error">${errorMessage}</div>`;
             } finally {
                 viewButton.disabled = false;
             }
