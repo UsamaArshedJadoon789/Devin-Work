@@ -2,23 +2,14 @@
 <html>
 <head>
     <title>USW Musicals Booking System</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .musical { border: 1px solid #ddd; padding: 15px; margin: 10px 0; }
-        .form-group { margin: 10px 0; }
-        button { padding: 8px 16px; background: #1a237e; color: white; border: none; cursor: pointer; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>USW Musicals Booking System</h1>
-        
         <div id="musicals">
             <h2>Available Musicals</h2>
-            <!-- Musicals will be loaded here -->
         </div>
-
         <div id="booking-form">
             <h2>Book Tickets</h2>
             <div class="form-group">
@@ -35,98 +26,108 @@
             </div>
             <button onclick="bookTickets()">Book Now</button>
         </div>
-
         <div id="bookings">
             <h2>My Bookings</h2>
             <div class="form-group">
                 <input type="text" id="searchStudentId" placeholder="Enter Student ID" />
                 <button onclick="viewBookings()">View Bookings</button>
             </div>
-            <div id="bookings-list">
-                <!-- Bookings will be loaded here -->
-            </div>
+            <div id="bookings-list"></div>
         </div>
     </div>
-
     <script>
-        const showServiceUrl = '/api';
-        const bookingServiceUrl = '/api';
-
+        const API_URL = 'https://pdf-coursework-app-7x8n3ym8.devinapps.com/api';
+        
         async function loadMusicals() {
-            const response = await fetch(`${showServiceUrl}/musicals`);
-            const musicals = await response.json();
-            
-            const musicalsDiv = document.getElementById('musicals');
-            const showTimeSelect = document.getElementById('showTimeId');
-            
-            musicalsDiv.innerHTML = '<h2>Available Musicals</h2>';
-            showTimeSelect.innerHTML = '';
-            
-            musicals.forEach(musical => {
-                const musicalDiv = document.createElement('div');
-                musicalDiv.className = 'musical';
-                musicalDiv.innerHTML = `
-                    <h3>${musical.title}</h3>
-                    <p>${musical.description}</p>
-                    <h4>Show Times:</h4>
-                `;
+            try {
+                const response = await fetch(`${API_URL}/musicals`);
+                const musicals = await response.json();
                 
-                musical.showTimes.forEach(showTime => {
-                    musicalDiv.innerHTML += `
-                        <p>Date: ${new Date(showTime.dateTime).toLocaleString()}<br>
-                        Available Seats: ${showTime.availableSeats}</p>
+                const musicalsDiv = document.getElementById('musicals');
+                const showTimeSelect = document.getElementById('showTimeId');
+                
+                musicalsDiv.innerHTML = '<h2>Available Musicals</h2>';
+                showTimeSelect.innerHTML = '';
+                
+                musicals.forEach(musical => {
+                    const musicalDiv = document.createElement('div');
+                    musicalDiv.className = 'musical';
+                    musicalDiv.innerHTML = `
+                        <h3>${musical.title}</h3>
+                        <p>${musical.description}</p>
+                        <h4>Show Times:</h4>
                     `;
                     
-                    const option = document.createElement('option');
-                    option.value = showTime.id;
-                    option.text = `${musical.title} - ${new Date(showTime.dateTime).toLocaleString()}`;
-                    showTimeSelect.appendChild(option);
+                    musical.showTimes.forEach(showTime => {
+                        musicalDiv.innerHTML += `
+                            <p>Date: ${new Date(showTime.dateTime).toLocaleString()}<br>
+                            Available Seats: ${showTime.availableSeats}</p>
+                        `;
+                        
+                        const option = document.createElement('option');
+                        option.value = showTime.id;
+                        option.text = `${musical.title} - ${new Date(showTime.dateTime).toLocaleString()}`;
+                        showTimeSelect.appendChild(option);
+                    });
+                    
+                    musicalsDiv.appendChild(musicalDiv);
                 });
-                
-                musicalsDiv.appendChild(musicalDiv);
-            });
+            } catch (error) {
+                console.error('Error loading musicals:', error);
+                alert('Error loading musicals. Please try again.');
+            }
         }
 
         async function bookTickets() {
-            const booking = {
-                studentId: document.getElementById('studentId').value,
-                showTimeId: document.getElementById('showTimeId').value,
-                numberOfSeats: parseInt(document.getElementById('seats').value)
-            };
-            
-            const response = await fetch(`${bookingServiceUrl}/bookings`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(booking)
-            });
-            
-            if (response.ok) {
-                alert('Booking successful!');
-                loadMusicals();
-            } else {
-                alert('Booking failed. Please try again.');
+            try {
+                const booking = {
+                    studentId: document.getElementById('studentId').value,
+                    showTimeId: document.getElementById('showTimeId').value,
+                    numberOfSeats: parseInt(document.getElementById('seats').value)
+                };
+                
+                const response = await fetch(`${API_URL}/bookings`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(booking)
+                });
+                
+                if (response.ok) {
+                    alert('Booking successful!');
+                    loadMusicals();
+                } else {
+                    alert('Booking failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error booking tickets:', error);
+                alert('Error booking tickets. Please try again.');
             }
         }
 
         async function viewBookings() {
-            const studentId = document.getElementById('searchStudentId').value;
-            const response = await fetch(`${bookingServiceUrl}/bookings/student/${studentId}`);
-            const bookings = await response.json();
-            
-            const bookingsDiv = document.getElementById('bookings-list');
-            bookingsDiv.innerHTML = '';
-            
-            bookings.forEach(booking => {
-                const bookingDiv = document.createElement('div');
-                bookingDiv.className = 'musical';
-                bookingDiv.innerHTML = `
-                    <p>Booking ID: ${booking.id}</p>
-                    <p>Show Time ID: ${booking.showTimeId}</p>
-                    <p>Number of Seats: ${booking.numberOfSeats}</p>
-                    <p>Status: ${booking.status}</p>
-                `;
-                bookingsDiv.appendChild(bookingDiv);
-            });
+            try {
+                const studentId = document.getElementById('searchStudentId').value;
+                const response = await fetch(`${API_URL}/bookings/student/${studentId}`);
+                const bookings = await response.json();
+                
+                const bookingsDiv = document.getElementById('bookings-list');
+                bookingsDiv.innerHTML = '';
+                
+                bookings.forEach(booking => {
+                    const bookingDiv = document.createElement('div');
+                    bookingDiv.className = 'musical';
+                    bookingDiv.innerHTML = `
+                        <p>Booking ID: ${booking.id}</p>
+                        <p>Show Time ID: ${booking.showTimeId}</p>
+                        <p>Number of Seats: ${booking.numberOfSeats}</p>
+                        <p>Status: ${booking.status}</p>
+                    `;
+                    bookingsDiv.appendChild(bookingDiv);
+                });
+            } catch (error) {
+                console.error('Error viewing bookings:', error);
+                alert('Error viewing bookings. Please try again.');
+            }
         }
 
         // Load musicals when page loads
