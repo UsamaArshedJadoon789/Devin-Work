@@ -51,7 +51,22 @@
     </div>
 
     <script>
-        const API_URL = 'http://localhost:80';
+        const API_URL = window.location.origin;
+
+        async function fetchWithRetry(url, options = {}, retries = 3) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    if (i === retries - 1) throw error;
+                    await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1)));
+                }
+            }
+        }
 
         async function loadMusicals() {
             const loadingDiv = document.querySelector('#musicals .loading');
@@ -65,12 +80,7 @@
                 
                 const url = `${API_URL}/api/musicals`;
                 console.log('Fetching musicals from:', url);
-                const response = await fetch(url);
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
+                const response = await fetchWithRetry(url);
                 const musicals = await response.json();
                 console.log('Musicals data:', musicals);
                 
@@ -113,10 +123,10 @@
             });
             } catch (error) {
                 console.error('Error loading musicals:', error);
-                const musicalsContent = document.getElementById('musicals-content');
-                const loadingDiv = document.querySelector('#musicals .loading');
-                loadingDiv.style.display = 'none';
-                musicalsContent.innerHTML = '<div class="alert error">Error loading musicals. Please try again later.</div>';
+                const errorMessage = error.message.includes('Failed to fetch') 
+                    ? 'Unable to connect to server. Please check your connection.' 
+                    : `Error loading musicals: ${error.message}`;
+                musicalsContent.innerHTML = `<div class="alert error">${errorMessage}</div>`;
             }
         }
 
