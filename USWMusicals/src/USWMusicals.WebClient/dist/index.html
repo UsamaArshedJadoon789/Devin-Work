@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USW Musicals Booking System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>USW Musicals Booking System</h1>
+        
+        <section id="musicals" class="section">
+            <h2>Available Musicals</h2>
+            <div class="loading">Loading musicals...</div>
+            <div id="musicals-content"></div>
+        </section>
+
+        <section id="booking-form" class="section">
+            <h2>Book Tickets</h2>
+            <form onsubmit="event.preventDefault(); bookTickets();">
+                <div class="form-group">
+                    <label for="studentId">Student ID:</label>
+                    <input type="text" id="studentId" required devinid="0" />
+                </div>
+                <div class="form-group">
+                    <label for="showTimeId">Show Time:</label>
+                    <select id="showTimeId" required devinid="1"></select>
+                </div>
+                <div class="form-group">
+                    <label for="seats">Number of Seats:</label>
+                    <input type="number" id="seats" min="1" max="10" value="1" required devinid="2" />
+                </div>
+                <button type="submit" devinid="3">Book Now</button>
+            </form>
+        </section>
+
+        <section id="bookings" class="section">
+            <h2>My Bookings</h2>
+            <div class="form-group">
+                <label for="searchStudentId">Enter Student ID:</label>
+                <div class="search-group">
+                    <input type="text" id="searchStudentId" required devinid="4" />
+                    <button onclick="viewBookings()" devinid="5">View Bookings</button>
+                </div>
+            </div>
+            <div id="bookings-list">
+                <div class="loading" style="display: none;">Loading bookings...</div>
+                <div id="bookings-content"></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const API_URL = window.location.origin;
+        const RETRY_ATTEMPTS = 3;
+        const RETRY_DELAY = 1000;
+        const HEADERS = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        };
+
+        async function fetchWithRetry(url, options = {}, retries = RETRY_ATTEMPTS) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, {
+                        ...options,
+                        headers: HEADERS
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    
+                    return await response.json();
+                } catch (error) {
+                    if (i === retries - 1) throw error;
+                    await new Promise(resolve => setTimeout(resolve, RETRY_DELAY * Math.pow(2, i)));
+                }
+            }
+        }
+
+        async function loadMusicals() {
+            const loadingDiv = document.querySelector('#musicals .loading');
+            const musicalsContent = document.getElementById('musicals-content');
+            const showTimeSelect = document.getElementById('showTimeId');
+            
+            try {
+                loadingDiv.style.display = 'block';
+                musicalsContent.innerHTML = '';
+                showTimeSelect.innerHTML = '<option value="">Select a show time</option>';
+                
+                const url = `${API_URL}/api/musicals`;
+                console.log('Fetching musicals from:', url);
+                const musicals = await fetchWithRetry(url);
+                console.log('Musicals data:', musicals);
+                
+                loadingDiv.style.display = 'none';
+                
+                if (!Array.isArray(musicals) || musicals.length === 0) {
+                    musicalsContent.innerHTML = '<div class="alert">No musicals available.</div>';
+                    return;
+                }
+                
+                musicals.forEach(musical => {
+                    if (!musical || !musical.showTimes || !Array.isArray(musical.showTimes)) {
+                        console.error('Invalid musical data:', musical);
+                        return;
+                    }
+                    
+                    const musicalDiv = document.createElement('div');
+                    musicalDiv.className = 'musical';
+                    musicalDiv.innerHTML = `
+                        <h3>${musical.title || 'Untitled'}</h3>
+                        <p class="description">${musical.description || 'No description available'}</p>
+                        <div class="show-times">
+                            <h4>Show Times:</h4>
+                            <div class="times-grid">
+                                ${musical.showTimes.map(showTime => `
+                                    <div class="time-slot">
+                                        <div class="date">${new Date(showTime.dateTime).toLocaleDateString()}</div>
+                                        <div class="time">${new Date(showTime.dateTime).toLocaleTimeString()}</div>
+                                        <div class="seats">Available Seats: ${showTime.availableSeats}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                    
+                    musical.showTimes.forEach(showTime => {
+                        if (!showTime || !showTime.id || !showTime.dateTime) {
+                            console.error('Invalid show time data:', showTime);
+                            return;
+                        }
+                        const option = document.createElement('option');
+                        option.value = showTime.id;
+                        option.text = `${musical.title} - ${new Date(showTime.dateTime).toLocaleString()}`;
+                        showTimeSelect.appendChild(option);
+                    });
+                    
+                    musicalsContent.appendChild(musicalDiv);
+                });
+            } catch (error) {
+                console.error('Error loading musicals:', error);
+                loadingDiv.style.display = 'none';
+                const errorMessage = error.message.includes('Response is not JSON') 
+                    ? 'Server returned invalid response format. Please try again later.' 
+                    : `Error loading musicals: ${error.message}`;
+                musicalsContent.innerHTML = `<div class="alert error">${errorMessage}</div>`;
+            }
+        }
+
+        async function bookTickets() {
+            const bookingForm = document.querySelector('#booking-form form');
+            const submitButton = bookingForm.querySelector('button[type="submit"]');
+            
+            try {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Booking...';
+                
+                const booking = {
+                    studentId: document.getElementById('studentId').value,
+                    showTimeId: document.getElementById('showTimeId').value,
+                    numberOfSeats: parseInt(document.getElementById('seats').value)
+                };
+                
+                console.log('Booking tickets:', booking);
+                const result = await fetchWithRetry(`${API_URL}/api/bookings`, {
+                    method: 'POST',
+                    body: JSON.stringify(booking)
+                });
+                
+                console.log('Booking result:', result);
+                const successMessage = document.createElement('div');
+                successMessage.className = 'alert success';
+                successMessage.textContent = 'Booking successful!';
+                document.querySelector('#booking-form').prepend(successMessage);
+                setTimeout(() => successMessage.remove(), 3000);
+                
+                loadMusicals();
+            } catch (error) {
+                console.error('Error booking tickets:', error);
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'alert error';
+                errorMessage.textContent = 'Error booking tickets: ' + error.message;
+                document.querySelector('#booking-form').prepend(errorMessage);
+                setTimeout(() => errorMessage.remove(), 3000);
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Book Now';
+            }
+        }
+
+        async function viewBookings() {
+            const bookingsSection = document.getElementById('bookings');
+            const loadingDiv = bookingsSection.querySelector('.loading');
+            const bookingsContent = document.getElementById('bookings-content');
+            const viewButton = bookingsSection.querySelector('button');
+            
+            try {
+                const studentId = document.getElementById('searchStudentId').value;
+                if (!studentId) {
+                    bookingsContent.innerHTML = '<div class="alert error">Please enter a Student ID</div>';
+                    return;
+                }
+                
+                viewButton.disabled = true;
+                loadingDiv.style.display = 'block';
+                bookingsContent.innerHTML = '';
+                
+                console.log('Fetching bookings for student:', studentId);
+                const bookings = await fetchWithRetry(`${API_URL}/api/bookings/student/${studentId}`);
+                console.log('Student bookings:', bookings);
+                
+                loadingDiv.style.display = 'none';
+                
+                if (!bookings || bookings.length === 0) {
+                    bookingsContent.innerHTML = '<div class="alert">No bookings found.</div>';
+                    return;
+                }
+                
+                const bookingsList = document.createElement('div');
+                bookingsList.className = 'bookings-list';
+                
+                bookings.forEach(booking => {
+                    const bookingDiv = document.createElement('div');
+                    bookingDiv.className = 'booking';
+                    bookingDiv.innerHTML = `
+                        <div class="booking-details">
+                            <p><strong>Booking ID:</strong> ${booking.id}</p>
+                            <p><strong>Show Time:</strong> ${new Date(booking.showTime.dateTime).toLocaleString()}</p>
+                            <p><strong>Number of Seats:</strong> ${booking.numberOfSeats}</p>
+                            <p><strong>Booking Time:</strong> ${new Date(booking.bookingTime).toLocaleString()}</p>
+                        </div>
+                    `;
+                    bookingsList.appendChild(bookingDiv);
+                });
+                
+                bookingsContent.appendChild(bookingsList);
+            } catch (error) {
+                console.error('Error viewing bookings:', error);
+                loadingDiv.style.display = 'none';
+                const errorMessage = error.message.includes('Response is not JSON')
+                    ? 'Server returned invalid response format. Please try again later.'
+                    : `Error viewing bookings: ${error.message}`;
+                bookingsContent.innerHTML = `<div class="alert error">${errorMessage}</div>`;
+            } finally {
+                viewButton.disabled = false;
+            }
+        }
+
+        // Load musicals when page loads
+        loadMusicals();
+    </script>
+</body>
+</html>

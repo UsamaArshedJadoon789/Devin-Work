@@ -1,28 +1,57 @@
 version: '3.8'
 
 services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./USWMusicals.WebClient/dist:/usr/share/nginx/html:ro
+    depends_on:
+      - showservice
+      - bookingservice
+    networks:
+      - app-network
+
   showservice:
     build:
       context: ./USWMusicals.ShowService
       dockerfile: Dockerfile
-    ports:
-      - "5001:80"
+    expose:
+      - "80"
+    networks:
+      - app-network
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:80
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:80/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
 
   bookingservice:
     build:
       context: ./USWMusicals.BookingService
       dockerfile: Dockerfile
-    ports:
-      - "5002:80"
+    expose:
+      - "80"
+    networks:
+      - app-network
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:80
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:80/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
 
-  client:
-    build:
-      context: ./USWMusicals.Client
-      dockerfile: Dockerfile
-    depends_on:
-      - showservice
-      - bookingservice
+networks:
+  app-network:
+    driver: bridge
