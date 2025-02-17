@@ -17,9 +17,6 @@ services:
         condition: service_healthy
     networks:
       - app-network
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=http://+:80
 
   showservice:
     build:
@@ -34,17 +31,17 @@ services:
       - ASPNETCORE_URLS=http://+:80
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:80/health || exit 1"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 30s
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
   bookingservice:
     build:
       context: ./USWMusicals.BookingService
       dockerfile: Dockerfile
     ports:
-      - "5001:80"
+      - "5002:80"
     networks:
       - app-network
     environment:
@@ -52,10 +49,10 @@ services:
       - ASPNETCORE_URLS=http://+:80
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:80/health || exit 1"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 30s
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
 networks:
   app-network:
