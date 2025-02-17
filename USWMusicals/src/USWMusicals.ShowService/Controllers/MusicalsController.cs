@@ -26,6 +26,28 @@ public class MusicalsController : ControllerBase
                         DateTime = DateTime.Now.AddDays(7),
                         TotalSeats = 100,
                         AvailableSeats = 100
+                    },
+                    new() {
+                        Id = Guid.NewGuid(),
+                        DateTime = DateTime.Now.AddDays(8),
+                        TotalSeats = 100,
+                        AvailableSeats = 100
+                    }
+                }
+            });
+            
+            _musicals.Add(new Musical
+            {
+                Id = Guid.NewGuid(),
+                Title = "Wicked",
+                Description = "The untold story of the Witches of Oz",
+                ShowTimes = new List<ShowTime>
+                {
+                    new() {
+                        Id = Guid.NewGuid(),
+                        DateTime = DateTime.Now.AddDays(14),
+                        TotalSeats = 150,
+                        AvailableSeats = 150
                     }
                 }
             });
