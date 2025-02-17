@@ -106,26 +106,47 @@
                 
                 const url = `${API_URL}/api/musicals`;
                 console.log('Fetching musicals from:', url);
-                const response = await fetch(url, { headers: HEADERS });
+                const response = await fetch(url, {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
                 if (!response.ok) {
+                    const text = await response.text();
+                    console.error('Raw response:', text);
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
+                
+                const contentType = response.headers.get('content-type');
+                if (!contentType || !contentType.includes('application/json')) {
+                    const text = await response.text();
+                    console.error('Invalid content type:', contentType, 'Raw response:', text);
+                    throw new Error('Response is not JSON');
+                }
+                
                 const musicals = await response.json();
                 console.log('Musicals data:', musicals);
                 
                 loadingDiv.style.display = 'none';
                 
-                if (!musicals || musicals.length === 0) {
+                if (!Array.isArray(musicals) || musicals.length === 0) {
                     musicalsContent.innerHTML = '<div class="alert">No musicals available.</div>';
                     return;
                 }
                 
                 musicals.forEach(musical => {
+                    if (!musical || !musical.showTimes || !Array.isArray(musical.showTimes)) {
+                        console.error('Invalid musical data:', musical);
+                        return;
+                    }
+                    
                     const musicalDiv = document.createElement('div');
                     musicalDiv.className = 'musical';
                     musicalDiv.innerHTML = `
-                        <h3>${musical.title}</h3>
-                        <p class="description">${musical.description}</p>
+                        <h3>${musical.title || 'Untitled'}</h3>
+                        <p class="description">${musical.description || 'No description available'}</p>
                         <div class="show-times">
                             <h4>Show Times:</h4>
                             <div class="times-grid">
@@ -141,6 +162,10 @@
                     `;
                     
                     musical.showTimes.forEach(showTime => {
+                        if (!showTime || !showTime.id || !showTime.dateTime) {
+                            console.error('Invalid show time data:', showTime);
+                            return;
+                        }
                         const option = document.createElement('option');
                         option.value = showTime.id;
                         option.text = `${musical.title} - ${new Date(showTime.dateTime).toLocaleString()}`;

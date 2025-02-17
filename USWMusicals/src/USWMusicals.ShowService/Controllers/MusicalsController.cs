@@ -63,7 +63,7 @@ public class MusicalsController : ControllerBase
         {
             Console.WriteLine($"GetAll called at {DateTime.UtcNow}");
             
-            Response.Headers["Content-Type"] = "application/json; charset=utf-8";
+            Response.ContentType = "application/json";
             Response.Headers.Add("Access-Control-Allow-Origin", "*");
             Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
             Response.Headers.Add("Access-Control-Allow-Headers", "*");
