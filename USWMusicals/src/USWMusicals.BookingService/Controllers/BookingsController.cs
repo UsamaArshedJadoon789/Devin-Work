@@ -4,7 +4,7 @@ using USWMusicals.BookingService.Models;
 namespace USWMusicals.BookingService.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/bookings")]
 public class BookingsController : ControllerBase
 {
     private static readonly List<Booking> _bookings = new();

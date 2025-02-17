@@ -19,8 +19,9 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseCors();
 app.UseRouting();
+app.UseCors();
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();

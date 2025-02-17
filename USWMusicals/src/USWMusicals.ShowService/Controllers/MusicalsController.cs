@@ -4,7 +4,8 @@ using USWMusicals.ShowService.Models;
 namespace USWMusicals.ShowService.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/musicals")]
+[Produces("application/json")]
 public class MusicalsController : ControllerBase
 {
     private static readonly List<Musical> _musicals = new();
@@ -55,9 +56,32 @@ public class MusicalsController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Musical>> GetAll()
+    [Produces("application/json")]
+    public ActionResult<IEnumerable<object>> GetAll()
     {
-        return Ok(_musicals);
+        Console.WriteLine($"GetAll called at {DateTime.UtcNow}");
+        
+        Response.Headers["Content-Type"] = "application/json; charset=utf-8";
+        Response.Headers.Add("Access-Control-Allow-Origin", "*");
+        Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+        Response.Headers.Add("Access-Control-Allow-Headers", "*");
+        
+        var musicals = _musicals.Select(m => new
+        {
+            m.Id,
+            m.Title,
+            m.Description,
+            ShowTimes = m.ShowTimes.Select(st => new
+            {
+                st.Id,
+                st.DateTime,
+                st.TotalSeats,
+                st.AvailableSeats
+            }).ToList()
+        }).ToList();
+
+        Console.WriteLine($"Returning {musicals.Count} musicals");
+        return Ok(musicals);
     }
 
     [HttpGet("{id}")]
