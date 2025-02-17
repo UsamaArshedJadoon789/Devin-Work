@@ -53,17 +53,15 @@
     <script>
         const API_URL = window.location.origin;
 
-        async function fetchWithRetry(url, options = {}, retries = 3) {
+        async function fetchWithRetry(url, options = {}, retries = 5) {
             for (let i = 0; i < retries; i++) {
                 try {
                     const response = await fetch(url, options);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     return response;
                 } catch (error) {
                     if (i === retries - 1) throw error;
-                    await new Promise(resolve => setTimeout(resolve, 1000 * (i + 1)));
+                    await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
                 }
             }
         }
@@ -92,35 +90,34 @@
                 }
                 
                 musicals.forEach(musical => {
-                const musicalDiv = document.createElement('div');
-                musicalDiv.className = 'musical';
-                musicalDiv.innerHTML = `
-                    <h3>${musical.title}</h3>
-                    <p class="description">${musical.description}</p>
-                    <div class="show-times">
-                        <h4>Show Times:</h4>
-                        <div class="times-grid">
-                            ${musical.showTimes.map(showTime => `
-                                <div class="time-slot">
-                                    <div class="date">${new Date(showTime.dateTime).toLocaleDateString()}</div>
-                                    <div class="time">${new Date(showTime.dateTime).toLocaleTimeString()}</div>
-                                    <div class="seats">Available Seats: ${showTime.availableSeats}</div>
-                                </div>
-                            `).join('')}
+                    const musicalDiv = document.createElement('div');
+                    musicalDiv.className = 'musical';
+                    musicalDiv.innerHTML = `
+                        <h3>${musical.title}</h3>
+                        <p class="description">${musical.description}</p>
+                        <div class="show-times">
+                            <h4>Show Times:</h4>
+                            <div class="times-grid">
+                                ${musical.showTimes.map(showTime => `
+                                    <div class="time-slot">
+                                        <div class="date">${new Date(showTime.dateTime).toLocaleDateString()}</div>
+                                        <div class="time">${new Date(showTime.dateTime).toLocaleTimeString()}</div>
+                                        <div class="seats">Available Seats: ${showTime.availableSeats}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
                         </div>
-                    </div>
-                `;
+                    `;
                     
-                
-                musical.showTimes.forEach(showTime => {
-                    const option = document.createElement('option');
-                    option.value = showTime.id;
-                    option.text = `${musical.title} - ${new Date(showTime.dateTime).toLocaleString()}`;
-                    showTimeSelect.appendChild(option);
+                    musical.showTimes.forEach(showTime => {
+                        const option = document.createElement('option');
+                        option.value = showTime.id;
+                        option.text = `${musical.title} - ${new Date(showTime.dateTime).toLocaleString()}`;
+                        showTimeSelect.appendChild(option);
+                    });
+                    
+                    musicalsContent.appendChild(musicalDiv);
                 });
-                
-                musicalsContent.appendChild(musicalDiv);
-            });
             } catch (error) {
                 console.error('Error loading musicals:', error);
                 const errorMessage = error.message.includes('Failed to fetch') 
@@ -145,7 +142,7 @@
                 };
                 
                 console.log('Booking tickets:', booking);
-                const response = await fetch(`${API_URL}/api/bookings`, {
+                const response = await fetchWithRetry(`${API_URL}/api/bookings`, {
                     method: 'POST',
                     headers: { 
                         'Content-Type': 'application/json',
@@ -153,10 +150,6 @@
                     },
                     body: JSON.stringify(booking)
                 });
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
                 
                 const result = await response.json();
                 console.log('Booking result:', result);
@@ -197,16 +190,12 @@
                 bookingsContent.innerHTML = '';
                 console.log('Fetching bookings for student:', studentId);
                 
-                const response = await fetch(`${API_URL}/api/bookings/student/${studentId}`, {
+                const response = await fetchWithRetry(`${API_URL}/api/bookings/student/${studentId}`, {
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     }
                 });
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
                 
                 const result = await response.json();
                 console.log('Student bookings:', result);

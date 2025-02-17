@@ -68,15 +68,15 @@ public class MusicalsController : ControllerBase
         
         var musicals = _musicals.Select(m => new
         {
-            m.Id,
-            m.Title,
-            m.Description,
-            ShowTimes = m.ShowTimes.Select(st => new
+            id = m.Id,
+            title = m.Title,
+            description = m.Description,
+            showTimes = m.ShowTimes.Select(st => new
             {
-                st.Id,
-                st.DateTime,
-                st.TotalSeats,
-                st.AvailableSeats
+                id = st.Id,
+                dateTime = st.DateTime,
+                totalSeats = st.TotalSeats,
+                availableSeats = st.AvailableSeats
             }).ToList()
         }).ToList();
 
