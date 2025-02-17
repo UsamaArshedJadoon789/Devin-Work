@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  showservice:
+    build:
+      context: ./USWMusicals.ShowService
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  bookingservice:
+    build:
+      context: ./USWMusicals.BookingService
+      dockerfile: Dockerfile
+    ports:
+      - "5002:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  client:
+    build:
+      context: ./USWMusicals.Client
+      dockerfile: Dockerfile
+    depends_on:
+      - showservice
+      - bookingservice
