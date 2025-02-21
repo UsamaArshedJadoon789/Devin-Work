@@ -30,28 +30,29 @@ const faqs = [
   }
 ]
 
-export const FAQ = (): JSX.Element => {
-  return (
-    <section className="container mx-auto px-4 py-20">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4">
+export const FAQ = (): JSX.Element => (
+    <section className="container mx-auto px-4 py-24 sm:py-28 lg:py-32">
+      <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 lg:mb-6 animate-fade-in">
           <GradientText>Frequently Asked Questions</GradientText>
         </h2>
-        <p className="text-xl text-gray-300">Everything you need to know about our SEO services</p>
+        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up delay-100">
+          Everything you need to know about our SEO services
+        </p>
       </div>
 
-      <div className="max-w-3xl mx-auto">
-        <Accordion type="single" collapsible className="space-y-4">
+      <div className="max-w-3xl mx-auto animate-slide-up delay-200">
+        <Accordion type="single" collapsible className="space-y-4 sm:space-y-6">
           {faqs.map((faq) => (
             <AccordionItem 
               key={faq.question} 
               value={faq.question}
-              className="bg-white/5 backdrop-blur border-none rounded-lg overflow-hidden"
+              className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-300"
             >
-              <AccordionTrigger className="px-6 py-4 text-white hover:no-underline hover:bg-white/10">
+              <AccordionTrigger className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold text-white hover:no-underline hover:bg-white/5">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="px-6 py-4 text-gray-300">
+              <AccordionContent className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-base sm:text-lg text-gray-300 leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -59,5 +60,4 @@ export const FAQ = (): JSX.Element => {
         </Accordion>
       </div>
     </section>
-  )
-}
+)

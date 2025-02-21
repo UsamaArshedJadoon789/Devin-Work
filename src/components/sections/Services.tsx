@@ -36,19 +36,24 @@ const services = [
 ]
 
 export const Services = (): JSX.Element => (
-  <section className="container mx-auto px-4 py-20">
-    <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold mb-4">
+  <section className="container mx-auto px-4 py-32">
+    <div className="text-center mb-20">
+      <h2 className="text-5xl font-bold mb-6 animate-fade-in">
         <GradientText>Our Services</GradientText>
       </h2>
-      <p className="text-xl text-gray-300">Comprehensive SEO solutions for your business growth</p>
+      <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up delay-100">
+        Comprehensive SEO solutions for your business growth
+      </p>
     </div>
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-3 gap-8 animate-slide-up delay-200">
       {services.map((service) => (
-        <CardHover key={service.title}>
-          <div className="text-4xl mb-4">{service.icon}</div>
-          <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
-          <p className="text-gray-300">{service.description}</p>
+        <CardHover 
+          key={service.title}
+          className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8"
+        >
+          <div className="text-4xl mb-6">{service.icon}</div>
+          <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
+          <p className="text-gray-300 text-lg leading-relaxed">{service.description}</p>
         </CardHover>
       ))}
     </div>

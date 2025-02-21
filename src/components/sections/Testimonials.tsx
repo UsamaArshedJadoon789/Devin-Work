@@ -40,15 +40,17 @@ export const Testimonials = (): JSX.Element => {
   }
 
   return (
-    <section className="container mx-auto px-4 py-20">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4">
+    <section className="container mx-auto px-4 py-32">
+      <div className="text-center mb-20">
+        <h2 className="text-5xl font-bold mb-6 animate-fade-in">
           <GradientText>What Our Clients Say</GradientText>
         </h2>
-        <p className="text-xl text-gray-300">Real results from real clients</p>
+        <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up delay-100">
+          Real results from real clients
+        </p>
       </div>
 
-      <div className="relative">
+      <div className="relative animate-slide-up delay-200">
         <div 
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -58,9 +60,9 @@ export const Testimonials = (): JSX.Element => {
               key={index}
               className="w-full flex-shrink-0 px-4"
             >
-              <Card className="bg-white/5 backdrop-blur border-none text-white p-8">
-                <div className="flex flex-col md:flex-row gap-8 items-center">
-                  <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-600">
+              <Card className="bg-secondary/50 backdrop-blur border border-white/5 text-white p-10 rounded-xl">
+                <div className="flex flex-col md:flex-row gap-10 items-center">
+                  <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-800 border-2 border-accent/20">
                     <img
                       src={testimonial.image}
                       alt={testimonial.author}
@@ -68,10 +70,10 @@ export const Testimonials = (): JSX.Element => {
                     />
                   </div>
                   <div>
-                    <p className="text-xl italic mb-6">{testimonial.quote}</p>
+                    <p className="text-2xl leading-relaxed italic mb-8">{testimonial.quote}</p>
                     <div>
-                      <p className="font-bold">{testimonial.author}</p>
-                      <p className="text-sm text-gray-400">{testimonial.role} at {testimonial.company}</p>
+                      <p className="text-xl font-bold text-white mb-1">{testimonial.author}</p>
+                      <p className="text-lg text-gray-400">{testimonial.role} at {testimonial.company}</p>
                     </div>
                   </div>
                 </div>
@@ -82,14 +84,14 @@ export const Testimonials = (): JSX.Element => {
 
         <Button
           variant="ghost"
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/10"
+          className="absolute -left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full"
           onClick={prevSlide}
         >
           <ChevronLeft size={24} />
         </Button>
         <Button
           variant="ghost"
-          className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/10"
+          className="absolute -right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full"
           onClick={nextSlide}
         >
           <ChevronRight size={24} />
