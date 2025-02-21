@@ -51,9 +51,9 @@ export default function App() {
   };
 
   return (
-    <div className="h-screen overflow-y-auto bg-[#003344]">
+    <div className="min-h-screen w-full bg-[#003344] flex flex-col">
       {/* Navigation */}
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-4 sticky top-0 z-50 bg-[#003344]/80 backdrop-blur">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-white">The Skyline Strategies</div>
           <div className="hidden md:flex items-center gap-8">

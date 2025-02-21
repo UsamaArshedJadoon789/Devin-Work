@@ -6,10 +6,10 @@ export const Hero: FC = () => {
   const buttonText = "Read stories & opinions";
 
   return (
-    <section className="relative min-h-[100vh] w-full bg-primary overflow-hidden flex flex-col justify-between">
+    <section className="flex-1 relative w-full bg-primary overflow-hidden flex flex-col">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent" />
       
-      <div className="container mx-auto px-4 py-20 flex-1 flex items-center relative z-10">
+      <div className="container mx-auto px-4 min-h-[calc(100vh-5rem)] flex items-center relative z-10">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
             We Build SEO Revenue Engines For SaaS Brands
@@ -33,7 +33,7 @@ export const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-1/4 right-20 w-[400px] h-[250px] rounded-2xl bg-secondary p-6 shadow-xl transform rotate-6 animate-float">
+        <div className="absolute top-1/3 right-[10%] w-[400px] h-[250px] rounded-2xl bg-secondary p-6 shadow-xl transform rotate-6 animate-float hover:rotate-3 transition-transform">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -51,7 +51,7 @@ export const Hero: FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 pb-12">
+      <div className="container mx-auto px-4 py-8 mt-auto">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-40">
           <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-6" />
           <img src="/images/clients/attest.svg" alt="Attest" className="h-6" />
