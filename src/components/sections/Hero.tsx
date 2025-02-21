@@ -33,21 +33,40 @@ export const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-1/3 right-[10%] w-[400px] h-[250px] rounded-2xl bg-secondary p-6 shadow-xl transform rotate-6 animate-float hover:rotate-3 transition-transform">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M20 11.5V14.5L12 19L4 14.5V11.5L12 16L20 11.5Z" fill="currentColor"/>
-                <path d="M20 8.5V11.5L12 16L4 11.5V8.5L12 13L20 8.5Z" fill="currentColor"/>
-                <path d="M12 3L20 7.5L12 12L4 7.5L12 3Z" fill="currentColor"/>
+        <div className="absolute top-1/3 right-[10%] w-[400px] rounded-2xl bg-[#0F1923] p-6 shadow-xl transform rotate-6 animate-float hover:rotate-3 transition-transform">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 rounded-full bg-[#C6F135] flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
               </svg>
             </div>
             <div>
-              <h3 className="text-white font-semibold">Turn your SEO into a</h3>
-              <p className="text-accent">Revenue Engine</p>
+              <h3 className="text-white font-semibold text-lg">Turn your SEO into a</h3>
+              <p className="text-[#C6F135] font-bold text-xl">Revenue Engine</p>
             </div>
           </div>
-          <div className="h-32 bg-gradient-to-b from-[#1A2730] to-secondary rounded-lg" />
+          <div className="space-y-4">
+            <div className="bg-[#1A2730]/50 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-white/80">Monthly Revenue</span>
+                <span className="text-[#C6F135]">+147%</span>
+              </div>
+              <div className="h-12 bg-[#1A2730] rounded relative overflow-hidden">
+                <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-[#C6F135] to-[#D4F55C]"></div>
+              </div>
+            </div>
+            <div className="bg-[#1A2730]/50 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-white/80">Organic Traffic</span>
+                <span className="text-[#C6F135]">+312%</span>
+              </div>
+              <div className="h-12 bg-[#1A2730] rounded relative overflow-hidden">
+                <div className="absolute inset-y-0 left-0 w-4/5 bg-gradient-to-r from-[#C6F135] to-[#D4F55C]"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
