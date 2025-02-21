@@ -1,9 +1,10 @@
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, NavigationMenuContent } from "./ui/navigation-menu"
+import { Button } from "./ui/button"
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 import { Menu, MessageCircle } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(true);
@@ -18,29 +19,68 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <NavigationMenu>
               <NavigationMenuList className="flex gap-8">
                 <NavigationMenuItem>
-                  <Link to="/" className="text-white hover:text-blue-200">Home</Link>
+                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
+                    Why Skale?
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
+                      <li className="text-white hover:text-accent transition-colors">
+                        <Link to="/about">About Us</Link>
+                      </li>
+                      <li className="text-white hover:text-accent transition-colors">
+                        <Link to="/case-studies">Case Studies</Link>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link to="/services" className="text-white hover:text-blue-200">Services</Link>
+                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
+                    Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
+                      <li className="text-white hover:text-accent transition-colors">
+                        <Link to="/services/seo">SEO Services</Link>
+                      </li>
+                      <li className="text-white hover:text-accent transition-colors">
+                        <Link to="/services/content">Content Marketing</Link>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link to="/pricing" className="text-white hover:text-blue-200">Pricing</Link>
+                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
+                    Stories &amp; Opinions
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
+                      <li className="text-white hover:text-accent transition-colors">
+                        <Link to="/blog">Blog</Link>
+                      </li>
+                      <li className="text-white hover:text-accent transition-colors">
+                        <Link to="/resources">Resources</Link>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link to="/about" className="text-white hover:text-blue-200">About Us</Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link to="/portfolio" className="text-white hover:text-blue-200">Our Portfolio</Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link to="/blog" className="text-white hover:text-blue-200">Our Blogs</Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link to="/contact" className="text-white hover:text-blue-200">Contact</Link>
+                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
+                    Learn
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
+                      <li className="text-white hover:text-accent transition-colors">
+                        <Link to="/guides">Guides</Link>
+                      </li>
+                      <li className="text-white hover:text-accent transition-colors">
+                        <Link to="/tutorials">Tutorials</Link>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Button className="bg-white text-blue-900 hover:bg-blue-50">Get started</Button>
+            <Button className="bg-accent text-primary hover:bg-accent/90">Book a Strategy Call</Button>
           </div>
           
           <Sheet>
@@ -50,14 +90,36 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-blue-900 text-white">
-              <nav className="flex flex-col gap-4">
-                <Link to="/" className="text-lg hover:text-blue-200">Home</Link>
-                <Link to="/services" className="text-lg hover:text-blue-200">Services</Link>
-                <Link to="/pricing" className="text-lg hover:text-blue-200">Pricing</Link>
-                <Link to="/about" className="text-lg hover:text-blue-200">About Us</Link>
-                <Link to="/portfolio" className="text-lg hover:text-blue-200">Our Portfolio</Link>
-                <Link to="/blog" className="text-lg hover:text-blue-200">Our Blogs</Link>
-                <Link to="/contact" className="text-lg hover:text-blue-200">Contact</Link>
+              <nav className="flex flex-col gap-6">
+                <div>
+                  <h3 className="text-accent mb-2">Why Skale?</h3>
+                  <div className="flex flex-col gap-2">
+                    <Link to="/about" className="text-white hover:text-accent transition-colors">About Us</Link>
+                    <Link to="/case-studies" className="text-white hover:text-accent transition-colors">Case Studies</Link>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-accent mb-2">Services</h3>
+                  <div className="flex flex-col gap-2">
+                    <Link to="/services/seo" className="text-white hover:text-accent transition-colors">SEO Services</Link>
+                    <Link to="/services/content" className="text-white hover:text-accent transition-colors">Content Marketing</Link>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-accent mb-2">Stories &amp; Opinions</h3>
+                  <div className="flex flex-col gap-2">
+                    <Link to="/blog" className="text-white hover:text-accent transition-colors">Blog</Link>
+                    <Link to="/resources" className="text-white hover:text-accent transition-colors">Resources</Link>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-accent mb-2">Learn</h3>
+                  <div className="flex flex-col gap-2">
+                    <Link to="/guides" className="text-white hover:text-accent transition-colors">Guides</Link>
+                    <Link to="/tutorials" className="text-white hover:text-accent transition-colors">Tutorials</Link>
+                  </div>
+                </div>
+                <Button className="bg-accent text-primary hover:bg-accent/90 w-full">Book a Strategy Call</Button>
               </nav>
             </SheetContent>
           </Sheet>

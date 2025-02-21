@@ -2,11 +2,17 @@ import './App.css'
 import { Button } from "@/components/ui/button"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu"
 import { Card, CardContent } from "@/components/ui/card"
-import { Phone, Menu, MessageCircle } from "lucide-react"
+import { Menu, MessageCircle } from "lucide-react"
+import { Hero } from "@/components/sections/Hero"
+import { Services } from "@/components/sections/Services"
+import { Testimonials } from "@/components/sections/Testimonials"
+import { FAQ } from "@/components/sections/FAQ"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { contactFormSchema, type ContactFormValues } from "@/lib/validations/contact"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { GradientText } from "./components/ui/gradient-text"
+import { Toaster, toast } from "sonner"
 import { useState } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 export default function App() {
@@ -24,7 +30,7 @@ export default function App() {
 
   const onSubmit = async (data: ContactFormValues) => {
     try {
-      const response = await fetch('http://localhost:8000/api/contact', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -37,10 +43,10 @@ export default function App() {
       }
 
       form.reset();
-      // TODO: Add success toast notification
+      toast.success("Message sent successfully!");
     } catch (error) {
       console.error('Error sending message:', error);
-      // TODO: Add error toast notification
+      toast.error("Failed to send message. Please try again.");
     }
   };
 
@@ -103,188 +109,83 @@ export default function App() {
       {/* Main Content */}
       {currentPage === 'home' && (
         <>
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-20">
-            <div className="text-center">
-              <h1 className="text-7xl font-bold text-white mb-6">
-                Transform Your Digital Presence<br />with Expert Solutions
-              </h1>
-              <p className="text-3xl text-blue-200 mb-6 font-light">Your Success is Our Priority</p>
-              <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                From startups to established brands, we provide professional strategies that drive growth—without
-                the hefty price tag. Get started with a free consultation to explore how we can help your business thrive.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button className="bg-white text-blue-900 hover:bg-blue-50 flex items-center gap-2 text-lg px-8 py-6 w-full sm:w-auto">
-                  <Phone size={24} />
-                  Schedule Free Consultation
-                </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white/10 flex items-center gap-2 text-lg px-8 py-6 w-full sm:w-auto">
-                  View Our Portfolio
-                </Button>
-              </div>
-            </div>
-          </section>
-
-          {/* Stats Section */}
-          <section className="container mx-auto px-4 py-20">
-            <Card className="bg-gradient-to-r from-blue-900 to-blue-800 text-white border-none">
-              <CardContent className="p-12">
-                <div className="grid md:grid-cols-4 gap-12 text-center">
-                  <div>
-                    <p className="text-5xl font-bold mb-2">2+</p>
-                    <p className="text-lg text-blue-200">Years of Experience</p>
-                  </div>
-                  <div>
-                    <p className="text-5xl font-bold mb-2">130+</p>
-                    <p className="text-lg text-blue-200">Projects Completed</p>
-                  </div>
-                  <div>
-                    <p className="text-5xl font-bold mb-2">50+</p>
-                    <p className="text-lg text-blue-200">Happy Clients</p>
-                  </div>
-                  <div>
-                    <p className="text-5xl font-bold mb-2">24/7</p>
-                    <p className="text-lg text-blue-200">Support Available</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Why Choose Us Section */}
+          <Hero />
+          <Services />
+          <Testimonials />
+          <FAQ />
+          {/* Contact Form */}
           <section className="container mx-auto px-4 py-20">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
-              <p className="text-lg text-gray-300">What makes us different from others</p>
+              <h2 className="text-4xl font-bold mb-4">
+                <GradientText>Get in Touch</GradientText>
+              </h2>
+              <p className="text-xl text-gray-300">Ready to grow your business? Let's talk.</p>
             </div>
-            <div className="grid md:grid-cols-3 gap-12">
+            <div className="max-w-2xl mx-auto">
               <Card className="bg-white/10 backdrop-blur border-none text-white">
                 <CardContent className="p-8">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="text-4xl mb-6">👥</div>
-                    <h3 className="text-2xl font-bold mb-4">Expert Team</h3>
-                    <p className="text-gray-300">Our team consists of industry experts with years of experience in digital marketing and technology.</p>
-                  </div>
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-white">Name</FormLabel>
+                            <FormControl>
+                              <input
+                                {...field}
+                                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent"
+                                placeholder="Enter your name"
+                              />
+                            </FormControl>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-white">Email</FormLabel>
+                            <FormControl>
+                              <input
+                                {...field}
+                                type="email"
+                                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent"
+                                placeholder="Enter your email"
+                              />
+                            </FormControl>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-white">Message</FormLabel>
+                            <FormControl>
+                              <textarea
+                                {...field}
+                                rows={5}
+                                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent resize-none"
+                                placeholder="Tell us about your project"
+                              />
+                            </FormControl>
+                            <FormMessage className="text-red-400" />
+                          </FormItem>
+                        )}
+                      />
+                      <Button type="submit" className="w-full bg-accent text-primary hover:bg-accent/90 py-6 text-lg">
+                        Send Message
+                      </Button>
+                    </form>
+                  </Form>
                 </CardContent>
               </Card>
-              <Card className="bg-white/10 backdrop-blur border-none text-white">
-                <CardContent className="p-8">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="text-4xl mb-6">⚡</div>
-                    <h3 className="text-2xl font-bold mb-4">Custom Solutions</h3>
-                    <p className="text-gray-300">We create tailored strategies that align with your business goals and target audience.</p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/10 backdrop-blur border-none text-white">
-                <CardContent className="p-8">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="text-4xl mb-6">📈</div>
-                    <h3 className="text-2xl font-bold mb-4">Proven Results</h3>
-                    <p className="text-gray-300">Our track record shows consistent success in delivering measurable results for our clients.</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          {/* Testimonials Section */}
-          <section className="container mx-auto px-4 py-20">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-              <p className="text-lg text-gray-300">Real feedback from satisfied customers</p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-12">
-              <Card className="bg-white/5 backdrop-blur border-none text-white">
-                <CardContent className="p-8">
-                  <div className="text-yellow-400 text-2xl mb-6">★★★★★</div>
-                  <p className="text-gray-300 italic mb-6">"The team at Skyline Strategies transformed our online presence completely. Our website traffic has increased by 200% since working with them."</p>
-                  <div className="flex items-center gap-4">
-                    <div className="text-4xl">👨</div>
-                    <div>
-                      <p className="font-bold">John Smith</p>
-                      <p className="text-sm text-gray-400">CEO, TechCorp</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/5 backdrop-blur border-none text-white">
-                <CardContent className="p-8">
-                  <div className="text-yellow-400 text-2xl mb-6">★★★★★</div>
-                  <p className="text-gray-300 italic mb-6">"Their digital marketing expertise helped us reach new audiences and increase our conversion rates significantly."</p>
-                  <div className="flex items-center gap-4">
-                    <div className="text-4xl">👩</div>
-                    <div>
-                      <p className="font-bold">Sarah Johnson</p>
-                      <p className="text-sm text-gray-400">Marketing Director, GrowthCo</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/5 backdrop-blur border-none text-white">
-                <CardContent className="p-8">
-                  <div className="text-yellow-400 text-2xl mb-6">★★★★★</div>
-                  <p className="text-gray-300 italic mb-6">"Professional, responsive, and results-driven. They delivered our mobile app project on time and exceeded our expectations."</p>
-                  <div className="flex items-center gap-4">
-                    <div className="text-4xl">👨</div>
-                    <div>
-                      <p className="font-bold">Michael Chen</p>
-                      <p className="text-sm text-gray-400">Founder, AppStart</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          {/* Services Section */}
-          <section className="container mx-auto px-4 py-20">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-lg text-gray-300">Comprehensive digital solutions for your business growth</p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-12">
-              {[
-                {
-                  title: "Website Development",
-                  description: "Custom websites that convert visitors into customers",
-                  icon: "🌐"
-                },
-                {
-                  title: "App Development",
-                  description: "Native and cross-platform mobile applications",
-                  icon: "📱"
-                },
-                {
-                  title: "Digital Marketing",
-                  description: "Results-driven marketing strategies",
-                  icon: "📈"
-                },
-                {
-                  title: "Game Development",
-                  description: "Engaging gaming experiences for all platforms",
-                  icon: "🎮"
-                },
-                {
-                  title: "Video Editing",
-                  description: "Professional video production and editing",
-                  icon: "🎥"
-                },
-                {
-                  title: "Amazon Services",
-                  description: "Complete Amazon marketplace solutions",
-                  icon: "🛍️"
-                }
-              ].map((service, index) => (
-                <Card key={index} className="bg-white/10 backdrop-blur border-none text-white hover:bg-white/20 transition-all">
-                  <CardContent className="p-6">
-                    <div className="text-4xl mb-4">{service.icon}</div>
-                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-gray-300">{service.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </section>
         </>
@@ -407,7 +308,6 @@ export default function App() {
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-lg text-gray-300 mb-8">Contact us today to discuss your project</p>
               <Button className="bg-white text-blue-900 hover:bg-blue-50 flex items-center gap-2 text-lg px-8 py-6">
-                <Phone size={24} />
                 Schedule Free Consultation
               </Button>
             </div>
@@ -864,6 +764,7 @@ export default function App() {
           <MessageCircle size={24} />
         </a>
       )}
+      <Toaster position="top-right" />
     </div>
   )
 }
