@@ -33,7 +33,7 @@ export const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-20 right-20 w-[400px] h-[250px] rounded-2xl bg-secondary p-6 shadow-xl transform rotate-6 animate-float">
+        <div className="absolute top-1/4 right-20 w-[400px] h-[250px] rounded-2xl bg-secondary p-6 shadow-xl transform rotate-6 animate-float">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
