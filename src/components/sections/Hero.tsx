@@ -6,7 +6,7 @@ export const Hero: FC = () => {
   return (
     <section className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col">
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/20 to-transparent" />
-      <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5 mix-blend-overlay pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none"></div>
       
       <div className="container mx-auto px-4 flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-2xl lg:max-w-4xl relative">
@@ -33,21 +33,21 @@ export const Hero: FC = () => {
             </div>
           </div>
           <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
-            <div className="grid grid-cols-2 gap-6 p-8">
-              <div className="space-y-6">
-                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/meeting-1.jpg" alt="Team Meeting" className="w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+            <div className="grid grid-cols-2 gap-4 p-6">
+              <div className="space-y-4">
+                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                  <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-52 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/analytics.jpg" alt="Analytics Dashboard" className="w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                  <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-52 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
-              <div className="space-y-6 mt-12">
-                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/team-2.jpg" alt="Team Collaboration" className="w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+              <div className="space-y-4 mt-16">
+                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-52 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/growth.jpg" alt="Growth Chart" className="w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                  <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-52 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
             </div>

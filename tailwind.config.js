@@ -39,8 +39,8 @@ export default {
           to: { height: '0' }
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '0%, 100%': { transform: 'translateY(0) rotate(6deg)' },
+          '50%': { transform: 'translateY(-10px) rotate(6deg)' },
         },
         fadeIn: {
           '0%': { opacity: '0' },
