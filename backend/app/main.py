@@ -1,9 +1,10 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, EmailStr
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, EmailStr
 
-app = FastAPI()
+app = FastAPI(title="Skyline Website API")
 
+# Configure CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,5 +20,8 @@ class ContactForm(BaseModel):
 
 @app.post("/api/contact")
 async def submit_contact(form: ContactForm):
-    # TODO: Add email sending logic
-    return {"status": "success"}
+    return {"status": "success", "message": "Contact form submitted successfully"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
