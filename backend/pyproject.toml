@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "skyline-website-backend"
+version = "0.1.0"
+description = "Backend for Skyline Strategies website"
+authors = ["Devin <devin@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "0.115.8"
+uvicorn = "0.34.0"
+pydantic = "2.10.6"
+email-validator = "2.2.0"
+python-dotenv = "1.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
