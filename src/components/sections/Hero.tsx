@@ -6,10 +6,10 @@ export const Hero: FC = () => {
   const buttonText = "Read stories & opinions";
 
   return (
-    <section className="relative min-h-screen bg-primary overflow-hidden">
+    <section className="relative h-screen w-full bg-primary overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent" />
       
-      <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
+      <div className="container mx-auto px-4 py-32 h-full relative z-10">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
             We Build SEO Revenue Engines For SaaS Brands
