@@ -6,11 +6,33 @@ export const Hero: FC = () => {
   const buttonText = "Read stories & opinions";
 
   return (
-    <section className="flex-1 relative w-full bg-primary overflow-hidden flex flex-col">
+    <section className="flex-1 relative w-full bg-primary overflow-hidden flex flex-col min-h-screen">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent" />
+      <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
       
       <div className="container mx-auto px-4 min-h-[calc(100vh-5rem)] flex items-center relative z-10">
-        <div className="max-w-4xl">
+        <div className="max-w-2xl lg:max-w-4xl relative">
+          <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+            <div className="grid grid-cols-2 gap-4 p-8">
+              <div className="space-y-4">
+                <div className="bg-[#1A2730] rounded-lg overflow-hidden">
+                  <img src="/images/hero-grid/meeting-1.jpg" alt="Team Meeting" className="w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="bg-[#1A2730] rounded-lg overflow-hidden">
+                  <img src="/images/hero-grid/analytics.jpg" alt="Analytics Dashboard" className="w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity" />
+                </div>
+              </div>
+              <div className="space-y-4 mt-12">
+                <div className="bg-[#1A2730] rounded-lg overflow-hidden">
+                  <img src="/images/hero-grid/team-2.jpg" alt="Team Collaboration" className="w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="bg-[#1A2730] rounded-lg overflow-hidden">
+                  <img src="/images/hero-grid/growth.jpg" alt="Growth Chart" className="w-full h-48 object-cover opacity-80 hover:opacity-100 transition-opacity" />
+                </div>
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#003344] via-transparent to-transparent"></div>
+          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
             We Build SEO Revenue Engines For SaaS Brands
           </h1>
@@ -33,7 +55,7 @@ export const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-1/3 right-[10%] w-[400px] rounded-2xl bg-[#0F1923] p-6 shadow-xl transform rotate-6 animate-float hover:rotate-3 transition-transform">
+        <div className="absolute top-1/3 -right-[5%] w-[400px] rounded-2xl bg-[#0F1923] p-6 shadow-xl transform rotate-6 animate-float hover:rotate-3 transition-transform">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-12 rounded-full bg-[#C6F135] flex items-center justify-center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
