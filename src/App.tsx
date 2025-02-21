@@ -51,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#003344]">
+    <div className="h-screen overflow-y-auto bg-[#003344]">
       {/* Navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
