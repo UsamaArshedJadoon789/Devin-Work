@@ -5,7 +5,7 @@ import type { FC } from "react"
 export const Hero: FC = () => {
   return (
     <section className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none"></div>
       
       <div className="container mx-auto px-4 flex-1 flex items-center justify-center relative z-10">
@@ -36,26 +36,26 @@ export const Hero: FC = () => {
             <div className="grid grid-cols-2 gap-4 p-6">
               <div className="space-y-4">
                 <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-52 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-52 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
-              <div className="space-y-4 mt-16">
+              <div className="space-y-4 mt-20">
                 <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-52 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-52 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#003344] via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent"></div>
           </div>
         </div>
 
-        <div className="absolute top-1/2 -right-[5%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl transform rotate-6 animate-float hover:rotate-3 transition-all duration-300">
+        <div className="absolute top-[45%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl transform rotate-3 animate-float hover:rotate-0 transition-all duration-500">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-14 h-14 rounded-full bg-[#C6F135] flex items-center justify-center">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -93,7 +93,7 @@ export const Hero: FC = () => {
       </div>
 
       <div className="container mx-auto px-4 py-16 mt-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-30 hover:opacity-40 transition-opacity duration-300">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-25 hover:opacity-35 transition-opacity duration-300">
           <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
           <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
           <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
