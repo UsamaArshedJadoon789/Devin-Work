@@ -51,8 +51,8 @@ export const Hero: FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 pb-20">
-        <div className="grid grid-cols-6 gap-8 items-center opacity-40">
+      <div className="container mx-auto px-4 pb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-40">
           <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-6" />
           <img src="/images/clients/attest.svg" alt="Attest" className="h-6" />
           <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-6" />
