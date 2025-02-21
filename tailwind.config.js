@@ -61,8 +61,8 @@ export default {
     }
   },
   plugins: [
-    require("@tailwindcss/typography"),
-    require("tailwindcss-animate")
+    import('@tailwindcss/typography').then(m => m.default),
+    import('tailwindcss-animate').then(m => m.default)
   ]
 }
 
