@@ -1,27 +1,31 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Canvas, useFrame, useThree, extend, type ThreeElements } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import { Object3D } from 'three';
+import { Object3D, Mesh, SphereGeometry, MeshStandardMaterial } from 'three';
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      orbitControls: any;
-      ambientLight: any;
-      pointLight: any;
-      mesh: any;
-      sphereGeometry: any;
-      meshStandardMaterial: any;
-    }
-  }
-}
+extend({
+  OrbitControls,
+  Stars,
+  SphereGeometry,
+  MeshStandardMaterial
+});
+
+type ThreeSceneElements = ThreeElements & {
+  orbitControls: { enableZoom: boolean; enablePan: boolean };
+  stars: { count: number; depth: number; factor: number };
+  ambientLight: { intensity: number };
+  pointLight: { position: [number, number, number] };
+  mesh: { ref: React.RefObject<Mesh> };
+  sphereGeometry: { args: [number, number, number] };
+  meshStandardMaterial: { color: string; transparent: boolean; opacity: number };
+};
 
 interface SceneProps {
   color?: string;
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<Object3D>(null);
+  const sphereRef = useRef<Mesh>(null);
   const { camera } = useThree();
 
   useEffect(() => {
