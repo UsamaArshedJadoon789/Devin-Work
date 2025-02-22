@@ -3,6 +3,7 @@ import { CardHover } from "../ui/card-hover"
 import { GradientText } from "../ui/gradient-text"
 import { motion } from "framer-motion"
 import { staggerContainer, staggerItem, createBurst, createZdogLogo } from "@/lib/animations"
+import { ThreeScene } from "../ThreeScene"
 import Reveal from "react-reveal/Fade"
 import type { RevealProps } from "react-reveal/Fade"
 import Velocity from 'velocity-animate'
@@ -114,11 +115,16 @@ export const Services = (): JSX.Element => {
   return (
   <motion.section 
     ref={servicesRef}
-    className="w-full py-32 relative"
+    className="w-full py-32 relative bg-[#0A0A0A] overflow-hidden"
     initial="initial"
     animate="animate"
     variants={staggerContainer}
   >
+    <div className="absolute inset-0">
+      <ThreeScene color="#91AD29" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
+    </div>
     <div ref={zdogContainerRef} className="absolute top-0 right-0 w-32 h-32 opacity-25" />
     <Reveal 
       effect="fadeInUp"
