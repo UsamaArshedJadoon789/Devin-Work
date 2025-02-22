@@ -53,7 +53,7 @@ export default function App() {
   return (
     <div className="min-h-screen w-full bg-[#003344] flex flex-col">
       {/* Navigation */}
-      <nav className="container mx-auto px-2 py-4 sticky top-0 z-50 bg-[#003344]/80 backdrop-blur">
+      <nav className="container mx-auto w-full py-4 sticky top-0 z-50 bg-[#003344]/80 backdrop-blur">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-white">The Skyline Strategies</div>
           <div className="hidden md:flex items-center gap-8">
@@ -114,7 +114,7 @@ export default function App() {
           <Testimonials />
           <FAQ />
           {/* Contact Form */}
-          <section className="container mx-auto px-2 py-20">
+          <section className="container mx-auto w-full py-20">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">
                 <GradientText>Get in Touch</GradientText>
@@ -193,7 +193,7 @@ export default function App() {
 
       {currentPage === 'services' && (
         <>
-          <section className="container mx-auto px-2 py-20">
+          <section className="container mx-auto w-full py-20">
             <div className="text-center mb-16">
               <h1 className="text-4xl font-bold text-white mb-4">Our Services</h1>
               <p className="text-lg text-gray-300">Explore our comprehensive range of digital solutions</p>
@@ -274,7 +274,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="container mx-auto px-2 py-20 bg-gradient-to-r from-blue-900 to-blue-800">
+          <section className="container mx-auto w-full py-20 bg-gradient-to-r from-blue-900 to-blue-800">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Process</h2>
               <p className="text-lg text-gray-300">How we deliver exceptional results</p>
@@ -303,7 +303,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="container mx-auto px-2 py-20">
+          <section className="container mx-auto w-full py-20">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-lg text-gray-300 mb-8">Contact us today to discuss your project</p>
@@ -317,7 +317,7 @@ export default function App() {
 
       {currentPage === 'pricing' && (
         <>
-          <section className="container mx-auto px-2 py-20">
+          <section className="container mx-auto w-full py-20">
             <div className="text-center mb-16">
               <h1 className="text-4xl font-bold text-white mb-4">Pricing Plans</h1>
               <p className="text-lg text-gray-300">Choose the perfect plan for your business needs</p>
@@ -387,7 +387,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="container mx-auto px-2 py-20">
+          <section className="container mx-auto w-full py-20">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
               <p className="text-lg text-gray-300">Find answers to common questions</p>
@@ -424,7 +424,7 @@ export default function App() {
 
       {currentPage === 'about' && (
         <>
-          <section className="container mx-auto px-2 py-20">
+          <section className="container mx-auto w-full py-20">
             <div className="text-center mb-16">
               <h1 className="text-4xl font-bold text-white mb-4">About Us</h1>
               <p className="text-lg text-gray-300">Learn more about our journey and mission</p>
@@ -478,7 +478,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="container mx-auto px-2 py-20 bg-gradient-to-r from-blue-900 to-blue-800">
+          <section className="container mx-auto w-full py-20 bg-gradient-to-r from-blue-900 to-blue-800">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Team</h2>
               <p className="text-lg text-gray-300">Meet the experts behind our success</p>
@@ -721,7 +721,7 @@ export default function App() {
       )}
 
       {/* Footer */}
-      <footer className="container mx-auto px-2 py-12 text-white">
+      <footer className="container mx-auto w-full py-12 text-white">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">The Skyline Strategies</h3>

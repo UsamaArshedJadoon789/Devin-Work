@@ -31,7 +31,7 @@ const faqs = [
 ]
 
 export const FAQ = (): JSX.Element => (
-    <section className="container mx-auto py-24 sm:py-28 lg:py-32">
+    <section className="container mx-auto w-full py-24 sm:py-28 lg:py-32">
       <div className="text-center mb-12 sm:mb-16 lg:mb-20">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 lg:mb-6 animate-fade-in">
           <GradientText>Frequently Asked Questions</GradientText>
