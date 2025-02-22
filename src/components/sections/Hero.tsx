@@ -143,38 +143,34 @@ export const Hero: FC = () => {
             </div>
           </div>
         </motion.div>
-          <div className="space-y-6">
-            <div className="bg-[#1A2730]/50 rounded-xl p-6">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-white/90 text-lg">Monthly Revenue</span>
-                <span className="text-[#C6F135] text-lg font-semibold">+147%</span>
-              </div>
-              <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden">
-                <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-300"></div>
-              </div>
-            </div>
-            <div className="bg-[#1A2730]/50 rounded-xl p-6">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-white/90 text-lg">Organic Traffic</span>
-                <span className="text-[#C6F135] text-lg font-semibold">+312%</span>
-              </div>
-              <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden">
-                <div className="absolute inset-y-0 left-0 w-4/5 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-300"></div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="w-full py-16 mt-auto px-8">
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-25 hover:opacity-35 transition-opacity duration-300">
-          <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
-          <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
-          <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
-          <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
-          <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
-          <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
-        </div>
+        <motion.div 
+          className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-25 hover:opacity-35 transition-opacity duration-300"
+          variants={staggerContainer}
+        >
+          {[
+            { src: "/images/clients/hubspot.svg", alt: "HubSpot" },
+            { src: "/images/clients/attest.svg", alt: "Attest" },
+            { src: "/images/clients/flodesk.svg", alt: "Flodesk" },
+            { src: "/images/clients/recruitee.svg", alt: "Recruitee" },
+            { src: "/images/clients/testgorilla.svg", alt: "TestGorilla" },
+            { src: "/images/clients/travelperk.svg", alt: "TravelPerk" }
+          ].map((client, index) => (
+            <motion.img
+              key={client.alt}
+              src={client.src}
+              alt={client.alt}
+              className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110"
+              variants={staggerItem}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            />
+          ))}
+        </motion.div>
       </div>
     </motion.section>
   );
