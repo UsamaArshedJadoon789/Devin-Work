@@ -33,20 +33,20 @@ export const Hero: FC = () => {
             </div>
           </div>
           <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
-            <div className="grid grid-cols-2 gap-8 p-10">
-              <div className="space-y-8">
-                <div className="bg-[#1A2730] rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-700 hover:shadow-2xl">
-                  <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-40 object-cover opacity-85 hover:opacity-100 transition-all duration-700" />
+            <div className="grid grid-cols-2 gap-6 p-8">
+              <div className="space-y-6">
+                <div className="bg-[#1A2730] rounded-2xl overflow-hidden transform hover:scale-105 hover:-translate-y-1 transition-all duration-700 hover:shadow-2xl group">
+                  <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-36 object-cover opacity-85 group-hover:opacity-100 transition-all duration-700" />
                 </div>
                 <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 hover:-translate-y-1 transition-all duration-700 hover:shadow-2xl group">
                   <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-36 object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" />
                 </div>
               </div>
-              <div className="space-y-8 mt-32">
-                <div className="bg-[#1A2730] rounded-2xl overflow-hidden transform hover:scale-105 hover:-translate-y-1 transition-all duration-700 hover:shadow-2xl group">
-                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-40 object-cover opacity-85 group-hover:opacity-100 transition-all duration-700" />
+              <div className="space-y-6 mt-24">
+                <div className="bg-[#1A2730] rounded-2xl overflow-hidden transform hover:scale-105 hover:-translate-y-1 transition-all duration-700 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] group">
+                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-36 object-cover opacity-85 group-hover:opacity-100 transition-all duration-700" />
                 </div>
-                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 hover:-translate-y-1 transition-all duration-700 hover:shadow-2xl group">
+                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 hover:-translate-y-1 transition-all duration-700 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] group">
                   <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-36 object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" />
                 </div>
               </div>
@@ -55,7 +55,7 @@ export const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-[45%] -right-[20%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] transform rotate-6 animate-[float_6s_ease-in-out_infinite] hover:rotate-3 hover:-translate-y-2 transition-all duration-700">
+        <div className="absolute top-[40%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] transform rotate-6 animate-[float_6s_ease-in-out_infinite] hover:rotate-3 hover:-translate-y-2 transition-all duration-700">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-14 h-14 rounded-full bg-[#C6F135] flex items-center justify-center">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -93,8 +93,8 @@ export const Hero: FC = () => {
       </div>
 
       <div className="w-full mt-auto">
-        <div className="w-full max-w-[1400px] mx-auto px-8 py-20">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-16 items-center opacity-15 hover:opacity-25 transition-all duration-700 group">
+        <div className="w-full max-w-[1400px] mx-auto px-8 py-16">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-30 hover:opacity-40 transition-all duration-700 group">
             <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700" />
             <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700" />
             <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700" />
