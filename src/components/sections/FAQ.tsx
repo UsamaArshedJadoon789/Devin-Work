@@ -11,7 +11,7 @@ import { staggerContainer, staggerItem, createBurst, velocityAnimate } from "@/l
 import { ThreeScene } from "../ThreeScene"
 import Reveal from "react-reveal/Fade"
 import { NodeGroup } from 'react-move'
-import { spring } from 'popmotion'
+import { animate } from 'popmotion'
 import anime from 'animejs'
 
 const faqs = [
@@ -51,7 +51,7 @@ export const FAQ = (): JSX.Element => {
     burst.play();
     
     // Popmotion spring animation
-    spring({
+    animate({
       from: 0,
       to: 1,
       duration: 300,
@@ -59,7 +59,7 @@ export const FAQ = (): JSX.Element => {
         button.style.transform = `scale(${1 + progress * 0.05})`;
       },
       onComplete: () => {
-        spring({
+        animate({
           from: 1,
           to: 0,
           duration: 200,
