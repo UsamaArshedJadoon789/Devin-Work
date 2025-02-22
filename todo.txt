@@ -1,4 +1,4 @@
 - [x] Hero
 - [x] Services
-- [ ] Testimonials
+- [x] Testimonials
 - [ ] FAQ
