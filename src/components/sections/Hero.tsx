@@ -6,7 +6,6 @@ import { staggerContainer, staggerItem, presets } from "@/lib/animations"
 import anime from 'animejs'
 import { useEffect, useRef } from "react"
 import { ThreeScene } from "../ThreeScene"
-import { motion, AnimatePresence } from "framer-motion"
 
 export const Hero: FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);

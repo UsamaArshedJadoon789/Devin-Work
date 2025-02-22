@@ -1,7 +1,10 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
+
+// Extend Three.js elements for JSX
+extend(THREE);
 
 extend(THREE);
 
