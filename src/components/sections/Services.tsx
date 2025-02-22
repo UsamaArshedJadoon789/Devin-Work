@@ -45,11 +45,12 @@ export const Services = (): JSX.Element => (
         Comprehensive SEO solutions for your business growth
       </p>
     </div>
-    <div className="grid md:grid-cols-3 gap-8 px-8 w-full animate-slide-up delay-200">
-      {services.map((service) => (
+    <div className="grid md:grid-cols-3 gap-8 px-8 w-full">
+      {services.map((service, index) => (
         <CardHover 
           key={service.title}
-          className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8"
+          className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 animate-slide-up"
+          style={{ animationDelay: `${index * 100}ms` }}
         >
           <div className="text-4xl mb-6">{service.icon}</div>
           <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
