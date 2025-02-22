@@ -1,7 +1,8 @@
 import anime from 'animejs';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Canvas, useThree, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
+import type { FC } from 'react';
 import mojs from 'mojs';
 import Zdog from 'zdog';
 import { animate, spring } from 'popmotion';
@@ -43,7 +44,7 @@ export const staggerItem = {
 };
 
 // Three.js setup
-export const ThreeBackground = () => {
+export const ThreeBackground: FC = () => {
   return (
     <Canvas style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}>
       <OrbitControls enableZoom={false} enablePan={false} />
