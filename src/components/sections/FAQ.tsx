@@ -129,7 +129,29 @@ export const FAQ = (): JSX.Element => {
             >
               <AccordionItem 
                 value={faq.question}
-                className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-300"
+                className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-300 faq-item"
+                onMouseEnter={(e) => {
+                  velocity(e.currentTarget, {
+                    scale: 1.02,
+                    boxShadowBlur: 20,
+                    opacity: 0.95
+                  }, {
+                    duration: 300,
+                    easing: 'easeOutCubic',
+                    queue: false
+                  });
+                }}
+                onMouseLeave={(e) => {
+                  velocity(e.currentTarget, {
+                    scale: 1,
+                    boxShadowBlur: 0,
+                    opacity: 1
+                  }, {
+                    duration: 200,
+                    easing: 'easeOutQuad',
+                    queue: false
+                  });
+                }}
               >
                 <AccordionTrigger 
                   className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold text-white hover:no-underline hover:bg-white/5"
