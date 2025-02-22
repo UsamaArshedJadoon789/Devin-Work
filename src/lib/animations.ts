@@ -72,7 +72,36 @@ export const createBurst = (x: number, y: number) => {
 export const createZdogLogo = (element: HTMLElement) => {
   const illustration = new Zdog.Illustration({
     element,
-    dragRotate: true
+    dragRotate: true,
+    rotate: { x: -0.5, y: 0.5 }
+  });
+
+  // Create main shape
+  new Zdog.Shape({
+    addTo: illustration,
+    stroke: 20,
+    color: '#C6F135',
+    path: [
+      { x: -40, y: -40 },
+      { x:  40, y: -40 },
+      { x:  40, y:  40 },
+      { x: -40, y:  40 },
+    ],
+    closed: true,
+  });
+
+  // Add inner details
+  new Zdog.Shape({
+    addTo: illustration,
+    stroke: 10,
+    color: '#91AD29',
+    path: [
+      { x: -20, y: -20 },
+      { x:  20, y: -20 },
+      { x:  20, y:  20 },
+      { x: -20, y:  20 },
+    ],
+    closed: true,
   });
   
   return illustration;

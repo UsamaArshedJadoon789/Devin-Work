@@ -44,7 +44,7 @@ const services = [
 export const Services = (): JSX.Element => {
   const servicesRef = useRef<HTMLDivElement>(null);
   const zdogContainerRef = useRef<HTMLDivElement>(null);
-  const burstRefs = useRef<mojs.Shape[]>([]);
+  const burstRefs = useRef<any[]>([]);
 
   useEffect(() => {
     if (zdogContainerRef.current) {
@@ -120,7 +120,14 @@ export const Services = (): JSX.Element => {
     variants={staggerContainer}
   >
     <div ref={zdogContainerRef} className="absolute top-0 right-0 w-32 h-32 opacity-25" />
-    <Reveal bottom cascade>
+    <Reveal 
+      bottom 
+      cascade 
+      duration={1000}
+      delay={200}
+      distance="50px"
+      fraction={0.5}
+    >
       <div className="text-center mb-20 px-8">
         <motion.h2 
           className="text-5xl font-bold mb-6 max-w-4xl mx-auto"
