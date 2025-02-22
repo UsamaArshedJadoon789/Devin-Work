@@ -1,8 +1,18 @@
 import { motion } from 'framer-motion';
 import mojs from 'mojs';
+import velocity from 'velocity-animate';
 
 // Export animation components and utilities for direct use
 export { motion };
+
+// Velocity.js animations
+export const velocityAnimate = (element: HTMLElement, properties: any, options: any = {}) => {
+  return velocity(element, properties, {
+    easing: 'easeOutExpo',
+    duration: 300,
+    ...options
+  });
+};
 
 // Anime.js animations
 export const cardAnimation = {

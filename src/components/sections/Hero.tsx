@@ -2,35 +2,62 @@ import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
 import type { FC } from "react"
 import { motion } from "framer-motion"
-import { staggerContainer, staggerItem, presets, createBurst } from "@/lib/animations"
+import { staggerContainer, staggerItem, presets, createBurst, velocityAnimate } from "@/lib/animations"
 import { useEffect, useRef, useCallback } from "react"
 import { ThreeScene } from "../ThreeScene"
 
 export const Hero: FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   
-  const handleButtonClick = useCallback((event: React.MouseEvent) => {
+  const handleButtonClick = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
     const burst = createBurst(event.clientX, event.clientY, {
       color: '#D4F55C',
       radius: 50
     });
     burst.play();
+
+    // Add velocity animation to button
+    velocityAnimate(event.currentTarget, {
+      scale: [1.1, 1],
+      translateY: [-2, 0]
+    }, {
+      duration: 400,
+      easing: [0.175, 0.885, 0.32, 1.275]
+    });
   }, []);
 
-  const handleCardHover = useCallback((event: React.MouseEvent) => {
+  const handleCardHover = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
     const burst = createBurst(event.clientX, event.clientY, {
       color: '#C6F135',
       radius: 30
     });
     burst.play();
+
+    // Add velocity animation to card
+    velocityAnimate(event.currentTarget, {
+      scale: 1.05,
+      rotateZ: 0
+    }, {
+      duration: 600,
+      easing: 'easeOutElastic'
+    });
   }, []);
 
-  const handleLogoHover = useCallback((event: React.MouseEvent) => {
+  const handleLogoHover = useCallback((event: React.MouseEvent<HTMLImageElement>) => {
     const burst = createBurst(event.clientX, event.clientY, {
       color: '#91AD29',
       radius: 20
     });
     burst.play();
+
+    // Add velocity animation to logo
+    velocityAnimate(event.currentTarget, {
+      scale: 1.2,
+      opacity: 1
+    }, {
+      duration: 300,
+      easing: 'easeOutCubic'
+    });
   }, []);
 
   return (
