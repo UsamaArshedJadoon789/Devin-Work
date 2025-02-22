@@ -1,12 +1,39 @@
 import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
 import type { FC } from "react"
+import { motion } from "framer-motion"
+import { staggerContainer, staggerItem, presets } from "@/lib/animations"
+import anime from 'animejs'
+import { useEffect, useRef } from "react"
 
 export const Hero: FC = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    if (heroRef.current) {
+      anime({
+        targets: heroRef.current.querySelectorAll('.animate-fade-in'),
+        ...presets.fadeUp,
+        delay: anime.stagger(100)
+      });
+    }
+  }, []);
   return (
-    <section className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none"></div>
+    <motion.section 
+      ref={heroRef}
+      className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col"
+      initial="initial"
+      animate="animate"
+      variants={staggerContainer}
+    >
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent"
+        variants={staggerItem}
+      />
+      <motion.div 
+        className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none"
+        variants={staggerItem}
+      />
       
       <div className="w-full flex-1 flex items-center justify-center relative z-10">
         <div className="w-full px-8 relative">
