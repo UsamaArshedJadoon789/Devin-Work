@@ -7,10 +7,12 @@ import {
   AccordionTrigger,
 } from "../ui/accordion"
 import { motion, AnimatePresence } from "framer-motion"
-import { staggerContainer, staggerItem, animate } from "@/lib/animations"
+import { staggerContainer, staggerItem, animate, presets } from "@/lib/animations"
 import Reveal from "react-reveal/Fade"
 import { NodeGroup } from 'react-move'
 import { spring } from 'popmotion'
+import anime from 'animejs'
+import type { RevealProps } from "react-reveal/Fade"
 
 const faqs = [
   {
@@ -38,6 +40,8 @@ const faqs = [
 export const FAQ = (): JSX.Element => {
   const handleAccordionClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const button = event.currentTarget;
+    
+    // Popmotion spring animation
     animate({
       from: 0,
       to: 1,
@@ -55,6 +59,14 @@ export const FAQ = (): JSX.Element => {
           }
         });
       }
+    });
+
+    // Anime.js animation for text color
+    anime({
+      targets: button.querySelector('.accordion-text'),
+      color: ['#FFFFFF', '#C6F135', '#FFFFFF'],
+      duration: 800,
+      easing: 'easeInOutQuad'
     });
   };
 
@@ -109,7 +121,7 @@ export const FAQ = (): JSX.Element => {
                   className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold text-white hover:no-underline hover:bg-white/5"
                   onClick={handleAccordionClick}
                 >
-                  {faq.question}
+                  <span className="accordion-text">{faq.question}</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-base sm:text-lg text-gray-300 leading-relaxed">
                   <NodeGroup
