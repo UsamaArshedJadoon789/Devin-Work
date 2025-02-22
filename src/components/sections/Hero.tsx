@@ -4,11 +4,11 @@ import type { FC } from "react"
 
 export const Hero: FC = () => {
   return (
-    <section className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col">
+    <section className="relative min-h-[100vh] w-screen bg-[#0A0A0A] overflow-hidden flex flex-col">
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-[0.15] mix-blend-overlay pointer-events-none"></div>
       
-      <div className="container mx-auto px-4 flex-1 flex items-center justify-center relative z-10">
+      <div className="container mx-auto px-4 flex-1 flex items-center justify-center relative z-10 min-h-[100vh]">
         <div className="w-full max-w-2xl lg:max-w-4xl relative">
           <div className="relative z-10 mb-12">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
