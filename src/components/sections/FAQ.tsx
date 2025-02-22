@@ -7,7 +7,8 @@ import {
   AccordionTrigger,
 } from "../ui/accordion"
 import { motion } from "framer-motion"
-import { staggerContainer, staggerItem, animate } from "@/lib/animations"
+import { staggerContainer, staggerItem, createBurst, velocityAnimate } from "@/lib/animations"
+import { ThreeScene } from "../ThreeScene"
 import Reveal from "react-reveal/Fade"
 import { NodeGroup } from 'react-move'
 import { spring } from 'popmotion'
@@ -50,19 +51,19 @@ export const FAQ = (): JSX.Element => {
     burst.play();
     
     // Popmotion spring animation
-    animate({
+    spring({
       from: 0,
       to: 1,
       duration: 300,
-      onUpdate: (progress) => {
+      onUpdate: (progress: number) => {
         button.style.transform = `scale(${1 + progress * 0.05})`;
       },
       onComplete: () => {
-        animate({
+        spring({
           from: 1,
           to: 0,
           duration: 200,
-          onUpdate: (progress) => {
+          onUpdate: (progress: number) => {
             button.style.transform = `scale(${1 + progress * 0.05})`;
           }
         });
@@ -131,7 +132,7 @@ export const FAQ = (): JSX.Element => {
                 value={faq.question}
                 className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-300 faq-item"
                 onMouseEnter={(e) => {
-                  velocity(e.currentTarget, {
+                  velocityAnimate(e.currentTarget, {
                     scale: 1.02,
                     boxShadowBlur: 20,
                     opacity: 0.95
@@ -142,7 +143,7 @@ export const FAQ = (): JSX.Element => {
                   });
                 }}
                 onMouseLeave={(e) => {
-                  velocity(e.currentTarget, {
+                  velocityAnimate(e.currentTarget, {
                     scale: 1,
                     boxShadowBlur: 0,
                     opacity: 1

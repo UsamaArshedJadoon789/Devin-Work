@@ -4,7 +4,8 @@ import { GradientText } from "../ui/gradient-text"
 import { Button } from "../ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import { staggerContainer, staggerItem, remotionConfig } from "@/lib/animations"
+import { staggerContainer, staggerItem, remotionConfig, createBurst, velocityAnimate } from "@/lib/animations"
+import { ThreeScene } from "../ThreeScene"
 import Reveal from "react-reveal/Fade"
 import { Sequence } from 'remotion'
 import { NodeGroup } from 'react-move'
@@ -71,7 +72,7 @@ export const Testimonials = (): JSX.Element => {
     const cards = document.querySelectorAll('.testimonial-card');
     cards.forEach(card => {
       card.addEventListener('mouseenter', () => {
-        velocity(card, {
+        velocityAnimate(card, {
           scale: 1.02,
           boxShadowBlur: 30,
           opacity: 0.95
@@ -83,7 +84,7 @@ export const Testimonials = (): JSX.Element => {
       });
 
       card.addEventListener('mouseleave', () => {
-        velocity(card, {
+        velocityAnimate(card, {
           scale: 1,
           boxShadowBlur: 0,
           opacity: 1
