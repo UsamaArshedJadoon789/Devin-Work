@@ -1,20 +1,24 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree, extend, type ThreeElements } from '@react-three/fiber';
+import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import { Object3D } from 'three/src/core/Object3D';
+import { Mesh } from 'three';
+import { BufferGeometry } from 'three';
+import { Material } from 'three';
 
 // Extend Three.js with custom elements
 extend({ OrbitControls });
 
-declare module '@react-three/fiber' {
-  interface ThreeElements {
-    orbitControls: JSX.IntrinsicElements['div'];
-    stars: JSX.IntrinsicElements['div'];
-    ambientLight: JSX.IntrinsicElements['div'];
-    pointLight: JSX.IntrinsicElements['div'];
-    mesh: JSX.IntrinsicElements['div'];
-    sphereGeometry: JSX.IntrinsicElements['div'];
-    meshStandardMaterial: JSX.IntrinsicElements['div'];
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      orbitControls: any;
+      stars: any;
+      ambientLight: any;
+      pointLight: any;
+      mesh: any;
+      sphereGeometry: any;
+      meshStandardMaterial: any;
+    }
   }
 }
 
@@ -23,7 +27,7 @@ interface SceneProps {
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<Object3D>(null);
+  const sphereRef = useRef<Mesh<BufferGeometry, Material>>(null);
   const { camera } = useThree();
 
   useEffect(() => {
