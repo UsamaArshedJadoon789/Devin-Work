@@ -89,10 +89,10 @@ export const Hero: FC = () => {
               <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl animate-slide-up delay-100">
                 Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
               </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-slide-up delay-200">
-              <Button 
-                className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300"
-                onClick={handleButtonClick}
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-slide-up delay-200">
+                <Button 
+                  className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300"
+                  onClick={handleButtonClick}
               >
                 Book a Strategy Call
               </Button>
@@ -103,9 +103,10 @@ export const Hero: FC = () => {
               >
                 Read stories &amp; opinions
                 <ArrowRight className="ml-2" />
-              </Button>
+                </Button>
+              </div>
             </div>
-          </div>
+          </FloatingElement>
           <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
             <div className="grid grid-cols-2 gap-4 p-6">
               <div className="space-y-4">
