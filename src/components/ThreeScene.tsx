@@ -1,5 +1,5 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree, ThreeElements } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import type { ThreeEvent } from '@react-three/fiber';
 
@@ -32,7 +32,7 @@ interface SceneProps {
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<ThreeElements['mesh']>(null);
+  const sphereRef = useRef<JSX.IntrinsicElements['mesh']>(null);
   const { camera } = useThree();
 
   useEffect(() => {
