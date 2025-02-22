@@ -1,12 +1,9 @@
-import { type JSX, useEffect, useRef } from "react"
+import { type JSX } from "react"
 import { CardHover } from "../ui/card-hover"
 import { GradientText } from "../ui/gradient-text"
 import { motion } from "framer-motion"
-import { staggerContainer, staggerItem, createBurst, createZdogLogo } from "@/lib/animations"
+import { staggerContainer } from "@/lib/animations"
 import { ThreeScene } from "../ThreeScene"
-import Reveal from "react-reveal/Fade"
-import type { RevealProps } from "react-reveal/Fade"
-import Velocity from 'velocity-animate'
 
 const services = [
   {
@@ -42,99 +39,8 @@ const services = [
 ]
 
 export const Services = (): JSX.Element => {
-  const servicesRef = useRef<HTMLDivElement>(null);
-  const zdogContainerRef = useRef<HTMLDivElement>(null);
-  const burstRefs = useRef<any[]>([]);
-
-  useEffect(() => {
-    if (zdogContainerRef.current) {
-      const illustration = createZdogLogo(zdogContainerRef.current);
-      const animate = () => {
-        illustration.updateRenderGraph();
-        requestAnimationFrame(animate);
-      };
-      animate();
-    }
-
-    const handleCardClick = (event: Event) => {
-      const mouseEvent = event as MouseEvent;
-      const burst = createBurst(mouseEvent.clientX, mouseEvent.clientY, {
-        color: '#91AD29',
-        radius: 60
-      });
-      burstRefs.current.push(burst);
-      burst.play();
-
-      // Add Velocity.js animation for clicked card
-      const card = event.currentTarget as HTMLElement;
-      Velocity(card, {
-        scale: [1.2, 1],
-        rotateZ: ['5deg', '-5deg', '0deg'],
-        boxShadowBlur: [30, 0],
-        opacity: [0.8, 1]
-      }, {
-        duration: 600,
-        easing: [0.175, 0.885, 0.32, 1.275], // Custom bezier curve for springy effect
-        queue: false
-      });
-    };
-
-    const handleCardHover = (event: Event) => {
-      const mouseEvent = event as MouseEvent;
-      const burst = createBurst(mouseEvent.clientX, mouseEvent.clientY, {
-        color: '#C6F135',
-        radius: 30
-      });
-      burstRefs.current.push(burst);
-      burst.play();
-
-      const card = event.currentTarget as HTMLElement;
-      Velocity(card, {
-        translateY: -15,
-        scale: 1.05,
-        boxShadowBlur: 25,
-        opacity: 0.9
-      }, {
-        duration: 400,
-        easing: 'easeOutCubic',
-        queue: false
-      });
-    };
-
-    const handleCardLeave = (event: Event) => {
-      const card = event.currentTarget as HTMLElement;
-      Velocity(card, {
-        translateY: 0,
-        scale: 1,
-        boxShadowBlur: 0,
-        opacity: 1
-      }, {
-        duration: 300,
-        easing: 'easeOutQuad',
-        queue: false
-      });
-    };
-
-    const cards = servicesRef.current?.querySelectorAll('.service-card');
-    cards?.forEach(card => {
-      card.addEventListener('click', handleCardClick);
-      card.addEventListener('mouseenter', handleCardHover);
-      card.addEventListener('mouseleave', handleCardLeave);
-    });
-
-    return () => {
-      cards?.forEach(card => {
-        card.removeEventListener('click', handleCardClick);
-        card.removeEventListener('mouseenter', handleCardHover);
-        card.removeEventListener('mouseleave', handleCardLeave);
-      });
-      burstRefs.current.forEach(burst => burst.pause());
-    };
-  }, []);
-
   return (
   <motion.section 
-    ref={servicesRef}
     className="w-full py-32 relative bg-[#0A0A0A] overflow-hidden"
     initial="initial"
     animate="animate"
@@ -146,66 +52,49 @@ export const Services = (): JSX.Element => {
       <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
     </div>
     <div className="relative z-10">
-      <div ref={zdogContainerRef} className="absolute top-0 right-0 w-32 h-32 opacity-25" />
-    <Reveal 
-      effect="fadeInUp"
-      duration={1000}
-      delay={200}
-      fraction={0.5}
-      {...({} as RevealProps)}
-    >
       <div className="text-center mb-20 px-8">
         <motion.h2 
           className="text-5xl font-bold mb-6 max-w-4xl mx-auto"
-          variants={staggerItem}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
           <GradientText>Our Services</GradientText>
         </motion.h2>
         <motion.p 
           className="text-xl text-gray-300 max-w-2xl mx-auto"
-          variants={staggerItem}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
           Comprehensive SEO solutions for your business growth
         </motion.p>
       </div>
-    </Reveal>
-    <motion.div 
-      className="grid md:grid-cols-3 gap-8 px-8 w-full"
-      variants={staggerContainer}
-    >
-      {services.map((service, index) => (
-        <motion.div
-          key={service.title}
-          variants={staggerItem}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ delay: index * 0.1 }}
-        >
-          <Reveal 
-            effect="fadeInUp"
-            duration={800}
-            delay={index * 200}
-            fraction={0.5}
-            {...({} as RevealProps)}
+      <div className="grid md:grid-cols-3 gap-8 px-8 w-full">
+        {services.map((service, index) => (
+          <motion.div
+            key={service.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <CardHover 
               className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 service-card"
             >
-            <motion.div 
-              className="text-4xl mb-6"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              {service.icon}
-            </motion.div>
-            <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
-            <p className="text-gray-300 text-lg leading-relaxed">{service.description}</p>
-          </CardHover>
-          </Reveal>
-        </motion.div>
-      ))}
-    </motion.div>
+              <motion.div 
+                className="text-4xl mb-6"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                {service.icon}
+              </motion.div>
+              <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">{service.description}</p>
+            </CardHover>
+          </motion.div>
+        ))}
+      </div>
     </div>
   </motion.section>
   );
