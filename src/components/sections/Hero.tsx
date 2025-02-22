@@ -154,6 +154,6 @@ export const Hero: FC = () => {
           <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
