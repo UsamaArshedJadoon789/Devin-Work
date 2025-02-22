@@ -13,6 +13,7 @@ import Reveal from "react-reveal/Fade"
 import { NodeGroup } from 'react-move'
 import { animate } from 'popmotion'
 import anime from 'animejs'
+import { easeQuadOut } from 'd3-ease'
 
 const faqs = [
   {
@@ -171,17 +172,17 @@ export const FAQ = (): JSX.Element => {
                     enter={() => ({
                       opacity: [1],
                       y: [0],
-                      timing: { duration: 300, ease: spring }
+                      timing: { duration: 300, ease: (t: number) => t }
                     })}
                     update={() => ({
                       opacity: [1],
                       y: [0],
-                      timing: { duration: 300, ease: spring }
+                      timing: { duration: 300, ease: (t: number) => t }
                     })}
                     leave={() => ({
                       opacity: [0],
                       y: [20],
-                      timing: { duration: 300, ease: spring }
+                      timing: { duration: 300, ease: (t: number) => t }
                     })}
                   >
                     {(nodes) => (

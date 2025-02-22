@@ -72,7 +72,7 @@ export const Testimonials = (): JSX.Element => {
     const cards = document.querySelectorAll('.testimonial-card');
     cards.forEach(card => {
       card.addEventListener('mouseenter', () => {
-        velocityAnimate(card, {
+        velocityAnimate(card as HTMLElement, {
           scale: 1.02,
           boxShadowBlur: 30,
           opacity: 0.95
@@ -84,7 +84,7 @@ export const Testimonials = (): JSX.Element => {
       });
 
       card.addEventListener('mouseleave', () => {
-        velocityAnimate(card, {
+        velocityAnimate(card as HTMLElement, {
           scale: 1,
           boxShadowBlur: 0,
           opacity: 1
@@ -160,17 +160,17 @@ export const Testimonials = (): JSX.Element => {
             enter={() => ({
               opacity: [1],
               x: [0],
-              timing: { duration: 500, ease: spring }
+              timing: { duration: 500, ease: (t: number) => t }
             })}
             update={() => ({
               opacity: [1],
               x: [0],
-              timing: { duration: 500, ease: spring }
+              timing: { duration: 500, ease: (t: number) => t }
             })}
             leave={() => ({
               opacity: [0],
               x: [-100],
-              timing: { duration: 500, ease: spring }
+              timing: { duration: 500, ease: (t: number) => t }
             })}
           >
             {(nodes) => (
