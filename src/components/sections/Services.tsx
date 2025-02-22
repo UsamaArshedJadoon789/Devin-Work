@@ -68,12 +68,15 @@ export const Services = (): JSX.Element => {
       // Add Velocity.js animation for clicked card
       const card = event.currentTarget as HTMLElement;
       Velocity(card, {
-        scale: [1, 1.1],
-        rotateZ: ['0deg', '5deg', '-5deg', '0deg'],
-      } as { [key: string]: any }, {
-        duration: 800,
-        easing: 'spring',
-      } as { [key: string]: any });
+        scale: [1.2, 1],
+        rotateZ: ['5deg', '-5deg', '0deg'],
+        boxShadowBlur: [30, 0],
+        opacity: [0.8, 1]
+      }, {
+        duration: 600,
+        easing: [0.175, 0.885, 0.32, 1.275], // Custom bezier curve for springy effect
+        queue: false
+      });
     };
 
     const handleCardHover = (event: Event) => {
@@ -87,23 +90,29 @@ export const Services = (): JSX.Element => {
 
       const card = event.currentTarget as HTMLElement;
       Velocity(card, {
-        translateY: -10,
-        boxShadowBlur: 20,
-      } as { [key: string]: any }, {
-        duration: 300,
-        easing: 'easeOutQuad',
-      } as { [key: string]: any });
+        translateY: -15,
+        scale: 1.05,
+        boxShadowBlur: 25,
+        opacity: 0.9
+      }, {
+        duration: 400,
+        easing: 'easeOutCubic',
+        queue: false
+      });
     };
 
     const handleCardLeave = (event: Event) => {
       const card = event.currentTarget as HTMLElement;
       Velocity(card, {
         translateY: 0,
+        scale: 1,
         boxShadowBlur: 0,
-      } as { [key: string]: any }, {
-        duration: 200,
-        easing: 'easeInQuad',
-      } as { [key: string]: any });
+        opacity: 1
+      }, {
+        duration: 300,
+        easing: 'easeOutQuad',
+        queue: false
+      });
     };
 
     const cards = servicesRef.current?.querySelectorAll('.service-card');
