@@ -39,20 +39,17 @@
   }
   
   #root {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    min-height: 100vh !important;
+    all: unset !important;
     display: flex !important;
     flex-direction: column !important;
+    width: 100vw !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
     position: fixed !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    overflow-x: hidden !important;
+    inset: 0 !important;
     box-sizing: border-box !important;
-    max-width: none !important;
+    overflow-x: hidden !important;
   }
 }
 
