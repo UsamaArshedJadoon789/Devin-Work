@@ -39,6 +39,15 @@ const faqs = [
 export const FAQ = (): JSX.Element => {
   const handleAccordionClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const button = event.currentTarget;
+    const rect = button.getBoundingClientRect();
+    
+    // Create burst effect at click position
+    const burst = createBurst(
+      rect.left + rect.width / 2,
+      rect.top + rect.height / 2,
+      { color: '#6B21A8', radius: 30 }
+    );
+    burst.play();
     
     // Popmotion spring animation
     animate({
