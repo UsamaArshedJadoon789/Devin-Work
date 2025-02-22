@@ -12,10 +12,10 @@ export const velocityAnimate = (
   options: { 
     easing?: string;
     duration?: number;
-    queue?: boolean;
+    queue?: boolean | string;
     [key: string]: any;
   } = {}
-) => {
+): Promise<any> => {
   return velocity(element, properties, {
     easing: 'easeOutExpo',
     duration: 300,

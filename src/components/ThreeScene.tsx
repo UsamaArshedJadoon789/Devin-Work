@@ -1,24 +1,32 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
+import type { ThreeEvent } from '@react-three/fiber';
 import * as THREE from 'three';
 
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      orbitControls: any;
-      stars: any;
-      ambientLight: any;
-      pointLight: any;
-      mesh: any;
-      sphereGeometry: any;
-      meshStandardMaterial: any;
+      mesh: {
+        ref?: React.RefObject<any>;
+        onClick?: (event: ThreeEvent<MouseEvent>) => void;
+        onPointerOver?: (event: ThreeEvent<PointerEvent>) => void;
+        onPointerOut?: (event: ThreeEvent<PointerEvent>) => void;
+        [key: string]: any;
+      };
+      sphereGeometry: {
+        args?: [radius?: number, widthSegments?: number, heightSegments?: number];
+        [key: string]: any;
+      };
+      meshStandardMaterial: {
+        color?: string;
+        transparent?: boolean;
+        opacity?: number;
+        [key: string]: any;
+      };
     }
   }
 }
-
-// Register OrbitControls as a custom element
-extend({ OrbitControls: OrbitControls });
 
 interface SceneProps {
   color?: string;
@@ -42,8 +50,6 @@ const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
     <>
       <OrbitControls enableZoom={false} enablePan={false} />
       <Stars count={1000} depth={50} factor={4} />
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} />
       <mesh ref={sphereRef}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshStandardMaterial color={color} transparent opacity={0.6} />
