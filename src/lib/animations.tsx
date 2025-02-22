@@ -7,7 +7,16 @@ import Zdog from 'zdog';
 export { motion };
 
 // Velocity.js animations
-export const velocityAnimate = (element: HTMLElement, properties: Record<string, unknown>, options: Record<string, unknown> = {}) => {
+export const velocityAnimate = (
+  element: HTMLElement, 
+  properties: { [key: string]: string | number | number[] | string[] }, 
+  options: { 
+    easing?: string;
+    duration?: number;
+    queue?: boolean;
+    [key: string]: any;
+  } = {}
+) => {
   return velocity(element, properties, {
     easing: 'easeOutExpo',
     duration: 300,
