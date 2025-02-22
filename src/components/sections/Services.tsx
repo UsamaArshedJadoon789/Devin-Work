@@ -6,6 +6,7 @@ import { staggerContainer, staggerItem, createBurst, createZdogLogo } from "@/li
 import Reveal from "react-reveal/Fade"
 import mojs from 'mojs'
 import Zdog from 'zdog'
+import Velocity from 'velocity-js'
 
 const services = [
   {
@@ -59,16 +60,52 @@ export const Services = (): JSX.Element => {
       const burst = createBurst(event.clientX, event.clientY);
       burstRefs.current.push(burst);
       burst.play();
+
+      // Add Velocity.js animation for clicked card
+      const card = event.currentTarget as HTMLElement;
+      Velocity(card, {
+        scale: [1, 1.1],
+        rotateZ: ['0deg', '5deg', '-5deg', '0deg'],
+      }, {
+        duration: 800,
+        easing: 'spring',
+      });
+    };
+
+    const handleCardHover = (event: MouseEvent) => {
+      const card = event.currentTarget as HTMLElement;
+      Velocity(card, {
+        translateY: -10,
+        boxShadowBlur: 20,
+      }, {
+        duration: 300,
+        easing: 'easeOutQuad',
+      });
+    };
+
+    const handleCardLeave = (event: MouseEvent) => {
+      const card = event.currentTarget as HTMLElement;
+      Velocity(card, {
+        translateY: 0,
+        boxShadowBlur: 0,
+      }, {
+        duration: 200,
+        easing: 'easeInQuad',
+      });
     };
 
     const cards = servicesRef.current?.querySelectorAll('.service-card');
     cards?.forEach(card => {
       card.addEventListener('click', handleCardClick);
+      card.addEventListener('mouseenter', handleCardHover);
+      card.addEventListener('mouseleave', handleCardLeave);
     });
 
     return () => {
       cards?.forEach(card => {
         card.removeEventListener('click', handleCardClick);
+        card.removeEventListener('mouseenter', handleCardHover);
+        card.removeEventListener('mouseleave', handleCardLeave);
       });
       burstRefs.current.forEach(burst => burst.pause());
     };
