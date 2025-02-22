@@ -1,9 +1,7 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
+import { Canvas, useFrame, useThree, extend, type ThreeElements } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import { Mesh } from 'three';
-import { BufferGeometry } from 'three';
-import { Material } from 'three';
+import { Mesh, BufferGeometry, Material } from 'three/src/Three.js';
 
 // Extend Three.js with custom elements
 extend({ OrbitControls });
