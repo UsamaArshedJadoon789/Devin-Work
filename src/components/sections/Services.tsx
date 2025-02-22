@@ -4,8 +4,7 @@ import { GradientText } from "../ui/gradient-text"
 import { motion } from "framer-motion"
 import { staggerContainer, staggerItem, createBurst, createZdogLogo } from "@/lib/animations"
 import Reveal from "react-reveal/Fade"
-import mojs from 'mojs'
-import Zdog from 'zdog'
+import type { RevealProps } from "react-reveal/Fade"
 import Velocity from 'velocity-js'
 
 const services = [
@@ -56,8 +55,9 @@ export const Services = (): JSX.Element => {
       animate();
     }
 
-    const handleCardClick = (event: MouseEvent) => {
-      const burst = createBurst(event.clientX, event.clientY);
+    const handleCardClick = (event: Event) => {
+      const mouseEvent = event as MouseEvent;
+      const burst = createBurst(mouseEvent.clientX, mouseEvent.clientY);
       burstRefs.current.push(burst);
       burst.play();
 
@@ -72,7 +72,7 @@ export const Services = (): JSX.Element => {
       } as { [key: string]: any });
     };
 
-    const handleCardHover = (event: MouseEvent) => {
+    const handleCardHover = (event: Event) => {
       const card = event.currentTarget as HTMLElement;
       Velocity(card, {
         translateY: -10,
@@ -83,7 +83,7 @@ export const Services = (): JSX.Element => {
       } as { [key: string]: any });
     };
 
-    const handleCardLeave = (event: MouseEvent) => {
+    const handleCardLeave = (event: Event) => {
       const card = event.currentTarget as HTMLElement;
       Velocity(card, {
         translateY: 0,
@@ -121,12 +121,11 @@ export const Services = (): JSX.Element => {
   >
     <div ref={zdogContainerRef} className="absolute top-0 right-0 w-32 h-32 opacity-25" />
     <Reveal 
-      bottom 
-      cascade 
+      effect="fadeInUp"
       duration={1000}
       delay={200}
-      distance="50px"
       fraction={0.5}
+      {...({} as RevealProps)}
     >
       <div className="text-center mb-20 px-8">
         <motion.h2 
