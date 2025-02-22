@@ -122,9 +122,6 @@ importers:
       input-otp:
         specifier: ^1.4.2
         version: 1.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      lucide-react:
-        specifier: ^0.364.0
-        version: 0.364.0(react@18.3.1)
       mojs:
         specifier: ^0.2.0
         version: 0.2.0
@@ -201,6 +198,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.5
         version: 18.3.5(@types/react@18.3.18)
+      '@types/react-router-dom':
+        specifier: ^5.3.3
+        version: 5.3.3
       '@types/three':
         specifier: ^0.173.0
         version: 0.173.0
@@ -222,6 +222,9 @@ importers:
       globals:
         specifier: ^15.12.0
         version: 15.15.0
+      lucide-react:
+        specifier: ^0.364.0
+        version: 0.364.0(react@18.3.1)
       postcss:
         specifier: ^8.4.49
         version: 8.5.3
@@ -1593,6 +1596,9 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/history@4.7.11':
+    resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
+
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
@@ -1606,6 +1612,12 @@ packages:
     resolution: {integrity: sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==}
     peerDependencies:
       '@types/react': ^18.0.0
+
+  '@types/react-router-dom@5.3.3':
+    resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
+
+  '@types/react-router@5.1.20':
+    resolution: {integrity: sha512-jGjmu/ZqS7FjSH6owMcD5qpq19+1RS9DeVRqfl1FeBMxTDQAGwlMWOcs52NDoXaNKyG3d1cYQFMs9rCrb88o9Q==}
 
   '@types/react@18.3.18':
     resolution: {integrity: sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==}
@@ -4378,14 +4390,14 @@ snapshots:
     dependencies:
       '@remotion/studio': 4.0.267(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@remotion/studio-shared': 4.0.267(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      css-loader: 5.2.7(webpack@5.96.1)
+      css-loader: 5.2.7(webpack@5.96.1(esbuild@0.25.0))
       esbuild: 0.25.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-refresh: 0.9.0
       remotion: 4.0.267(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       source-map: 0.7.3
-      style-loader: 2.0.0(webpack@5.96.1)
+      style-loader: 2.0.0(webpack@5.96.1(esbuild@0.25.0))
       webpack: 5.96.1(esbuild@0.25.0)
     transitivePeerDependencies:
       - '@swc/core'
@@ -4652,6 +4664,8 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/history@4.7.11': {}
+
   '@types/json-schema@7.0.15': {}
 
   '@types/node@22.13.5':
@@ -4662,6 +4676,17 @@ snapshots:
 
   '@types/react-dom@18.3.5(@types/react@18.3.18)':
     dependencies:
+      '@types/react': 18.3.18
+
+  '@types/react-router-dom@5.3.3':
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 18.3.18
+      '@types/react-router': 5.1.20
+
+  '@types/react-router@5.1.20':
+    dependencies:
+      '@types/history': 4.7.11
       '@types/react': 18.3.18
 
   '@types/react@18.3.18':
@@ -5036,7 +5061,7 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  css-loader@5.2.7(webpack@5.96.1):
+  css-loader@5.2.7(webpack@5.96.1(esbuild@0.25.0)):
     dependencies:
       icss-utils: 5.1.0(postcss@8.5.3)
       loader-utils: 2.0.4
@@ -6126,7 +6151,7 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  style-loader@2.0.0(webpack@5.96.1):
+  style-loader@2.0.0(webpack@5.96.1(esbuild@0.25.0)):
     dependencies:
       loader-utils: 2.0.4
       schema-utils: 3.3.0
