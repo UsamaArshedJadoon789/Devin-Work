@@ -2,8 +2,8 @@ import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
 import type { FC } from "react"
 import { motion } from "framer-motion"
-import { staggerContainer, staggerItem, presets, createBurst, velocityAnimate } from "@/lib/animations"
-import { useEffect, useRef, useCallback } from "react"
+import { staggerContainer, staggerItem, createBurst, velocityAnimate } from "@/lib/animations"
+import { useRef, useCallback } from "react"
 import { ThreeScene } from "../ThreeScene"
 
 export const Hero: FC = () => {
