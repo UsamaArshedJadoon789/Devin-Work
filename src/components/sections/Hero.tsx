@@ -94,12 +94,12 @@ export const Hero: FC = () => {
 
       <div className="w-full py-16 mt-auto px-8">
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-25 hover:opacity-35 transition-opacity duration-300">
-          <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+          <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
         </div>
       </div>
     </section>
