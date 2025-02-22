@@ -13,13 +13,13 @@ import { contactFormSchema, type ContactFormValues } from "@/lib/validations/con
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { GradientText } from "./components/ui/gradient-text"
 import { Toaster, toast } from "sonner"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 export default function App() {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(true);
   const [currentPage, setCurrentPage] = useState('home');
 
-  React.useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
