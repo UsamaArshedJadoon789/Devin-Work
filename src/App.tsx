@@ -500,26 +500,22 @@ export default function App() {
               <p className="text-lg text-gray-300">Meet the experts behind our success</p>
             </div>
             <div className="grid md:grid-cols-4 gap-8 px-8 w-full">
-              <div className="text-center">
-                <div className="text-6xl mb-4">👨</div>
-                <h3 className="text-xl font-bold text-white mb-2">John Smith</h3>
-                <p className="text-gray-300">CEO &amp; Founder</p>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">👩</div>
-                <h3 className="text-xl font-bold text-white mb-2">Sarah Johnson</h3>
-                <p className="text-gray-300">Technical Director</p>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">💻</div>
-                <h3 className="text-xl font-bold text-white mb-2">Michael Chen</h3>
-                <p className="text-gray-300">Lead Developer</p>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">🎨</div>
-                <h3 className="text-xl font-bold text-white mb-2">Emily Brown</h3>
-                <p className="text-gray-300">Creative Director</p>
-              </div>
+              {[
+                { icon: "👨", name: "John Smith", role: "CEO & Founder" },
+                { icon: "👩", name: "Sarah Johnson", role: "Technical Director" },
+                { icon: "💻", name: "Michael Chen", role: "Lead Developer" },
+                { icon: "🎨", name: "Emily Brown", role: "Creative Director" }
+              ].map((member, index) => (
+                <div 
+                  key={member.name}
+                  className="text-center animate-on-scroll"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="text-6xl mb-4 transform hover:scale-110 transition-all duration-300">{member.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                  <p className="text-gray-300">{member.role}</p>
+                </div>
+              ))}
             </div>
           </section>
         </>
