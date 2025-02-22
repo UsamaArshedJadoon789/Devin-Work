@@ -1,12 +1,15 @@
 import anime from 'animejs';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import * as THREE from 'three';
 import mojs from 'mojs';
 import Zdog from 'zdog';
-import { interpolate, animate } from 'popmotion';
+import { animate, spring } from 'popmotion';
 import { NodeGroup } from 'react-move';
 import { Sequence } from 'remotion';
 import Reveal from 'react-reveal/Fade';
+
+// Export animation components for direct use
+export { motion, AnimatePresence, NodeGroup, Sequence, Reveal };
 
 // Anime.js animations
 export const cardAnimation = {
