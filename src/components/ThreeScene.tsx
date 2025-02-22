@@ -1,10 +1,7 @@
 import { FC, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import { Mesh, BufferGeometry, Material } from 'three';
-
-// Extend Three.js with custom elements
-extend({ OrbitControls });
+import { Mesh, BufferGeometry, Material } from 'three/dist/three';
 
 declare global {
   namespace JSX {
@@ -20,8 +17,8 @@ declare global {
   }
 }
 
-// Extend Three.js with custom elements
-extend({ OrbitControls });
+// Register OrbitControls as a custom element
+extend({ OrbitControls: OrbitControls });
 
 interface SceneProps {
   color?: string;
