@@ -5,19 +5,19 @@ import type { FC } from "react"
 export const Hero: FC = () => {
   return (
     <section className="relative min-h-[100vh] w-screen bg-[#0A0A0A] flex flex-col overflow-x-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-[0.15] mix-blend-overlay pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/20 via-[#0A0A0A] to-[#0A0A0A]" />
+      <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-[0.08] mix-blend-overlay pointer-events-none" />
       
       <div className="w-full flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-[1400px] mx-auto px-6 relative">
           <div className="relative z-10 mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] opacity-0 animate-[fadeIn_0.8s_ease-out_0.2s_forwards]">
               We Build SEO Revenue Engines For SaaS Brands
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl animate-slide-up delay-100">
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl opacity-0 animate-[slideUp_0.8s_ease-out_0.6s_forwards]">
               Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-slide-up delay-200">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 opacity-0 animate-[scaleIn_0.8s_ease-out_1s_forwards]">
               <Button 
                 className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300"
               >
@@ -33,18 +33,18 @@ export const Hero: FC = () => {
             </div>
           </div>
           <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
-            <div className="grid grid-cols-2 gap-6 p-8">
-              <div className="space-y-6">
-                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-36 object-cover opacity-90 hover:opacity-100 transition-opacity duration-300" />
+            <div className="grid grid-cols-2 gap-8 p-10">
+              <div className="space-y-8">
+                <div className="bg-[#1A2730] rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-700 hover:shadow-2xl">
+                  <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-40 object-cover opacity-85 hover:opacity-100 transition-all duration-700" />
                 </div>
                 <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
                   <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-36 object-cover opacity-90 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
-              <div className="space-y-6 mt-24">
-                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-36 object-cover opacity-90 hover:opacity-100 transition-opacity duration-300" />
+              <div className="space-y-8 mt-32">
+                <div className="bg-[#1A2730] rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-40 object-cover opacity-85 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
                   <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-36 object-cover opacity-90 hover:opacity-100 transition-opacity duration-300" />
@@ -93,8 +93,8 @@ export const Hero: FC = () => {
       </div>
 
       <div className="w-full mt-auto">
-        <div className="w-full max-w-[1400px] mx-auto px-6 py-16">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-20 hover:opacity-30 transition-opacity duration-300">
+        <div className="w-full max-w-[1400px] mx-auto px-8 py-20">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-16 items-center opacity-15 hover:opacity-25 transition-opacity duration-300">
             <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
             <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
             <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
