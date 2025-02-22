@@ -4,8 +4,11 @@ import { GradientText } from "../ui/gradient-text"
 import { Button } from "../ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import { staggerContainer, staggerItem } from "@/lib/animations"
+import { staggerContainer, staggerItem, remotionConfig } from "@/lib/animations"
 import Reveal from "react-reveal/Fade"
+import { Sequence, Composition } from 'remotion'
+import { NodeGroup } from 'react-move'
+import { spring } from 'popmotion'
 
 const testimonials = [
   {
@@ -81,32 +84,70 @@ export const Testimonials = (): JSX.Element => {
             exit={{ opacity: 0, x: -100 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="w-full flex-shrink-0 px-4"
-            >
-              <Card className="bg-secondary/50 backdrop-blur border border-white/5 text-white p-10 rounded-xl">
-                <div className="flex flex-col md:flex-row gap-10 items-center">
-                  <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-800 border-2 border-accent/20">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.author}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-2xl leading-relaxed italic mb-8">{testimonial.quote}</p>
-                    <div>
-                      <p className="text-xl font-bold text-white mb-1">{testimonial.author}</p>
-                      <p className="text-lg text-gray-400">{testimonial.role} at {testimonial.company}</p>
+          <NodeGroup
+            data={[testimonials[currentSlide]]}
+            keyAccessor={(d) => d.author}
+            start={() => ({
+              opacity: 0,
+              x: 100
+            })}
+            enter={() => ({
+              opacity: [1],
+              x: [0],
+              timing: { duration: 500, ease: spring }
+            })}
+            update={() => ({
+              opacity: [1],
+              x: [0],
+              timing: { duration: 500, ease: spring }
+            })}
+            leave={() => ({
+              opacity: [0],
+              x: [-100],
+              timing: { duration: 500, ease: spring }
+            })}
+          >
+            {(nodes) => (
+              <div className="w-full">
+                {nodes.map(({ key, data, state: { opacity, x } }) => (
+                  <Sequence
+                    key={key}
+                    from={0}
+                    durationInFrames={remotionConfig.durationInFrames}
+                  >
+                    <div
+                      className="w-full flex-shrink-0 px-4"
+                      style={{
+                        opacity,
+                        transform: `translateX(${x}px)`
+                      }}
+                    >
+                      <Card className="bg-secondary/50 backdrop-blur border border-white/5 text-white p-10 rounded-xl">
+                        <div className="flex flex-col md:flex-row gap-10 items-center">
+                          <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-800 border-2 border-accent/20">
+                            <img
+                              src={data.image}
+                              alt={data.author}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div>
+                            <p className="text-2xl leading-relaxed italic mb-8">{data.quote}</p>
+                            <div>
+                              <p className="text-xl font-bold text-white mb-1">{data.author}</p>
+                              <p className="text-lg text-gray-400">{data.role} at {data.company}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </Card>
                     </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          ))}
-        </div>
+                  </Sequence>
+                ))}
+              </div>
+            )}
+          </NodeGroup>
+          </motion.div>
+        </AnimatePresence>
 
         <Button
           variant="ghost"
@@ -122,7 +163,7 @@ export const Testimonials = (): JSX.Element => {
         >
           <ChevronRight size={24} />
         </Button>
-      </div>
+      </motion.div>
     </motion.section>
   )
 }
