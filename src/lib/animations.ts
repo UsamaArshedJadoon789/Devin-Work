@@ -1,11 +1,7 @@
 import anime from 'animejs';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Scene, PerspectiveCamera, WebGLRenderer } from 'three/src/Three';
-import { BufferGeometry } from 'three/src/core/BufferGeometry';
-import { BufferAttribute } from 'three/src/core/BufferAttribute';
-import { PointsMaterial } from 'three/src/materials/PointsMaterial';
-import { Points } from 'three/src/objects/Points';
-import { AdditiveBlending } from 'three/src/constants';
+import { Canvas, useThree, useFrame } from '@react-three/fiber';
+import { OrbitControls, Stars } from '@react-three/drei';
 import mojs from 'mojs';
 import Zdog from 'zdog';
 import { animate, spring } from 'popmotion';
@@ -47,15 +43,19 @@ export const staggerItem = {
 };
 
 // Three.js setup
-export const initThreeBackground = (container: HTMLElement) => {
-  const scene = new Scene();
-  const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  const renderer = new WebGLRenderer({ alpha: true });
-  
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  container.appendChild(renderer.domElement);
-  
-  return { scene, camera, renderer };
+export const ThreeBackground = () => {
+  return (
+    <Canvas>
+      <OrbitControls />
+      <Stars />
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} />
+      <mesh>
+        <sphereGeometry args={[1, 32, 32]} />
+        <meshStandardMaterial color="#C6F135" />
+      </mesh>
+    </Canvas>
+  );
 };
 
 // Mo.js burst effect
