@@ -8,7 +8,10 @@
   }
   
   html, body, #root {
-    @apply min-h-[100vh] w-screen overflow-x-hidden bg-[#0A0A0A];
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #0A0A0A;
     margin: 0;
     padding: 0;
   }
