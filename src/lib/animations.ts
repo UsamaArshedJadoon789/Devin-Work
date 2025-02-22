@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 import * as THREE from 'three';
 import mojs from 'mojs';
 import Zdog from 'zdog';
+import { interpolate, animate } from 'popmotion';
+import { NodeGroup } from 'react-move';
+import { Sequence } from 'remotion';
+import Reveal from 'react-reveal/Fade';
 
 // Anime.js animations
 export const cardAnimation = {
@@ -94,5 +98,60 @@ export const presets = {
     opacity: [0, 1],
     duration: 500,
     easing: 'easeOutQuad'
+  },
+  // Popmotion spring animation
+  springBounce: {
+    type: "spring",
+    stiffness: 200,
+    damping: 15,
+    mass: 1
+  },
+  // Mo.js burst effect
+  burst: {
+    radius: { 0: 100 },
+    count: 5,
+    duration: 1000,
+    children: {
+      shape: 'circle',
+      duration: 500,
+      fill: ['#C6F135', '#91AD29'],
+      radius: 20,
+      angle: { 0: 180 }
+    }
+  },
+  // Zdog illustration preset
+  zdogSpin: {
+    rotate: {
+      x: 0,
+      y: Math.PI * 2,
+      z: 0
+    },
+    duration: 3000,
+    easing: 'easeInOutQuad'
+  },
+  // React Move transitions
+  moveTransition: {
+    timing: { duration: 750, ease: 'easeInOutQuad' },
+    events: {
+      start: () => console.log('start'),
+      interrupt: () => console.log('interrupt'),
+      end: () => console.log('end')
+    }
   }
+};
+
+// Remotion composition settings
+export const remotionConfig = {
+  durationInFrames: 60,
+  fps: 30,
+  width: 1920,
+  height: 1080
+};
+
+// React Move node group config
+export const nodeGroupConfig = {
+  start: { opacity: 0, scale: 0 },
+  enter: { opacity: [1], scale: [1], timing: { duration: 750 } },
+  update: { opacity: [1], scale: [1], timing: { duration: 750 } },
+  leave: { opacity: [0], scale: [0], timing: { duration: 750 } }
 };
