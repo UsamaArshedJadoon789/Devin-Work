@@ -1,6 +1,6 @@
 import anime from 'animejs';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { FC } from 'react';
+
 import mojs from 'mojs';
 import Zdog from 'zdog';
 import { animate, spring } from 'popmotion';
