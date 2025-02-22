@@ -19,6 +19,7 @@ export const Hero: FC = () => {
       });
     }
   }, []);
+
   return (
     <motion.section 
       ref={heroRef}
@@ -121,6 +122,27 @@ export const Hero: FC = () => {
               >Revenue Engine</motion.p>
             </div>
           </motion.div>
+          <div className="space-y-6">
+            <div className="bg-[#1A2730]/50 rounded-xl p-6">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-white/90 text-lg">Monthly Revenue</span>
+                <span className="text-[#C6F135] text-lg font-semibold">+147%</span>
+              </div>
+              <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden">
+                <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-300"></div>
+              </div>
+            </div>
+            <div className="bg-[#1A2730]/50 rounded-xl p-6">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-white/90 text-lg">Organic Traffic</span>
+                <span className="text-[#C6F135] text-lg font-semibold">+312%</span>
+              </div>
+              <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden">
+                <div className="absolute inset-y-0 left-0 w-4/5 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-300"></div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
           <div className="space-y-6">
             <div className="bg-[#1A2730]/50 rounded-xl p-6">
               <div className="flex items-center justify-between mb-3">
