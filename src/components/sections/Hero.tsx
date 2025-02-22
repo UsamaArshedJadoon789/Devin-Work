@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { staggerContainer, staggerItem, presets } from "@/lib/animations"
 import anime from 'animejs'
 import { useEffect, useRef } from "react"
+import { ThreeBackground } from "../ThreeBackground"
 
 export const Hero: FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -34,6 +35,7 @@ export const Hero: FC = () => {
         className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none"
         variants={staggerItem}
       />
+      <ThreeBackground />
       
       <div className="w-full flex-1 flex items-center justify-center relative z-10">
         <div className="w-full px-8 relative">
@@ -82,20 +84,43 @@ export const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-[45%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl transform rotate-3 animate-float hover:rotate-0 transition-all duration-500">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-14 h-14 rounded-full bg-[#C6F135] flex items-center justify-center">
+        <motion.div 
+          className="absolute top-[45%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl"
+          initial={{ x: 100, rotate: 3, opacity: 0 }}
+          animate={{ x: 0, rotate: 3, opacity: 1 }}
+          whileHover={{ rotate: 0, scale: 1.02 }}
+          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+        >
+          <motion.div 
+            className="flex items-center gap-4 mb-8"
+            variants={staggerItem}
+          >
+            <motion.div 
+              className="w-14 h-14 rounded-full bg-[#C6F135] flex items-center justify-center"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                 <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
                 <line x1="12" y1="22.08" x2="12" y2="12" />
               </svg>
-            </div>
+            </motion.div>
             <div>
-              <h3 className="text-white font-semibold text-xl">Turn your SEO into a</h3>
-              <p className="text-[#C6F135] font-bold text-2xl">Revenue Engine</p>
+              <motion.h3 
+                className="text-white font-semibold text-xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >Turn your SEO into a</motion.h3>
+              <motion.p 
+                className="text-[#C6F135] font-bold text-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >Revenue Engine</motion.p>
             </div>
-          </div>
+          </motion.div>
           <div className="space-y-6">
             <div className="bg-[#1A2730]/50 rounded-xl p-6">
               <div className="flex items-center justify-between mb-3">
