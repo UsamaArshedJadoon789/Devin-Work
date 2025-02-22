@@ -14,6 +14,19 @@ declare module 'mojs' {
     angle?: number | { [key: string]: number };
   }
 
+  interface BurstOptions extends ShapeOptions {
+    radius?: { [key: string]: number };
+    count?: number;
+    children?: {
+      shape?: string;
+      radius?: { [key: string]: number };
+      fill?: string;
+      scale?: { [key: string]: number };
+      duration?: number;
+      easing?: string;
+    };
+  }
+
   class Shape {
     constructor(options: ShapeOptions);
     play(): void;
@@ -22,6 +35,17 @@ declare module 'mojs' {
     setSpeed(speed: number): void;
   }
 
-  export { Shape };
-  export default { Shape };
+  class Burst {
+    constructor(options: BurstOptions);
+    play(): void;
+    pause(): void;
+  }
+
+  const mojs: {
+    Shape: typeof Shape;
+    Burst: typeof Burst;
+  };
+
+  export { Shape, Burst };
+  export default mojs;
 }
