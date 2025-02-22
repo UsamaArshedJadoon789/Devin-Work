@@ -40,8 +40,8 @@ export const Testimonials = (): JSX.Element => {
   }
 
   return (
-    <section className="container mx-auto w-full py-32">
-      <div className="text-center mb-20">
+    <section className="w-full py-32">
+      <div className="text-center mb-20 px-8">
         <h2 className="text-5xl font-bold mb-6 animate-fade-in">
           <GradientText>What Our Clients Say</GradientText>
         </h2>
@@ -50,7 +50,7 @@ export const Testimonials = (): JSX.Element => {
         </p>
       </div>
 
-      <div className="relative animate-slide-up delay-200">
+      <div className="relative animate-slide-up delay-200 px-8 w-full">
         <div 
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}

@@ -12,8 +12,8 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen bg-[#003344]">
       {/* Navigation */}
-      <nav className="container mx-auto w-full py-4">
-        <div className="flex items-center justify-between">
+      <nav className="w-full bg-[#003344]/80 backdrop-blur py-4">
+        <div className="flex items-center justify-between px-8 w-full">
           <Link to="/" className="text-2xl font-bold text-white">The Skyline Strategies</Link>
           <div className="hidden md:flex items-center gap-8">
             <NavigationMenu>
@@ -129,8 +129,8 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       {children}
 
       {/* Footer */}
-      <footer className="container mx-auto w-full py-12 text-white">
-        <div className="grid md:grid-cols-4 gap-8">
+      <footer className="w-full bg-[#003344] py-12 text-white">
+        <div className="grid md:grid-cols-4 gap-8 px-8 w-full">
           <div>
             <h3 className="text-xl font-bold mb-4">The Skyline Strategies</h3>
             <p className="text-gray-300">Empowering businesses with innovative IT solutions</p>
