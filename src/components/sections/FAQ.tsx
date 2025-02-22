@@ -6,6 +6,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion"
+import { motion, AnimatePresence } from "framer-motion"
+import { staggerContainer, staggerItem } from "@/lib/animations"
+import Reveal from "react-reveal/Fade"
 
 const faqs = [
   {
@@ -31,35 +34,62 @@ const faqs = [
 ]
 
 export const FAQ = (): JSX.Element => (
-    <section className="w-full py-24 sm:py-28 lg:py-32">
-      <div className="text-center mb-12 sm:mb-16 lg:mb-20 px-8 animate-on-scroll">
-        <div className="w-full">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 lg:mb-6 animate-fade-in">
-            <GradientText>Frequently Asked Questions</GradientText>
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up delay-100">
-            Everything you need to know about our SEO services
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-3xl mx-auto px-8 w-full animate-slide-up delay-200">
-        <Accordion type="single" collapsible className="space-y-4 sm:space-y-6">
-          {faqs.map((faq) => (
-            <AccordionItem 
-              key={faq.question} 
-              value={faq.question}
-              className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-300"
+    <motion.section 
+      className="w-full py-24 sm:py-28 lg:py-32"
+      initial="initial"
+      animate="animate"
+      variants={staggerContainer}
+    >
+      <Reveal bottom cascade>
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 px-8">
+          <div className="w-full">
+            <motion.h2 
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 lg:mb-6"
+              variants={staggerItem}
             >
-              <AccordionTrigger className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold text-white hover:no-underline hover:bg-white/5">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-base sm:text-lg text-gray-300 leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
+              <GradientText>Frequently Asked Questions</GradientText>
+            </motion.h2>
+            <motion.p 
+              className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto"
+              variants={staggerItem}
+            >
+              Everything you need to know about our SEO services
+            </motion.p>
+          </div>
+        </div>
+      </Reveal>
+
+      <motion.div 
+        className="max-w-3xl mx-auto px-8 w-full"
+        variants={staggerContainer}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        <Accordion type="single" collapsible className="space-y-4 sm:space-y-6">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={faq.question}
+              variants={staggerItem}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <AccordionItem 
+                value={faq.question}
+                className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-300"
+              >
+                <AccordionTrigger className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold text-white hover:no-underline hover:bg-white/5">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-base sm:text-lg text-gray-300 leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
           ))}
         </Accordion>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
 )
