@@ -8,8 +8,8 @@ export const Hero: FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none"></div>
       
-      <div className="container mx-auto px-4 flex-1 flex items-center justify-center relative z-10">
-        <div className="w-full max-w-2xl lg:max-w-4xl relative">
+      <div className="w-full flex-1 flex items-center justify-center relative z-10">
+        <div className="w-full px-8 relative">
           <div className="relative z-10 mb-12">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
               We Build SEO Revenue Engines For SaaS Brands
@@ -27,7 +27,7 @@ export const Hero: FC = () => {
                 variant="ghost" 
                 className="w-full sm:w-auto text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-300"
               >
-                Read stories & opinions
+                Read stories &amp; opinions
                 <ArrowRight className="ml-2" />
               </Button>
             </div>
@@ -92,14 +92,14 @@ export const Hero: FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16 mt-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-25 hover:opacity-35 transition-opacity duration-300">
-          <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+      <div className="w-full py-16 mt-auto px-8">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-25 hover:opacity-35 transition-opacity duration-300">
+          <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
+          <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110" />
         </div>
       </div>
     </section>
