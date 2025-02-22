@@ -37,7 +37,7 @@ const services = [
 
 export const Services = (): JSX.Element => (
   <section className="w-full py-32">
-    <div className="text-center mb-20 px-8">
+    <div className="text-center mb-20 px-8 animate-on-scroll">
       <h2 className="text-5xl font-bold mb-6 animate-fade-in max-w-4xl mx-auto">
         <GradientText>Our Services</GradientText>
       </h2>

@@ -32,7 +32,7 @@ const faqs = [
 
 export const FAQ = (): JSX.Element => (
     <section className="w-full py-24 sm:py-28 lg:py-32">
-      <div className="text-center mb-12 sm:mb-16 lg:mb-20 px-8">
+      <div className="text-center mb-12 sm:mb-16 lg:mb-20 px-8 animate-on-scroll">
         <div className="w-full">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 lg:mb-6 animate-fade-in">
             <GradientText>Frequently Asked Questions</GradientText>

@@ -41,7 +41,7 @@ export const Testimonials = (): JSX.Element => {
 
   return (
     <section className="w-full py-32">
-      <div className="text-center mb-20 px-8">
+      <div className="text-center mb-20 px-8 animate-on-scroll">
         <h2 className="text-5xl font-bold mb-6 animate-fade-in">
           <GradientText>What Our Clients Say</GradientText>
         </h2>
