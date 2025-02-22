@@ -58,7 +58,10 @@ export const Services = (): JSX.Element => {
 
     const handleCardClick = (event: Event) => {
       const mouseEvent = event as MouseEvent;
-      const burst = createBurst(mouseEvent.clientX, mouseEvent.clientY);
+      const burst = createBurst(mouseEvent.clientX, mouseEvent.clientY, {
+        color: '#91AD29',
+        radius: 60
+      });
       burstRefs.current.push(burst);
       burst.play();
 
@@ -74,6 +77,14 @@ export const Services = (): JSX.Element => {
     };
 
     const handleCardHover = (event: Event) => {
+      const mouseEvent = event as MouseEvent;
+      const burst = createBurst(mouseEvent.clientX, mouseEvent.clientY, {
+        color: '#C6F135',
+        radius: 30
+      });
+      burstRefs.current.push(burst);
+      burst.play();
+
       const card = event.currentTarget as HTMLElement;
       Velocity(card, {
         translateY: -10,
