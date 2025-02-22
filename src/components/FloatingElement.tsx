@@ -1,4 +1,5 @@
 import { useSpring, animated } from '@react-spring/web';
+import * as React from 'react';
 
 export interface FloatingElementProps {
   children: React.ReactNode;
