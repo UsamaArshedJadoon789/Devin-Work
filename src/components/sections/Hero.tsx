@@ -43,11 +43,11 @@ export const Hero: FC = () => {
                 </div>
               </div>
               <div className="space-y-8 mt-32">
-                <div className="bg-[#1A2730] rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-40 object-cover opacity-85 hover:opacity-100 transition-opacity duration-300" />
+                <div className="bg-[#1A2730] rounded-2xl overflow-hidden transform hover:scale-105 hover:-translate-y-1 transition-all duration-700 hover:shadow-2xl group">
+                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-40 object-cover opacity-85 group-hover:opacity-100 transition-all duration-700" />
                 </div>
-                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-36 object-cover opacity-90 hover:opacity-100 transition-opacity duration-300" />
+                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 hover:-translate-y-1 transition-all duration-700 hover:shadow-2xl group">
+                  <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-36 object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" />
                 </div>
               </div>
             </div>
@@ -75,8 +75,8 @@ export const Hero: FC = () => {
                 <span className="text-white/90 text-lg">Monthly Revenue</span>
                 <span className="text-[#C6F135] text-lg font-semibold">+147%</span>
               </div>
-              <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden">
-                <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-300"></div>
+              <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden group">
+                <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-700 group-hover:w-[85%]"></div>
               </div>
             </div>
             <div className="bg-[#1A2730]/50 rounded-xl p-6">
@@ -94,13 +94,13 @@ export const Hero: FC = () => {
 
       <div className="w-full mt-auto">
         <div className="w-full max-w-[1400px] mx-auto px-8 py-20">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-16 items-center opacity-15 hover:opacity-25 transition-opacity duration-300">
-            <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-            <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-            <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-            <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-            <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-            <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-16 items-center opacity-15 hover:opacity-25 transition-all duration-700 group">
+            <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700" />
+            <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700" />
+            <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700" />
+            <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700" />
+            <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700" />
+            <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700" />
           </div>
         </div>
       </div>
