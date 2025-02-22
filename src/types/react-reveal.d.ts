@@ -1,7 +1,7 @@
 declare module 'react-reveal/Fade' {
   import { ComponentType, ReactNode } from 'react';
 
-  interface RevealProps {
+  export interface RevealProps {
     children: ReactNode;
     cascade?: boolean;
     fraction?: number;
@@ -22,6 +22,7 @@ declare module 'react-reveal/Fade' {
     enter?: boolean;
     style?: object;
     className?: string;
+    effect?: string;
   }
 
   const Fade: ComponentType<RevealProps>;

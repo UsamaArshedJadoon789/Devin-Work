@@ -6,13 +6,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion"
-import { motion, AnimatePresence } from "framer-motion"
-import { staggerContainer, staggerItem, animate, presets } from "@/lib/animations"
+import { motion } from "framer-motion"
+import { staggerContainer, staggerItem, animate } from "@/lib/animations"
 import Reveal from "react-reveal/Fade"
 import { NodeGroup } from 'react-move'
 import { spring } from 'popmotion'
 import anime from 'animejs'
-import type { RevealProps } from "react-reveal/Fade"
 
 const faqs = [
   {
