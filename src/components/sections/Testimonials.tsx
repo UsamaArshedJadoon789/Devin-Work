@@ -36,14 +36,41 @@ const testimonials = [
 
 export const Testimonials = (): JSX.Element => {
   const [currentSlide, setCurrentSlide] = React.useState(0)
+  const burstRefs = React.useRef<any[]>([])
 
   const nextSlide = () => {
+    const button = document.querySelector('.next-button') as HTMLElement;
+    if (button) {
+      const burst = createBurst(
+        button.getBoundingClientRect().left + button.offsetWidth / 2,
+        button.getBoundingClientRect().top + button.offsetHeight / 2,
+        { color: '#4B5563', radius: 40 }
+      );
+      burstRefs.current.push(burst);
+      burst.play();
+    }
     setCurrentSlide((prev) => (prev + 1) % testimonials.length)
   }
 
   const prevSlide = () => {
+    const button = document.querySelector('.prev-button') as HTMLElement;
+    if (button) {
+      const burst = createBurst(
+        button.getBoundingClientRect().left + button.offsetWidth / 2,
+        button.getBoundingClientRect().top + button.offsetHeight / 2,
+        { color: '#4B5563', radius: 40 }
+      );
+      burstRefs.current.push(burst);
+      burst.play();
+    }
     setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)
   }
+
+  React.useEffect(() => {
+    return () => {
+      burstRefs.current.forEach(burst => burst.pause());
+    };
+  }, []);
 
   return (
     <motion.section 
@@ -157,14 +184,14 @@ export const Testimonials = (): JSX.Element => {
 
         <Button
           variant="ghost"
-          className="absolute -left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full"
+          className="absolute -left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full prev-button"
           onClick={prevSlide}
         >
           <ChevronLeft size={24} />
         </Button>
         <Button
           variant="ghost"
-          className="absolute -right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full"
+          className="absolute -right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full next-button"
           onClick={nextSlide}
         >
           <ChevronRight size={24} />
