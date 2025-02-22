@@ -24,6 +24,12 @@
     --sidebar-ring: 217.2 91.2% 59.8%
   }
   
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   html, body {
     margin: 0;
     padding: 0;
@@ -46,6 +52,7 @@
     bottom: 0 !important;
     overflow-x: hidden !important;
     box-sizing: border-box !important;
+    max-width: none !important;
   }
 }
 
