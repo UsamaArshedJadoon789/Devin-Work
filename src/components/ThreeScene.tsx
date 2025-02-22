@@ -1,12 +1,10 @@
 import { FC, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import * as THREE from 'three';
+import { Mesh } from 'three';
 
 // Extend Three.js elements for JSX
-extend(THREE);
-
-extend(THREE);
+extend({ OrbitControls, Stars });
 
 declare global {
   namespace JSX {
@@ -27,7 +25,7 @@ interface SceneProps {
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<THREE.Mesh>(null);
+  const sphereRef = useRef<Mesh>(null);
   const { camera } = useThree();
 
   useEffect(() => {
