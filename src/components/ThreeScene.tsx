@@ -1,22 +1,18 @@
 import { FC, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import type { Mesh } from 'three';
-import type { ThreeEvent } from '@react-three/fiber';
+import { Mesh } from 'three';
+import type { ThreeElements } from '@react-three/fiber';
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      orbitControls: any;
-      stars: any;
-      ambientLight: any;
-      pointLight: any;
-      mesh: any;
-      sphereGeometry: any;
-      meshStandardMaterial: any;
-    }
-  }
-}
+type ThreeIntrinsicElements = {
+  orbitControls: ThreeElements['mesh'];
+  stars: ThreeElements['mesh'];
+  ambientLight: ThreeElements['mesh'];
+  pointLight: ThreeElements['mesh'];
+  mesh: ThreeElements['mesh'];
+  sphereGeometry: ThreeElements['mesh'];
+  meshStandardMaterial: ThreeElements['mesh'];
+};
 
 interface SceneProps {
   color?: string;
