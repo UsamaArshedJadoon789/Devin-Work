@@ -2,11 +2,23 @@ import { FC, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { Mesh } from 'three';
-import { extend } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
+import { OrbitControls, Stars } from '@react-three/drei';
 
 // Extend Three.js with custom elements
 extend({ OrbitControls });
+
+declare module '@react-three/fiber' {
+  interface ThreeElements {
+    orbitControls: any;
+    stars: any;
+    ambientLight: any;
+    pointLight: any;
+    mesh: any;
+    sphereGeometry: any;
+    meshStandardMaterial: any;
+  }
+}
 
 interface SceneProps {
   color?: string;
