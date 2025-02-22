@@ -2,7 +2,7 @@ import { FC, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import type { ThreeEvent } from '@react-three/fiber';
-import { Mesh } from 'three/src/objects/Mesh';
+import type { Mesh } from 'three';
 
 declare global {
   namespace JSX {
