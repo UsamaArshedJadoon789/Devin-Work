@@ -73,7 +73,7 @@ export const createZdogLogo = (element: HTMLElement) => {
   const illustration = new Zdog.Illustration({
     element,
     dragRotate: true,
-    rotate: { x: -0.5, y: 0.5 }
+    rotate: { x: -0.5, y: 0.5, z: 0 }
   });
 
   // Create main shape

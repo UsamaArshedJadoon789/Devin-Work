@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { staggerContainer, staggerItem, remotionConfig } from "@/lib/animations"
 import Reveal from "react-reveal/Fade"
-import { Sequence, Composition } from 'remotion'
+import { Sequence } from 'remotion'
 import { NodeGroup } from 'react-move'
 import { spring } from 'popmotion'
 
