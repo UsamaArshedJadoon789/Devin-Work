@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 import mojs from 'mojs';
 import velocity from 'velocity-animate';
-// Removed Zdog import as it's not one of our three chosen libraries
+import gsap from 'gsap';
 
-// Export animation components and utilities for direct use
 export { motion };
 
 // Velocity.js animations
@@ -20,8 +19,9 @@ export const velocityAnimate = (
   return velocity(element, properties, {
     easing: 'easeOutExpo',
     duration: 300,
+    queue: false,
     ...options
-  });
+  } as any);
 };
 
 // Anime.js animations
@@ -75,44 +75,7 @@ export const createBurst = (x: number, y: number, options?: { color?: string; ra
   });
 };
 
-// Zdog illustration
-export const createZdogLogo = (element: HTMLElement) => {
-  const illustration = new Zdog.Illustration({
-    element,
-    dragRotate: true,
-    rotate: { x: -0.5, y: 0.5, z: 0 }
-  });
 
-  // Create main shape
-  new Zdog.Shape({
-    addTo: illustration,
-    stroke: 20,
-    color: '#C6F135',
-    path: [
-      { x: -40, y: -40 },
-      { x:  40, y: -40 },
-      { x:  40, y:  40 },
-      { x: -40, y:  40 },
-    ],
-    closed: true,
-  });
-
-  // Add inner details
-  new Zdog.Shape({
-    addTo: illustration,
-    stroke: 10,
-    color: '#91AD29',
-    path: [
-      { x: -20, y: -20 },
-      { x:  20, y: -20 },
-      { x:  20, y:  20 },
-      { x: -20, y:  20 },
-    ],
-    closed: true,
-  });
-  
-  return illustration;
-};
 
 // Utility for handling reduced motion preference
 export const shouldReduceMotion = () => 
@@ -137,60 +100,16 @@ export const presets = {
     opacity: [0, 1],
     duration: 500,
     easing: 'easeOutQuad'
-  },
-  // Popmotion spring animation
-  springBounce: {
-    type: "spring",
-    stiffness: 200,
-    damping: 15,
-    mass: 1
-  },
-  // Mo.js burst effect
-  burst: {
-    radius: { 0: 100 },
-    count: 5,
-    duration: 1000,
-    children: {
-      shape: 'circle',
-      duration: 500,
-      fill: ['#C6F135', '#91AD29'],
-      radius: 20,
-      angle: { 0: 180 }
-    }
-  },
-  // Zdog illustration preset
-  zdogSpin: {
-    rotate: {
-      x: 0,
-      y: Math.PI * 2,
-      z: 0
-    },
-    duration: 3000,
-    easing: 'easeInOutQuad'
-  },
-  // React Move transitions
-  moveTransition: {
-    timing: { duration: 750, ease: 'easeInOutQuad' },
-    events: {
-      start: () => console.log('start'),
-      interrupt: () => console.log('interrupt'),
-      end: () => console.log('end')
-    }
   }
 };
 
-// Remotion composition settings
-export const remotionConfig = {
-  durationInFrames: 60,
-  fps: 30,
-  width: 1920,
-  height: 1080
-};
-
-// React Move node group config
-export const nodeGroupConfig = {
-  start: { opacity: 0, scale: 0 },
-  enter: { opacity: [1], scale: [1], timing: { duration: 750 } },
-  update: { opacity: [1], scale: [1], timing: { duration: 750 } },
-  leave: { opacity: [0], scale: [0], timing: { duration: 750 } }
+// GSAP timeline animations
+export const createPageTimeline = (element: HTMLElement) => {
+  return gsap.timeline()
+    .from(element, {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
 };
