@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { staggerContainer, staggerItem, presets } from "@/lib/animations"
 import anime from 'animejs'
 import { useEffect, useRef } from "react"
-import { ThreeBackground } from "../ThreeBackground"
+import { ThreeScene } from "../ThreeScene"
 
 export const Hero: FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -36,7 +36,7 @@ export const Hero: FC = () => {
         className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none"
         variants={staggerItem}
       />
-      <ThreeBackground />
+      <ThreeScene color="#C6F135" />
       
       <div className="w-full flex-1 flex items-center justify-center relative z-10">
         <div className="w-full px-8 relative">

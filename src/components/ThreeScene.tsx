@@ -4,6 +4,20 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 
 extend(THREE);
+extend({ OrbitControls });
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      orbitControls: any;
+      ambientLight: any;
+      pointLight: any;
+      mesh: any;
+      sphereGeometry: any;
+      meshStandardMaterial: any;
+    }
+  }
+}
 
 interface SceneProps {
   color?: string;
