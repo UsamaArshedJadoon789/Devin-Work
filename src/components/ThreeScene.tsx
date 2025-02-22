@@ -1,7 +1,7 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree, extend, type MeshProps } from '@react-three/fiber';
+import { Canvas, useFrame, useThree, extend, type ThreeElements, type MeshProps } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import { Mesh, BufferGeometry, Material } from 'three';
+import { Group } from 'three';
 
 // Extend Three.js with custom elements
 extend({ OrbitControls });
@@ -18,12 +18,14 @@ declare module '@react-three/fiber' {
   }
 }
 
+extend({ OrbitControls });
+
 interface SceneProps {
   color?: string;
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<Mesh<BufferGeometry, Material>>(null);
+  const sphereRef = useRef<Group>(null);
   const { camera } = useThree();
 
   useEffect(() => {
