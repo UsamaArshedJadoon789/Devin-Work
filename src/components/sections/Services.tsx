@@ -1,9 +1,11 @@
-import { type JSX } from "react"
+import { type JSX, useEffect, useRef } from "react"
 import { CardHover } from "../ui/card-hover"
 import { GradientText } from "../ui/gradient-text"
 import { motion } from "framer-motion"
-import { staggerContainer, staggerItem } from "@/lib/animations"
+import { staggerContainer, staggerItem, createBurst, createZdogLogo } from "@/lib/animations"
 import Reveal from "react-reveal/Fade"
+import mojs from 'mojs'
+import Zdog from 'zdog'
 
 const services = [
   {
@@ -38,13 +40,49 @@ const services = [
   }
 ]
 
-export const Services = (): JSX.Element => (
+export const Services = (): JSX.Element => {
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const zdogContainerRef = useRef<HTMLDivElement>(null);
+  const burstRefs = useRef<mojs.Shape[]>([]);
+
+  useEffect(() => {
+    if (zdogContainerRef.current) {
+      const illustration = createZdogLogo(zdogContainerRef.current);
+      const animate = () => {
+        illustration.updateRenderGraph();
+        requestAnimationFrame(animate);
+      };
+      animate();
+    }
+
+    const handleCardClick = (event: MouseEvent) => {
+      const burst = createBurst(event.clientX, event.clientY);
+      burstRefs.current.push(burst);
+      burst.play();
+    };
+
+    const cards = servicesRef.current?.querySelectorAll('.service-card');
+    cards?.forEach(card => {
+      card.addEventListener('click', handleCardClick);
+    });
+
+    return () => {
+      cards?.forEach(card => {
+        card.removeEventListener('click', handleCardClick);
+      });
+      burstRefs.current.forEach(burst => burst.pause());
+    };
+  }, []);
+
+  return (
   <motion.section 
-    className="w-full py-32"
+    ref={servicesRef}
+    className="w-full py-32 relative"
     initial="initial"
     animate="animate"
     variants={staggerContainer}
   >
+    <div ref={zdogContainerRef} className="absolute top-0 right-0 w-32 h-32 opacity-25" />
     <Reveal bottom cascade>
       <div className="text-center mb-20 px-8">
         <motion.h2 
@@ -75,7 +113,7 @@ export const Services = (): JSX.Element => (
           transition={{ delay: index * 0.1 }}
         >
           <CardHover 
-            className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8"
+            className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 service-card"
           >
             <motion.div 
               className="text-4xl mb-6"
