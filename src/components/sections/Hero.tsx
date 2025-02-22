@@ -55,7 +55,7 @@ export const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-[45%] -right-[20%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] transform rotate-6 animate-float hover:rotate-0 transition-all duration-500">
+        <div className="absolute top-[45%] -right-[20%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] transform rotate-6 animate-[float_6s_ease-in-out_infinite] hover:rotate-3 hover:-translate-y-2 transition-all duration-700">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-14 h-14 rounded-full bg-[#C6F135] flex items-center justify-center">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -76,7 +76,7 @@ export const Hero: FC = () => {
                 <span className="text-[#C6F135] text-lg font-semibold">+147%</span>
               </div>
               <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden group">
-                <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-700 group-hover:w-[85%]"></div>
+                <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-700 group-hover:w-[85%] group-hover:shadow-lg"></div>
               </div>
             </div>
             <div className="bg-[#1A2730]/50 rounded-xl p-6">
@@ -84,8 +84,8 @@ export const Hero: FC = () => {
                 <span className="text-white/90 text-lg">Organic Traffic</span>
                 <span className="text-[#C6F135] text-lg font-semibold">+312%</span>
               </div>
-              <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden">
-                <div className="absolute inset-y-0 left-0 w-4/5 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-300"></div>
+              <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden group">
+                <div className="absolute inset-y-0 left-0 w-4/5 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-700 group-hover:w-[90%] group-hover:shadow-lg"></div>
               </div>
             </div>
           </div>
