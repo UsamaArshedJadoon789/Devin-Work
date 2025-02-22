@@ -2,22 +2,35 @@ import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
 import type { FC } from "react"
 import { motion } from "framer-motion"
-import { staggerContainer, staggerItem, presets } from "@/lib/animations"
-import anime from 'animejs'
-import { useEffect, useRef } from "react"
+import { staggerContainer, staggerItem, presets, createBurst } from "@/lib/animations"
+import { useEffect, useRef, useCallback } from "react"
 import { ThreeScene } from "../ThreeScene"
 
 export const Hero: FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   
-  useEffect(() => {
-    if (heroRef.current) {
-      anime({
-        targets: heroRef.current.querySelectorAll('.animate-fade-in'),
-        ...presets.fadeUp,
-        delay: anime.stagger(100)
-      });
-    }
+  const handleButtonClick = useCallback((event: React.MouseEvent) => {
+    const burst = createBurst(event.clientX, event.clientY, {
+      color: '#D4F55C',
+      radius: 50
+    });
+    burst.play();
+  }, []);
+
+  const handleCardHover = useCallback((event: React.MouseEvent) => {
+    const burst = createBurst(event.clientX, event.clientY, {
+      color: '#C6F135',
+      radius: 30
+    });
+    burst.play();
+  }, []);
+
+  const handleLogoHover = useCallback((event: React.MouseEvent) => {
+    const burst = createBurst(event.clientX, event.clientY, {
+      color: '#91AD29',
+      radius: 20
+    });
+    burst.play();
   }, []);
 
   return (
@@ -50,12 +63,14 @@ export const Hero: FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-slide-up delay-200">
               <Button 
                 className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300"
+                onClick={handleButtonClick}
               >
                 Book a Strategy Call
               </Button>
               <Button 
                 variant="ghost" 
                 className="w-full sm:w-auto text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-300"
+                onClick={handleButtonClick}
               >
                 Read stories &amp; opinions
                 <ArrowRight className="ml-2" />
@@ -87,6 +102,7 @@ export const Hero: FC = () => {
 
         <motion.div 
           className="absolute top-[45%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl"
+          onMouseEnter={handleCardHover}
           initial={{ x: 100, rotate: 3, opacity: 0 }}
           animate={{ x: 0, rotate: 3, opacity: 1 }}
           whileHover={{ rotate: 0, scale: 1.02 }}
@@ -162,6 +178,7 @@ export const Hero: FC = () => {
               key={client.alt}
               src={client.src}
               alt={client.alt}
+              onMouseEnter={handleLogoHover}
               className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110"
               variants={staggerItem}
               initial={{ opacity: 0, y: 20 }}
