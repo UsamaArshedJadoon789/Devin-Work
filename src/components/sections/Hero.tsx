@@ -19,7 +19,7 @@ export const Hero: FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 opacity-0 animate-[scaleIn_0.8s_ease-out_1s_forwards]">
               <Button 
-                className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300"
+                className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] hover:scale-105 text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-500"
               >
                 Book a Strategy Call
               </Button>
@@ -38,8 +38,8 @@ export const Hero: FC = () => {
                 <div className="bg-[#1A2730] rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-700 hover:shadow-2xl">
                   <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-40 object-cover opacity-85 hover:opacity-100 transition-all duration-700" />
                 </div>
-                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-36 object-cover opacity-90 hover:opacity-100 transition-opacity duration-300" />
+                <div className="bg-[#1A2730] rounded-xl overflow-hidden transform hover:scale-105 hover:-translate-y-1 transition-all duration-700 hover:shadow-2xl group">
+                  <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-36 object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" />
                 </div>
               </div>
               <div className="space-y-8 mt-32">
