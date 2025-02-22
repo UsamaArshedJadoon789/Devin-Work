@@ -9,7 +9,7 @@ import { ThreeScene } from "../ThreeScene"
 import Reveal from "react-reveal/Fade"
 import { Sequence } from 'remotion'
 import { NodeGroup } from 'react-move'
-import { spring } from 'popmotion'
+import { easeCubicInOut } from 'd3-ease'
 
 const testimonials = [
   {
@@ -160,17 +160,17 @@ export const Testimonials = (): JSX.Element => {
             enter={() => ({
               opacity: [1],
               x: [0],
-              timing: { duration: 500, ease: (t: number) => t }
+              timing: { duration: 500, ease: easeCubicInOut }
             })}
             update={() => ({
               opacity: [1],
               x: [0],
-              timing: { duration: 500, ease: (t: number) => t }
+              timing: { duration: 500, ease: easeCubicInOut }
             })}
             leave={() => ({
               opacity: [0],
               x: [-100],
-              timing: { duration: 500, ease: (t: number) => t }
+              timing: { duration: 500, ease: easeCubicInOut }
             })}
           >
             {(nodes) => (

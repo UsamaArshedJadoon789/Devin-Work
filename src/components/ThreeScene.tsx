@@ -1,7 +1,7 @@
 import { FC, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import { Mesh } from 'three';
+import { type Object3D } from '@react-three/fiber';
 
 declare global {
   namespace JSX {
@@ -22,7 +22,7 @@ interface SceneProps {
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<Mesh>(null);
+  const sphereRef = useRef<Object3D>(null);
   const { camera } = useThree();
 
   useEffect(() => {
