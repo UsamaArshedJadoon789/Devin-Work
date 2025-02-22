@@ -1,6 +1,6 @@
 import anime from 'animejs';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Scene, PerspectiveCamera, WebGLRenderer } from 'three';
+import * as THREE from 'three';
 import mojs from 'mojs';
 import Zdog from 'zdog';
 import { animate, spring } from 'popmotion';
@@ -9,7 +9,7 @@ import { Sequence } from 'remotion';
 import Reveal from 'react-reveal/Fade';
 
 // Export animation components and utilities for direct use
-export { motion, AnimatePresence, NodeGroup, Sequence, Reveal, anime, spring };
+export { motion, AnimatePresence, NodeGroup, Sequence, Reveal, anime, spring, animate };
 
 // Anime.js animations
 export const cardAnimation = {
@@ -43,9 +43,9 @@ export const staggerItem = {
 
 // Three.js setup
 export const initThreeBackground = (container: HTMLElement) => {
-  const scene = new Scene();
-  const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  const renderer = new WebGLRenderer({ alpha: true });
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ alpha: true });
   
   renderer.setSize(window.innerWidth, window.innerHeight);
   container.appendChild(renderer.domElement);
