@@ -51,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#003344] flex flex-col" style={{ margin: 0, padding: 0 }}>
+    <div className="min-h-screen w-full bg-[#003344] flex flex-col" style={{ margin: 0, padding: 0, width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column', textAlign: 'center', overflowX: 'hidden', maxWidth: 'none', position: 'static' }}>
       {/* Navigation */}
       <nav className="w-full py-4 sticky top-0 z-50 bg-[#003344]/80 backdrop-blur">
         <div className="flex items-center justify-between w-full">
