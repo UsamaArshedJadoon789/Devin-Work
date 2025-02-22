@@ -1,6 +1,11 @@
 import anime from 'animejs';
 import { motion, AnimatePresence } from 'framer-motion';
-import * as THREE from 'three';
+import { Scene, PerspectiveCamera, WebGLRenderer } from 'three/src/Three';
+import { BufferGeometry } from 'three/src/core/BufferGeometry';
+import { BufferAttribute } from 'three/src/core/BufferAttribute';
+import { PointsMaterial } from 'three/src/materials/PointsMaterial';
+import { Points } from 'three/src/objects/Points';
+import { AdditiveBlending } from 'three/src/constants';
 import mojs from 'mojs';
 import Zdog from 'zdog';
 import { animate, spring } from 'popmotion';
@@ -43,9 +48,9 @@ export const staggerItem = {
 
 // Three.js setup
 export const initThreeBackground = (container: HTMLElement) => {
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ alpha: true });
+  const scene = new Scene();
+  const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new WebGLRenderer({ alpha: true });
   
   renderer.setSize(window.innerWidth, window.innerHeight);
   container.appendChild(renderer.domElement);
