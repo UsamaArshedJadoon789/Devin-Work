@@ -1,29 +1,11 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Canvas, useFrame, useThree, ThreeEvent, Object3DNode } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import type { ThreeEvent } from '@react-three/fiber';
+import { Mesh } from 'three';
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      mesh: {
-        ref?: React.RefObject<any>;
-        onClick?: (event: ThreeEvent<MouseEvent>) => void;
-        onPointerOver?: (event: ThreeEvent<PointerEvent>) => void;
-        onPointerOut?: (event: ThreeEvent<PointerEvent>) => void;
-        [key: string]: any;
-      };
-      sphereGeometry: {
-        args?: [radius?: number, widthSegments?: number, heightSegments?: number];
-        [key: string]: any;
-      };
-      meshStandardMaterial: {
-        color?: string;
-        transparent?: boolean;
-        opacity?: number;
-        [key: string]: any;
-      };
-    }
+declare module '@react-three/fiber' {
+  interface ThreeElements {
+    mesh: Object3DNode<Mesh, typeof Mesh>
   }
 }
 
@@ -32,7 +14,7 @@ interface SceneProps {
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<JSX.IntrinsicElements['mesh']>(null);
+  const sphereRef = useRef<Mesh>(null);
   const { camera } = useThree();
 
   useEffect(() => {
