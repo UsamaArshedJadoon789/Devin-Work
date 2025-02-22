@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import mojs from 'mojs';
 import velocity from 'velocity-animate';
+import Zdog from 'zdog';
 
 // Export animation components and utilities for direct use
 export { motion };
