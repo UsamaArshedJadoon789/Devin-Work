@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { staggerContainer, staggerItem, createBurst, createZdogLogo } from "@/lib/animations"
 import Reveal from "react-reveal/Fade"
 import type { RevealProps } from "react-reveal/Fade"
-import Velocity from 'velocity-js'
+import Velocity from 'velocity-animate'
 
 const services = [
   {
