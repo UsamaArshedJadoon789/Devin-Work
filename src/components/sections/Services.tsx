@@ -6,7 +6,6 @@ import { staggerContainer, staggerItem, createBurst, createZdogLogo } from "@/li
 import Reveal from "react-reveal/Fade"
 import type { RevealProps } from "react-reveal/Fade"
 import Velocity from 'velocity-js'
-import { Animated, useAnimatedStyle, withSpring } from 'react-native-reanimated'
 
 const services = [
   {
@@ -45,7 +44,6 @@ export const Services = (): JSX.Element => {
   const servicesRef = useRef<HTMLDivElement>(null);
   const zdogContainerRef = useRef<HTMLDivElement>(null);
   const burstRefs = useRef<any[]>([]);
-  const animatedValue = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     if (zdogContainerRef.current) {
@@ -157,13 +155,12 @@ export const Services = (): JSX.Element => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ delay: index * 0.1 }}
         >
-          <Animated.View
-            style={[
-              useAnimatedStyle(() => ({
-                transform: [{ scale: withSpring(1.05) }],
-                opacity: withSpring(1)
-              }))
-            ]}
+          <Reveal 
+            effect="fadeInUp"
+            duration={800}
+            delay={index * 200}
+            fraction={0.5}
+            {...({} as RevealProps)}
           >
             <CardHover 
               className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 service-card"
@@ -178,7 +175,7 @@ export const Services = (): JSX.Element => {
             <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
             <p className="text-gray-300 text-lg leading-relaxed">{service.description}</p>
           </CardHover>
-          </Animated.View>
+          </Reveal>
         </motion.div>
       ))}
     </motion.div>
