@@ -13,11 +13,27 @@ import { contactFormSchema, type ContactFormValues } from "@/lib/validations/con
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { GradientText } from "./components/ui/gradient-text"
 import { Toaster, toast } from "sonner"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 export default function App() {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(true);
   const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -51,11 +67,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#003344] flex flex-col">
+    <div className="min-h-screen w-full bg-[#003344] flex flex-col" style={{ margin: 0, padding: 0, width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column', textAlign: 'center', overflowX: 'hidden', maxWidth: 'none', position: 'static' }}>
       {/* Navigation */}
-      <nav className="container mx-auto px-4 py-4 sticky top-0 z-50 bg-[#003344]/80 backdrop-blur">
-        <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-white">The Skyline Strategies</div>
+      <nav className="w-full py-4 sticky top-0 z-50 bg-[#003344]/80 backdrop-blur">
+        <div className="flex items-center justify-between w-full">
+          <div className="text-2xl font-bold text-white px-8">The Skyline Strategies</div>
           <div className="hidden md:flex items-center gap-8">
             <NavigationMenu>
               <NavigationMenuList className="flex gap-12">
@@ -114,14 +130,14 @@ export default function App() {
           <Testimonials />
           <FAQ />
           {/* Contact Form */}
-          <section className="container mx-auto px-4 py-20">
+          <section className="w-full py-20">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">
                 <GradientText>Get in Touch</GradientText>
               </h2>
               <p className="text-xl text-gray-300">Ready to grow your business? Let's talk.</p>
             </div>
-            <div className="max-w-2xl mx-auto">
+            <div className="w-full max-w-2xl mx-auto px-8">
               <Card className="bg-white/10 backdrop-blur border-none text-white">
                 <CardContent className="p-8">
                   <Form {...form}>
@@ -193,12 +209,12 @@ export default function App() {
 
       {currentPage === 'services' && (
         <>
-          <section className="container mx-auto px-4 py-20">
+          <section className="w-full py-20">
             <div className="text-center mb-16">
               <h1 className="text-4xl font-bold text-white mb-4">Our Services</h1>
               <p className="text-lg text-gray-300">Explore our comprehensive range of digital solutions</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-12 px-8">
               <Card className="bg-white/10 backdrop-blur border-none text-white">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-6">
@@ -274,12 +290,12 @@ export default function App() {
             </div>
           </section>
 
-          <section className="container mx-auto px-4 py-20 bg-gradient-to-r from-blue-900 to-blue-800">
+          <section className="w-full py-20 bg-gradient-to-r from-blue-900 to-blue-800">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Process</h2>
               <p className="text-lg text-gray-300">How we deliver exceptional results</p>
             </div>
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-4 gap-8 px-8">
               <div className="text-center">
                 <div className="text-4xl mb-4">1️⃣</div>
                 <h3 className="text-xl font-bold text-white mb-2">Discovery</h3>
@@ -303,7 +319,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="container mx-auto px-4 py-20">
+          <section className="w-full py-20">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-lg text-gray-300 mb-8">Contact us today to discuss your project</p>
@@ -317,12 +333,12 @@ export default function App() {
 
       {currentPage === 'pricing' && (
         <>
-          <section className="container mx-auto px-4 py-20">
+          <section className="w-full py-20">
             <div className="text-center mb-16">
               <h1 className="text-4xl font-bold text-white mb-4">Pricing Plans</h1>
               <p className="text-lg text-gray-300">Choose the perfect plan for your business needs</p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 px-8 w-full">
               <Card className="bg-white/10 backdrop-blur border-none text-white">
                 <CardContent className="p-8">
                   <div className="text-center">
@@ -387,12 +403,12 @@ export default function App() {
             </div>
           </section>
 
-          <section className="container mx-auto px-4 py-20">
+          <section className="w-full py-20">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
               <p className="text-lg text-gray-300">Find answers to common questions</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 px-8">
               <Card className="bg-white/10 backdrop-blur border-none text-white">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">What's included in the support?</h3>
@@ -424,12 +440,12 @@ export default function App() {
 
       {currentPage === 'about' && (
         <>
-          <section className="container mx-auto px-4 py-20">
+          <section className="w-full py-20">
             <div className="text-center mb-16">
               <h1 className="text-4xl font-bold text-white mb-4">About Us</h1>
               <p className="text-lg text-gray-300">Learn more about our journey and mission</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-12 px-8 w-full">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
                 <p className="text-gray-300 mb-4">
@@ -478,44 +494,40 @@ export default function App() {
             </div>
           </section>
 
-          <section className="container mx-auto px-4 py-20 bg-gradient-to-r from-blue-900 to-blue-800">
+          <section className="w-full py-20 bg-gradient-to-r from-blue-900 to-blue-800">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Team</h2>
               <p className="text-lg text-gray-300">Meet the experts behind our success</p>
             </div>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-6xl mb-4">👨</div>
-                <h3 className="text-xl font-bold text-white mb-2">John Smith</h3>
-                <p className="text-gray-300">CEO &amp; Founder</p>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">👩</div>
-                <h3 className="text-xl font-bold text-white mb-2">Sarah Johnson</h3>
-                <p className="text-gray-300">Technical Director</p>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">💻</div>
-                <h3 className="text-xl font-bold text-white mb-2">Michael Chen</h3>
-                <p className="text-gray-300">Lead Developer</p>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">🎨</div>
-                <h3 className="text-xl font-bold text-white mb-2">Emily Brown</h3>
-                <p className="text-gray-300">Creative Director</p>
-              </div>
+            <div className="grid md:grid-cols-4 gap-8 px-8 w-full">
+              {[
+                { icon: "👨", name: "John Smith", role: "CEO & Founder" },
+                { icon: "👩", name: "Sarah Johnson", role: "Technical Director" },
+                { icon: "💻", name: "Michael Chen", role: "Lead Developer" },
+                { icon: "🎨", name: "Emily Brown", role: "Creative Director" }
+              ].map((member, index) => (
+                <div 
+                  key={member.name}
+                  className="text-center animate-on-scroll"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="text-6xl mb-4 transform hover:scale-110 transition-all duration-300">{member.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                  <p className="text-gray-300">{member.role}</p>
+                </div>
+              ))}
             </div>
           </section>
         </>
       )}
 
       {currentPage === 'portfolio' && (
-        <section className="container mx-auto px-4 py-20">
+        <section className="w-full py-20">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-white mb-4">Our Portfolio</h1>
             <p className="text-lg text-gray-300">Explore our successful projects</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 px-8 w-full">
             {[
               {
                 id: 1,
@@ -578,12 +590,12 @@ export default function App() {
       )}
 
       {currentPage === 'blog' && (
-        <section className="container mx-auto px-4 py-20">
+        <section className="w-full py-20">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-white mb-4">Our Blog</h1>
             <p className="text-lg text-gray-300">Latest insights and updates</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 px-8 w-full">
             {[
               {
                 id: 1,
@@ -646,12 +658,12 @@ export default function App() {
       )}
 
       {currentPage === 'contact' && (
-        <section className="container mx-auto px-4 py-20">
+        <section className="w-full py-20">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
             <p className="text-lg text-gray-300">Get in touch with our team</p>
           </div>
-          <div className="max-w-2xl mx-auto">
+          <div className="w-full max-w-2xl mx-auto px-8">
             <Card className="bg-white/10 backdrop-blur border-none text-white">
               <CardContent className="p-8">
                 <Form {...form}>
@@ -721,8 +733,8 @@ export default function App() {
       )}
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-12 text-white">
-        <div className="grid md:grid-cols-4 gap-8">
+      <footer className="w-full py-12 text-white">
+        <div className="grid md:grid-cols-4 gap-8 w-full px-8">
           <div>
             <h3 className="text-xl font-bold mb-4">The Skyline Strategies</h3>
             <p className="text-gray-300">Empowering businesses with innovative IT solutions</p>

@@ -6,6 +6,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion"
+import { motion } from "framer-motion"
+import { staggerContainer, staggerItem, createBurst, velocityAnimate } from "@/lib/animations"
+import { ThreeScene } from "../ThreeScene"
+import Reveal from "react-reveal/Fade"
+import { NodeGroup } from 'react-move'
+import { animate } from 'popmotion'
+import anime from 'animejs'
+import { easeCubicInOut } from 'd3-ease'
 
 const faqs = [
   {
@@ -30,34 +38,176 @@ const faqs = [
   }
 ]
 
-export const FAQ = (): JSX.Element => (
-    <section className="container mx-auto px-4 py-24 sm:py-28 lg:py-32">
-      <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 lg:mb-6 animate-fade-in">
-          <GradientText>Frequently Asked Questions</GradientText>
-        </h2>
-        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up delay-100">
-          Everything you need to know about our SEO services
-        </p>
-      </div>
+export const FAQ = (): JSX.Element => {
+  const handleAccordionClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const button = event.currentTarget;
+    const rect = button.getBoundingClientRect();
+    
+    // Create burst effect at click position
+    const burst = createBurst(
+      rect.left + rect.width / 2,
+      rect.top + rect.height / 2,
+      { color: '#6B21A8', radius: 30 }
+    );
+    burst.play();
+    
+    // Popmotion spring animation
+    animate({
+      from: 0,
+      to: 1,
+      duration: 300,
+      onUpdate: (progress: number) => {
+        button.style.transform = `scale(${1 + progress * 0.05})`;
+      },
+      onComplete: () => {
+        animate({
+          from: 1,
+          to: 0,
+          duration: 200,
+          onUpdate: (progress: number) => {
+            button.style.transform = `scale(${1 + progress * 0.05})`;
+          }
+        });
+      }
+    });
 
-      <div className="max-w-3xl mx-auto animate-slide-up delay-200">
-        <Accordion type="single" collapsible className="space-y-4 sm:space-y-6">
-          {faqs.map((faq) => (
-            <AccordionItem 
-              key={faq.question} 
-              value={faq.question}
-              className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-300"
+    // Anime.js animation for text color
+    anime({
+      targets: button.querySelector('.accordion-text'),
+      color: ['#FFFFFF', '#C6F135', '#FFFFFF'],
+      duration: 800,
+      easing: 'easeInOutQuad'
+    });
+  };
+
+  return (
+    <motion.section 
+      className="w-full py-24 sm:py-28 lg:py-32 relative bg-[#0A0A0A] overflow-hidden"
+      initial="initial"
+      animate="animate"
+      variants={staggerContainer}
+    >
+      <div className="absolute inset-0 z-0">
+        <ThreeScene color="#6B21A8" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
+      </div>
+      <div className="relative z-10">
+      <Reveal bottom cascade>
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 px-8">
+          <div className="w-full">
+            <motion.h2 
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 lg:mb-6"
+              variants={staggerItem}
             >
-              <AccordionTrigger className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold text-white hover:no-underline hover:bg-white/5">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-base sm:text-lg text-gray-300 leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
+              <GradientText>Frequently Asked Questions</GradientText>
+            </motion.h2>
+            <motion.p 
+              className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto"
+              variants={staggerItem}
+            >
+              Everything you need to know about our SEO services
+            </motion.p>
+          </div>
+        </div>
+      </Reveal>
+
+      <motion.div 
+        className="max-w-3xl mx-auto px-8 w-full"
+        variants={staggerContainer}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        <Accordion type="single" collapsible className="space-y-4 sm:space-y-6">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={faq.question}
+              variants={staggerItem}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <AccordionItem 
+                value={faq.question}
+                className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-300 faq-item"
+                onMouseEnter={(e) => {
+                  velocityAnimate(e.currentTarget, {
+                    scale: 1.02,
+                    boxShadowBlur: 20,
+                    opacity: 0.95
+                  }, {
+                    duration: 300,
+                    easing: 'easeOutCubic',
+                    queue: false
+                  });
+                }}
+                onMouseLeave={(e) => {
+                  velocityAnimate(e.currentTarget, {
+                    scale: 1,
+                    boxShadowBlur: 0,
+                    opacity: 1
+                  }, {
+                    duration: 200,
+                    easing: 'easeOutQuad',
+                    queue: false
+                  });
+                }}
+              >
+                <AccordionTrigger 
+                  className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold text-white hover:no-underline hover:bg-white/5"
+                  onClick={handleAccordionClick}
+                >
+                  <span className="accordion-text">{faq.question}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-base sm:text-lg text-gray-300 leading-relaxed">
+                  <NodeGroup
+                    data={[{ id: faq.question, text: faq.answer }]}
+                    keyAccessor={(d) => d.id}
+                    start={() => ({
+                      opacity: 0,
+                      y: 20
+                    })}
+                    enter={() => ({
+                      opacity: [1],
+                      y: [0],
+                      timing: { duration: 300, ease: easeCubicInOut }
+                    })}
+                    update={() => ({
+                      opacity: [1],
+                      y: [0],
+                      timing: { duration: 300, ease: easeCubicInOut }
+                    })}
+                    leave={() => ({
+                      opacity: [0],
+                      y: [20],
+                      timing: { duration: 300, ease: easeCubicInOut }
+                    })}
+                  >
+                    {(nodes) => (
+                      <div>
+                        {nodes.map(({ key, data, state: { opacity, y } }) => (
+                          <div
+                            key={key}
+                            style={{
+                              opacity,
+                              transform: `translateY(${y}px)`
+                            }}
+                          >
+                            {data.text}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </NodeGroup>
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
           ))}
         </Accordion>
+      </motion.div>
       </div>
-    </section>
-)
+    </motion.section>
+  );
+}
