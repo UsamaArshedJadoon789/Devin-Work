@@ -35,15 +35,16 @@
   #root {
     margin: 0 !important;
     padding: 0 !important;
-    width: 100vw !important;
+    width: 100% !important;
     min-height: 100vh !important;
     display: flex !important;
     flex-direction: column !important;
-    position: relative !important;
+    position: absolute !important;
     left: 0 !important;
     right: 0 !important;
     top: 0 !important;
     bottom: 0 !important;
+    overflow-x: hidden !important;
   }
 }
 
