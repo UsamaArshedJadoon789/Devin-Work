@@ -71,11 +71,17 @@ export const FAQ = (): JSX.Element => {
 
   return (
     <motion.section 
-      className="w-full py-24 sm:py-28 lg:py-32"
+      className="w-full py-24 sm:py-28 lg:py-32 relative bg-[#0A0A0A] overflow-hidden"
       initial="initial"
       animate="animate"
       variants={staggerContainer}
     >
+      <div className="absolute inset-0 z-0">
+        <ThreeScene color="#6B21A8" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
+      </div>
+      <div className="relative z-10">
       <Reveal bottom cascade>
         <div className="text-center mb-12 sm:mb-16 lg:mb-20 px-8">
           <div className="w-full">
@@ -168,6 +174,7 @@ export const FAQ = (): JSX.Element => {
           ))}
         </Accordion>
       </motion.div>
+      </div>
     </motion.section>
   );
 }
