@@ -66,10 +66,10 @@ export const Services = (): JSX.Element => {
       Velocity(card, {
         scale: [1, 1.1],
         rotateZ: ['0deg', '5deg', '-5deg', '0deg'],
-      }, {
+      } as { [key: string]: any }, {
         duration: 800,
         easing: 'spring',
-      });
+      } as { [key: string]: any });
     };
 
     const handleCardHover = (event: MouseEvent) => {
@@ -77,10 +77,10 @@ export const Services = (): JSX.Element => {
       Velocity(card, {
         translateY: -10,
         boxShadowBlur: 20,
-      }, {
+      } as { [key: string]: any }, {
         duration: 300,
         easing: 'easeOutQuad',
-      });
+      } as { [key: string]: any });
     };
 
     const handleCardLeave = (event: MouseEvent) => {
@@ -88,10 +88,10 @@ export const Services = (): JSX.Element => {
       Velocity(card, {
         translateY: 0,
         boxShadowBlur: 0,
-      }, {
+      } as { [key: string]: any }, {
         duration: 200,
         easing: 'easeInQuad',
-      });
+      } as { [key: string]: any });
     };
 
     const cards = servicesRef.current?.querySelectorAll('.service-card');
@@ -164,6 +164,7 @@ export const Services = (): JSX.Element => {
           </CardHover>
         </motion.div>
       ))}
-    </div>
+    </motion.div>
   </motion.section>
-)
+  );
+}
