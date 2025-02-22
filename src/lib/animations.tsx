@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import * as mojs from '@mojs/core';
+import mojs from 'mojs';
 import velocity from 'velocity-animate';
 import Zdog from 'zdog';
 

@@ -120,12 +120,13 @@ export const Services = (): JSX.Element => {
     animate="animate"
     variants={staggerContainer}
   >
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 z-0">
       <ThreeScene color="#91AD29" />
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
     </div>
-    <div ref={zdogContainerRef} className="absolute top-0 right-0 w-32 h-32 opacity-25" />
+    <div className="relative z-10">
+      <div ref={zdogContainerRef} className="absolute top-0 right-0 w-32 h-32 opacity-25" />
     <Reveal 
       effect="fadeInUp"
       duration={1000}
@@ -185,6 +186,7 @@ export const Services = (): JSX.Element => {
         </motion.div>
       ))}
     </motion.div>
+    </div>
   </motion.section>
   );
 }
