@@ -1,6 +1,9 @@
 import { type JSX } from "react"
 import { CardHover } from "../ui/card-hover"
 import { GradientText } from "../ui/gradient-text"
+import { motion } from "framer-motion"
+import { staggerContainer, staggerItem } from "@/lib/animations"
+import Reveal from "react-reveal/Fade"
 
 const services = [
   {
@@ -36,27 +39,56 @@ const services = [
 ]
 
 export const Services = (): JSX.Element => (
-  <section className="w-full py-32">
-    <div className="text-center mb-20 px-8 animate-on-scroll">
-      <h2 className="text-5xl font-bold mb-6 animate-fade-in max-w-4xl mx-auto">
-        <GradientText>Our Services</GradientText>
-      </h2>
-      <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up delay-100">
-        Comprehensive SEO solutions for your business growth
-      </p>
-    </div>
-    <div className="grid md:grid-cols-3 gap-8 px-8 w-full">
-      {services.map((service, index) => (
-        <CardHover 
-          key={service.title}
-          className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 animate-slide-up"
-          style={{ animationDelay: `${index * 100}ms` }}
+  <motion.section 
+    className="w-full py-32"
+    initial="initial"
+    animate="animate"
+    variants={staggerContainer}
+  >
+    <Reveal bottom cascade>
+      <div className="text-center mb-20 px-8">
+        <motion.h2 
+          className="text-5xl font-bold mb-6 max-w-4xl mx-auto"
+          variants={staggerItem}
         >
-          <div className="text-4xl mb-6">{service.icon}</div>
-          <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
-          <p className="text-gray-300 text-lg leading-relaxed">{service.description}</p>
-        </CardHover>
+          <GradientText>Our Services</GradientText>
+        </motion.h2>
+        <motion.p 
+          className="text-xl text-gray-300 max-w-2xl mx-auto"
+          variants={staggerItem}
+        >
+          Comprehensive SEO solutions for your business growth
+        </motion.p>
+      </div>
+    </Reveal>
+    <motion.div 
+      className="grid md:grid-cols-3 gap-8 px-8 w-full"
+      variants={staggerContainer}
+    >
+      {services.map((service, index) => (
+        <motion.div
+          key={service.title}
+          variants={staggerItem}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: index * 0.1 }}
+        >
+          <CardHover 
+            className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8"
+          >
+            <motion.div 
+              className="text-4xl mb-6"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              {service.icon}
+            </motion.div>
+            <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
+            <p className="text-gray-300 text-lg leading-relaxed">{service.description}</p>
+          </CardHover>
+        </motion.div>
       ))}
     </div>
-  </section>
+  </motion.section>
 )
