@@ -32,7 +32,7 @@ interface SceneProps {
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<MeshProps>(null);
+  const sphereRef = useRef<JSX.IntrinsicElements['mesh']>(null);
   const { camera } = useThree();
 
   useEffect(() => {
