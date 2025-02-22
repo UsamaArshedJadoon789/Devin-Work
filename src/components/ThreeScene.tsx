@@ -1,24 +1,24 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree, extend, type ThreeElements } from '@react-three/fiber';
+import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import { Object3D, Mesh, SphereGeometry, MeshStandardMaterial } from 'three';
+import * as THREE from 'three';
+import { type Mesh } from 'three';
 
-extend({
-  OrbitControls,
-  Stars,
-  SphereGeometry,
-  MeshStandardMaterial
-});
+extend(THREE);
 
-type ThreeSceneElements = ThreeElements & {
-  orbitControls: { enableZoom: boolean; enablePan: boolean };
-  stars: { count: number; depth: number; factor: number };
-  ambientLight: { intensity: number };
-  pointLight: { position: [number, number, number] };
-  mesh: { ref: React.RefObject<Mesh> };
-  sphereGeometry: { args: [number, number, number] };
-  meshStandardMaterial: { color: string; transparent: boolean; opacity: number };
-};
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      orbitControls: any;
+      stars: any;
+      ambientLight: any;
+      pointLight: any;
+      mesh: any;
+      sphereGeometry: any;
+      meshStandardMaterial: any;
+    }
+  }
+}
 
 interface SceneProps {
   color?: string;
