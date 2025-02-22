@@ -3,6 +3,9 @@ import { Card } from "../ui/card"
 import { GradientText } from "../ui/gradient-text"
 import { Button } from "../ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { staggerContainer, staggerItem } from "@/lib/animations"
+import Reveal from "react-reveal/Fade"
 
 const testimonials = [
   {
@@ -40,21 +43,44 @@ export const Testimonials = (): JSX.Element => {
   }
 
   return (
-    <section className="w-full py-32">
-      <div className="text-center mb-20 px-8 animate-on-scroll">
-        <h2 className="text-5xl font-bold mb-6 animate-fade-in">
-          <GradientText>What Our Clients Say</GradientText>
-        </h2>
-        <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up delay-100">
-          Real results from real clients
-        </p>
-      </div>
+    <motion.section 
+      className="w-full py-32"
+      initial="initial"
+      animate="animate"
+      variants={staggerContainer}
+    >
+      <Reveal bottom cascade>
+        <div className="text-center mb-20 px-8">
+          <motion.h2 
+            className="text-5xl font-bold mb-6"
+            variants={staggerItem}
+          >
+            <GradientText>What Our Clients Say</GradientText>
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            variants={staggerItem}
+          >
+            Real results from real clients
+          </motion.p>
+        </div>
+      </Reveal>
 
-      <div className="relative animate-slide-up delay-200 px-8 w-full">
-        <div 
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
+      <motion.div 
+        className="relative px-8 w-full"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={currentSlide}
+            className="flex"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          >
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -97,6 +123,6 @@ export const Testimonials = (): JSX.Element => {
           <ChevronRight size={24} />
         </Button>
       </div>
-    </section>
+    </motion.section>
   )
 }
