@@ -3,6 +3,17 @@ export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: '0',
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '100%',
+        xl: '100%',
+        '2xl': '100%',
+      },
+    },
     extend: {
       colors: {
         primary: '#0A0A0A',
