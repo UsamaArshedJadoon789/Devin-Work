@@ -1,4 +1,4 @@
-- [ ] Hero
+- [x] Hero
 - [ ] Services
 - [ ] Testimonials
 - [ ] FAQ
