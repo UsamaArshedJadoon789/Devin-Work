@@ -1,11 +1,16 @@
 #root {
-  width: 100% !important;
+  all: initial !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100vw !important;
   min-height: 100vh !important;
   margin: 0 !important;
   padding: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  text-align: center;
+  text-align: center !important;
+  position: fixed !important;
+  inset: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
 }
 
 .logo {
