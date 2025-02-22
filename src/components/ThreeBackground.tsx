@@ -12,14 +12,14 @@ export const ThreeBackground = () => {
     if (!containerRef.current) return;
 
     // Setup
-    sceneRef.current = new Scene();
-    cameraRef.current = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    rendererRef.current = new WebGLRenderer({ alpha: true });
+    sceneRef.current = new THREE.Scene();
+    cameraRef.current = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    rendererRef.current = new THREE.WebGLRenderer({ alpha: true });
     rendererRef.current.setSize(window.innerWidth, window.innerHeight);
     containerRef.current.appendChild(rendererRef.current.domElement);
 
     // Create particles
-    const particlesGeometry = new BufferGeometry();
+    const particlesGeometry = new THREE.BufferGeometry();
     const particlesCount = 1000;
     const positions = new Float32Array(particlesCount * 3);
 
@@ -27,17 +27,17 @@ export const ThreeBackground = () => {
       positions[i] = (Math.random() - 0.5) * 10;
     }
 
-    particlesGeometry.setAttribute('position', new BufferAttribute(positions, 3));
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
-    const particlesMaterial = new PointsMaterial({
+    const particlesMaterial = new THREE.PointsMaterial({
       size: 0.02,
       color: '#C6F135',
       transparent: true,
       opacity: 0.5,
-      blending: AdditiveBlending
+      blending: THREE.AdditiveBlending
     });
 
-    particlesRef.current = new Points(particlesGeometry, particlesMaterial);
+    particlesRef.current = new THREE.Points(particlesGeometry, particlesMaterial);
     sceneRef.current.add(particlesRef.current);
 
     cameraRef.current.position.z = 5;
