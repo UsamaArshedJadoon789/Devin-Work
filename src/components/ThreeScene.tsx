@@ -2,24 +2,18 @@ import { FC, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { Mesh } from 'three';
-import type { ThreeElements } from '@react-three/fiber';
+import { extend } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 
-type ThreeIntrinsicElements = {
-  orbitControls: ThreeElements['mesh'];
-  stars: ThreeElements['mesh'];
-  ambientLight: ThreeElements['mesh'];
-  pointLight: ThreeElements['mesh'];
-  mesh: ThreeElements['mesh'];
-  sphereGeometry: ThreeElements['mesh'];
-  meshStandardMaterial: ThreeElements['mesh'];
-};
+// Extend Three.js with custom elements
+extend({ OrbitControls });
 
 interface SceneProps {
   color?: string;
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<Mesh | null>(null);
+  const sphereRef = useRef<Mesh>(null);
   const { camera } = useThree();
 
   useEffect(() => {
