@@ -1,8 +1,11 @@
 import anime from 'animejs';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, extend } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import type { FC } from 'react';
+import * as THREE from 'three';
+
+extend(THREE);
 import mojs from 'mojs';
 import Zdog from 'zdog';
 import { animate, spring } from 'popmotion';
@@ -57,7 +60,7 @@ export const ThreeBackground: FC = () => {
       </mesh>
     </Canvas>
   );
-};
+} as FC;
 
 // Mo.js burst effect
 export const createBurst = (x: number, y: number) => {
