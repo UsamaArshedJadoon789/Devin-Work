@@ -4,12 +4,12 @@ import type { FC } from "react"
 
 export const Hero: FC = () => {
   return (
-    <section className="relative min-h-[100vh] w-full bg-[#0A0A0A] flex flex-col">
+    <section className="relative min-h-[100vh] w-screen bg-[#0A0A0A] flex flex-col overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-[0.15] mix-blend-overlay pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-[0.15] mix-blend-overlay pointer-events-none" />
       
-      <div className="w-full flex-1 flex items-center justify-center relative z-10 min-h-[100vh]">
-        <div className="max-w-[1400px] w-full mx-auto px-6 relative">
+      <div className="w-full flex-1 flex items-center justify-center relative z-10">
+        <div className="w-full max-w-[1400px] mx-auto px-6 relative">
           <div className="relative z-10 mb-12">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
               We Build SEO Revenue Engines For SaaS Brands
@@ -93,7 +93,7 @@ export const Hero: FC = () => {
       </div>
 
       <div className="w-full mt-auto">
-        <div className="max-w-[1400px] mx-auto px-6 py-16">
+        <div className="w-full max-w-[1400px] mx-auto px-6 py-16">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-20 hover:opacity-30 transition-opacity duration-300">
             <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
             <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
