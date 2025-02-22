@@ -1,22 +1,20 @@
 import { FC, useRef, useEffect } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Canvas, useFrame, useThree, extend, type MeshProps } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import { Mesh } from 'three';
-import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
+import { Mesh, BufferGeometry, Material } from 'three';
 
 // Extend Three.js with custom elements
 extend({ OrbitControls });
 
 declare module '@react-three/fiber' {
   interface ThreeElements {
-    orbitControls: any;
-    stars: any;
-    ambientLight: any;
-    pointLight: any;
-    mesh: any;
-    sphereGeometry: any;
-    meshStandardMaterial: any;
+    orbitControls: MeshProps;
+    stars: MeshProps;
+    ambientLight: MeshProps;
+    pointLight: MeshProps;
+    mesh: MeshProps;
+    sphereGeometry: MeshProps;
+    meshStandardMaterial: MeshProps;
   }
 }
 
@@ -25,7 +23,7 @@ interface SceneProps {
 }
 
 const Scene: FC<SceneProps> = ({ color = "#C6F135" }) => {
-  const sphereRef = useRef<Mesh>(null);
+  const sphereRef = useRef<Mesh<BufferGeometry, Material>>(null);
   const { camera } = useThree();
 
   useEffect(() => {
