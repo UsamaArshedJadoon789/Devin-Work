@@ -510,7 +510,7 @@ export default function App() {
       )}
 
       {currentPage === 'portfolio' && (
-        <section className="container mx-auto px-2 py-20">
+        <section className="container mx-auto w-full py-20">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-white mb-4">Our Portfolio</h1>
             <p className="text-lg text-gray-300">Explore our successful projects</p>
@@ -578,7 +578,7 @@ export default function App() {
       )}
 
       {currentPage === 'blog' && (
-        <section className="container mx-auto px-2 py-20">
+        <section className="container mx-auto w-full py-20">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-white mb-4">Our Blog</h1>
             <p className="text-lg text-gray-300">Latest insights and updates</p>
@@ -646,7 +646,7 @@ export default function App() {
       )}
 
       {currentPage === 'contact' && (
-        <section className="container mx-auto px-2 py-20">
+        <section className="container mx-auto w-full py-20">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
             <p className="text-lg text-gray-300">Get in touch with our team</p>
