@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
-import { Scene, PerspectiveCamera, WebGLRenderer, BufferGeometry, BufferAttribute, PointsMaterial, Points, AdditiveBlending } from 'three';
+import * as THREE from 'three';
 
 export const ThreeBackground = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const sceneRef = useRef<Scene>();
-  const cameraRef = useRef<PerspectiveCamera>();
-  const rendererRef = useRef<WebGLRenderer>();
-  const particlesRef = useRef<Points>();
+  const sceneRef = useRef<THREE.Scene>();
+  const cameraRef = useRef<THREE.PerspectiveCamera>();
+  const rendererRef = useRef<THREE.WebGLRenderer>();
+  const particlesRef = useRef<THREE.Points>();
 
   useEffect(() => {
     if (!containerRef.current) return;
