@@ -7,8 +7,10 @@ import {
   AccordionTrigger,
 } from "../ui/accordion"
 import { motion, AnimatePresence } from "framer-motion"
-import { staggerContainer, staggerItem } from "@/lib/animations"
+import { staggerContainer, staggerItem, animate } from "@/lib/animations"
 import Reveal from "react-reveal/Fade"
+import { NodeGroup } from 'react-move'
+import { spring } from 'popmotion'
 
 const faqs = [
   {
@@ -33,7 +35,30 @@ const faqs = [
   }
 ]
 
-export const FAQ = (): JSX.Element => (
+export const FAQ = (): JSX.Element => {
+  const handleAccordionClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const button = event.currentTarget;
+    animate({
+      from: 0,
+      to: 1,
+      duration: 300,
+      onUpdate: (progress) => {
+        button.style.transform = `scale(${1 + progress * 0.05})`;
+      },
+      onComplete: () => {
+        animate({
+          from: 1,
+          to: 0,
+          duration: 200,
+          onUpdate: (progress) => {
+            button.style.transform = `scale(${1 + progress * 0.05})`;
+          }
+        });
+      }
+    });
+  };
+
+  return (
     <motion.section 
       className="w-full py-24 sm:py-28 lg:py-32"
       initial="initial"
@@ -80,11 +105,52 @@ export const FAQ = (): JSX.Element => (
                 value={faq.question}
                 className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-300"
               >
-                <AccordionTrigger className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold text-white hover:no-underline hover:bg-white/5">
+                <AccordionTrigger 
+                  className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold text-white hover:no-underline hover:bg-white/5"
+                  onClick={handleAccordionClick}
+                >
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-base sm:text-lg text-gray-300 leading-relaxed">
-                  {faq.answer}
+                  <NodeGroup
+                    data={[{ id: faq.question, text: faq.answer }]}
+                    keyAccessor={(d) => d.id}
+                    start={() => ({
+                      opacity: 0,
+                      y: 20
+                    })}
+                    enter={() => ({
+                      opacity: [1],
+                      y: [0],
+                      timing: { duration: 300, ease: spring }
+                    })}
+                    update={() => ({
+                      opacity: [1],
+                      y: [0],
+                      timing: { duration: 300, ease: spring }
+                    })}
+                    leave={() => ({
+                      opacity: [0],
+                      y: [20],
+                      timing: { duration: 300, ease: spring }
+                    })}
+                  >
+                    {(nodes) => (
+                      <div>
+                        {nodes.map(({ key, data, state: { opacity, y } }) => (
+                          <div
+                            key={key}
+                            style={{
+                              opacity,
+                              transform: `translateY(${y}px)`
+                            }}
+                          >
+                            {data.text}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </NodeGroup>
                 </AccordionContent>
               </AccordionItem>
             </motion.div>
@@ -92,4 +158,5 @@ export const FAQ = (): JSX.Element => (
         </Accordion>
       </motion.div>
     </motion.section>
-)
+  );
+}
