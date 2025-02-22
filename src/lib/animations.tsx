@@ -1,15 +1,8 @@
-import anime from 'animejs';
-import { motion, AnimatePresence } from 'framer-motion';
-
+import { motion } from 'framer-motion';
 import mojs from 'mojs';
-import Zdog from 'zdog';
-import { animate, spring } from 'popmotion';
-import { NodeGroup } from 'react-move';
-import { Sequence } from 'remotion';
-import Reveal from 'react-reveal/Fade';
 
 // Export animation components and utilities for direct use
-export { motion, AnimatePresence, NodeGroup, Sequence, Reveal, anime, spring, animate };
+export { motion };
 
 // Anime.js animations
 export const cardAnimation = {
@@ -45,17 +38,20 @@ export const staggerItem = {
 export { ThreeScene as ThreeBackground } from '@/components/ThreeScene';
 
 // Mo.js burst effect
-export const createBurst = (x: number, y: number) => {
-  return new mojs.Shape({
+export const createBurst = (x: number, y: number, options?: { color?: string; radius?: number }) => {
+  return new mojs.Burst({
     left: x,
     top: y,
-    scale: { 0: 1 },
-    duration: 1000,
-    easing: 'quad.out',
-    shape: 'circle',
-    fill: '#C6F135',
-    radius: 50,
-    opacity: { 1: 0 }
+    radius: { 0: options?.radius || 100 },
+    count: 5,
+    children: {
+      shape: 'circle',
+      radius: { 8: 0 },
+      fill: options?.color || '#C6F135',
+      scale: { 1: 0 },
+      duration: 500,
+      easing: 'quad.out'
+    }
   });
 };
 
