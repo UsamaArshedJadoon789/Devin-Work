@@ -67,10 +67,42 @@ export const Testimonials = (): JSX.Element => {
   }
 
   React.useEffect(() => {
+    // Add hover animations to testimonial cards
+    const cards = document.querySelectorAll('.testimonial-card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        velocity(card, {
+          scale: 1.02,
+          boxShadowBlur: 30,
+          opacity: 0.95
+        }, {
+          duration: 300,
+          easing: 'easeOutCubic',
+          queue: false
+        });
+      });
+
+      card.addEventListener('mouseleave', () => {
+        velocity(card, {
+          scale: 1,
+          boxShadowBlur: 0,
+          opacity: 1
+        }, {
+          duration: 200,
+          easing: 'easeOutQuad',
+          queue: false
+        });
+      });
+    });
+
     return () => {
       burstRefs.current.forEach(burst => burst.pause());
+      cards.forEach(card => {
+        card.removeEventListener('mouseenter', () => {});
+        card.removeEventListener('mouseleave', () => {});
+      });
     };
-  }, []);
+  }, [currentSlide]);
 
   return (
     <motion.section 
@@ -155,7 +187,7 @@ export const Testimonials = (): JSX.Element => {
                         transform: `translateX(${x}px)`
                       }}
                     >
-                      <Card className="bg-secondary/50 backdrop-blur border border-white/5 text-white p-10 rounded-xl">
+                      <Card className="bg-secondary/50 backdrop-blur border border-white/5 text-white p-10 rounded-xl testimonial-card">
                         <div className="flex flex-col md:flex-row gap-10 items-center">
                           <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-800 border-2 border-accent/20">
                             <img
