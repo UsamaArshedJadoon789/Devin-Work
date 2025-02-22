@@ -2,6 +2,7 @@ import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
 import type { FC } from "react"
 import { motion } from "framer-motion"
+import { FloatingElement } from "../FloatingElement"
 import { staggerContainer, staggerItem, createBurst, velocityAnimate } from "@/lib/animations"
 import { useRef, useCallback } from "react"
 import { ThreeScene } from "../ThreeScene"
@@ -22,7 +23,7 @@ export const Hero: FC = () => {
       translateY: [-2, 0]
     }, {
       duration: 400,
-      easing: [0.175, 0.885, 0.32, 1.275]
+      easing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
     });
   }, []);
 
@@ -80,13 +81,14 @@ export const Hero: FC = () => {
       
       <div className="w-full flex-1 flex items-center justify-center relative z-10">
         <div className="w-full px-8 relative">
-          <div className="relative z-10 mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
-              We Build SEO Revenue Engines For SaaS Brands
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl animate-slide-up delay-100">
-              Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
-            </p>
+          <FloatingElement offset={-20} duration={3000}>
+            <div className="relative z-10 mb-12">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
+                We Build SEO Revenue Engines For SaaS Brands
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl animate-slide-up delay-100">
+                Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
+              </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-slide-up delay-200">
               <Button 
                 className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300"
@@ -107,20 +109,44 @@ export const Hero: FC = () => {
           <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
             <div className="grid grid-cols-2 gap-4 p-6">
               <div className="space-y-4">
-                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
-                </div>
+                <FloatingElement offset={-10} duration={2000}>
+                  <motion.div 
+                    className="bg-[#1A2730] rounded-lg overflow-hidden"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  </motion.div>
+                </FloatingElement>
+                <FloatingElement offset={-10} duration={2200}>
+                  <motion.div 
+                    className="bg-[#1A2730] rounded-lg overflow-hidden"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  </motion.div>
+                </FloatingElement>
               </div>
               <div className="space-y-4 mt-20">
-                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
-                </div>
+                <FloatingElement offset={-10} duration={2400}>
+                  <motion.div 
+                    className="bg-[#1A2730] rounded-lg overflow-hidden"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  </motion.div>
+                </FloatingElement>
+                <FloatingElement offset={-10} duration={2600}>
+                  <motion.div 
+                    className="bg-[#1A2730] rounded-lg overflow-hidden"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  </motion.div>
+                </FloatingElement>
               </div>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent"></div>
