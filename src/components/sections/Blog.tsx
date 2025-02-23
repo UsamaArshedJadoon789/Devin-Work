@@ -7,6 +7,7 @@ interface Post {
   excerpt: string;
   image: string;
   categories: string[];
+  readTime?: string;
 }
 
 const posts: Post[] = [
@@ -41,7 +42,7 @@ export const Blog: FC = () => {
         <section className="motion-safe:animate-fade-in animate-duration-700">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white">
-              <GradientText>{"Blog & Insights"}</GradientText>
+              <GradientText>{"Blog &amp; Insights"}</GradientText>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl motion-safe:animate-slide-up animate-delay-200">
               Expert insights and strategies to help you grow your organic traffic and revenue.
