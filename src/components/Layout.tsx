@@ -32,10 +32,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="min-h-screen bg-[#003344]">
       {/* Navigation */}
       <Navigation navigationItems={navigationItems} />
-          
-          <MobileMenu navigationItems={navigationItems} />
-        </div>
-      </nav>
+      <MobileMenu navigationItems={navigationItems} />
 
       {children}
 
