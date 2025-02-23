@@ -38,22 +38,22 @@ const services = [
 export const Services = (): JSX.Element => (
   <section className="container mx-auto px-4 py-32">
     <div className="text-center mb-20">
-      <h2 className="text-5xl font-bold mb-6 animate-fade-in">
+      <h2 className="text-5xl font-bold mb-6 animate-fade-in animate-duration-700">
         <GradientText>Our Services</GradientText>
       </h2>
-      <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up delay-100">
+      <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in animate-slide-up animate-delay-200 animate-duration-500">
         Comprehensive SEO solutions for your business growth
       </p>
     </div>
-    <div className="grid md:grid-cols-3 gap-8 animate-slide-up delay-200">
+    <div className="grid md:grid-cols-3 gap-8 animate-fade-in animate-slide-up animate-delay-300 animate-duration-500">
       {services.map((service) => (
         <CardHover 
           key={service.title}
-          className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8"
+          className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-white/10"
         >
-          <div className="text-4xl mb-6">{service.icon}</div>
-          <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
-          <p className="text-gray-300 text-lg leading-relaxed">{service.description}</p>
+          <div className="text-4xl mb-6 transition-transform duration-300 group-hover:scale-110">{service.icon}</div>
+          <h3 className="text-2xl font-bold mb-3 text-white transition-colors duration-300">{service.title}</h3>
+          <p className="text-gray-300 text-lg leading-relaxed transition-colors duration-300">{service.description}</p>
         </CardHover>
       ))}
     </div>
