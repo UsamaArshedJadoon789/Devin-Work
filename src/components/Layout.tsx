@@ -31,7 +31,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(true);
 
   return (
-    <div className="min-h-screen bg-[#003344]">
+    <div className="min-h-screen bg-[#003344] m-0 p-0">
       {/* Navigation */}
       <Navigation navigationItems={navigationItems} />
       <MobileMenu navigationItems={navigationItems} />
