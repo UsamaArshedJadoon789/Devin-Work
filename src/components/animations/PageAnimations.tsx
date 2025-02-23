@@ -2,7 +2,7 @@ import { motion, type MotionProps } from "framer-motion"
 import { forwardRef } from "react"
 import type { ReactNode, HTMLAttributes } from "react"
 
-import { scrollReveal, microInteraction } from "./PageTransitions"
+import { scrollReveal, microInteraction } from "./pageTransitions"
 
 // Define animation props with performance optimizations
 const fadeInProps = {
