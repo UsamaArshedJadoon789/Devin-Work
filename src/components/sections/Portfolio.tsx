@@ -44,10 +44,10 @@ export const Portfolio = (): JSX.Element => {
     <ScrollFadeIn>
       <section className="container">
         <div className="text-center">
-          <h2 className="text-5xl font-bold motion-safe:animate-fade-in-down animate-duration-700">
+          <h2 className="motion-safe:animate-fade-in-down animate-duration-700">
             <GradientText>Portfolio</GradientText>
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto motion-safe:animate-fade-in motion-safe:animate-slide-in animate-delay-200 animate-duration-500">
+          <p className="max-w-2xl mx-auto motion-safe:animate-fade-in motion-safe:animate-slide-in animate-delay-200 animate-duration-500">
             Dive into our portfolio showcasing a diverse range of successful campaigns and projects.
           </p>
         </div>
