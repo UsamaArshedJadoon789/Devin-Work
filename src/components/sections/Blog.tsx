@@ -34,9 +34,12 @@ const posts: Post[] = [
   }
 ]
 
+import { ScrollFadeIn } from "../animations/PageAnimations"
+
 export const Blog: FC = () => {
   return (
-    <div className="min-h-screen bg-[#003344]">
+    <ScrollFadeIn>
+      <div className="min-h-screen bg-[#003344]">
       <div className="container">
         {/* Hero Section */}
         <section className="motion-safe:animate-fade-in animate-duration-700">
@@ -89,5 +92,6 @@ export const Blog: FC = () => {
         </section>
       </div>
     </div>
+    </ScrollFadeIn>
   )
 }
