@@ -45,13 +45,14 @@ export const Services = (): JSX.Element => (
         Comprehensive SEO solutions for your business growth
       </p>
     </div>
-    <div className="grid md:grid-cols-3 gap-8 animate-fade-in animate-slide-up animate-delay-300 animate-duration-500">
-      {services.map((service) => (
+    <div className="grid md:grid-cols-3 gap-8">
+      {services.map((service, index) => (
         <CardHover 
           key={service.title}
-          className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-white/10"
+          className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-white/10 transform-gpu animate-fade-in animate-slide-up"
+          style={{ animationDelay: `${index * 100}ms` }}
         >
-          <div className="text-4xl mb-6 transition-transform duration-300 group-hover:scale-110">{service.icon}</div>
+          <div className="text-4xl mb-6 transition-transform duration-300 group-hover:scale-110 transform-gpu">{service.icon}</div>
           <h3 className="text-2xl font-bold mb-3 text-white transition-colors duration-300">{service.title}</h3>
           <p className="text-gray-300 text-lg leading-relaxed transition-colors duration-300">{service.description}</p>
         </CardHover>
