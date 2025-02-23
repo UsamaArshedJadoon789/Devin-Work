@@ -33,12 +33,12 @@ export const Blog: FC = () => {
     <div className="min-h-screen bg-[#003344]">
       <div className="container">
         {/* Hero Section */}
-        <section className="animate-fade-in animate-duration-700">
+        <section className="motion-safe:animate-fade-in animate-duration-700">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white">
               <GradientText>{"Blog & Insights"}</GradientText>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl animate-slide-up animate-delay-200">
+            <p className="text-xl text-gray-300 max-w-3xl motion-safe:animate-slide-up animate-delay-200">
               Expert insights and strategies to help you grow your organic traffic and revenue.
             </p>
           </div>
@@ -50,18 +50,30 @@ export const Blog: FC = () => {
             {posts.map((post, index) => (
               <article 
                 key={post.id}
-                className="bg-secondary/50 backdrop-blur border border-white/5 rounded-xl overflow-hidden transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-white/10 transform-gpu animate-fade-in animate-slide-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group bg-white/10 backdrop-blur border-none overflow-hidden rounded-xl transition-all duration-500 motion-safe:animate-fade-in transform-gpu hover:scale-105"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="aspect-video bg-accent/20" />
-                <div>
-                  <div className="flex items-center gap-4">
-                    <span className="text-accent text-sm">{post.category}</span>
-                    <span className="text-gray-400 text-sm">{post.readTime}</span>
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={post.title} 
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex gap-2 mb-4">
+                    {post.categories.map(category => (
+                      <span 
+                        key={category}
+                        className="bg-white/20 px-2 py-1 rounded text-sm animate-bounce"
+                      >
+                        {category}
+                      </span>
+                    ))}
                   </div>
-                  <h3 className="text-2xl font-bold text-white transition-colors duration-300">{post.title}</h3>
-                  <p className="text-gray-300 transition-colors duration-300">{post.excerpt}</p>
-                  <button className="text-accent hover:text-white transition-colors duration-300">
+                  <h3 className="text-xl font-bold group-hover:translate-y-1 transition-transform">{post.title}</h3>
+                  <p className="text-gray-300 motion-safe:animate-slide-in" style={{ animationDelay: `${index * 150 + 100}ms` }}>{post.excerpt}</p>
+                  <button className="text-accent hover:text-white transition-colors duration-300 group-hover:translate-x-2">
                     Read More →
                   </button>
                 </div>
