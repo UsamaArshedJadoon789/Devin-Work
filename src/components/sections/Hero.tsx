@@ -35,13 +35,13 @@ export const Hero: React.FC = () => {
             </motion.p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <Button 
-                className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300 transform hover:scale-105"
+                className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-transform duration-300 hover:scale-105"
               >
                 Book a Strategy Call
               </Button>
               <Button 
                 variant="ghost" 
-                className="w-full sm:w-auto text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-300 transform hover:scale-105"
+                className="w-full sm:w-auto text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-transform duration-300 hover:scale-105"
               >
                 Read stories & opinions
                 <ArrowRight className="ml-2" />
