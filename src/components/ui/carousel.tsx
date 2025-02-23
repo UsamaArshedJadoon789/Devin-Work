@@ -28,8 +28,7 @@ interface CarouselContextProps extends CarouselProps {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
-  canScrollNext: boolean
-} & CarouselProps
+}
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
 
