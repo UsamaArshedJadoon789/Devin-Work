@@ -1,6 +1,6 @@
-import { motion } from "framer-motion"
+import { motion, type MotionProps } from "framer-motion"
 import { forwardRef } from "react"
-import type { ComponentPropsWithRef } from "react"
+import type { ReactNode, HTMLAttributes } from "react"
 
 // Define animation props
 const fadeInProps = {
@@ -18,8 +18,13 @@ const buttonProps = {
 } as const
 
 // Create components
-type ScrollFadeInProps = ComponentPropsWithRef<typeof motion.div>
-type AnimatedButtonProps = ComponentPropsWithRef<typeof motion.button>
+type ScrollFadeInProps = MotionProps & HTMLAttributes<HTMLDivElement> & {
+  children?: ReactNode
+}
+
+type AnimatedButtonProps = MotionProps & HTMLAttributes<HTMLButtonElement> & {
+  children?: ReactNode
+}
 
 export const ScrollFadeIn = forwardRef<HTMLDivElement, ScrollFadeInProps>((props, ref) => {
   const { className, children, ...rest } = props
