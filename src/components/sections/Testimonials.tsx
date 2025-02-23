@@ -60,20 +60,20 @@ export const Testimonials = (): JSX.Element => {
               key={index}
               className="w-full flex-shrink-0 px-4"
             >
-              <Card className="bg-secondary/50 backdrop-blur border border-white/5 text-white p-10 rounded-xl">
+              <Card className="bg-secondary/50 backdrop-blur border border-white/5 text-white p-10 rounded-xl transition-all duration-500 hover:shadow-lg hover:border-white/10 hover:bg-secondary/70">
                 <div className="flex flex-col md:flex-row gap-10 items-center">
-                  <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-800 border-2 border-accent/20">
+                  <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-800 border-2 border-accent/20 transition-transform duration-500 hover:scale-105">
                     <img
                       src={testimonial.image}
                       alt={testimonial.author}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-90"
                     />
                   </div>
                   <div>
-                    <p className="text-2xl leading-relaxed italic mb-8">{testimonial.quote}</p>
+                    <p className="text-2xl leading-relaxed italic mb-8 transition-colors duration-300">{testimonial.quote}</p>
                     <div>
-                      <p className="text-xl font-bold text-white mb-1">{testimonial.author}</p>
-                      <p className="text-lg text-gray-400">{testimonial.role} at {testimonial.company}</p>
+                      <p className="text-xl font-bold text-white mb-1 transition-colors duration-300">{testimonial.author}</p>
+                      <p className="text-lg text-gray-400 transition-colors duration-300">{testimonial.role} at {testimonial.company}</p>
                     </div>
                   </div>
                 </div>
@@ -84,17 +84,17 @@ export const Testimonials = (): JSX.Element => {
 
         <Button
           variant="ghost"
-          className="absolute -left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full"
+          className="absolute -left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full transition-all duration-300 hover:scale-110"
           onClick={prevSlide}
         >
-          <ChevronLeft size={24} />
+          <ChevronLeft size={24} className="transition-transform duration-300 hover:-translate-x-1" />
         </Button>
         <Button
           variant="ghost"
-          className="absolute -right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full"
+          className="absolute -right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/5 w-12 h-12 rounded-full transition-all duration-300 hover:scale-110"
           onClick={nextSlide}
         >
-          <ChevronRight size={24} />
+          <ChevronRight size={24} className="transition-transform duration-300 hover:translate-x-1" />
         </Button>
       </div>
     </section>
