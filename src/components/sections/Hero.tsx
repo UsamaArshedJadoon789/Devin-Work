@@ -55,18 +55,18 @@ export const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-[45%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl transform rotate-3 animate-float hover:rotate-0 transition-all duration-500">
+        <div className="absolute top-[45%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-700 hover:shadow-2xl hover:scale-105 transform-gpu">
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-14 h-14 rounded-full bg-[#C6F135] flex items-center justify-center">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="w-14 h-14 rounded-full bg-[#C6F135] flex items-center justify-center transition-transform duration-500 hover:scale-110 transform-gpu">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-500 hover:rotate-12">
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                 <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
                 <line x1="12" y1="22.08" x2="12" y2="12" />
               </svg>
             </div>
             <div>
-              <h3 className="text-white font-semibold text-xl">Turn your SEO into a</h3>
-              <p className="text-[#C6F135] font-bold text-2xl">Revenue Engine</p>
+              <h3 className="text-white font-semibold text-xl transition-colors duration-300">Turn your SEO into a</h3>
+              <p className="text-[#C6F135] font-bold text-2xl transition-colors duration-300">Revenue Engine</p>
             </div>
           </div>
           <div className="space-y-6">
