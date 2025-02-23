@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { Button } from "../ui/button"
 import { ButtonWithIcon } from "../ui/button-with-icon"
 
-type HeroProps = {}
+type HeroProps = Record<string, never>
 
 export const Hero: React.FC<HeroProps> = () => {
   return (
