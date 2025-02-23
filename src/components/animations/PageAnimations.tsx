@@ -1,4 +1,4 @@
-import { motion, type MotionProps } from "framer-motion"
+import { motion, type MotionProps, type Variants } from "framer-motion"
 import { forwardRef } from "react"
 import type { ReactNode, HTMLAttributes } from "react"
 
@@ -65,28 +65,28 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>
 AnimatedButton.displayName = "AnimatedButton"
 
 // Export animation variants
-export const fadeInUp = {
+export const fadeInUp: Variants = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 }
-} as const
+}
 
-export const staggerContainer = {
+export const staggerContainer: Variants = {
   animate: { transition: { staggerChildren: 0.1 } }
-} as const
+}
 
-export const parallaxScroll = {
+export const parallaxScroll: Variants = {
   initial: { y: 0 },
   animate: { y: 100 }
-} as const
+}
 
-export const scaleOnHover = buttonProps
+export const scaleOnHover: Variants = buttonProps
 
-export const fadeInLeft = {
+export const fadeInLeft: Variants = {
   initial: { opacity: 0, x: -20 },
   animate: { opacity: 1, x: 0 }
-} as const
+}
 
-export const fadeInRight = {
+export const fadeInRight: Variants = {
   initial: { opacity: 0, x: 20 },
   animate: { opacity: 1, x: 0 }
-} as const
+}
