@@ -11,13 +11,7 @@ export const Hero: React.FC = () => {
       
       <div className="container mx-auto px-4 flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-2xl lg:max-w-4xl relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative z-10 mb-12"
-          >
+          <div className="relative z-10 mb-12">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -53,7 +47,7 @@ export const Hero: React.FC = () => {
                 <ArrowRight className="ml-2" />
               </Button>
             </motion.div>
-          </motion.div>
+          </div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
