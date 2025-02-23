@@ -547,8 +547,8 @@ export default function App() {
       {currentPage === 'portfolio' && (
         <section className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-white mb-4">Our Portfolio</h1>
-            <p className="text-lg text-gray-300">Explore our successful projects</p>
+            <h1 className="text-4xl font-bold text-white mb-4 motion-safe:animate-fade-in-down animate-duration-700">Our Portfolio</h1>
+            <p className="text-lg text-gray-300 motion-safe:animate-fade-in motion-safe:animate-slide-in animate-delay-200">Explore our successful projects</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -594,15 +594,30 @@ export default function App() {
                 image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3",
                 tags: ["Performance", "Web Development", "SEO"]
               }
-            ].map((item) => (
-              <Card key={item.id} className="bg-white/10 backdrop-blur border-none text-white">
+            ].map((item, index) => (
+              <Card 
+                key={item.id} 
+                className="group bg-white/10 backdrop-blur border-none text-white transform-gpu hover:scale-110 hover:rotate-6 transition-all duration-500 motion-safe:animate-fade-in"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
                 <CardContent className="p-6">
-                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover rounded mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-300 mb-4">{item.description}</p>
+                  <div className="overflow-hidden rounded-lg">
+                    <img 
+                      src={item.image} 
+                      alt={item.title} 
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" 
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mt-4 group-hover:translate-y-1 transition-transform">{item.title}</h3>
+                  <p className="text-gray-300 mb-4 motion-safe:animate-slide-in" style={{ animationDelay: `${index * 150 + 100}ms` }}>{item.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
-                      <span key={tag} className="bg-white/20 px-2 py-1 rounded text-sm">{tag}</span>
+                      <span 
+                        key={tag} 
+                        className="bg-white/20 px-2 py-1 rounded text-sm hover:skew-x-6 transition-transform"
+                      >
+                        {tag}
+                      </span>
                     ))}
                   </div>
                 </CardContent>
