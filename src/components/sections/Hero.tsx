@@ -33,12 +33,7 @@ export const Hero: React.FC = () => {
             >
               Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
             </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
@@ -61,7 +56,7 @@ export const Hero: React.FC = () => {
                   <ArrowRight className="ml-2" />
                 </Button>
               </motion.div>
-            </motion.div>
+            </div>
           </motion.div>
           
           <motion.div
