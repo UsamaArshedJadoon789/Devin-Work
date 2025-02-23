@@ -36,8 +36,11 @@ const services = [
   }
 ]
 
+import { ScrollFadeIn } from "../animations/PageAnimations"
+
 export const Services = (): JSX.Element => (
-  <section className="container">
+  <ScrollFadeIn>
+    <section className="container">
     <div className="text-center">
       <h2 className="text-5xl font-bold motion-safe:animate-fade-in-down animate-duration-700">
         <GradientText>Our Services</GradientText>
@@ -68,4 +71,5 @@ export const Services = (): JSX.Element => (
       ))}
     </div>
   </section>
+  </ScrollFadeIn>
 )

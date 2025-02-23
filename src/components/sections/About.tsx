@@ -1,8 +1,11 @@
 import { GradientText } from "../ui/gradient-text"
 
+import { ScrollFadeIn } from "../animations/PageAnimations"
+
 export const About = () => {
   return (
-    <div className="min-h-screen bg-[#003344] py-20">
+    <ScrollFadeIn>
+      <div className="min-h-screen bg-[#003344] py-20">
       <div className="container">
         {/* Hero Section */}
         <section className="motion-safe:animate-fade-in-down">
@@ -69,5 +72,6 @@ export const About = () => {
         </section>
       </div>
     </div>
+    </ScrollFadeIn>
   )
 }
