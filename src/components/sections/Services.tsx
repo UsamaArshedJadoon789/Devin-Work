@@ -6,64 +6,73 @@ import { ScrollFadeIn } from "../animations/PageAnimations"
 
 const services = [
   {
-    title: "Brand Strategy and Development",
-    description: "Empowering brands with innovative strategies for digital success. Elevate your online presence and engage your audience effectively.",
-    image: "/images/services/brand-strategy.jpg"
+    title: "SEO Strategy & Planning",
+    description: "Data-driven SEO strategies tailored for SaaS companies. We analyze your market, competitors, and opportunities to create a comprehensive roadmap for organic growth.",
+    image: "/images/services/seo-strategy.jpg",
+    icon: "📊"
   },
   {
-    title: "Creative Digital Marketing",
-    description: "Transform your brand's digital presence with our creative digital marketing solutions. From captivating content to targeted campaigns.",
-    image: "/images/services/digital-marketing.jpg"
+    title: "Technical SEO Optimization",
+    description: "Enhance your website's technical foundation. We optimize site architecture, speed, mobile responsiveness, and crawlability to maximize search performance.",
+    image: "/images/services/technical-seo.jpg",
+    icon: "⚡"
   },
   {
-    title: "Marketing Analytics and Reporting",
-    description: "Elevate your marketing strategy with our robust analytics and reporting services. Gain insights, track performance metrics for maximum ROI.",
-    image: "/images/services/analytics.jpg"
+    title: "Content Strategy & Creation",
+    description: "Create high-quality, SEO-optimized content that ranks and converts. Our content strategies target your audience's search intent and business goals.",
+    image: "/images/services/content-strategy.jpg",
+    icon: "✍️"
   },
   {
-    title: "Event and Content Marketing",
-    description: "Engage your audience and create memorable experiences with our event and content marketing expertise.",
-    image: "/images/services/content-marketing.jpg"
+    title: "Link Building & Authority",
+    description: "Build high-quality backlinks that boost your domain authority. We focus on relevant, authoritative links that drive referral traffic and rankings.",
+    image: "/images/services/link-building.jpg",
+    icon: "🔗"
+  },
+  {
+    title: "Analytics & Reporting",
+    description: "Track and measure your SEO performance with detailed analytics. Get actionable insights and transparent reporting on your organic growth metrics.",
+    image: "/images/services/analytics.jpg",
+    icon: "📈"
+  },
+  {
+    title: "Local SEO & Optimization",
+    description: "Dominate local search results and attract nearby customers. Perfect for businesses targeting specific geographic areas or multiple locations.",
+    image: "/images/services/local-seo.jpg",
+    icon: "📍"
   }
 ]
 
 export const Services = (): JSX.Element => (
   <ScrollFadeIn>
-    <section className="container">
-      <div className="text-center">
-        <h2 className="motion-safe:animate-fade-in-down animate-duration-700">
+    <section className="container mx-auto px-4 py-32">
+      <div className="text-center mb-20">
+        <h2 className="text-5xl font-bold mb-6 motion-safe:animate-fade-in">
           <GradientText>Our Services</GradientText>
         </h2>
-        <p className="max-w-2xl mx-auto motion-safe:animate-fade-in motion-safe:animate-slide-in animate-delay-200 animate-duration-500">
-          Explore our comprehensive range of services designed to amplify your brand's presence
+        <p className="text-xl text-gray-300 max-w-2xl mx-auto motion-safe:animate-slide-up animate-delay-100">
+          Comprehensive SEO solutions to skyrocket your organic growth
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <motion.div
             key={service.title}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             className="transform-gpu"
           >
             <CardHover 
-              className="group relative bg-secondary/50 backdrop-blur border border-white/5 rounded-xl transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-accent/20 motion-safe:hover:animate-wiggle"
+              className="group relative bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-accent/20"
             >
-              <div className="overflow-hidden rounded-t-xl">
-                <img 
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-white transition-all duration-300 group-hover:text-accent group-hover:translate-y-1">{service.title}</h3>
-                <p className="text-gray-300 text-lg leading-relaxed transition-colors duration-300 group-hover:text-white/90 motion-safe:animate-slide-in" style={{ animationDelay: `${index * 150 + 100}ms` }}>{service.description}</p>
-                <div className="flex items-center gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-x-2">
-                  <span className="text-accent motion-safe:group-hover:animate-pulse">Learn more</span>
-                  <span className="text-accent motion-safe:animate-bounce">→</span>
-                </div>
+              <div className="text-4xl mb-6 motion-safe:group-hover:animate-bounce">{service.icon}</div>
+              <h3 className="text-2xl font-bold mb-3 text-white transition-all duration-300 group-hover:text-accent">{service.title}</h3>
+              <p className="text-gray-300 text-lg leading-relaxed transition-colors duration-300 group-hover:text-white/90">{service.description}</p>
+              <div className="mt-6 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-x-2">
+                <span className="text-accent font-medium">Learn more</span>
+                <span className="text-accent">→</span>
               </div>
               <div className="absolute bottom-0 left-0 w-full h-0.5 bg-accent/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"/>
             </CardHover>
