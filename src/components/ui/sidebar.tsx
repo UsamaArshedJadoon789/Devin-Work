@@ -1,4 +1,5 @@
 import * as React from "react"
+import type { HTMLAttributes, ReactNode, CSSProperties } from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"
 import { PanelLeft } from "lucide-react"
@@ -24,7 +25,7 @@ const SIDEBAR_WIDTH_MOBILE = "18rem"
 const SIDEBAR_WIDTH_ICON = "3rem"
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 
-type SidebarContext = {
+interface SidebarContext {
   state: "expanded" | "collapsed"
   open: boolean
   setOpen: (open: boolean) => void
@@ -45,13 +46,14 @@ function useSidebar() {
   return context
 }
 
-const SidebarProvider = React.forwardRef<
-  HTMLDivElement,
-  React.ComponentProps<"div"> & {
-    defaultOpen?: boolean
-    open?: boolean
-    onOpenChange?: (open: boolean) => void
-  }
+interface SidebarProviderProps extends HTMLAttributes<HTMLDivElement> {
+  defaultOpen?: boolean
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+  children?: ReactNode
+}
+
+const SidebarProvider = React.forwardRef<HTMLDivElement, SidebarProviderProps
 >(
   (
     {

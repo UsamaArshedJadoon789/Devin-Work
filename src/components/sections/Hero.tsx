@@ -1,8 +1,8 @@
 import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
-import type { FC } from "react"
+import * as React from "react"
 
-export const Hero: FC = () => {
+export const Hero = (): JSX.Element => {
   return (
     <section className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col">
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
