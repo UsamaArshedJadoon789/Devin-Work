@@ -53,6 +53,7 @@ export const Hero: React.FC = () => {
                 <ArrowRight className="ml-2" />
               </Button>
             </motion.div>
+          </motion.div>
           <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
             <div className="grid grid-cols-2 gap-4 p-6">
               <div className="space-y-4">
