@@ -15,6 +15,7 @@ interface NavigationProps {
       href: string;
     }>;
     href?: string;
+    isButton?: boolean;
   }[];
 }
 
@@ -50,7 +51,7 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
                         <NavigationMenuTrigger className="text-white/80 hover:text-white transition-colors">
                           {item.label}
                         </NavigationMenuTrigger>
-                        <DropdownMenu items={item.items} />
+                        <DropdownMenu items={item.items}>{item.label}</DropdownMenu>
                       </>
                     ) : (
                       <Link 
