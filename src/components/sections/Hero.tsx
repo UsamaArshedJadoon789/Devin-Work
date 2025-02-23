@@ -28,33 +28,36 @@ export const Hero: React.FC = () => {
             >
               Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
             </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6"
-            >
-              <div className="w-full sm:w-auto">
-                <motion.div whileHover={{ scale: 1.05 }}>
-                  <Button 
-                    className="w-full bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-colors duration-300"
-                  >
-                    Book a Strategy Call
-                  </Button>
-                </motion.div>
-              </div>
-              <div className="w-full sm:w-auto">
-                <motion.div whileHover={{ scale: 1.05 }}>
-                  <Button 
-                    variant="ghost" 
-                    className="w-full text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-colors duration-300"
-                  >
-                    Read stories & opinions
-                    <ArrowRight className="ml-2" />
-                  </Button>
-                </motion.div>
-              </div>
-            </motion.div>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full sm:w-auto"
+              >
+                <Button 
+                  className="w-full bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-colors duration-300"
+                >
+                  Book a Strategy Call
+                </Button>
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full sm:w-auto"
+              >
+                <Button 
+                  variant="ghost" 
+                  className="w-full text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-colors duration-300"
+                >
+                  Read stories & opinions
+                  <ArrowRight className="ml-2" />
+                </Button>
+              </motion.div>
+            </div>
           </div>
 
           <motion.div
