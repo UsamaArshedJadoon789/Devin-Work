@@ -1,5 +1,5 @@
 import * as React from "react"
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "./ui/navigation-menu"
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "./ui/navigation-menu"
 import { Button } from "./ui/button"
 import { Link } from "react-router-dom"
 import { cn } from "../lib/utils"
@@ -46,9 +46,11 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
                 {navigationItems.map((item) => (
                   <NavigationMenuItem key={item.label}>
                     {item.items ? (
-                      <DropdownMenu items={item.items}>
-                        {item.label}
-                      </DropdownMenu>
+                      <NavigationMenuTrigger className="text-white/80 hover:text-white transition-colors">
+                        <DropdownMenu items={item.items}>
+                          {item.label}
+                        </DropdownMenu>
+                      </NavigationMenuTrigger>
                     ) : (
                       <Link 
                         to={item.href!}
