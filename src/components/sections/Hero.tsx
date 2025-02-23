@@ -161,16 +161,40 @@ export const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      <div className="container mx-auto px-4 py-16 mt-auto">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="container mx-auto px-4 py-16 mt-auto"
+      >
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-25 hover:opacity-35 transition-opacity duration-300">
-          <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+          {[
+            { src: "/images/clients/hubspot.svg", alt: "HubSpot" },
+            { src: "/images/clients/attest.svg", alt: "Attest" },
+            { src: "/images/clients/flodesk.svg", alt: "Flodesk" },
+            { src: "/images/clients/recruitee.svg", alt: "Recruitee" },
+            { src: "/images/clients/testgorilla.svg", alt: "TestGorilla" },
+            { src: "/images/clients/travelperk.svg", alt: "TravelPerk" }
+          ].map((client, index) => (
+            <motion.div
+              key={client.alt}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <motion.img 
+                src={client.src} 
+                alt={client.alt} 
+                className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+              />
+            </motion.div>
+          ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
