@@ -1,9 +1,9 @@
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, NavigationMenuContent } from "./ui/navigation-menu"
 import { Button } from "./ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 import { Menu, MessageCircle } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { Navigation } from "./Navigation"
 
 
 const navigationItems = [
