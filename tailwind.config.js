@@ -83,6 +83,9 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'fade-in': 'fadeIn 0.5s ease-in',
         'slide-up': 'slideUp 0.5s ease-out'
+      },
+      boxShadow: {
+        'glow': '0 0 10px rgba(255, 255, 255, 0.3)',
       }
     }
   },

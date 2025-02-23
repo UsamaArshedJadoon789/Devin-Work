@@ -4,6 +4,7 @@ import { Button } from "./ui/button"
 import { Link } from "react-router-dom"
 import { cn } from "../lib/utils"
 import { DropdownMenu } from "./DropdownMenu"
+import { motion } from "framer-motion"
 
 const { useState, useEffect } = React;
 
@@ -38,9 +39,14 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
     )}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-white hover:text-white/90 transition-colors">
-            The Skyline Strategies
-          </Link>
+          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+            <Link 
+              to="/" 
+              className="text-2xl font-bold text-white hover:text-white/90 transition-all"
+            >
+              The Skyline Strategies
+            </Link>
+          </motion.div>
           <div className="hidden md:flex items-center gap-8">
             <NavigationMenu>
               <NavigationMenuList className="flex gap-8">
@@ -48,30 +54,36 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
                   <NavigationMenuItem key={item.label}>
                     {item.items ? (
                       <>
-                        <NavigationMenuTrigger className="text-white/80 hover:text-white transition-colors">
-                          {item.label}
-                        </NavigationMenuTrigger>
+                        <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+                          <NavigationMenuTrigger className="text-white/80 hover:text-white transition-all">
+                            {item.label}
+                          </NavigationMenuTrigger>
+                        </motion.div>
                         <DropdownMenu items={item.items}>{item.label}</DropdownMenu>
                       </>
                     ) : (
-                      <Link 
-                        to={item.href!}
-                        className="text-white/80 hover:text-white transition-colors px-4 py-2"
-                      >
-                        {item.label}
-                      </Link>
+                      <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+                        <Link 
+                          to={item.href!}
+                          className="text-white/80 hover:text-white transition-all px-4 py-2 inline-block"
+                        >
+                          {item.label}
+                        </Link>
+                      </motion.div>
                     )}
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
             {navigationItems.find(item => item.isButton) && (
-              <Button 
-                className="bg-forest hover:bg-forest-600 text-white transition-colors"
-                asChild
-              >
-                <Link to="/contact">Book a Strategy Call</Link>
-              </Button>
+              <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+                <Button 
+                  className="bg-forest hover:bg-forest-600 text-white transition-all"
+                  asChild
+                >
+                  <Link to="/contact">Book a Strategy Call</Link>
+                </Button>
+              </motion.div>
             )}
           </div>
         </div>

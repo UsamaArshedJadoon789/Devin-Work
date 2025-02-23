@@ -45,13 +45,18 @@ export const DropdownMenu = ({ children, items }: DropdownMenuProps) => {
           aria-orientation="vertical"
         >
           {items.map((item) => (
-            <Link
+            <motion.div
               key={item.title}
-              to={item.href}
-              className="block px-4 py-2 text-sm text-white/80 hover:bg-forest hover:text-white transition-colors"
+              whileHover={{ scale: 1.02, x: 4 }}
+              transition={{ duration: 0.2 }}
             >
-              {item.title}
-            </Link>
+              <Link
+                to={item.href}
+                className="block px-4 py-2 text-sm text-white/80 hover:bg-forest hover:text-white hover:shadow-glow transition-all"
+              >
+                {item.title}
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
       )}
