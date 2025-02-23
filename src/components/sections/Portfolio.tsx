@@ -1,5 +1,6 @@
 import { ScrollFadeIn } from "@/components/animations/PageAnimations"
 import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion"
 
 export const Portfolio = () => {
   const projects = [
@@ -39,11 +40,16 @@ export const Portfolio = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card 
+            <motion.div
               key={project.id}
-              className="group bg-white/10 backdrop-blur border-none text-white transform-gpu hover:scale-105 hover:rotate-3 transition-all duration-500 motion-safe:animate-fade-in"
-              style={{ animationDelay: `${index * 150}ms` }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className="transform-gpu"
             >
+              <Card 
+                className="group bg-white/10 backdrop-blur border-none text-white transform-gpu hover:scale-105 hover:rotate-3 transition-all duration-500"
+              >
               <CardContent className="p-6">
                 <div className="overflow-hidden rounded-lg">
                   <img 
@@ -70,6 +76,7 @@ export const Portfolio = () => {
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
         </div>
       </section>
