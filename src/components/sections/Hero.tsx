@@ -53,6 +53,7 @@ export const Hero: React.FC = () => {
               </Button>
             </motion.div>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -93,7 +94,7 @@ export const Hero: React.FC = () => {
                 </motion.div>
               </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
           </motion.div>
         </div>
 
