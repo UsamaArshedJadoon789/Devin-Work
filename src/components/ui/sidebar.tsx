@@ -53,8 +53,7 @@ interface SidebarProviderProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode
 }
 
-const SidebarProvider = React.forwardRef<HTMLDivElement, SidebarProviderProps
->(
+const SidebarProvider = React.forwardRef<HTMLDivElement, SidebarProviderProps>(
   (
     {
       defaultOpen = true,

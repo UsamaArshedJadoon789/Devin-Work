@@ -28,10 +28,6 @@ interface CarouselContextProps extends CarouselProps {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
-  api: ReturnType<typeof useEmblaCarousel>[1]
-  scrollPrev: () => void
-  scrollNext: () => void
-  canScrollPrev: boolean
   canScrollNext: boolean
 } & CarouselProps
 
