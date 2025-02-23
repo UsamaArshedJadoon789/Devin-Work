@@ -2,18 +2,18 @@ import { motion, type MotionProps } from "framer-motion"
 import { forwardRef } from "react"
 import type { ReactNode, HTMLAttributes } from "react"
 
-// Define animation props
+import { scrollReveal, optimizedFadeIn, microInteraction } from "./pageTransitions"
+
+// Define animation props with performance optimizations
 const fadeInProps = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  transition: { type: "tween", duration: 0.5 },
-  viewport: { once: true }
+  ...optimizedFadeIn,
+  whileInView: scrollReveal.visible,
+  initial: scrollReveal.hidden,
+  viewport: { once: true, margin: "-100px" }
 } as const
 
 const buttonProps = {
-  initial: { scale: 1 },
-  whileHover: { scale: 1.05 },
-  whileTap: { scale: 0.95 },
+  ...microInteraction,
   transition: { type: "spring", stiffness: 200, damping: 10 }
 } as const
 
@@ -67,8 +67,7 @@ AnimatedButton.displayName = "AnimatedButton"
 // Export animation variants
 export const fadeInUp = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { type: "tween", duration: 0.5 }
+  animate: { opacity: 1, y: 0 }
 } as const
 
 export const staggerContainer = {
@@ -77,20 +76,17 @@ export const staggerContainer = {
 
 export const parallaxScroll = {
   initial: { y: 0 },
-  animate: { y: 100 },
-  transition: { type: "spring", stiffness: 200, damping: 10 }
+  animate: { y: 100 }
 } as const
 
 export const scaleOnHover = buttonProps
 
 export const fadeInLeft = {
   initial: { opacity: 0, x: -20 },
-  animate: { opacity: 1, x: 0 },
-  transition: { type: "tween", duration: 0.5 }
+  animate: { opacity: 1, x: 0 }
 } as const
 
 export const fadeInRight = {
   initial: { opacity: 0, x: 20 },
-  animate: { opacity: 1, x: 0 },
-  transition: { type: "tween", duration: 0.5 }
+  animate: { opacity: 1, x: 0 }
 } as const
