@@ -32,40 +32,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen bg-[#003344]">
       {/* Navigation */}
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-white">The Skyline Strategies</Link>
-          <div className="hidden md:flex items-center gap-8">
-            <NavigationMenu>
-              <NavigationMenuList className="flex gap-8">
-                {navigationItems.map((item) => (
-                  <NavigationMenuItem key={item.label}>
-                    {item.items ? (
-                      <>
-                        <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
-                          {item.label}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <ul className="grid gap-3 p-6 w-[400px] bg-primary">
-                            {item.items.map((subItem) => (
-                              <li key={subItem.title} className="text-white hover:text-accent transition-colors">
-                                <Link to={subItem.href}>{subItem.title}</Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </NavigationMenuContent>
-                      </>
-                    ) : (
-                      <Link to={item.href} className="text-white hover:text-accent transition-colors">
-                        {item.label}
-                      </Link>
-                    )}
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
-            <Button className="bg-accent text-primary hover:bg-accent/90">Book a Strategy Call</Button>
-          </div>
+      <Navigation navigationItems={navigationItems} />
           
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
