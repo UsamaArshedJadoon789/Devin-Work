@@ -1,7 +1,7 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import { Button } from "../ui/button"
-import { ButtonWithIcon } from "../ui/button-with-icon"
+import { ButtonWithIcon } from "../ui/button-with-icon.js"
 
 export const Hero: React.FC = () => {
   return (
