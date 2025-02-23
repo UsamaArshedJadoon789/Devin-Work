@@ -27,9 +27,9 @@ const tutorials = [
 export const Tutorials = () => {
   return (
     <div className="min-h-screen bg-[#003344] py-20">
-      <div className="container mx-auto px-4">
+      <div className="container">
         {/* Hero Section */}
-        <section className="animate-fade-in animate-duration-700">
+        <section className="animate-fade-in animate-duration-700 px-4 md:px-6 lg:px-8">
           <h1 className="text-5xl font-bold mb-6 text-white">
             <GradientText>Step-by-Step Tutorials</GradientText>
           </h1>
@@ -39,7 +39,7 @@ export const Tutorials = () => {
         </section>
 
         {/* Tutorials Grid */}
-        <section className="mt-20">
+        <section className="mt-20 px-4 md:px-6 lg:px-8">
           <div className="space-y-8 animate-fade-in animate-duration-700">
             {tutorials.map((tutorial, index) => (
               <div

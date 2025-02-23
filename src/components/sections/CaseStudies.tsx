@@ -24,9 +24,9 @@ export const CaseStudies = () => {
 
   return (
     <div className="min-h-screen bg-[#003344] py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Hero Section */}
-        <section className="animate-fade-in animate-duration-700">
+        <section className="px-4 md:px-6 lg:px-8 animate-fade-in animate-duration-700">
           <h1 className="text-5xl font-bold mb-6 text-white">
             <GradientText>Our Success Stories</GradientText>
           </h1>
@@ -36,7 +36,7 @@ export const CaseStudies = () => {
         </section>
 
         {/* Case Studies Grid */}
-        <section className="mt-20 grid md:grid-cols-3 gap-8">
+        <section className="mt-20 grid md:grid-cols-3 gap-8 px-4 md:px-6 lg:px-8">
           {caseStudies.map((study, index) => (
             <div
               key={index}
@@ -55,7 +55,7 @@ export const CaseStudies = () => {
         </section>
 
         {/* Results Section */}
-        <section className="mt-20 animate-fade-in animate-duration-700">
+        <section className="mt-20 animate-fade-in animate-duration-700 px-4 md:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-12 text-center text-white">
             <GradientText>Measurable Results</GradientText>
           </h2>
