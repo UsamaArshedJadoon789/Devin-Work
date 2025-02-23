@@ -93,13 +93,13 @@ export const Hero: FC = () => {
       </div>
 
       <div className="container mx-auto px-4 py-16 mt-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center opacity-25 hover:opacity-35 transition-opacity duration-300">
-          <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
-          <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center">
+          <img src="/images/clients/hubspot.svg" alt="HubSpot" className="h-8 w-auto grayscale opacity-25 hover:opacity-100 hover:grayscale-0 transition-all duration-500 hover:scale-110 transform-gpu" />
+          <img src="/images/clients/attest.svg" alt="Attest" className="h-8 w-auto grayscale opacity-25 hover:opacity-100 hover:grayscale-0 transition-all duration-500 hover:scale-110 transform-gpu" />
+          <img src="/images/clients/flodesk.svg" alt="Flodesk" className="h-8 w-auto grayscale opacity-25 hover:opacity-100 hover:grayscale-0 transition-all duration-500 hover:scale-110 transform-gpu" />
+          <img src="/images/clients/recruitee.svg" alt="Recruitee" className="h-8 w-auto grayscale opacity-25 hover:opacity-100 hover:grayscale-0 transition-all duration-500 hover:scale-110 transform-gpu" />
+          <img src="/images/clients/testgorilla.svg" alt="TestGorilla" className="h-8 w-auto grayscale opacity-25 hover:opacity-100 hover:grayscale-0 transition-all duration-500 hover:scale-110 transform-gpu" />
+          <img src="/images/clients/travelperk.svg" alt="TravelPerk" className="h-8 w-auto grayscale opacity-25 hover:opacity-100 hover:grayscale-0 transition-all duration-500 hover:scale-110 transform-gpu" />
         </div>
       </div>
     </section>
