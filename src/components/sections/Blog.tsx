@@ -90,7 +90,7 @@ export const Blog = (): ReactElement => {
             }
           }}
         >
-          {blogPosts.map((post, index) => (
+          {blogPosts.map((post) => (
             <motion.div
               key={post.id}
               variants={{
