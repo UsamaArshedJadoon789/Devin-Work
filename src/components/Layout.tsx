@@ -9,9 +9,9 @@ const navigationItems = [
   {
     label: 'Why Skale?',
     items: [
-      { title: 'Overview', href: '/overview' },
+      { title: 'Our Approach', href: '/approach' },
       { title: 'Case Studies', href: '/case-studies' },
-      { title: 'Testimonials', href: '/testimonials' }
+      { title: 'Client Results', href: '/results' }
     ]
   },
   {
@@ -19,11 +19,12 @@ const navigationItems = [
     items: [
       { title: 'SEO Strategy', href: '/services/seo-strategy' },
       { title: 'Content Marketing', href: '/services/content-marketing' },
-      { title: 'Technical SEO', href: '/services/technical-seo' }
+      { title: 'Technical SEO', href: '/services/technical-seo' },
+      { title: 'Link Building', href: '/services/link-building' }
     ]
   },
   { label: 'Stories & Opinions', href: '/blog' },
-  { label: 'Learn', href: '/learn' }
+  { label: 'Learn', href: '/resources' }
 ];
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(true);
