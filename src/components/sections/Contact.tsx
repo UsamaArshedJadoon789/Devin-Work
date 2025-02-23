@@ -27,7 +27,7 @@ export const Contact = (): JSX.Element => {
     message: ""
   })
 
-  const [errors, setErrors] = useState<FormErrors>({})
+  const [formErrors, setFormErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
@@ -48,7 +48,7 @@ export const Contact = (): JSX.Element => {
       newErrors.message = "Message is required"
     }
     
-    setErrors(newErrors)
+    setFormErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
 
@@ -65,7 +65,7 @@ export const Contact = (): JSX.Element => {
       await new Promise(resolve => setTimeout(resolve, 1500))
       setSubmitStatus("success")
       setFormData({ name: "", email: "", company: "", message: "" })
-    } catch (error) {
+    } catch (_error) {
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
@@ -75,8 +75,8 @@ export const Contact = (): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
-    if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({ ...prev, [name]: undefined }))
+    if (formErrors[name as keyof FormErrors]) {
+      setFormErrors(prev => ({ ...prev, [name]: undefined }))
     }
   }
 
@@ -162,10 +162,10 @@ export const Contact = (): JSX.Element => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-secondary/50 border ${errors.name ? 'border-red-500' : 'border-white/10'} rounded-lg focus:outline-none focus:border-accent transition-colors`}
+                  className={`w-full px-4 py-3 bg-secondary/50 border ${formErrors.name ? 'border-red-500' : 'border-white/10'} rounded-lg focus:outline-none focus:border-accent transition-colors`}
                   placeholder="Your name"
                 />
-                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                {formErrors.name && <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>}
               </div>
 
               <div>
@@ -176,10 +176,10 @@ export const Contact = (): JSX.Element => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-secondary/50 border ${errors.email ? 'border-red-500' : 'border-white/10'} rounded-lg focus:outline-none focus:border-accent transition-colors`}
+                  className={`w-full px-4 py-3 bg-secondary/50 border ${formErrors.email ? 'border-red-500' : 'border-white/10'} rounded-lg focus:outline-none focus:border-accent transition-colors`}
                   placeholder="your@email.com"
                 />
-                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                {formErrors.email && <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>}
               </div>
 
               <div>
@@ -203,10 +203,10 @@ export const Contact = (): JSX.Element => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className={`w-full px-4 py-3 bg-secondary/50 border ${errors.message ? 'border-red-500' : 'border-white/10'} rounded-lg focus:outline-none focus:border-accent transition-colors`}
+                  className={`w-full px-4 py-3 bg-secondary/50 border ${formErrors.message ? 'border-red-500' : 'border-white/10'} rounded-lg focus:outline-none focus:border-accent transition-colors`}
                   placeholder="How can we help?"
                 />
-                {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+                {formErrors.message && <p className="text-red-500 text-sm mt-1">{formErrors.message}</p>}
               </div>
 
               <motion.div

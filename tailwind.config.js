@@ -1,5 +1,8 @@
+const tailwindcssAnimate = require('tailwindcss-animate');
+const typography = require('@tailwindcss/typography');
+
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
@@ -39,8 +42,8 @@ export default {
           to: { height: '0' }
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0) rotate(6deg)' },
-          '50%': { transform: 'translateY(-10px) rotate(6deg)' },
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
         },
         fadeIn: {
           '0%': { opacity: '0' },
@@ -61,8 +64,8 @@ export default {
     }
   },
   plugins: [
-    import('@tailwindcss/typography').then(m => m.default),
-    import('tailwindcss-animate').then(m => m.default)
+    typography,
+    tailwindcssAnimate
   ]
 }
 
