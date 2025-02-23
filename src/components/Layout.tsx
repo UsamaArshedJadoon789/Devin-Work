@@ -143,18 +143,18 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           <div>
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-300">
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/portfolio">Portfolio</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li className="transition-all duration-300 hover:translate-x-1 transform-gpu"><Link to="/about" className="hover:text-accent">About Us</Link></li>
+              <li className="transition-all duration-300 hover:translate-x-1 transform-gpu"><Link to="/services" className="hover:text-accent">Services</Link></li>
+              <li className="transition-all duration-300 hover:translate-x-1 transform-gpu"><Link to="/portfolio" className="hover:text-accent">Portfolio</Link></li>
+              <li className="transition-all duration-300 hover:translate-x-1 transform-gpu"><Link to="/contact" className="hover:text-accent">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-bold mb-4">Legal</h3>
             <ul className="space-y-2 text-gray-300">
-              <li><Link to="/terms">Terms &amp; Conditions</Link></li>
-              <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><Link to="/refund">Refund Policy</Link></li>
+              <li className="transition-all duration-300 hover:translate-x-1 transform-gpu"><Link to="/terms" className="hover:text-accent">Terms &amp; Conditions</Link></li>
+              <li className="transition-all duration-300 hover:translate-x-1 transform-gpu"><Link to="/privacy" className="hover:text-accent">Privacy Policy</Link></li>
+              <li className="transition-all duration-300 hover:translate-x-1 transform-gpu"><Link to="/refund" className="hover:text-accent">Refund Policy</Link></li>
             </ul>
           </div>
         </div>
