@@ -2,7 +2,7 @@ import * as React from "react"
 import { ArrowRight } from "lucide-react"
 import { Button } from "./button"
 
-type ButtonWithIconProps = {
+export interface ButtonWithIconProps {
   text: string
 }
 
