@@ -1,3 +1,4 @@
+import { type ReactElement } from "react"
 import { ScrollFadeIn } from "@/components/animations/PageAnimations"
 import { Card, CardContent } from "@/components/ui/card"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -6,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { contactFormSchema, type ContactFormValues } from "@/lib/validations/contact"
 import { toast } from "sonner"
 
-export const Contact = () => {
+export const Contact = (): ReactElement => {
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {

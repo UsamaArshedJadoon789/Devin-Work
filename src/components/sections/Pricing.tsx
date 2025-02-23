@@ -1,8 +1,9 @@
+import { type ReactElement } from "react"
 import { ScrollFadeIn } from "../animations/PageAnimations"
 import { Card, CardContent } from "../ui/card"
 import { GradientText } from "../ui/gradient-text"
 
-export const Pricing = () => {
+export const Pricing = (): ReactElement => {
   const plans = [
     {
       title: "Starter",
