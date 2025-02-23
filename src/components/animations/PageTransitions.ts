@@ -23,6 +23,21 @@ export const scrollReveal: Variants = {
   }
 }
 
+export const optimizedFadeIn: Variants = {
+  initial: { 
+    opacity: 0,
+    willChange: "opacity, transform" 
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      type: "tween",
+      duration: 0.3,
+      "@media (prefers-reduced-motion: reduce)": reducedMotion
+    }
+  }
+}
+
 export const microInteraction: Variants = {
   initial: { scale: 1 },
   whileHover: { 
