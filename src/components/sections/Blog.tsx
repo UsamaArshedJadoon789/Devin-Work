@@ -1,30 +1,35 @@
 import { type FC } from "react"
 import { GradientText } from "../ui/gradient-text"
 
-const posts = [
+interface Post {
+  id: number;
+  title: string;
+  excerpt: string;
+  image: string;
+  categories: string[];
+}
+
+const posts: Post[] = [
   {
     id: 1,
     title: "10 SEO Strategies for SaaS Growth",
     excerpt: "Learn the most effective SEO strategies specifically designed for SaaS companies.",
-    category: "SEO",
-    readTime: "5 min read",
-    image: "/images/blog/seo-strategies.jpg"
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3",
+    categories: ["SEO", "Strategy"]
   },
   {
     id: 2,
     title: "Content Marketing in 2024",
     excerpt: "Discover the latest trends and best practices in content marketing for maximum impact.",
-    category: "Content",
-    readTime: "7 min read",
-    image: "/images/blog/content-marketing.jpg"
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3",
+    categories: ["Content", "Marketing"]
   },
   {
     id: 3,
     title: "Technical SEO Checklist",
     excerpt: "A comprehensive checklist to ensure your website's technical SEO is optimized.",
-    category: "Technical",
-    readTime: "6 min read",
-    image: "/images/blog/technical-seo.jpg"
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3",
+    categories: ["Technical", "SEO"]
   }
 ]
 
