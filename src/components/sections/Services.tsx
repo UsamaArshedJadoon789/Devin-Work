@@ -1,6 +1,7 @@
 import { type JSX } from "react"
 import { CardHover } from "../ui/card-hover"
 import { GradientText } from "../ui/gradient-text"
+import { motion } from "framer-motion"
 import "../../styles/animations.css"
 
 const services = [
@@ -51,11 +52,16 @@ export const Services = (): JSX.Element => (
     </div>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {services.map((service, index) => (
-        <CardHover 
+        <motion.div
           key={service.title}
-          className="group relative bg-secondary/50 backdrop-blur border border-white/5 rounded-xl transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-accent/20 transform-gpu motion-safe:animate-fade-in motion-safe:animate-slide-in motion-safe:hover:animate-wiggle"
-          style={{ animationDelay: `${index * 150}ms` }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1, duration: 0.5 }}
+          className="transform-gpu"
         >
+          <CardHover 
+            className="group relative bg-secondary/50 backdrop-blur border border-white/5 rounded-xl transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-accent/20 transform-gpu motion-safe:hover:animate-wiggle"
+          >
           <div className="relative">
             <div className="text-4xl transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce transform-gpu">{service.icon}</div>
             <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 motion-safe:animate-ping"/>
@@ -68,6 +74,7 @@ export const Services = (): JSX.Element => (
           </div>
           <div className="absolute bottom-0 left-0 w-full h-0.5 bg-accent/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"/>
         </CardHover>
+        </motion.div>
       ))}
     </div>
   </section>
