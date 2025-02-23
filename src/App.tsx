@@ -352,7 +352,7 @@ export default function App() {
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300">Get Started</Button>
+                    <AnimatedButton className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300">Get Started</AnimatedButton>
                   </div>
                 </CardContent>
               </Card>
@@ -389,7 +389,7 @@ export default function App() {
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300">Get Started</Button>
+                    <AnimatedButton className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300">Get Started</AnimatedButton>
                   </div>
                 </CardContent>
               </Card>
@@ -423,7 +423,7 @@ export default function App() {
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300">Contact Us</Button>
+                    <AnimatedButton className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300">Contact Us</AnimatedButton>
                   </div>
                 </CardContent>
               </Card>
@@ -782,13 +782,13 @@ export default function App() {
                         </FormItem>
                       )}
                     />
-                    <Button 
+                    <AnimatedButton 
                       type="submit" 
                       className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300 motion-safe:animate-fade-in"
                       style={{ animationDelay: '400ms' }}
                     >
                       Send Message
-                    </Button>
+                    </AnimatedButton>
                   </form>
                 </Form>
               </CardContent>

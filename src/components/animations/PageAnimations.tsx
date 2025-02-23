@@ -40,6 +40,7 @@ export function ScrollFadeIn({ children }: { children: ReactNode }) {
 import { ButtonHTMLAttributes } from "react";
 import { VariantProps } from "class-variance-authority";
 import { buttonVariants } from "@/components/ui/button";
+import { Slot } from "@radix-ui/react-slot";
 
 export interface AnimatedButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
@@ -55,15 +56,19 @@ export function AnimatedButton({
   children,
   ...props
 }: AnimatedButtonProps) {
+  const Comp = asChild ? Slot : "button";
   return (
-    <motion.button
+    <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
     >
-      {children}
-    </motion.button>
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...props}
+      >
+        {children}
+      </Comp>
+    </motion.div>
   );
 }
 
