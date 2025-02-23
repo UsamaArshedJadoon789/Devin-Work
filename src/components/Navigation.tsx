@@ -1,8 +1,9 @@
 import * as React from "react"
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, NavigationMenuContent } from "./ui/navigation-menu"
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "./ui/navigation-menu"
 import { Button } from "./ui/button"
 import { Link } from "react-router-dom"
 import { cn } from "../lib/utils"
+import { DropdownMenu } from "./DropdownMenu"
 
 interface NavigationProps {
   navigationItems: {
@@ -43,27 +44,9 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
                 {navigationItems.map((item) => (
                   <NavigationMenuItem key={item.label}>
                     {item.items ? (
-                      <>
-                        <NavigationMenuTrigger 
-                          className="text-white/80 bg-transparent hover:text-white hover:bg-white/10 transition-colors"
-                        >
-                          {item.label}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <ul className="grid gap-3 p-6 w-[400px] bg-dark-800 rounded-lg border border-white/10">
-                            {item.items.map((subItem) => (
-                              <li key={subItem.title}>
-                                <Link 
-                                  to={subItem.href}
-                                  className="block text-white/80 hover:text-white hover:bg-forest/10 rounded-md px-4 py-2 transition-colors"
-                                >
-                                  {subItem.title}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </NavigationMenuContent>
-                      </>
+                      <DropdownMenu items={item.items}>
+                        {item.label}
+                      </DropdownMenu>
                     ) : (
                       <Link 
                         to={item.href!}
