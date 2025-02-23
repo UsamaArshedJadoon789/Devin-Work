@@ -24,11 +24,11 @@ export const scrollReveal: Variants = {
 }
 
 export const optimizedFadeIn: Variants = {
-  initial: { 
+  hidden: { 
     opacity: 0,
     willChange: "opacity, transform" 
   },
-  animate: {
+  visible: {
     opacity: 1,
     transition: {
       type: "tween",
