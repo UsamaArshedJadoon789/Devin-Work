@@ -2,18 +2,21 @@ import { motion, type MotionProps } from "framer-motion"
 import { forwardRef } from "react"
 import type { ReactNode, HTMLAttributes } from "react"
 
-import { scrollReveal, optimizedFadeIn, microInteraction } from "./PageTransitions"
+import { scrollReveal, optimizedFadeIn, microInteraction } from "./pageTransitions"
 
 // Define animation props with performance optimizations
 const fadeInProps = {
-  ...optimizedFadeIn,
-  whileInView: scrollReveal.visible,
-  initial: scrollReveal.hidden,
+  initial: "hidden",
+  whileInView: "visible",
+  variants: scrollReveal,
   viewport: { once: true, margin: "-100px" }
 } as const
 
 const buttonProps = {
-  ...microInteraction,
+  initial: "initial",
+  whileHover: "whileHover",
+  whileTap: "whileTap",
+  variants: microInteraction,
   transition: { type: "spring", stiffness: 200, damping: 10 }
 } as const
 
