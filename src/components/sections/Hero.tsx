@@ -1,10 +1,12 @@
 import { type FC } from "react"
 import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
+import { ParallaxBackground, AnimatedButton } from "../animations/PageAnimations"
 
 export const Hero: FC = () => {
   return (
-    <section className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col">
+    <ParallaxBackground>
+      <section className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col transform-gpu">
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[url('/images/noise/noise.png')] opacity-5 mix-blend-overlay pointer-events-none"></div>
       
@@ -18,12 +20,12 @@ export const Hero: FC = () => {
               Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fade-in animate-slide-up animate-delay-300 animate-duration-500">
-              <Button 
+              <AnimatedButton 
                 className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] hover:scale-105 text-black font-semibold text-base sm:text-lg rounded-full transition-all duration-500"
               >
                 Book a Strategy Call
-              </Button>
-              <Button 
+              </AnimatedButton>
+              <AnimatedButton 
                 variant="ghost"
                 className="group/arrow inline-flex items-center gap-2 w-full sm:w-auto text-white hover:bg-white/10 hover:scale-105 text-base sm:text-lg rounded-full border border-white/20 transition-all duration-500"
               >
@@ -103,5 +105,6 @@ export const Hero: FC = () => {
         </div>
       </div>
     </section>
+    </ParallaxBackground>
   )
 }

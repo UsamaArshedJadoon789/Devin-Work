@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Card } from "../ui/card"
 import { GradientText } from "../ui/gradient-text"
+import { ParallaxBackground } from "../animations/PageAnimations"
 import { Button } from "../ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
@@ -40,7 +41,8 @@ export const Testimonials = (): JSX.Element => {
   }
 
   return (
-    <section className="container py-32">
+    <ParallaxBackground>
+      <section className="container py-32 transform-gpu">
       <div className="text-center mb-20">
         <h2 className="text-5xl font-bold mb-6 animate-fade-in">
           <GradientText>What Our Clients Say</GradientText>
@@ -98,5 +100,6 @@ export const Testimonials = (): JSX.Element => {
         </Button>
       </div>
     </section>
+    </ParallaxBackground>
   )
 }
