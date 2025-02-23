@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "../ui/button"
 
-type HeroProps = {}
+type HeroProps = Record<string, never>
 
 export const Hero: FC<HeroProps> = () => {
   return (
