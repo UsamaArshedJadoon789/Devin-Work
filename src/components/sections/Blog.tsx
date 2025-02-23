@@ -1,3 +1,4 @@
+import { type FC } from "react"
 import { GradientText } from "../ui/gradient-text"
 
 const posts = [
@@ -27,18 +28,20 @@ const posts = [
   }
 ]
 
-export const Blog = (): JSX.Element => {
+export const Blog: FC = () => {
   return (
     <div className="min-h-screen bg-[#003344] py-20">
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <section className="animate-fade-in animate-duration-700">
-          <h1 className="text-5xl font-bold mb-6 text-white">
-            <GradientText>Blog & Insights</GradientText>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl animate-slide-up animate-delay-200">
-            Expert insights and strategies to help you grow your organic traffic and revenue.
-          </p>
+          <div className="text-center">
+            <h1 className="text-5xl font-bold mb-6 text-white">
+              <GradientText>Blog & Insights</GradientText>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up animate-delay-200">
+              Expert insights and strategies to help you grow your organic traffic and revenue.
+            </p>
+          </div>
         </section>
 
         {/* Blog Grid */}
