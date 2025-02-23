@@ -51,12 +51,10 @@ export const Hero: FC = () => {
               >
                 <Button 
                   variant="ghost"
-                  className="w-full text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-colors duration-300"
+                  className="w-full text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-colors duration-300 inline-flex items-center gap-2"
                 >
-                  <div className="flex items-center justify-center gap-2">
-                    <span>Read stories & opinions</span>
-                    <span><ArrowRight /></span>
-                  </div>
+                  Read stories & opinions
+                  <ArrowRight size={20} />
                 </Button>
               </motion.div>
             </div>
