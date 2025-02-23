@@ -39,28 +39,30 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 sm:gap-6"
             >
-              <motion.div
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
+                className="w-full sm:w-auto"
               >
                 <Button 
-                  className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-colors duration-300"
+                  className="w-full bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-colors duration-300"
                 >
                   Book a Strategy Call
                 </Button>
-              </motion.div>
-              <motion.div
+              </motion.button>
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
+                className="w-full sm:w-auto"
               >
                 <Button 
                   variant="ghost" 
-                  className="w-full sm:w-auto text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-colors duration-300"
+                  className="w-full text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-colors duration-300"
                 >
                   Read stories & opinions
                   <ArrowRight className="ml-2" />
                 </Button>
-              </motion.div>
+              </motion.button>
             </motion.div>
           </motion.div>
           
