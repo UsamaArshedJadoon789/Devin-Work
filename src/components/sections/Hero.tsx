@@ -1,7 +1,7 @@
-import { Button } from "../ui/button"
-import { ArrowRight } from "lucide-react"
-import { motion } from "framer-motion"
 import * as React from "react"
+import { motion } from "framer-motion"
+import { ArrowRight } from "lucide-react"
+import { Button } from "../ui/button"
 
 export const Hero: React.FC = () => {
   return (
