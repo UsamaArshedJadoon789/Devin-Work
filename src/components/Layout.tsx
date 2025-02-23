@@ -38,66 +38,30 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="hidden md:flex items-center gap-8">
             <NavigationMenu>
               <NavigationMenuList className="flex gap-8">
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
-                    Why Skale?
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
-                      <li className="text-white hover:text-accent transition-colors">
-                        <Link to="/about">About Us</Link>
-                      </li>
-                      <li className="text-white hover:text-accent transition-colors">
-                        <Link to="/case-studies">Case Studies</Link>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
-                    Services
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
-                      <li className="text-white hover:text-accent transition-colors">
-                        <Link to="/services/seo">SEO Services</Link>
-                      </li>
-                      <li className="text-white hover:text-accent transition-colors">
-                        <Link to="/services/content">Content Marketing</Link>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
-                    Stories &amp; Opinions
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
-                      <li className="text-white hover:text-accent transition-colors">
-                        <Link to="/blog">Blog</Link>
-                      </li>
-                      <li className="text-white hover:text-accent transition-colors">
-                        <Link to="/resources">Resources</Link>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
-                    Learn
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
-                      <li className="text-white hover:text-accent transition-colors">
-                        <Link to="/guides">Guides</Link>
-                      </li>
-                      <li className="text-white hover:text-accent transition-colors">
-                        <Link to="/tutorials">Tutorials</Link>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+                {navigationItems.map((item) => (
+                  <NavigationMenuItem key={item.label}>
+                    {item.items ? (
+                      <>
+                        <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
+                          {item.label}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="grid gap-3 p-6 w-[400px] bg-primary">
+                            {item.items.map((subItem) => (
+                              <li key={subItem.title} className="text-white hover:text-accent transition-colors">
+                                <Link to={subItem.href}>{subItem.title}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </NavigationMenuContent>
+                      </>
+                    ) : (
+                      <Link to={item.href} className="text-white hover:text-accent transition-colors">
+                        {item.label}
+                      </Link>
+                    )}
+                  </NavigationMenuItem>
+                ))}
               </NavigationMenuList>
             </NavigationMenu>
             <Button className="bg-accent text-primary hover:bg-accent/90">Book a Strategy Call</Button>
@@ -111,34 +75,33 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             </SheetTrigger>
             <SheetContent side="right" className="bg-blue-900 text-white">
               <nav className="flex flex-col gap-6">
-                <div>
-                  <h3 className="text-accent mb-2">Why Skale?</h3>
-                  <div className="flex flex-col gap-2">
-                    <Link to="/about" className="text-white hover:text-accent transition-colors">About Us</Link>
-                    <Link to="/case-studies" className="text-white hover:text-accent transition-colors">Case Studies</Link>
+                {navigationItems.map((item) => (
+                  <div key={item.label}>
+                    <h3 className="text-accent mb-2">{item.label}</h3>
+                    {item.items ? (
+                      <div className="flex flex-col gap-2">
+                        {item.items.map((subItem) => (
+                          <Link
+                            key={subItem.title}
+                            to={subItem.href}
+                            className="text-white hover:text-accent transition-colors"
+                          >
+                            {subItem.title}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="flex flex-col gap-2">
+                        <Link
+                          to={item.href}
+                          className="text-white hover:text-accent transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      </div>
+                    )}
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-accent mb-2">Services</h3>
-                  <div className="flex flex-col gap-2">
-                    <Link to="/services/seo" className="text-white hover:text-accent transition-colors">SEO Services</Link>
-                    <Link to="/services/content" className="text-white hover:text-accent transition-colors">Content Marketing</Link>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-accent mb-2">Stories &amp; Opinions</h3>
-                  <div className="flex flex-col gap-2">
-                    <Link to="/blog" className="text-white hover:text-accent transition-colors">Blog</Link>
-                    <Link to="/resources" className="text-white hover:text-accent transition-colors">Resources</Link>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-accent mb-2">Learn</h3>
-                  <div className="flex flex-col gap-2">
-                    <Link to="/guides" className="text-white hover:text-accent transition-colors">Guides</Link>
-                    <Link to="/tutorials" className="text-white hover:text-accent transition-colors">Tutorials</Link>
-                  </div>
-                </div>
+                ))}
                 <Button className="bg-accent text-primary hover:bg-accent/90 w-full">Book a Strategy Call</Button>
               </nav>
             </SheetContent>
