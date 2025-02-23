@@ -1,6 +1,5 @@
 import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
-import * as React from "react"
 
 export const Hero = (): JSX.Element => {
   return (
@@ -27,7 +26,7 @@ export const Hero = (): JSX.Element => {
                 variant="ghost" 
                 className="w-full sm:w-auto text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-300"
               >
-                Read stories & opinions
+                Read stories &amp; opinions
                 <ArrowRight className="ml-2" />
               </Button>
             </div>

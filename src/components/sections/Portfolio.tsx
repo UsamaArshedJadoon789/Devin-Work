@@ -1,4 +1,4 @@
-import * as React from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { ScrollFadeIn } from "../animations/PageAnimations"
 import { GradientText } from "../ui/gradient-text"
@@ -38,7 +38,7 @@ const projects = [
 ]
 
 export const Portfolio = (): JSX.Element => {
-  const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
     <ScrollFadeIn>

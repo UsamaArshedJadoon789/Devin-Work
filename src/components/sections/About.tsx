@@ -1,4 +1,4 @@
-import * as React from "react"
+// Removed unused React import since we use JSX transform
 import { motion } from "framer-motion"
 import { ScrollFadeIn } from "../animations/PageAnimations"
 import { GradientText } from "../ui/gradient-text"

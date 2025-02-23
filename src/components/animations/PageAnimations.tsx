@@ -1,75 +1,91 @@
-import * as React from "react"
-import { motion, type HTMLMotionProps } from "framer-motion"
+import { motion } from "framer-motion"
+import { forwardRef } from "react"
+import type { ComponentPropsWithRef } from "react"
 
-// Animation variants
-export const fadeInUp = {
+// Define animation props
+const fadeInProps = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
-}
+  whileInView: { opacity: 1, y: 0 },
+  transition: { type: "tween", duration: 0.5 },
+  viewport: { once: true }
+} as const
 
-export const staggerContainer = {
-  animate: { transition: { staggerChildren: 0.1 } }
-}
-
-export const parallaxScroll = {
-  initial: { y: 0 },
-  animate: (offset: number) => ({
-    y: offset,
-    transition: { type: "spring", stiffness: 100 }
-  })
-}
-
-export const scaleOnHover = {
+const buttonProps = {
   initial: { scale: 1 },
   whileHover: { scale: 1.05 },
-  whileTap: { scale: 0.95 }
-}
+  whileTap: { scale: 0.95 },
+  transition: { type: "spring", stiffness: 200, damping: 10 }
+} as const
 
-export const fadeInLeft = {
-  initial: { opacity: 0, x: -20 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.5 }
-}
+// Create components
+type ScrollFadeInProps = ComponentPropsWithRef<typeof motion.div>
+type AnimatedButtonProps = ComponentPropsWithRef<typeof motion.button>
 
-export const fadeInRight = {
-  initial: { opacity: 0, x: 20 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.5 }
-}
-
-interface ScrollFadeInProps extends HTMLMotionProps<"div"> {
-  children: React.ReactNode
-}
-
-export type { ScrollFadeInProps, AnimatedButtonProps }
-export function ScrollFadeIn({ children, ...props }: ScrollFadeInProps): JSX.Element {
+export const ScrollFadeIn = forwardRef<HTMLDivElement, ScrollFadeInProps>((props, ref) => {
+  const { className, children, ...rest } = props
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-      {...props}
+      ref={ref}
+      initial={fadeInProps.initial}
+      whileInView={fadeInProps.whileInView}
+      transition={fadeInProps.transition}
+      viewport={fadeInProps.viewport}
+      className={className}
+      {...rest}
     >
       {children}
     </motion.div>
   )
-}
+})
 
-interface AnimatedButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode
-}
+ScrollFadeIn.displayName = "ScrollFadeIn"
 
-export function AnimatedButton({ children, ...props }: AnimatedButtonProps): JSX.Element {
+export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>((props, ref) => {
+  const { className, children, ...rest } = props
   return (
     <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ duration: 0.2 }}
-      {...props}
+      ref={ref}
+      initial={buttonProps.initial}
+      whileHover={buttonProps.whileHover}
+      whileTap={buttonProps.whileTap}
+      transition={buttonProps.transition}
+      className={className}
+      {...rest}
     >
       {children}
     </motion.button>
   )
-}
+})
+
+AnimatedButton.displayName = "AnimatedButton"
+
+// Export animation variants
+export const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { type: "tween", duration: 0.5 }
+} as const
+
+export const staggerContainer = {
+  animate: { transition: { staggerChildren: 0.1 } }
+} as const
+
+export const parallaxScroll = {
+  initial: { y: 0 },
+  animate: { y: 100 },
+  transition: { type: "spring", stiffness: 200, damping: 10 }
+} as const
+
+export const scaleOnHover = buttonProps
+
+export const fadeInLeft = {
+  initial: { opacity: 0, x: -20 },
+  animate: { opacity: 1, x: 0 },
+  transition: { type: "tween", duration: 0.5 }
+} as const
+
+export const fadeInRight = {
+  initial: { opacity: 0, x: 20 },
+  animate: { opacity: 1, x: 0 },
+  transition: { type: "tween", duration: 0.5 }
+} as const
