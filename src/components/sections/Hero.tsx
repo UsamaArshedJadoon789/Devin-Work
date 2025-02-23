@@ -1,9 +1,9 @@
-import { type FC } from "react"
+import * as React from "react"
 import { motion } from "framer-motion"
 import { Button } from "../ui/button"
 import { ButtonWithIcon } from "../ui/button-with-icon"
 
-export const Hero: FC = () => {
+export const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col">
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
