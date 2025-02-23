@@ -26,11 +26,11 @@ export const CaseStudies = () => {
     <div className="min-h-screen bg-[#003344] py-20">
       <div className="container mx-auto">
         {/* Hero Section */}
-        <section className="px-4 md:px-6 lg:px-8 animate-fade-in animate-duration-700">
-          <h1 className="text-5xl font-bold mb-6 text-white">
+        <section className="px-4 md:px-6 lg:px-8 motion-safe:animate-fade-in animate-duration-700">
+          <h1 className="text-5xl font-bold mb-6 text-white motion-safe:animate-fade-in-down">
             <GradientText>Our Success Stories</GradientText>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl animate-slide-up animate-delay-200">
+          <p className="text-xl text-gray-300 max-w-3xl motion-safe:animate-slide-up animate-delay-200">
             Discover how we've helped SaaS companies achieve remarkable growth through strategic SEO implementations.
           </p>
         </section>
@@ -67,7 +67,7 @@ export const CaseStudies = () => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-8 bg-secondary/50 backdrop-blur border border-white/5 rounded-xl transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-white/10 transform-gpu"
+                className="text-center p-8 bg-secondary/50 backdrop-blur border border-white/5 rounded-xl transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-white/10 transform-gpu motion-safe:animate-fade-in motion-safe:animate-slide-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-4xl font-bold text-accent mb-2">{stat.metric}</div>
