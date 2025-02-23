@@ -1,8 +1,8 @@
-import { motion, type MotionProps, type Variants } from "framer-motion"
+import { motion, type MotionProps } from "framer-motion"
 import { forwardRef } from "react"
 import type { ReactNode, HTMLAttributes } from "react"
 
-import { scrollReveal, optimizedFadeIn, microInteraction } from "./pageTransitions"
+import { scrollReveal, optimizedFadeIn, microInteraction } from "./PageTransitions"
 
 // Define animation props with performance optimizations
 const fadeInProps = {
@@ -63,30 +63,3 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>
 })
 
 AnimatedButton.displayName = "AnimatedButton"
-
-// Export animation variants
-export const fadeInUp: Variants = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 }
-}
-
-export const staggerContainer: Variants = {
-  animate: { transition: { staggerChildren: 0.1 } }
-}
-
-export const parallaxScroll: Variants = {
-  initial: { y: 0 },
-  animate: { y: 100 }
-}
-
-export const scaleOnHover: Variants = buttonProps
-
-export const fadeInLeft: Variants = {
-  initial: { opacity: 0, x: -20 },
-  animate: { opacity: 1, x: 0 }
-}
-
-export const fadeInRight: Variants = {
-  initial: { opacity: 0, x: 20 },
-  animate: { opacity: 1, x: 0 }
-}
