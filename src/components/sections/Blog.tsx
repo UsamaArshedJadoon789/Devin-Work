@@ -1,5 +1,6 @@
 import { type FC } from "react"
 import { GradientText } from "../ui/gradient-text"
+import { motion } from "framer-motion"
 
 interface Post {
   id: number;
@@ -57,11 +58,16 @@ export const Blog: FC = () => {
         <section>
           <div className="grid md:grid-cols-3 gap-8">
             {posts.map((post, index) => (
-              <article 
+              <motion.div
                 key={post.id}
-                className="group bg-white/10 backdrop-blur border-none overflow-hidden rounded-xl transition-all duration-500 motion-safe:animate-fade-in transform-gpu hover:scale-105"
-                style={{ animationDelay: `${index * 150}ms` }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="transform-gpu"
               >
+                <article 
+                  className="group bg-white/10 backdrop-blur border-none overflow-hidden rounded-xl transition-all duration-500 transform-gpu hover:scale-105"
+                >
                 <div className="relative overflow-hidden">
                   <img 
                     src={post.image} 
@@ -87,6 +93,7 @@ export const Blog: FC = () => {
                   </button>
                 </div>
               </article>
+              </motion.div>
             ))}
           </div>
         </section>
