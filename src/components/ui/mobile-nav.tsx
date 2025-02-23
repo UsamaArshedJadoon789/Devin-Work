@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
-import { microInteraction } from "../animations/PageTransitions"
+import { microInteraction } from "../animations/pageTransitions"
 
 export const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false)
