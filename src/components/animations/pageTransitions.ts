@@ -1,5 +1,10 @@
 import type { Variants } from "framer-motion"
 
+// Reduced motion variants that respect user preferences
+const reducedMotion = {
+  transition: { duration: 0 }
+}
+
 export const scrollReveal: Variants = {
   hidden: { 
     opacity: 0,
@@ -12,7 +17,8 @@ export const scrollReveal: Variants = {
     transition: {
       type: "spring",
       stiffness: 200,
-      damping: 20
+      damping: 20,
+      "@media (prefers-reduced-motion: reduce)": reducedMotion
     }
   }
 }
@@ -26,7 +32,8 @@ export const optimizedFadeIn: Variants = {
     opacity: 1,
     transition: {
       type: "tween",
-      duration: 0.3
+      duration: 0.3,
+      "@media (prefers-reduced-motion: reduce)": reducedMotion
     }
   }
 }
@@ -38,7 +45,8 @@ export const microInteraction: Variants = {
     transition: {
       type: "spring",
       stiffness: 400,
-      damping: 20
+      damping: 20,
+      "@media (prefers-reduced-motion: reduce)": reducedMotion
     }
   },
   whileTap: { 
@@ -46,7 +54,8 @@ export const microInteraction: Variants = {
     transition: {
       type: "spring",
       stiffness: 400,
-      damping: 20
+      damping: 20,
+      "@media (prefers-reduced-motion: reduce)": reducedMotion
     }
   }
 }
