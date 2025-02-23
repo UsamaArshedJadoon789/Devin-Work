@@ -65,7 +65,7 @@ export const Contact = (): JSX.Element => {
       await new Promise(resolve => setTimeout(resolve, 1500))
       setSubmitStatus("success")
       setFormData({ name: "", email: "", company: "", message: "" })
-    } catch (_error) {
+    } catch {
       setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
