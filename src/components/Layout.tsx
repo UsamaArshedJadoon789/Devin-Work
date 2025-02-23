@@ -15,64 +15,64 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-white">The Skyline Strategies</Link>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 animate-fade-in animate-duration-500">
             <NavigationMenu>
               <NavigationMenuList className="flex gap-8">
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
+                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10 transition-all duration-300 hover:scale-105 transform-gpu">
                     Why Skale?
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
-                      <li className="text-white hover:text-accent transition-colors">
+                    <ul className="grid gap-3 p-6 w-[400px] bg-primary animate-fade-in animate-slide-up animate-duration-300">
+                      <li className="text-white hover:text-accent transition-all duration-300 hover:translate-x-1 transform-gpu">
                         <Link to="/about">About Us</Link>
                       </li>
-                      <li className="text-white hover:text-accent transition-colors">
+                      <li className="text-white hover:text-accent transition-all duration-300 hover:translate-x-1 transform-gpu">
                         <Link to="/case-studies">Case Studies</Link>
                       </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
+                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10 transition-all duration-300 hover:scale-105 transform-gpu">
                     Services
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
-                      <li className="text-white hover:text-accent transition-colors">
+                    <ul className="grid gap-3 p-6 w-[400px] bg-primary animate-fade-in animate-slide-up animate-duration-300">
+                      <li className="text-white hover:text-accent transition-all duration-300 hover:translate-x-1 transform-gpu">
                         <Link to="/services/seo">SEO Services</Link>
                       </li>
-                      <li className="text-white hover:text-accent transition-colors">
+                      <li className="text-white hover:text-accent transition-all duration-300 hover:translate-x-1 transform-gpu">
                         <Link to="/services/content">Content Marketing</Link>
                       </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
+                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10 transition-all duration-300 hover:scale-105 transform-gpu">
                     Stories &amp; Opinions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
-                      <li className="text-white hover:text-accent transition-colors">
+                    <ul className="grid gap-3 p-6 w-[400px] bg-primary animate-fade-in animate-slide-up animate-duration-300">
+                      <li className="text-white hover:text-accent transition-all duration-300 hover:translate-x-1 transform-gpu">
                         <Link to="/blog">Blog</Link>
                       </li>
-                      <li className="text-white hover:text-accent transition-colors">
+                      <li className="text-white hover:text-accent transition-all duration-300 hover:translate-x-1 transform-gpu">
                         <Link to="/resources">Resources</Link>
                       </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10">
+                  <NavigationMenuTrigger className="text-white bg-transparent hover:bg-white/10 transition-all duration-300 hover:scale-105 transform-gpu">
                     Learn
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 w-[400px] bg-primary">
-                      <li className="text-white hover:text-accent transition-colors">
+                    <ul className="grid gap-3 p-6 w-[400px] bg-primary animate-fade-in animate-slide-up animate-duration-300">
+                      <li className="text-white hover:text-accent transition-all duration-300 hover:translate-x-1 transform-gpu">
                         <Link to="/guides">Guides</Link>
                       </li>
-                      <li className="text-white hover:text-accent transition-colors">
+                      <li className="text-white hover:text-accent transition-all duration-300 hover:translate-x-1 transform-gpu">
                         <Link to="/tutorials">Tutorials</Link>
                       </li>
                     </ul>
