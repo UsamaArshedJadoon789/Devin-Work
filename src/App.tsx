@@ -15,6 +15,7 @@ import { GradientText } from "./components/ui/gradient-text"
 import { Toaster, toast } from "sonner"
 import { useState } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { AnimatedPage, ParallaxBackground } from "@/components/animations/PageAnimations"
 export default function App() {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(true);
   const [currentPage, setCurrentPage] = useState('home');
@@ -51,8 +52,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#003344] flex flex-col">
-      {/* Navigation */}
+    <AnimatedPage>
+      <ParallaxBackground>
+        <div className="min-h-screen w-full bg-[#003344] flex flex-col">
+          {/* Navigation */}
       <nav className="container mx-auto py-4 sticky top-0 z-50 bg-[#003344]/80 backdrop-blur">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-white">The Skyline Strategies</div>
@@ -839,6 +842,8 @@ export default function App() {
         </a>
       )}
       <Toaster position="top-right" />
-    </div>
+        </div>
+      </ParallaxBackground>
+    </AnimatedPage>
   )
 }
