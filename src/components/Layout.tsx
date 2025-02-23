@@ -1,9 +1,8 @@
-import { Button } from "./ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
-import { Menu, MessageCircle } from "lucide-react"
+import { MessageCircle } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { Navigation } from "./Navigation"
+import { MobileMenu } from "./MobileMenu"
 
 
 const navigationItems = [
@@ -34,45 +33,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       {/* Navigation */}
       <Navigation navigationItems={navigationItems} />
           
-          <Sheet>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="text-white">
-                <Menu size={24} />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="bg-blue-900 text-white">
-              <nav className="flex flex-col gap-6">
-                {navigationItems.map((item) => (
-                  <div key={item.label}>
-                    <h3 className="text-accent mb-2">{item.label}</h3>
-                    {item.items ? (
-                      <div className="flex flex-col gap-2">
-                        {item.items.map((subItem) => (
-                          <Link
-                            key={subItem.title}
-                            to={subItem.href}
-                            className="text-white hover:text-accent transition-colors"
-                          >
-                            {subItem.title}
-                          </Link>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="flex flex-col gap-2">
-                        <Link
-                          to={item.href}
-                          className="text-white hover:text-accent transition-colors"
-                        >
-                          {item.label}
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                ))}
-                <Button className="bg-accent text-primary hover:bg-accent/90 w-full">Book a Strategy Call</Button>
-              </nav>
-            </SheetContent>
-          </Sheet>
+          <MobileMenu navigationItems={navigationItems} />
         </div>
       </nav>
 
