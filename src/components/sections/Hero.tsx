@@ -11,10 +11,10 @@ export const Hero = (): JSX.Element => {
       <div className="container mx-auto px-4 flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-2xl lg:max-w-4xl relative">
           <div className="relative z-10 mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
+            <h1 className="mb-6 lg:mb-8 leading-[1.1] motion-safe:animate-fade-in">
               We Build SEO Revenue Engines For SaaS Brands
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl animate-slide-up delay-100">
+            <p className="mb-8 lg:mb-10 max-w-2xl motion-safe:animate-slide-up animate-delay-100">
               Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-slide-up delay-200">
