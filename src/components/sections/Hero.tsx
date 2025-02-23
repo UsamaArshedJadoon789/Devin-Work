@@ -11,49 +11,43 @@ export const Hero: React.FC = () => {
       
       <div className="container mx-auto px-4 flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-2xl lg:max-w-4xl relative">
-          <div className="relative z-10 mb-12">
-            <motion.div
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 mb-12"
+          >
+            <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1]"
             >
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1]"
+              We Build SEO Revenue Engines For SaaS Brands
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl"
+            >
+              Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
+            </motion.p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <Button 
+                className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300"
               >
-                We Build SEO Revenue Engines For SaaS Brands
-              </motion.h1>
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl"
+                Book a Strategy Call
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="w-full sm:w-auto text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-300"
               >
-                Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
-              </motion.p>
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 sm:gap-6"
-              >
-                <Button 
-                  className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300"
-                >
-                  Book a Strategy Call
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  className="w-full sm:w-auto text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-300"
-                >
-                  Read stories & opinions
-                  <ArrowRight className="ml-2" />
-                </Button>
-              </motion.div>
-            </motion.div>
-          </div>
+                Read stories & opinions
+                <ArrowRight className="ml-2" />
+              </Button>
+            </div>
+          </motion.div>
           
           <motion.div
             initial={{ opacity: 0, x: 20 }}
