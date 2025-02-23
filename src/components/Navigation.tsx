@@ -5,6 +5,8 @@ import { Link } from "react-router-dom"
 import { cn } from "../lib/utils"
 import { DropdownMenu } from "./DropdownMenu"
 
+const { useState, useEffect } = React;
+
 interface NavigationProps {
   navigationItems: {
     label: string;
