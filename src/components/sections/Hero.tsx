@@ -25,12 +25,10 @@ export const Hero: FC = () => {
               </Button>
               <Button 
                 variant="ghost" 
-                className="group/arrow w-full sm:w-auto text-white hover:bg-white/10 hover:scale-105 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-500"
+                className="group flex items-center gap-2 w-full sm:w-auto text-white hover:bg-white/10 hover:scale-105 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-500"
               >
-                <span className="inline-flex items-center gap-2">
-                  Read stories & opinions
-                  <ArrowRight className="group-hover/arrow:translate-x-1 transition-transform duration-300" />
-                </span>
+                Read stories & opinions
+                <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </div>
           </div>
