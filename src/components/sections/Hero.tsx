@@ -48,7 +48,6 @@ export const Hero: React.FC = () => {
               </Button>
             </div>
           </motion.div>
-          </motion.div>
           
           <motion.div
             initial={{ opacity: 0, x: 20 }}
