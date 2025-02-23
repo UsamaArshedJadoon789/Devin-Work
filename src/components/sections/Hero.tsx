@@ -54,27 +54,48 @@ export const Hero: React.FC = () => {
               </Button>
             </motion.div>
           </motion.div>
-          <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="absolute right-0 top-0 w-1/2 h-full hidden lg:block"
+          >
             <div className="grid grid-cols-2 gap-4 p-6">
               <div className="space-y-4">
-                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-[#1A2730] rounded-lg overflow-hidden"
+                >
                   <img src="/images/hero-grid/team-collaboration.jpg" alt="Team Collaboration" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                </motion.div>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-[#1A2730] rounded-lg overflow-hidden"
+                >
                   <img src="/images/hero-grid/data-analytics.jpg" alt="Data Analytics" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
-                </div>
+                </motion.div>
               </div>
               <div className="space-y-4 mt-20">
-                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-[#1A2730] rounded-lg overflow-hidden"
+                >
                   <img src="/images/hero-grid/seo-strategy.jpg" alt="SEO Strategy" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="bg-[#1A2730] rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                </motion.div>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-[#1A2730] rounded-lg overflow-hidden"
+                >
                   <img src="/images/hero-grid/growth-chart.jpg" alt="Growth Chart" className="w-full h-32 object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
-                </div>
+                </motion.div>
               </div>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent"></div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="absolute top-[45%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl transform rotate-3 animate-float hover:rotate-0 transition-all duration-500">
