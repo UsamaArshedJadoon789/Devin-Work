@@ -20,6 +20,24 @@ export const parallaxScroll = {
   })
 }
 
+export const scaleOnHover = {
+  initial: { scale: 1 },
+  whileHover: { scale: 1.05 },
+  whileTap: { scale: 0.95 }
+}
+
+export const fadeInLeft = {
+  initial: { opacity: 0, x: -20 },
+  animate: { opacity: 1, x: 0 },
+  transition: { duration: 0.5 }
+}
+
+export const fadeInRight = {
+  initial: { opacity: 0, x: 20 },
+  animate: { opacity: 1, x: 0 },
+  transition: { duration: 0.5 }
+}
+
 interface ScrollFadeInProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode
 }
