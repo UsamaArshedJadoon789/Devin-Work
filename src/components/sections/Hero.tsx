@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
               Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
             </motion.p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <motion.button
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -46,8 +46,8 @@ export const Hero: React.FC = () => {
                 >
                   Book a Strategy Call
                 </Button>
-              </motion.button>
-              <motion.button
+              </motion.div>
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
                   Read stories & opinions
                   <ArrowRight className="ml-2" />
                 </Button>
-              </motion.button>
+              </motion.div>
             </div>
           </motion.div>
           
