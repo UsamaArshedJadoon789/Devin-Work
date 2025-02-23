@@ -1,8 +1,9 @@
 import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
-import type { FC } from "react"
+import { motion } from "framer-motion"
+import * as React from "react"
 
-export const Hero: FC = () => {
+export const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen w-full bg-[#0A0A0A] overflow-hidden flex flex-col">
       <div className="absolute inset-0 bg-gradient-to-br from-[#0F1923]/10 via-transparent to-transparent" />
@@ -10,14 +11,35 @@ export const Hero: FC = () => {
       
       <div className="container mx-auto px-4 flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-2xl lg:max-w-4xl relative">
-          <div className="relative z-10 mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1] animate-fade-in">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 mb-12"
+          >
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 text-white leading-[1.1]"
+            >
               We Build SEO Revenue Engines For SaaS Brands
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl animate-slide-up delay-100">
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl"
+            >
               Turn your SEO channel into a growth machine and significantly increase your pipeline and ARR.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-slide-up delay-200">
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6"
+            >
               <Button 
                 className="w-full sm:w-auto bg-[#C6F135] hover:bg-[#D4F55C] text-black font-semibold text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300"
               >
@@ -30,8 +52,8 @@ export const Hero: FC = () => {
                 Read stories & opinions
                 <ArrowRight className="ml-2" />
               </Button>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
             <div className="grid grid-cols-2 gap-4 p-6">
               <div className="space-y-4">

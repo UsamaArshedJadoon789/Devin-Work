@@ -1,4 +1,5 @@
 import * as React from "react"
+import { motion } from "framer-motion"
 import { Card } from "../ui/card"
 import { GradientText } from "../ui/gradient-text"
 import { Button } from "../ui/button"
@@ -28,7 +29,7 @@ const testimonials = [
   }
 ]
 
-export const Testimonials = (): JSX.Element => {
+export const Testimonials: React.FC = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0)
 
   const nextSlide = () => {
@@ -60,8 +61,14 @@ export const Testimonials = (): JSX.Element => {
               key={index}
               className="w-full flex-shrink-0 px-4"
             >
-              <Card className="bg-secondary/50 backdrop-blur border border-white/5 text-white p-10 rounded-xl">
-                <div className="flex flex-col md:flex-row gap-10 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <Card className="bg-secondary/50 backdrop-blur border border-white/5 text-white p-10 rounded-xl">
+                  <div className="flex flex-col md:flex-row gap-10 items-center">
                   <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-800 border-2 border-accent/20">
                     <img
                       src={testimonial.image}
@@ -78,6 +85,7 @@ export const Testimonials = (): JSX.Element => {
                   </div>
                 </div>
               </Card>
+              </motion.div>
             </div>
           ))}
         </div>

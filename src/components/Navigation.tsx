@@ -34,15 +34,15 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
 
   return (
     <nav className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-200",
-      isScrolled ? "bg-dark-900/80 backdrop-blur-sm border-b border-white/10" : "bg-transparent"
+      "fixed top-0 w-full z-50 transition-all duration-300 group",
+      isScrolled ? "bg-dark-900/80 backdrop-blur-sm border-b border-white/10" : "bg-transparent hover:bg-forest/5"
     )}>
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-4 transition-colors duration-300 group-hover:bg-forest/10">
         <div className="flex items-center justify-between">
           <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
             <Link 
               to="/" 
-              className="text-2xl font-bold text-white hover:text-white/90 transition-all"
+              className="text-2xl font-bold text-white hover:text-white/90 transition-all group-hover:text-forest-100"
             >
               The Skyline Strategies
             </Link>
@@ -55,7 +55,7 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
                     {item.items ? (
                       <>
                         <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
-                          <NavigationMenuTrigger className="text-white/80 hover:text-white transition-all">
+                          <NavigationMenuTrigger className="text-white/80 hover:text-white transition-all group-hover:text-forest-100">
                             {item.label}
                           </NavigationMenuTrigger>
                         </motion.div>
@@ -65,7 +65,7 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
                       <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
                         <Link 
                           to={item.href!}
-                          className="text-white/80 hover:text-white transition-all px-4 py-2 inline-block"
+                          className="text-white/80 hover:text-white transition-all px-4 py-2 inline-block group-hover:text-forest-100"
                         >
                           {item.label}
                         </Link>
@@ -78,7 +78,7 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
             {navigationItems.find(item => item.isButton) && (
               <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
                 <Button 
-                  className="bg-forest hover:bg-forest-600 text-white transition-all"
+                  className="bg-forest hover:bg-forest-600 text-white transition-all group-hover:bg-forest-500"
                   asChild
                 >
                   <Link to="/contact">Book a Strategy Call</Link>
