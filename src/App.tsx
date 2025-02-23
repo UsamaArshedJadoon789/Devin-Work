@@ -1,5 +1,5 @@
 import './App.css'
-import { Button } from "@/components/ui/button"
+import { AnimatedButton } from "@/components/animations/PageAnimations"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu"
 import { Card, CardContent } from "@/components/ui/card"
 import { Menu, MessageCircle } from "lucide-react"
@@ -85,14 +85,14 @@ export default function App() {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Button className="bg-white text-blue-900 hover:bg-blue-50">Get started</Button>
+            <AnimatedButton className="bg-white text-blue-900 hover:bg-blue-50">Get started</AnimatedButton>
           </div>
           
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="text-white">
+              <AnimatedButton variant="ghost" size="icon" className="text-white">
                 <Menu size={24} />
-              </Button>
+              </AnimatedButton>
             </SheetTrigger>
             <SheetContent side="right" className="bg-blue-900 text-white">
               <nav className="flex flex-col gap-4">
@@ -182,9 +182,9 @@ export default function App() {
                           </FormItem>
                         )}
                       />
-                      <Button type="submit" className="w-full bg-accent text-primary hover:bg-accent/90 py-6 text-lg">
+                      <AnimatedButton type="submit" className="w-full bg-accent text-primary hover:bg-accent/90 py-6 text-lg">
                         Send Message
-                      </Button>
+                      </AnimatedButton>
                     </form>
                   </Form>
                 </CardContent>
