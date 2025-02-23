@@ -98,7 +98,13 @@ export const Hero: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className="absolute top-[45%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl transform rotate-3 animate-float hover:rotate-0 transition-all duration-500">
+        <motion.div 
+          initial={{ opacity: 0, x: 20, rotate: 3 }}
+          animate={{ opacity: 1, x: 0 }}
+          whileHover={{ rotate: 0 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          className="absolute top-[45%] -right-[15%] w-[420px] rounded-2xl bg-[#0F1923] p-8 shadow-2xl transform animate-float transition-all duration-500"
+        >
           <div className="flex items-center gap-4 mb-8">
             <div className="w-14 h-14 rounded-full bg-[#C6F135] flex items-center justify-center">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -113,26 +119,46 @@ export const Hero: React.FC = () => {
             </div>
           </div>
           <div className="space-y-6">
-            <div className="bg-[#1A2730]/50 rounded-xl p-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 1.2 }}
+              className="bg-[#1A2730]/50 rounded-xl p-6"
+            >
               <div className="flex items-center justify-between mb-3">
                 <span className="text-white/90 text-lg">Monthly Revenue</span>
                 <span className="text-[#C6F135] text-lg font-semibold">+147%</span>
               </div>
               <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden">
-                <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-300"></div>
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: "75%" }}
+                  transition={{ duration: 1, delay: 1.4 }}
+                  className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#C6F135] to-[#D4F55C]"
+                />
               </div>
-            </div>
-            <div className="bg-[#1A2730]/50 rounded-xl p-6">
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 1.4 }}
+              className="bg-[#1A2730]/50 rounded-xl p-6"
+            >
               <div className="flex items-center justify-between mb-3">
                 <span className="text-white/90 text-lg">Organic Traffic</span>
                 <span className="text-[#C6F135] text-lg font-semibold">+312%</span>
               </div>
               <div className="h-14 bg-[#1A2730] rounded-lg relative overflow-hidden">
-                <div className="absolute inset-y-0 left-0 w-4/5 bg-gradient-to-r from-[#C6F135] to-[#D4F55C] transition-all duration-300"></div>
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: "80%" }}
+                  transition={{ duration: 1, delay: 1.6 }}
+                  className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#C6F135] to-[#D4F55C]"
+                />
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="container mx-auto px-4 py-16 mt-auto">
