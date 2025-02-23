@@ -24,11 +24,14 @@ export const Hero: FC = () => {
                 Book a Strategy Call
               </Button>
               <Button 
-                variant="ghost" 
+                variant="ghost"
+                asChild
                 className="group/arrow inline-flex items-center gap-2 w-full sm:w-auto text-white hover:bg-white/10 hover:scale-105 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-500"
               >
-                Read stories & opinions
-                <ArrowRight className="group-hover/arrow:translate-x-1 transition-transform duration-300" />
+                <div className="flex items-center gap-2">
+                  Read stories & opinions
+                  <ArrowRight className="group-hover/arrow:translate-x-1 transition-transform duration-300" />
+                </div>
               </Button>
             </div>
           </div>
