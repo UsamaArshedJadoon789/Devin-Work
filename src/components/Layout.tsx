@@ -1,5 +1,5 @@
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, NavigationMenuContent } from "./ui/navigation-menu"
-import { Button } from "./ui/button"
+import { AnimatedButton } from "./animations/PageAnimations"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 import { Menu, MessageCircle } from "lucide-react"
 import { useState } from "react"
@@ -80,14 +80,14 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Button className="bg-accent text-primary hover:bg-accent/90">Book a Strategy Call</Button>
+            <AnimatedButton className="bg-accent text-primary hover:bg-accent/90">Book a Strategy Call</AnimatedButton>
           </div>
           
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="text-white">
+              <AnimatedButton variant="ghost" size="icon" className="text-white">
                 <Menu size={24} />
-              </Button>
+              </AnimatedButton>
             </SheetTrigger>
             <SheetContent side="right" className="bg-blue-900 text-white">
               <nav className="flex flex-col gap-6">
@@ -119,7 +119,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                     <Link to="/tutorials" className="text-white hover:text-accent transition-colors">Tutorials</Link>
                   </div>
                 </div>
-                <Button className="bg-accent text-primary hover:bg-accent/90 w-full">Book a Strategy Call</Button>
+                <AnimatedButton className="bg-accent text-primary hover:bg-accent/90 w-full">Book a Strategy Call</AnimatedButton>
               </nav>
             </SheetContent>
           </Sheet>
