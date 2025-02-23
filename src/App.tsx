@@ -195,82 +195,87 @@ export default function App() {
         <>
           <section className="container mx-auto py-20">
             <div className="text-center mb-16">
-              <h1 className="text-4xl font-bold text-white mb-4">Our Services</h1>
-              <p className="text-lg text-gray-300">Explore our comprehensive range of digital solutions</p>
+              <h1 className="text-4xl font-bold text-white mb-4 motion-safe:animate-fade-in-down animate-duration-700">Our Services</h1>
+              <p className="text-lg text-gray-300 motion-safe:animate-fade-in motion-safe:animate-slide-in animate-delay-200">Explore our comprehensive range of digital solutions</p>
             </div>
             <div className="grid md:grid-cols-2 gap-12">
-              <Card className="bg-white/10 backdrop-blur border-none text-white">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="text-4xl">🌐</div>
-                    <div>
-                      <h3 className="text-2xl font-bold mb-4">Website Development</h3>
-                      <ul className="space-y-3 text-gray-300">
-                        <li>• Custom website design and development</li>
-                        <li>• E-commerce solutions</li>
-                        <li>• Content Management Systems (CMS)</li>
-                        <li>• Website maintenance and support</li>
-                        <li>• Performance optimization</li>
-                        <li>• SEO-friendly architecture</li>
-                      </ul>
+              {[
+                {
+                  icon: "🌐",
+                  title: "Website Development",
+                  features: [
+                    "Custom website design and development",
+                    "E-commerce solutions",
+                    "Content Management Systems (CMS)",
+                    "Website maintenance and support",
+                    "Performance optimization",
+                    "SEO-friendly architecture"
+                  ]
+                },
+                {
+                  icon: "📱",
+                  title: "App Development",
+                  features: [
+                    "iOS and Android app development",
+                    "Cross-platform solutions",
+                    "Progressive Web Apps (PWA)",
+                    "App maintenance and updates",
+                    "UI/UX design",
+                    "App Store optimization"
+                  ]
+                },
+                {
+                  icon: "📈",
+                  title: "Digital Marketing",
+                  features: [
+                    "Search Engine Optimization (SEO)",
+                    "Social Media Marketing",
+                    "Pay-Per-Click (PPC) Advertising",
+                    "Content Marketing",
+                    "Email Marketing",
+                    "Analytics and Reporting"
+                  ]
+                },
+                {
+                  icon: "🎮",
+                  title: "Game Development",
+                  features: [
+                    "Unity and Unreal Engine development",
+                    "Mobile game development",
+                    "2D and 3D game design",
+                    "Multiplayer integration",
+                    "Game testing and QA",
+                    "Monetization strategies"
+                  ]
+                }
+              ].map((service, index) => (
+                <Card 
+                  key={service.title}
+                  className="group bg-white/10 backdrop-blur border-none text-white transform-gpu hover:scale-105 transition-all duration-500 motion-safe:animate-fade-in"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-6">
+                      <div className="text-4xl group-hover:animate-bounce">{service.icon}</div>
+                      <div>
+                        <h3 className="text-2xl font-bold mb-4 group-hover:translate-y-1 transition-transform">{service.title}</h3>
+                        <ul className="space-y-3 text-gray-300">
+                          {service.features.map((feature, i) => (
+                            <li 
+                              key={i}
+                              className="flex items-center gap-2 hover:translate-x-1 transition-transform"
+                              style={{ animationDelay: `${i * 100}ms` }}
+                            >
+                              <span className="text-accent group-hover:animate-pulse">•</span>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/10 backdrop-blur border-none text-white">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="text-4xl">📱</div>
-                    <div>
-                      <h3 className="text-2xl font-bold mb-4">App Development</h3>
-                      <ul className="space-y-3 text-gray-300">
-                        <li>• iOS and Android app development</li>
-                        <li>• Cross-platform solutions</li>
-                        <li>• Progressive Web Apps (PWA)</li>
-                        <li>• App maintenance and updates</li>
-                        <li>• UI/UX design</li>
-                        <li>• App Store optimization</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/10 backdrop-blur border-none text-white">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="text-4xl">📈</div>
-                    <div>
-                      <h3 className="text-2xl font-bold mb-4">Digital Marketing</h3>
-                      <ul className="space-y-3 text-gray-300">
-                        <li>• Search Engine Optimization (SEO)</li>
-                        <li>• Social Media Marketing</li>
-                        <li>• Pay-Per-Click (PPC) Advertising</li>
-                        <li>• Content Marketing</li>
-                        <li>• Email Marketing</li>
-                        <li>• Analytics and Reporting</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/10 backdrop-blur border-none text-white">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="text-4xl">🎮</div>
-                    <div>
-                      <h3 className="text-2xl font-bold mb-4">Game Development</h3>
-                      <ul className="space-y-3 text-gray-300">
-                        <li>• Unity and Unreal Engine development</li>
-                        <li>• Mobile game development</li>
-                        <li>• 2D and 3D game design</li>
-                        <li>• Multiplayer integration</li>
-                        <li>• Game testing and QA</li>
-                        <li>• Monetization strategies</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </section>
 
@@ -630,8 +635,8 @@ export default function App() {
       {currentPage === 'blog' && (
         <section className="container mx-auto py-20">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-white mb-4">Our Blog</h1>
-            <p className="text-lg text-gray-300">Latest insights and updates</p>
+            <h1 className="text-4xl font-bold text-white mb-4 motion-safe:animate-fade-in-down animate-duration-700">Our Blog</h1>
+            <p className="text-lg text-gray-300 motion-safe:animate-fade-in motion-safe:animate-slide-in animate-delay-200">Latest insights and updates</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -677,17 +682,32 @@ export default function App() {
                 image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3",
                 categories: ["AI", "Technology"]
               }
-            ].map((post) => (
-              <Card key={post.id} className="bg-white/10 backdrop-blur border-none text-white">
+            ].map((post, index) => (
+              <Card 
+                key={post.id} 
+                className="group bg-white/10 backdrop-blur border-none text-white transform-gpu hover:scale-105 hover:rotate-3 transition-all duration-500 motion-safe:animate-fade-in"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
                 <CardContent className="p-6">
-                  <img src={post.image} alt={post.title} className="w-full h-48 object-cover rounded mb-4" />
-                  <div className="flex gap-2 mb-4">
+                  <div className="overflow-hidden rounded-lg">
+                    <img 
+                      src={post.image} 
+                      alt={post.title} 
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" 
+                    />
+                  </div>
+                  <div className="flex gap-2 mb-4 mt-4">
                     {post.categories.map((category) => (
-                      <span key={category} className="bg-white/20 px-2 py-1 rounded text-sm">{category}</span>
+                      <span 
+                        key={category} 
+                        className="bg-white/20 px-2 py-1 rounded text-sm hover:skew-x-6 transition-transform"
+                      >
+                        {category}
+                      </span>
                     ))}
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{post.title}</h3>
-                  <p className="text-gray-300">{post.excerpt}</p>
+                  <h3 className="text-xl font-bold mb-2 group-hover:translate-y-1 transition-transform">{post.title}</h3>
+                  <p className="text-gray-300 motion-safe:animate-slide-in" style={{ animationDelay: `${index * 150 + 100}ms` }}>{post.excerpt}</p>
                 </CardContent>
               </Card>
             ))}
@@ -698,11 +718,11 @@ export default function App() {
       {currentPage === 'contact' && (
         <section className="container mx-auto py-20">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
-            <p className="text-lg text-gray-300">Get in touch with our team</p>
+            <h1 className="text-4xl font-bold text-white mb-4 motion-safe:animate-fade-in-down animate-duration-700">Contact Us</h1>
+            <p className="text-lg text-gray-300 motion-safe:animate-fade-in motion-safe:animate-slide-in animate-delay-200">Get in touch with our team</p>
           </div>
-          <div className="max-w-2xl mx-auto">
-            <Card className="bg-white/10 backdrop-blur border-none text-white">
+          <div className="max-w-2xl mx-auto motion-safe:animate-fade-in animate-duration-500">
+            <Card className="group bg-white/10 backdrop-blur border-none text-white transform-gpu hover:scale-105 transition-all duration-500">
               <CardContent className="p-8">
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -710,16 +730,16 @@ export default function App() {
                       control={form.control}
                       name="name"
                       render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Name</FormLabel>
+                        <FormItem className="transform-gpu hover:translate-y-1 transition-all duration-300">
+                          <FormLabel className="text-white motion-safe:animate-fade-in" style={{ animationDelay: '100ms' }}>Name</FormLabel>
                           <FormControl>
                             <input
                               {...field}
-                              className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-md text-white placeholder:text-gray-400"
+                              className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-md text-white placeholder:text-gray-400 focus:ring-2 focus:ring-accent transition-all duration-300 hover:border-accent/50"
                               placeholder="Enter your name"
                             />
                           </FormControl>
-                          <FormMessage />
+                          <FormMessage className="motion-safe:animate-fade-in animate-delay-100" />
                         </FormItem>
                       )}
                     />
@@ -727,17 +747,17 @@ export default function App() {
                       control={form.control}
                       name="email"
                       render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email</FormLabel>
+                        <FormItem className="transform-gpu hover:translate-y-1 transition-all duration-300">
+                          <FormLabel className="text-white motion-safe:animate-fade-in" style={{ animationDelay: '200ms' }}>Email</FormLabel>
                           <FormControl>
                             <input
                               {...field}
                               type="email"
-                              className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-md text-white placeholder:text-gray-400"
+                              className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-md text-white placeholder:text-gray-400 focus:ring-2 focus:ring-accent transition-all duration-300 hover:border-accent/50"
                               placeholder="Enter your email"
                             />
                           </FormControl>
-                          <FormMessage />
+                          <FormMessage className="motion-safe:animate-fade-in animate-delay-200" />
                         </FormItem>
                       )}
                     />
@@ -745,21 +765,25 @@ export default function App() {
                       control={form.control}
                       name="message"
                       render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Message</FormLabel>
+                        <FormItem className="transform-gpu hover:translate-y-1 transition-all duration-300">
+                          <FormLabel className="text-white motion-safe:animate-fade-in" style={{ animationDelay: '300ms' }}>Message</FormLabel>
                           <FormControl>
                             <textarea
                               {...field}
                               rows={5}
-                              className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-md text-white placeholder:text-gray-400 resize-none"
+                              className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-md text-white placeholder:text-gray-400 focus:ring-2 focus:ring-accent transition-all duration-300 hover:border-accent/50 resize-none"
                               placeholder="Enter your message"
                             />
                           </FormControl>
-                          <FormMessage />
+                          <FormMessage className="motion-safe:animate-fade-in animate-delay-300" />
                         </FormItem>
                       )}
                     />
-                    <Button type="submit" className="w-full bg-white text-blue-900 hover:bg-blue-50">
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300 motion-safe:animate-fade-in"
+                      style={{ animationDelay: '400ms' }}
+                    >
                       Send Message
                     </Button>
                   </form>
