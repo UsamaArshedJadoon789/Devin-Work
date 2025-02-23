@@ -1,5 +1,5 @@
 // Core animation components
-export { ScrollFadeIn, AnimatedButton } from "./PageAnimations"
+export { ScrollFadeIn, AnimatedButton } from "./pageAnimations"
 
 // Animation variants
 export { fadeInUp, staggerContainer, parallaxScroll, scaleOnHover, fadeInLeft, fadeInRight } from "./animationVariants"
