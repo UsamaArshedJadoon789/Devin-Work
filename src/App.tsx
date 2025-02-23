@@ -319,68 +319,103 @@ export default function App() {
         <>
           <section className="container mx-auto px-4 py-20">
             <div className="text-center mb-16">
-              <h1 className="text-4xl font-bold text-white mb-4">Pricing Plans</h1>
-              <p className="text-lg text-gray-300">Choose the perfect plan for your business needs</p>
+              <h1 className="text-4xl font-bold text-white mb-4 motion-safe:animate-fade-in-down animate-duration-700">Pricing Plans</h1>
+              <p className="text-lg text-gray-300 motion-safe:animate-fade-in motion-safe:animate-slide-in animate-delay-200">Choose the perfect plan for your business needs</p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-white/10 backdrop-blur border-none text-white">
+              <Card 
+                className="group bg-white/10 backdrop-blur border-none text-white transform-gpu hover:scale-105 transition-all duration-500 motion-safe:animate-fade-in"
+                style={{ animationDelay: '0ms' }}
+              >
                 <CardContent className="p-8">
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold mb-2">Starter</h3>
-                    <div className="text-4xl font-bold mb-4">$999</div>
+                    <h3 className="text-2xl font-bold mb-2 group-hover:translate-y-1 transition-transform">Starter</h3>
+                    <div className="text-4xl font-bold mb-4 motion-safe:animate-slide-in">$999</div>
                     <p className="text-gray-300 mb-6">Perfect for small businesses</p>
                     <ul className="space-y-3 text-gray-300 text-left mb-8">
-                      <li>✓ Basic website development</li>
-                      <li>✓ 5 pages</li>
-                      <li>✓ Mobile responsive</li>
-                      <li>✓ Basic SEO setup</li>
-                      <li>✓ Contact form</li>
-                      <li>✓ 1 month support</li>
+                      {['Basic website development', '5 pages', 'Mobile responsive', 'Basic SEO setup', 'Contact form', '1 month support'].map((feature, i) => (
+                        <li 
+                          key={i} 
+                          className="group/item flex items-center gap-2 hover:translate-y-1 transition-transform"
+                          style={{ animationDelay: `${i * 100}ms` }}
+                        >
+                          <span className="text-accent group-hover/item:animate-bounce">✓</span>
+                          {feature}
+                        </li>
+                      ))}
                     </ul>
-                    <Button className="w-full bg-white text-blue-900 hover:bg-blue-50">Get Started</Button>
+                    <Button className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300">Get Started</Button>
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-gradient-to-r from-blue-900 to-blue-800 border-2 border-white text-white relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white text-blue-900 px-4 py-1 rounded-full text-sm font-bold">
+              <Card 
+                className="group bg-gradient-to-r from-blue-900 to-blue-800 border-2 border-white text-white relative transform-gpu hover:scale-105 transition-all duration-500 motion-safe:animate-fade-in"
+                style={{ animationDelay: '150ms' }}
+              >
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white text-blue-900 px-4 py-1 rounded-full text-sm font-bold animate-pulse">
                   Most Popular
                 </div>
                 <CardContent className="p-8">
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold mb-2">Professional</h3>
-                    <div className="text-4xl font-bold mb-4">$2,499</div>
+                    <h3 className="text-2xl font-bold mb-2 group-hover:translate-y-1 transition-transform">Professional</h3>
+                    <div className="text-4xl font-bold mb-4 motion-safe:animate-slide-in">$2,499</div>
                     <p className="text-gray-300 mb-6">For growing businesses</p>
                     <ul className="space-y-3 text-gray-300 text-left mb-8">
-                      <li>✓ Advanced website development</li>
-                      <li>✓ 10 pages</li>
-                      <li>✓ Mobile responsive</li>
-                      <li>✓ Advanced SEO setup</li>
-                      <li>✓ Custom forms</li>
-                      <li>✓ 3 months support</li>
-                      <li>✓ Social media integration</li>
-                      <li>✓ Analytics setup</li>
+                      {[
+                        'Advanced website development',
+                        '10 pages',
+                        'Mobile responsive',
+                        'Advanced SEO setup',
+                        'Custom forms',
+                        '3 months support',
+                        'Social media integration',
+                        'Analytics setup'
+                      ].map((feature, i) => (
+                        <li 
+                          key={i}
+                          className="group/item flex items-center gap-2 hover:translate-y-1 transition-transform"
+                          style={{ animationDelay: `${i * 100}ms` }}
+                        >
+                          <span className="text-accent group-hover/item:animate-bounce">✓</span>
+                          {feature}
+                        </li>
+                      ))}
                     </ul>
-                    <Button className="w-full bg-white text-blue-900 hover:bg-blue-50">Get Started</Button>
+                    <Button className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300">Get Started</Button>
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-white/10 backdrop-blur border-none text-white">
+              <Card 
+                className="group bg-white/10 backdrop-blur border-none text-white transform-gpu hover:scale-105 transition-all duration-500 motion-safe:animate-fade-in"
+                style={{ animationDelay: '300ms' }}
+              >
                 <CardContent className="p-8">
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
-                    <div className="text-4xl font-bold mb-4">Custom</div>
+                    <h3 className="text-2xl font-bold mb-2 group-hover:translate-y-1 transition-transform">Enterprise</h3>
+                    <div className="text-4xl font-bold mb-4 motion-safe:animate-slide-in">Custom</div>
                     <p className="text-gray-300 mb-6">For large organizations</p>
                     <ul className="space-y-3 text-gray-300 text-left mb-8">
-                      <li>✓ Custom website development</li>
-                      <li>✓ Unlimited pages</li>
-                      <li>✓ Advanced features</li>
-                      <li>✓ Full SEO package</li>
-                      <li>✓ Custom integrations</li>
-                      <li>✓ 12 months support</li>
-                      <li>✓ Priority support</li>
-                      <li>✓ Custom solutions</li>
+                      {[
+                        'Custom website development',
+                        'Unlimited pages',
+                        'Advanced features',
+                        'Full SEO package',
+                        'Custom integrations',
+                        '12 months support',
+                        'Priority support',
+                        'Custom solutions'
+                      ].map((feature, i) => (
+                        <li 
+                          key={i}
+                          className="group/item flex items-center gap-2 hover:translate-y-1 transition-transform"
+                          style={{ animationDelay: `${i * 100}ms` }}
+                        >
+                          <span className="text-accent group-hover/item:animate-bounce">✓</span>
+                          {feature}
+                        </li>
+                      ))}
                     </ul>
-                    <Button className="w-full bg-white text-blue-900 hover:bg-blue-50">Contact Us</Button>
+                    <Button className="w-full bg-white text-blue-900 hover:bg-blue-50 transform-gpu hover:scale-105 transition-all duration-300">Contact Us</Button>
                   </div>
                 </CardContent>
               </Card>
