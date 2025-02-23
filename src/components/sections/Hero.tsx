@@ -1,6 +1,6 @@
 import { type FC } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import * as Icons from "lucide-react"
 import { Button } from "../ui/button"
 
 export const Hero: FC = () => {
@@ -54,7 +54,7 @@ export const Hero: FC = () => {
                   className="w-full text-white hover:bg-white/10 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-colors duration-300 inline-flex items-center gap-2"
                 >
                   Read stories & opinions
-                  <ArrowRight size={20} />
+                  <Icons.ArrowRight size={20} />
                 </Button>
               </motion.div>
             </div>
