@@ -24,7 +24,8 @@ const navigationItems = [
     ]
   },
   { label: 'Stories & Opinions', href: '/blog' },
-  { label: 'Learn', href: '/resources' }
+  { label: 'Learn', href: '/resources' },
+  { label: 'Book a Strategy Call', href: '/contact', isButton: true }
 ];
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(true);

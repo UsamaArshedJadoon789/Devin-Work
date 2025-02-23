@@ -64,11 +64,14 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
-            <Button 
-              className="bg-forest hover:bg-forest-600 text-white transition-colors"
-            >
-              Book a Strategy Call
-            </Button>
+            {navigationItems.find(item => item.isButton) && (
+              <Button 
+                className="bg-forest hover:bg-forest-600 text-white transition-colors"
+                asChild
+              >
+                <Link to="/contact">Book a Strategy Call</Link>
+              </Button>
+            )}
           </div>
         </div>
       </div>
