@@ -37,9 +37,9 @@ const services = [
 ]
 
 export const Services = (): JSX.Element => (
-  <section className="container mx-auto px-4 py-32">
-    <div className="text-center mb-20">
-      <h2 className="text-5xl font-bold mb-6 animate-fade-in-down animate-duration-700">
+  <section className="container">
+    <div className="text-center">
+      <h2 className="text-5xl font-bold animate-fade-in-down animate-duration-700">
         <GradientText>Our Services</GradientText>
       </h2>
       <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in animate-slide-in animate-delay-200 animate-duration-500">
@@ -50,16 +50,16 @@ export const Services = (): JSX.Element => (
       {services.map((service, index) => (
         <CardHover 
           key={service.title}
-          className="group relative bg-secondary/50 backdrop-blur border border-white/5 rounded-xl p-8 transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-accent/20 transform-gpu animate-fade-in animate-slide-in motion-safe:hover:animate-wiggle"
+          className="group relative bg-secondary/50 backdrop-blur border border-white/5 rounded-xl transition-all duration-500 hover:scale-105 hover:bg-secondary/70 hover:border-accent/20 transform-gpu animate-fade-in animate-slide-in motion-safe:hover:animate-wiggle"
           style={{ animationDelay: `${index * 150}ms` }}
         >
           <div className="relative">
-            <div className="text-4xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce transform-gpu">{service.icon}</div>
+            <div className="text-4xl transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce transform-gpu">{service.icon}</div>
             <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 animate-ping"/>
           </div>
-          <h3 className="text-2xl font-bold mb-3 text-white transition-all duration-300 group-hover:text-accent group-hover:translate-y-1">{service.title}</h3>
+          <h3 className="text-2xl font-bold text-white transition-all duration-300 group-hover:text-accent group-hover:translate-y-1">{service.title}</h3>
           <p className="text-gray-300 text-lg leading-relaxed transition-colors duration-300 group-hover:text-white/90">{service.description}</p>
-          <div className="mt-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-x-2">
+          <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-x-2">
             <span className="text-accent">Learn more</span>
             <span className="text-accent animate-bounce">→</span>
           </div>
