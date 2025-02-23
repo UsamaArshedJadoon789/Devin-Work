@@ -315,9 +315,9 @@ export default function App() {
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-lg text-gray-300 mb-8">Contact us today to discuss your project</p>
-              <Button className="bg-white text-blue-900 hover:bg-blue-50 flex items-center gap-2 text-lg px-8 py-6">
+              <AnimatedButton className="bg-white text-blue-900 hover:bg-blue-50 flex items-center gap-2 text-lg px-8 py-6">
                 Schedule Free Consultation
-              </Button>
+              </AnimatedButton>
             </div>
           </section>
         </>
