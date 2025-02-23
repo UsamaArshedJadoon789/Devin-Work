@@ -1,22 +1,23 @@
 import { Input } from "./input"
 import { Textarea } from "./textarea"
 import { Button } from "./button"
+import type { ReactNode, InputHTMLAttributes, TextareaHTMLAttributes, SelectHTMLAttributes, ButtonHTMLAttributes } from "react"
 
-export const FormInput = ({ ...props }) => (
+export const FormInput = ({ ...props }: InputHTMLAttributes<HTMLInputElement>) => (
   <Input 
     className="w-full bg-secondary/50 backdrop-blur border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 transition-all duration-300 focus:ring-2 focus:ring-accent/50 hover:border-accent/50 transform-gpu"
     {...props}
   />
 )
 
-export const FormTextarea = ({ ...props }) => (
+export const FormTextarea = ({ ...props }: TextareaHTMLAttributes<HTMLTextAreaElement>) => (
   <Textarea 
     className="w-full bg-secondary/50 backdrop-blur border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-gray-400 transition-all duration-300 focus:ring-2 focus:ring-accent/50 hover:border-accent/50 transform-gpu resize-none min-h-[120px]"
     {...props}
   />
 )
 
-export const FormButton = ({ children, ...props }) => (
+export const FormButton = ({ children, ...props }: { children: ReactNode } & ButtonHTMLAttributes<HTMLButtonElement>): JSX.Element => (
   <Button 
     className="w-full bg-accent text-primary py-3 rounded-lg transition-all duration-300 hover:bg-accent/90 transform-gpu hover:scale-[1.02] focus:ring-2 focus:ring-accent/50"
     {...props}
@@ -25,7 +26,7 @@ export const FormButton = ({ children, ...props }) => (
   </Button>
 )
 
-export const FormSelect = ({ children, ...props }) => (
+export const FormSelect = ({ children, ...props }: { children: ReactNode } & SelectHTMLAttributes<HTMLSelectElement>) => (
   <select 
     className="w-full bg-secondary/50 backdrop-blur border border-white/10 rounded-lg px-4 py-3 text-white transition-all duration-300 focus:ring-2 focus:ring-accent/50 hover:border-accent/50 transform-gpu appearance-none cursor-pointer"
     {...props}
@@ -34,7 +35,7 @@ export const FormSelect = ({ children, ...props }) => (
   </select>
 )
 
-export const FormCheckbox = ({ label, ...props }) => (
+export const FormCheckbox = ({ label, ...props }: { label: string } & InputHTMLAttributes<HTMLInputElement>) => (
   <label className="flex items-center gap-2 cursor-pointer group">
     <input 
       type="checkbox"

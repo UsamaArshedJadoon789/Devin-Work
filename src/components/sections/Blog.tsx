@@ -27,7 +27,7 @@ const posts = [
   }
 ]
 
-export const Blog = () => {
+export const Blog = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-[#003344] py-20">
       <div className="container mx-auto px-4">
