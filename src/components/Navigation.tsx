@@ -46,11 +46,12 @@ export const Navigation = ({ navigationItems }: NavigationProps) => {
                 {navigationItems.map((item) => (
                   <NavigationMenuItem key={item.label}>
                     {item.items ? (
-                      <NavigationMenuTrigger className="text-white/80 hover:text-white transition-colors">
-                        <DropdownMenu items={item.items}>
+                      <>
+                        <NavigationMenuTrigger className="text-white/80 hover:text-white transition-colors">
                           {item.label}
-                        </DropdownMenu>
-                      </NavigationMenuTrigger>
+                        </NavigationMenuTrigger>
+                        <DropdownMenu items={item.items} />
+                      </>
                     ) : (
                       <Link 
                         to={item.href!}
