@@ -6,6 +6,26 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 
+const navigationItems = [
+  {
+    label: 'Why Skale?',
+    items: [
+      { title: 'Overview', href: '/overview' },
+      { title: 'Case Studies', href: '/case-studies' },
+      { title: 'Testimonials', href: '/testimonials' }
+    ]
+  },
+  {
+    label: 'Services',
+    items: [
+      { title: 'SEO Strategy', href: '/services/seo-strategy' },
+      { title: 'Content Marketing', href: '/services/content-marketing' },
+      { title: 'Technical SEO', href: '/services/technical-seo' }
+    ]
+  },
+  { label: 'Stories & Opinions', href: '/blog' },
+  { label: 'Learn', href: '/learn' }
+];
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(true);
 
