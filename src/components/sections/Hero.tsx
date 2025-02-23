@@ -23,13 +23,13 @@ export const Hero: FC = () => {
               >
                 Book a Strategy Call
               </Button>
-              <button 
-                type="button"
+              <Button 
+                variant="ghost"
                 className="group/arrow inline-flex items-center gap-2 w-full sm:w-auto text-white hover:bg-white/10 hover:scale-105 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border border-white/20 transition-all duration-500"
               >
                 Read stories & opinions
                 <ArrowRight className="group-hover/arrow:translate-x-1 transition-transform duration-300" />
-              </button>
+              </Button>
             </div>
           </div>
           <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
