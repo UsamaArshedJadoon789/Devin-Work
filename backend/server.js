@@ -1,8 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-require("dotenv").config();
+const dotenv = require("dotenv");
+const path = require("path");
 
+// Import routes
 const authRoutes = require("./routes/authRoutes");
 const residentRoutes = require("./routes/residentRoutes");
 const roomRoutes = require("./routes/roomRoutes");
@@ -12,13 +14,25 @@ const floorRoutes = require("./routes/floorRoutes");
 const bedRoutes = require("./routes/bedRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
 
+// Load environment variables
+dotenv.config();
+
+// Initialize Express app
 const app = express();
 
-// 🔹 Middleware (MUST be before routes)
+// Middleware
 app.use(cors());
-app.use(express.json()); // ✅ Ensures JSON request body is parsed
+app.use(express.json());
 
-// 🔹 Routes
+// Serve static files from uploads directory
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch(err => console.error("❌ MongoDB Connection Error:", err));
+
+// Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/residents", residentRoutes);
 app.use("/api/rooms", roomRoutes);
@@ -28,16 +42,6 @@ app.use("/api/floors", floorRoutes);
 app.use("/api/beds", bedRoutes);
 app.use("/api/payments", paymentRoutes);
 
-// 🔹 Database Connection
-mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch((err) => console.error("❌ MongoDB Error:", err));
-
+// Start server
 const PORT = process.env.PORT || 5000;
-
-app.get("/", (req, res) => {
-  res.send("✅ Backend is running! 🎉");
-});
-
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
