@@ -23,14 +23,24 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Set environment for mock database
-process.env.USE_MOCK_DB = 'true';
+// Database connection
+const mongoose = require("mongoose");
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  connectTimeoutMS: 30000,
+  socketTimeoutMS: 30000,
+  serverSelectionTimeoutMS: 30000
+})
+.then(() => {
+  console.log("✅ Connected to MongoDB");
+})
+.catch((error) => {
+  console.error("❌ MongoDB connection error:", error);
+});
 
 // Serve static files from uploads directory
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-
-// Mock database connection message
-console.log("✅ Using mock database for testing");
 
 // Routes
 app.use("/api/auth", authRoutes);
