@@ -88,7 +88,7 @@
   <label for="roomSelect" class="floating-label">Select Room</label>
   <select id="roomSelect" v-model="selectedRoom" class="form-input room-dropdown">
     <option value="">Select a Room</option>
-    <option v-for="room in rooms" :key="room._id" :value="room._id">
+    <option v-for="room in availableRooms" :key="room._id" :value="room._id">
       {{ room.number }} - {{ room.hall }} ({{ room.type }})
     </option>
   </select>
@@ -175,20 +175,26 @@ export default {
       }
     },
     async fetchRooms() {
-  try {
-    const response = await axios.get("http://localhost:5000/api/rooms");
-    
-    if (!Array.isArray(response.data)) {
-      throw new Error("Invalid response format");
-    }
-
-    this.rooms = response.data.filter(room => room.status === "available"); // Show only available rooms
-    console.log("Rooms fetched:", this.rooms); // Debugging
-  } catch (error) {
-    console.error("Error fetching rooms:", error.message);
-    alert("Failed to load rooms. Check console for details.");
-  }
-},
+      try {
+        const response = await axios.get("http://localhost:5000/api/rooms");
+        
+        // Check if response.data has a 'rooms' property (API returns {rooms: [...]} format)
+        if (response.data && response.data.rooms && Array.isArray(response.data.rooms)) {
+          this.rooms = response.data.rooms;
+          console.log("Rooms fetched from API:", this.rooms.length);
+        } else if (Array.isArray(response.data)) {
+          // Fallback for direct array response
+          this.rooms = response.data;
+          console.log("Rooms fetched (direct array):", this.rooms.length);
+        } else {
+          console.error("Invalid API response format:", response.data);
+          throw new Error("Invalid response format");
+        }
+      } catch (error) {
+        console.error("Error fetching rooms:", error.message);
+        alert("Failed to load rooms. Check console for details.");
+      }
+    },
     selectRegistration(resident) {
       this.selectedRegistration = resident;
     },
@@ -557,5 +563,3 @@ input[type="time"].form-input {
   }
 }
 </style>
-
-  
