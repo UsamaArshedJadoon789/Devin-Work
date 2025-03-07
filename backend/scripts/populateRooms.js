@@ -493,6 +493,9 @@ const rooms = [
   }
 ];
 
+// Export rooms for mock data
+module.exports = { rooms };
+
 mongoose.connect('mongodb://localhost:27017/hostel_management', {
   useNewUrlParser: true,
   useUnifiedTopology: true

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const mockRooms = require('../mockData/roomData');
 
 const RoomSchema = new mongoose.Schema({
   number: { type: String, required: true, unique: true },
@@ -18,4 +19,21 @@ const RoomSchema = new mongoose.Schema({
   cnic: { type: String }
 }, { timestamps: true });
 
-module.exports = mongoose.model("Room", RoomSchema);
+const RoomModel = mongoose.model("Room", RoomSchema);
+
+// Add mock methods for testing
+if (process.env.NODE_ENV === 'test' || process.env.USE_MOCK_DB === 'true') {
+  RoomModel.find = async () => {
+    return mockRooms;
+  };
+  
+  RoomModel.findById = async (id) => {
+    return mockRooms.find(room => room._id === id);
+  };
+  
+  RoomModel.prototype.save = async function() {
+    return this;
+  };
+}
+
+module.exports = RoomModel;

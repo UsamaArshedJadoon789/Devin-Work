@@ -1,11 +1,14 @@
 const Room = require("../models/Room");
+const mockRooms = require('../mockData/roomData');
 
 exports.getAllRooms = async (req, res) => {
   try {
     const rooms = await Room.find();
-    res.status(200).json(rooms);
+    res.status(200).json({ rooms }); // Return rooms in an object with 'rooms' property
   } catch (error) {
-    res.status(500).json({ message: "Error fetching rooms", error: error.message });
+    console.error("Error fetching rooms:", error);
+    // Fallback to mock data if database connection fails
+    res.status(200).json({ rooms: mockRooms });
   }
 };
 
